@@ -1,0 +1,110 @@
+{
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$o0jLpH4FKyj8xCyGwOwmleRI5uRQ0clWPNyihUdoaxE1kFP93rp6u",
+      "avatars": [1],
+      "avatarId": 1,
+      "nickName": "圈圈",
+      "totalCheckIn": 0,
+      "isAdmin": true,
+      "id": 1
+    }
+  ],
+  "favorites":[
+    {
+      "id": 1,
+      "userId": 1,
+      "courseId": 1
+    }
+  ],
+  "notions": [
+    {
+      "id": 1,
+      "userId": 1,
+      "content": "恭喜您，「JavaScript 核心篇」課程評價審核通過！",
+      "timer": 1690091082844
+    }
+  ],
+  "avatars": [
+    {
+      "id": 1,
+      "name": "入門徽章",
+      "level": 1,
+      "getFn": "",
+      "image": "成功註冊帳號獲取"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "JavaScript 核心篇",
+      "platform": "六角學院",
+      "tag": ["程式","JS","JavaScript"],
+      "cover": "",
+      "url": "https://www.hexschool.com/courses/js-core.html"
+    }
+  ],
+  "passes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "courseId": 1,
+      "isFinish": false
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "userId": 1,
+      "courseId": 1,
+      "canEdit": true,
+      "image": "",
+      "showName": 1,
+      "score": 4,
+      "content": "非常推薦這門課",
+      "theme": 1,
+      "isPAssed": -1,
+      "failContent": "",
+      "likes": [],
+      "timer": 1690092142269
+    }
+  ],
+  "chatRooms":[
+    {
+      "id": 1,
+      "courseId": 1,
+      "total": 30,
+      "onlineUsers": [1],
+      "name": "教室一"
+    }
+  ],
+  "coursesApplies": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "使用HTML、CSS開發一個網站",
+      "platform": "六角學院",
+      "reason": "前端三劍客怎麼可以少了 HTML 和 CSS",
+      "isPassed": -1,
+      "url": "https://www.hexschool.com/courses/html_css.html",
+      "timer": 1690092378676
+    }
+  ],
+  "userMails":[
+    {
+      "id": 1,
+      "userId": 1,
+      "nickName": "汪汪",
+      "mail": "admin@gmail.com",
+      "isReply": false,
+      "content": "敝大汪公司作為廣告商，誠摯提案建議您的網站增加廣告欄位。這將為您提供額外收益，同時為我們的廣告觸及更廣泛的目標受眾。若貴站有興趣，歡迎回信詳談！"
+    }
+  ],
+  "keyWords": [
+    {
+      "id": 1,
+      "keyWord": "CSS"
+    }
+  ]
+}
