@@ -10,28 +10,17 @@
 
 <body>
   <%- include('./layout/header'); -%>
-    <button class="btn btn-primary">333</button>
+    <div style="padding: 3rem;background-color: pink;">
+      <button class="btn btn-primary myBtn">登入</button>
+      <button class="btn btn-primary myBtn2">其他 api 測試</button>
+      <button class="btn btn-primary signOut">登出</button>
+      <h2>記得打開開發人員工具, 查看主控台的 console 資料</h2>
+    </div>
+
+
     <h1 class="index-title">我是首頁</h1>
     <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-            aria-expanded="true" aria-controls="collapseOne">
-            Accordion Item #1
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
-            adds the appropriate classes that we use to style each element. These classes control the overall
-            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-            <code>.accordion-body</code>, though the transition does limit overflow.
-          </div>
-        </div>
-      </div>
-    </div>
+
     <%- include('./layout/footer'); -%>
 
       <script type="module" src="../main.js"></script>

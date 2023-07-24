@@ -1,0 +1,47 @@
+import axios from "axios";
+const { VITE_BASEURL } = import.meta.env
+
+//  user 相關 api
+export const User = {
+    // 登入
+    async login(data) {
+       try {
+            const res = await axios.post(`${VITE_BASEURL}/login`, data);
+            localStorage.setItem('token', `Bearer ${res.data.accessToken}`) // 把 token 存在 localStorage
+            console.log('登入成功');
+            return res.data;
+        } catch (err) {
+            console.log('登入失敗');
+            console.log(err);
+        }
+     },
+
+    // 註冊
+    async register(data) {
+        try {
+            const res = await axios.post(`${VITE_BASEURL}/users`, data);
+            console.log('註冊成功');
+            return res.data;
+        } catch (err) {
+            console.log('註冊失敗');
+        }
+    },
+    // 登出
+    signOut() {
+        localStorage.clear()
+        console.log('登出成功');
+    },
+
+    // nav 用戶系統公告
+    async getNotions(id) {
+        try{
+            axios.defaults.headers.common['Authorization'] = localStorage.getItem('token')
+            const res = await axios.get(`${VITE_BASEURL}/600/users/${id}?_embed=notions`)
+            console.log('系統公告獲取成功');
+            return res.data
+        }
+        catch (err) {
+            console.log('系統公告獲取失敗');
+        }
+    }
+} 

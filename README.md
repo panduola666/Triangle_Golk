@@ -10,6 +10,8 @@
 - `npm run dev` - 執行開發模式
   - 若沒有自動開啟瀏覽器，可嘗試手動在瀏覽器上輸入
     `http://localhost:5173/<專案名稱>/pages/index.html`
+- 執行 `npm run start` 同步開啟本地畫面及 json-server API
+  - API 的本地網址是 `http://localhost:3000`
 - `npm run build` - 執行編譯模式（不會開啟瀏覽器）
 - `npm ru deploy` - 自動化部署
 
@@ -29,4 +31,3 @@
 
 2. 執行 `npm run deploy` 指令進行自動化部署
 
-3. 執行 `npm run start` 同步開啟本地畫面及 json-server API
