@@ -3,6 +3,7 @@ const { VITE_BASEURL } = import.meta.env
 
 //  user 相關 api
 export const User = {
+    content: ['我是user內容1','我是user內容2'],
     // 登入
     async login(data) {
        try {
@@ -15,7 +16,6 @@ export const User = {
             console.log(err);
         }
      },
-
     // 註冊
     async register(data) {
         try {
@@ -34,14 +34,17 @@ export const User = {
 
     // nav 用戶系統公告
     async getNotions(id) {
-        try{
-            axios.defaults.headers.common['Authorization'] = localStorage.getItem('token')
-            const res = await axios.get(`${VITE_BASEURL}/600/users/${id}?_embed=notions`)
-            console.log('系統公告獲取成功');
+        const token = localStorage.getItem('token')
+        console.log(token);
+        axios.defaults.headers.common['Authorization'] = token
+
+        return axios.get(`${VITE_BASEURL}/600/users/${id}?_embed=notions`)
+        .then(res => {
+            console.log(res.data);
             return res.data
-        }
-        catch (err) {
-            console.log('系統公告獲取失敗');
-        }
+        })
+        .catch(err => {
+            console.log(err);
+        })
     }
 } 

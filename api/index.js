@@ -1,3 +1,4 @@
 import { User } from './users';
+import { About } from './about';
 
-export { User }
+export { User, About }

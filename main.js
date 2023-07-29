@@ -1,5 +1,5 @@
 import './assets/scss/all.scss';
-import { User } from './api';
+import { User } from './api/index'
 
 const btn = document.querySelector('.myBtn'); // 獲取 登入 按鈕DOM
 const apiBtn = document.querySelector('.myBtn2'); // 獲取 其他api測試 按鈕DOM
@@ -12,12 +12,19 @@ btn.addEventListener('click', async () => {
     const res =  await User.login(data);
     console.log(res);
 });
-apiBtn.addEventListener('click', async () => {
-      const res =  await User.getNotions(1);
-      console.log(res);
-  });
-  signOut.addEventListener('click', async () => {
-    const res =  await User.signOut();
-    console.log(res);
-});
+
+apiBtn.addEventListener('click',async () => {
+ const res = await User.getNotions(1)
+ console.log(res);
+})
+
+
+// apiBtn.addEventListener('click', async () => {
+//       const res =  await User.getNotions(1);
+//       // console.log(res);
+//   });
+//   signOut.addEventListener('click', async () => {
+//     const res =  await User.signOut();
+//     console.log(res);
+// });
   
