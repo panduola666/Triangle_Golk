@@ -19,6 +19,8 @@
   - assets # 靜態資源放置處
     - images # 圖片放置處
     - scss # SCSS 的樣式放置處
+    - js # 各頁面的 js 邏輯放置處
+    - api # 不同 API 的管理處
 
   - layout # ejs 模板放置處
   - pages # 頁面放置處
