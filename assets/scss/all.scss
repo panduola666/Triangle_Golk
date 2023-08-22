@@ -1,8 +1,18 @@
 @import './custom.scss'; // BS 樣式導入
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+@import './base/base';
+
+
+@import './components/card';
+@import './components/icon';
+
 
 // 其他客製樣式
 @import './layout/header.scss';
 @import './layout/footer.scss';
-
+@import './layout/pagination';
 
 @import './pages/index.scss';
+@import './pages/achievement.scss';
+@import './pages/course';

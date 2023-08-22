@@ -1,0 +1,13 @@
+.page-nav .pagination {
+    --bs-pagination-border-radius: 0;
+}
+
+.page-link {
+    border: none;
+    color: $secondary;
+
+    &:hover {
+        background: #fff;
+        border-bottom: 1px solid $secondary;
+    }
+}

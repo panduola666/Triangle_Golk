@@ -10,16 +10,80 @@
 
 <body>
   <%- include('./layout/header'); -%>
+    <section class="p-l">
+      BS 樣式
+      <div class="fs-1">h1 / fs-1: 48px</div>
+      <div class="fs-2">h2 / fs-2: 40px</div>
+      <div class="fs-3">h3 / fs-3: 32px</div>
+      <div class="fs-4">h4 / fs-4: 28px</div>
+      <div class="fs-5">h5 / fs-5: 24px</div>
+      <div class="fs-6">h6 / fs-6: 20px</div>
+      <div class="small">small / small 標籤: 14px</div>
+      <div class="fs-tiny">fs-tiny: 12px</div>
+      <br>
+      <button type="button" class="btn btn-primary">primary</button>
+      <button type="button" class="btn btn-outline-primary">outline-primary</button>
+      <button type="button" class="btn btn-secondary">secondary</button>
+      <button type="button" class="btn btn-outline-secondary">outline-secondary</button>
+    </section>
+    <ol class="d-flex gap-3">
+      <li class="d-flex flex-column">
+        <h2 class="fs-6">bg-black</h2>
+        <div style="width: 100px;height: 100px;" class="bg-black"></div>
+      </li>
+      <li class="d-flex flex-column">
+        <h2 class="fs-6">bg-gray-500</h2>
+        <div style="width: 100px;height: 100px;" class="bg-gray-500"></div>
+      </li>
+      <li class="d-flex flex-column">
+        <h2 class="fs-6">bg-gray-400</h2>
+        <div style="width: 100px;height: 100px;" class="bg-gray-400"></div>
+      </li>
+      <li class="d-flex flex-column">
+        <h2 class="fs-6">bg-gray-300</h2>
+        <div style="width: 100px;height: 100px;" class="bg-gray-300"></div>
+      </li>
+      <li class="d-flex flex-column">
+        <h2 class="fs-6">bg-gray-200</h2>
+        <div style="width: 100px;height: 100px;" class="bg-gray-200"></div>
+      </li>
+      <li class="d-flex flex-column">
+        <h2 class="fs-6">bg-white</h2>
+        <div style="width: 100px;height: 100px;" class="bg-white border"></div>
+      </li>
+      <li class="d-flex flex-column">
+        <h2 class="fs-6">bg-primary</h2>
+        <div style="width: 100px;height: 100px;" class="bg-primary"></div>
+      </li>
+      <li class="d-flex flex-column">
+        <h2 class="fs-6">bg-secondary</h2>
+        <div style="width: 100px;height: 100px;" class="bg-secondary"></div>
+      </li>
+      <li class="d-flex flex-column">
+        <h2 class="fs-6">bg-blue</h2>
+        <div style="width: 100px;height: 100px;" class="bg-blue"></div>
+      </li>
+      <li class="d-flex flex-column">
+        <h2 class="fs-6">bg-orange</h2>
+        <div style="width: 100px;height: 100px;" class="bg-orange"></div>
+      </li>
+      <li class="d-flex flex-column">
+        <h2 class="fs-6">bg-secondary-subtle</h2>
+        <div style="width: 100px;height: 100px;" class="bg-secondary-subtle"></div>
+      </li>
+    </ol>
+
+
+
     <div style="padding: 3rem;background-color: pink;">
       <button class="btn btn-outline-primary  myBtn">登入</button>
       <button class="btn btn-primary myBtn2">其他 api 測試</button>
       <button class="btn btn-primary signOut">登出</button>
-      <button class="btn btn-primary signOut">測試</button>
       <h2>記得打開開發人員工具, 查看主控台的 console 資料</h2>
     </div>
 
 
-    <h1 class="index-title">我是首頁</h1>
+    <div class="index-title">我是首頁</div>
     <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
 
     <%- include('./layout/footer'); -%>

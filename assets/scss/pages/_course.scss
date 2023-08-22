@@ -1,0 +1,7 @@
+.search-value {
+    text-indent: 35px;
+
+    &:focus {
+        border: 1px solid $primary;
+    }
+}
