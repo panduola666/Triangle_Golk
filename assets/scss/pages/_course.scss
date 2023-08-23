@@ -5,3 +5,17 @@
         border: 1px solid $primary;
     }
 }
+
+.badge {
+    width: 100%;
+    top: 15px;
+    padding-left: 15px;
+
+    .favorite {
+        right: 15px;
+
+        &:hover {
+            font-variation-settings: 'FILL' 1;
+        }
+    }
+}
