@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
+" rel="stylesheet">
     <title>課程清單</title>
 </head>
 
@@ -249,12 +252,73 @@
                     </a>
                 </li>
             </ul>
-            <button class="apply btn btn-blue fw-bold">申請</br>新課</button>
+            <button type="button" class="apply btn btn-blue fw-bold" data-bs-toggle="modal"
+                data-bs-target="#apply-modal">申請</br>新課
+            </button>
+
+            <div class="modal fade" id="apply-modal" tabindex="-1" aria-labelledby="apply-modalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fw-bold" id="apply-modalLabel">申請新課</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="needs-validation d-flex flex-column" novalidate>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold mb-1" for="course-name">課程名稱</label>
+                                    <input class="form-control small py-1 ps-2" id="course-name" type="text"
+                                        placeholder="請輸入課程名稱" required>
+                                    <div class="invalid-feedback">
+                                        請輸入課程名稱
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold mb-1" for="brand-name">該課程開設在哪家平台</label>
+                                    <input class="form-control small py-1 ps-2" id="brand-name" type="text"
+                                        placeholder="請輸入平台名稱" required>
+                                    <div class="invalid-feedback">
+                                        請輸入平台名稱
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold mb-1" for="course-link">該課程的頁面連結</label>
+                                    <input class="form-control small py-1 ps-2" id="course-link" type="text"
+                                        placeholder="請輸入課程連結" required>
+                                    <div class="invalid-feedback">
+                                        請輸入課程連結
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold mb-1" for="comment">請寫下你的理由</label>
+                                    <textarea class="form-control comment small py-1 ps-2" id="comment" cols="30"
+                                        rows="10" placeholder="最多不超過 400 字" maxlength="400" minlength="5"
+                                        required></textarea>
+                                    <div class="invalid-feedback">
+                                        請寫下你的理由
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary"
+                                        data-bs-dismiss="modal">取消</button>
+                                    <button type="submit" class="btn btn-primary" id="show-alert">送出申請</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <%- include('./layout/pagination'); -%>
             <%- include('./layout/footer'); -%>
-
+                <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
                 <script type="module" src="../main.js"></script>
+                <script type="module" src="../assets/js/course.js"></script>
 </body>
 
 </html>
