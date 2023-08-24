@@ -17,3 +17,33 @@ img {
         'GRAD' 0,
         'opsz' 48
 }
+.cur-point{
+    cursor: pointer;
+}
+.btn{
+    font-weight: bold;
+}
+.btn-primary{
+    color: $secondary;
+    &:hover,&:disabled{
+        background-color: #80E142;
+        color: #0D1F00;
+    }
+}
+.btn-outline-primary:hover,.btn-outline-primary:disabled{
+    border-color: #80E142;
+    color: #80E142;
+    background: $white;
+}
+.btn-secondary{
+    color: $primary;
+    &:hover,&:disabled{
+        background-color: #0D1F00;
+        color: #80E142;
+    }
+}
+.btn-outline-secondary:hover,.btn-outline-secondary:disabled{
+    border-color: #0D1F00;
+    color: #0D1F00;
+    background: $white;
+}

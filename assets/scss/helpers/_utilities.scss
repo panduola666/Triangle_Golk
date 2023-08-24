@@ -135,6 +135,7 @@ $utilities: map-merge(
     ),
     "border-top": (
       property: border-top,
+      responsive: true,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
@@ -157,6 +158,7 @@ $utilities: map-merge(
     ),
     "border-start": (
       property: border-left,
+      responsive: true,
       class: border-start,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
@@ -196,12 +198,14 @@ $utilities: map-merge(
     // Sizing utilities
     // scss-docs-start utils-sizing
     "width": (
+      responsive: true,
       property: width,
       class: w,
       values: (
         25: 25%,
         50: 50%,
         75: 75%,
+        90: 90%,
         100: 100%,
         auto: auto
       )
