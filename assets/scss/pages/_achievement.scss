@@ -1,5 +1,9 @@
 .badge-book{
     height: 550px;
+    img{
+        height: 250px;
+        object-fit: cover;
+    }
 }
 .badge-circle {
   width: 44px;

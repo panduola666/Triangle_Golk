@@ -4,7 +4,7 @@ const { createEditor, createToolbar } = window.wangEditor
 
 const editorConfig = {
     placeholder: '最多不超過 100 字',
-    maxLength: 100,
+    maxLength: 100, // 字數最大限制
     onChange(editor) {
       const html = editor.getHtml()
       const text = editor.getText()
@@ -21,7 +21,7 @@ const editor = createEditor({
 })
 
 const toolbarConfig = {
-    toolbarKeys:['bold', 'underline', 'italic', 'fontSize', '|','undo','redo'] // 工具欄重新配置
+    toolbarKeys:['bold', 'underline', 'italic', '|','undo','redo'] // 工具欄重新配置
 }
 
 const toolbar = createToolbar({

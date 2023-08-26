@@ -1,7 +1,6 @@
 .form-required::before{
     content: '*';
     color: $danger;
-    font-size: $h5-font-size;
     margin-right: .2rem;
     vertical-align: middle;
 }
