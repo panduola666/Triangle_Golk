@@ -1,0 +1,37 @@
+.about-list{
+    background-image: url(/assets/images/starry-sky.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    counter-reset: card-counter; /* 初始化計數器 */
+}
+.about-card{
+    position: relative;
+    border: solid 1px $primary;
+    background: #ffffff;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 80px solid $primary;
+        border-right: 80px solid transparent;
+        border-bottom: 80px solid transparent;
+        }
+    &::before{
+        content: counter(card-counter); /* 使用計數器的值作為內容 */
+        position: absolute;
+        counter-increment: card-counter; /* 遞增計數器 */
+        color: #ffffff;
+        font-size: 1.5em;
+        line-height: 1.5;
+        text-align: left;
+        font-weight: bold;
+        top: 0.25em;
+        left: 0.75em;
+        z-index: 2;
+    }
+}
