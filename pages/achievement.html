@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>徽章成就</title>
   </head>
   <body>
@@ -11,12 +12,12 @@
     <main class="container py-lg-xxl py-xl">
       <div class="row flex-column-reverse gy-5 py-lg-0 flex-lg-row">
         <!-- 徽章圖鑑 -->
-        <div class="col border border-secondary border-4 py-xxl text-center position-relative d-flex flex-column justify-content-around badge-book position-relative ">
+        <div class="col border border-secondary border-4 py-xxl text-center position-relative d-flex flex-column justify-content-around badge-book position-relative bg-secondary-subtle fw-bold">
           <span class="badge-circle badge-circle-top"></span>
           <span class="badge-circle badge-circle-middle"></span>
           <span class="badge-circle badge-circle-bottom"></span>
           <!-- 封面 start -->
-          <!-- <h1>徽章圖鑑</h1>
+          <!-- <h1 class="fw-bold">徽章圖鑑</h1>
           <p>請選擇欲察看之徽章</p> -->
           <!-- 封面 end -->
 
@@ -24,15 +25,18 @@
           <article class="px-4 flex-grow-1">
             <div>
               <span class="btn bg-secondary text-primary float-end py-2 px-3">已獲得</span>
-              <img src="https://images.unsplash.com/photo-1683009427513-28e163402d16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="" class="w-100 my-3">
+              <img src="../assets/images/avatar-01.svg" alt="" class="w-100 my-3">
             </div>
             <section class="text-start">
-              <h2 class="fs-5 mb-4">完課徽章 - LV 1</h2>
+              <h2 class="fs-5 mb-4 fw-bold">完課徽章 - LV 1</h2>
               <p class="mb-0">獲得途徑:</p>
-              <p>上傳完課證明3次</p>
+              <div class="d-flex flex-wrap justify-content-between">
+                <p>上傳完課證明3次</p>
+                <button type="button" class="btn btn-danger btn-state fs-6 float-end">設為頭像</button>
+              </div>
             </section>
           </article>
-          <button type="button" class="btn btn-danger position-absolute set-avatar rounded-circle fs-4">設為頭像</button>
+            
           <!-- 內頁 end -->
         </div>
         <!-- 徽章墻 -->
@@ -40,35 +44,52 @@
           <div class="badge-table-cur d-flex flex-column justify-content-around p-5 gap-3 position-relative">
             <span class="badge-table-top position-absolute"></span>
             <span class="badge-table-right"></span>
-
             <div class="table-first bg-gray-300 flex-grow-1 p-2 pb-3 d-flex flex-column">
               <p class="mb-2">完課徽章</p>
               <div class="row row-cols-3 flex-grow-1">
-                <img class="col img-fluid" src="https://images.unsplash.com/photo-1683009427513-28e163402d16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
-                <img class="col img-fluid" src="https://images.unsplash.com/photo-1683009427513-28e163402d16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
-                <img class="col img-fluid" src="https://images.unsplash.com/photo-1683009427513-28e163402d16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                <!-- avatar-active 當前選擇要查看樣式的小箭頭, hover 的時候要切換 -->
+                <div class="col avatar-active position-relative">
+                  <img class="w-100 h-100 opacity-100" src="../assets/images/avatar-01.svg" alt="完課徽章-LV1">
+                </div>
+                <div class="col position-relative">
+                  <img class="w-100 h-100" src="../assets/images/avatar-02.svg" alt="完課徽章-LV2">
+                </div>
+                <div class="col position-relative">
+                  <img class="w-100 h-100" src="../assets/images/avatar-03.svg" alt="完課徽章-LV3">
+                </div>
               </div>
             </div>
             <div class="table-middle d-flex justify-content-around flex-grow-1 gap-3">
               <div class="table-middle-left bg-gray-300 flex-grow-1 p-3 pt-2 text-center d-flex flex-column">
                 <p class="mb-2">入門徽章</p>
                 <div class="row flex-grow-1">
-                  <img class="col img-fluid" src="https://images.unsplash.com/photo-1683009427513-28e163402d16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                  <div class="col position-relative">
+                    <img class="w-100 h-100" src="../assets/images/avatar-04.svg" alt="入門徽章">
+                  </div>
+                  
                 </div>
               </div>
               <div class="table-middle-rigth bg-gray-300 flex-grow-1 p-3 pt-2 text-center d-flex flex-column">
                 <p class="mb-2">申課徽章</p>
                 <div class="row flex-grow-1">
-                  <img class="col img-fluid" src="https://images.unsplash.com/photo-1683009427513-28e163402d16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                  <div class="col position-relative">
+                    <img class="w-100 h-100" src="../assets/images/avatar-05.svg" alt="申課徽章">
+                  </div>
                 </div>
               </div>
             </div>
             <div class="table-bottom bg-gray-300 flex-grow-1 p-2 pb-3 d-flex flex-column">
               <p class="mb-2">學習徽章</p>
               <div class="row row-cols-3 flex-grow-1">
-                <img class="col img-fluid" src="https://images.unsplash.com/photo-1683009427513-28e163402d16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
-                <img class="col img-fluid" src="https://images.unsplash.com/photo-1683009427513-28e163402d16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
-                <img class="col img-fluid" src="https://images.unsplash.com/photo-1683009427513-28e163402d16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                <div class="col position-relative">
+                  <img class="w-100 h-100" src="../assets/images/avatar-06.svg" alt="學習徽章-LV1">
+                </div>
+                <div class="col position-relative">
+                  <img class="w-100 h-100" src="../assets/images/avatar-07.svg" alt="學習徽章-LV2">
+                </div>
+                <div class="col position-relative">
+                  <img class="w-100 h-100" src="../assets/images/avatar-08.svg" alt="學習徽章-LV3">
+                </div>
               </div>
             </div>
           </div>

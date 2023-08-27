@@ -29,37 +29,55 @@
     height: 550px;
     width: 100%;
     background-color: $gray-200;
-    transform-style: preserve-3d;
-    transform: rotate3d(.7, 1.5, 0, 7deg);
     img{
         object-fit: cover;
+        max-height: 100px;
+        cursor: pointer;
+        opacity: .7;
+        &:hover{
+        opacity: 1;
+        transform: translateY(-2px);
+        }
     }
 }
+
+.avatar-active::before{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 8px solid rgba(0,0,0,0);
+    border-top: 8px solid $secondary;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .badge-table-top{
-    width: 100%;
-    height: 200px;
+    width: 101%;
+    height: 199px;
     background-color: $gray-500;
     transform-style: preserve-3d;
     transform-origin:center bottom;
-    transform: rotateX(-90deg);
+    transform: rotateX(-80deg) rotateZ(11deg) rotateY(2deg);
     left: 0;
     top: -200px;
 
 }
 .badge-table-right{
     width: 200px;
-    height: 100%;
+    height: 102%;
     background-color: $gray-400;
     position: absolute;
     right: -200px;
     transform-style: preserve-3d;
     transform-origin: left;
-    transform: rotateY(-90deg);
+    transform: rotateX(-10deg) rotateY(-100deg) translate3d(-200px, 0, 0);
 
 }
 .set-avatar{
     right: 30px;
     bottom: 30px;
-    padding: 30px 20px;
-    transform: rotate(10deg);
+    // padding: 30px 20px;
+    // transform: rotate(10deg);
 }

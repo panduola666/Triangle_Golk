@@ -10,7 +10,41 @@
 
 <body>
   <%- include('./layout/header'); -%>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#couse-comment">
+  完課評價
+</button>
 
+<!-- Modal -->
+<div class="modal fade" id="couse-comment" tabindex="-1" aria-labelledby="couse-comment" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <!-- 評價主題 comment-style0:便條紙 comment-style1:書籤 -->
+    <article class="modal-content bg-secondary text-primary fw-bold comment-style1">
+      <div class="translate-middle-y">
+        <button class="btn btn-outline-primary rounded-circle float-end" data-bs-dismiss="modal">X</button>
+      </div>
+      <div>
+        <div class="stars-icon d-flex text-primary float-end">
+            <span class="material-symbols-outlined ">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined outline-icon">star</span>
+            <span class="material-symbols-outlined outline-icon">star</span>
+            <span class="material-symbols-outlined outline-icon">star</span>
+        </div>
+          <p class="fs-5">汪汪：</p>
+      </div>
+      <p class="fs-4 mb-0">一開始只會跟著照抄而已，很多地方都不是很理解，但是慢慢地也越來越理解為什麼要這樣寫，很推薦這門課大家可以參考看看</p>
+      <div>
+        <!-- 課程審核進度 -->
+        <!-- <button type="button" class="btn btn-danger btn-state float-end" data-bs-dismiss="modal">評價內容違反社群規範</button> -->
+        <!-- 編輯 icon -->
+        <span class="material-symbols-outlined outline-icon cur-point float-end">
+          edit_square
+          </span>
+      </div>
+    </article>
+  </div>
+</div>
     <%- include('./layout/footer'); -%>
 
       <script type="module" src="../main.js"></script>
