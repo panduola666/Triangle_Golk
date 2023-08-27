@@ -4,10 +4,9 @@
 
 .page-link {
     border: none;
-    color: $secondary;
 
     &:hover {
         background: #fff;
-        border-bottom: 1px solid $secondary;
+        border-bottom: 2px solid $secondary;
     }
 }
