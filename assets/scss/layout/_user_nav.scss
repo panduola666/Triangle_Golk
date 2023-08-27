@@ -1,0 +1,9 @@
+.nav-item>a {
+    &:hover {
+        border-bottom: 3px solid $primary;
+    }
+
+    &.active {
+        border-bottom: 3px solid $secondary;
+    }
+}
