@@ -1,4 +1,9 @@
 .about-list{
+    background-image: url(/assets/images/starry-sky.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     counter-reset: card-counter; /* 初始化計數器 */
 }
 .about-card{
@@ -29,11 +34,4 @@
         left: 0.75em;
         z-index: 2;
     }
-}
-.about-bgimg{
-    background-image: url(/assets/images/starry-sky.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
 }
