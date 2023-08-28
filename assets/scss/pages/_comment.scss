@@ -30,6 +30,14 @@
         transform-origin: left;
     }
 }
+.btn-state{
+    width: 120px;
+    height: 120px;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 50%;
+    transform: rotate(15deg);
+}
 
 #editor—wrapper {
     border: 1px solid $secondary;
