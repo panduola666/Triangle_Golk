@@ -1,4 +1,15 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+// .header{
+//   background: #69F0AE;
+//   font-size: 64px;
+// }
+
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+ul li{
+  list-style: none; 
 }

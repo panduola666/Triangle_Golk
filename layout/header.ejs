@@ -1,4 +1,107 @@
-<h1 class="header">我是 header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
+<!-- <h1 class="header">我是 header</h1> -->
+<nav class="navbar navbar-expand-lg bg-white sticky-top navbar-secondary p-3 shadow-sm">
+    <div class="container">
+        <a class="logo" href="#">
+            <img src="../assets/images/en_logo.png" style="width: 150px;" alt="三角購客logo"></a>
+
+            <!-- 折疊 -->
+            <button class=" btn btn-white navbar-toggler p-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <!-- 螢幕顯示 -->
+              <div class="mx-auto my-3 d-lg-none d-none d-xs-none">
+    
+
+           <!-- 平台選單 -->
+            <ul class="navbar-nav ms-auto dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="nav-item dropdown-item-text">
+                  <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="#">平台</a>
+                </li>
+                <li class="nav-item dropdown-item-text">
+                  <a class="nav-link mx-2 text-uppercase" href="#">關鍵字</a>
+                </li>
+              </ul>
+
+            <!-- 搜尋 -->
+        
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-white text-gray-500" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg></button>
+              </form>
+
+        
+  <!-- 通知 -->
+  <ul class="navbar-nav ms-auto ">
+    <li class="nav-item">
+      <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+          </svg>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link mx-2 text-uppercase" href="#">恭喜您，「Javascript 核心篇」課程審核通過！<br> 2023-01-23 12:00:00 </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link mx-2 text-uppercase" href="#"> <button onclick="myFunction()" id="myBtn">顯示更多</button> </a>
+      </li>
+  </ul>
+
+       <!--課程清單 -->
+       <ul class="navbar-nav ms-auto ">
+        <li class="nav-item">
+          <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="#">課程清單</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2 text-uppercase" href="#">Javascript 核心篇1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Javascript 核心篇2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Javascript 核心篇3</a>
+          </li>
+      </ul>
+
+      <!-- 我的課程 -->
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item">
+          <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="#">我的課程</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2 text-uppercase" href="#">Javascript 核心篇1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Javascript 核心篇2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Javascript 核心篇3</a>
+          </li>
+      </ul>
+
+         <!-- 會員專區-->
+         <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="#">會員專區</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="#">關注清單</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="#">徽章成就</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="#">登出</a>
+              </li>
+          </ul>
+
+          <button onclick="myFunction()" id="myBtn">登入/註冊</button>
+
+        </div>
+        </div>
+    </div>
+    </nav>
+

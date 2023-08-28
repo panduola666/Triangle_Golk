@@ -2,6 +2,9 @@
 // Option B: Include parts of Bootstrap
 
 @import "../../node_modules/bootstrap/scss/functions";
+
+
+
 @import "./helpers/variables";
 
 @import "../../node_modules/bootstrap/scss/variables-dark";
@@ -24,7 +27,7 @@
 @import "../../node_modules/bootstrap/scss/transitions";
 // @import "../../node_modules/bootstrap/scss/dropdown";
 // @import "../../node_modules/bootstrap/scss/button-group";
-// @import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/nav";
 // @import "../../node_modules/bootstrap/scss/navbar";
 @import "../../node_modules/bootstrap/scss/card";
 @import "../../node_modules/bootstrap/scss/accordion";

@@ -1,0 +1,65 @@
+.badge-book{
+    height: 550px;
+    img{
+        height: 250px;
+        object-fit: cover;
+    }
+}
+.badge-circle {
+  width: 44px;
+  height: 24px;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: $secondary;
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+    &-top{
+        top: 25%;
+    }
+    &-middle{
+        top: 50%;
+    }
+    &-bottom{
+        top: 75%;
+    }
+}
+.badge-table-cur{
+    height: 550px;
+    width: 100%;
+    background-color: $gray-200;
+    transform-style: preserve-3d;
+    transform: rotate3d(.7, 1.5, 0, 7deg);
+    img{
+        object-fit: cover;
+    }
+}
+.badge-table-top{
+    width: 100%;
+    height: 200px;
+    background-color: $gray-500;
+    transform-style: preserve-3d;
+    transform-origin:center bottom;
+    transform: rotateX(-90deg);
+    left: 0;
+    top: -200px;
+
+}
+.badge-table-right{
+    width: 200px;
+    height: 100%;
+    background-color: $gray-400;
+    position: absolute;
+    right: -200px;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transform: rotateY(-90deg);
+
+}
+.set-avatar{
+    right: 30px;
+    bottom: 30px;
+    padding: 30px 20px;
+    transform: rotate(10deg);
+}

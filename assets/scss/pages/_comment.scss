@@ -1,0 +1,42 @@
+.form-required::before{
+    content: '*';
+    color: $danger;
+    margin-right: .2rem;
+    vertical-align: middle;
+}
+.comment-style0{ // 便條紙樣式
+    border-radius: 1rem;
+    padding: $spacer * 3;
+}
+.comment-style1{ // 書籤樣式
+    padding: $spacer * 4 $spacer * 3;
+    position: relative;
+    &::after,&::before{
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+        width: 6rem;
+        height: 2rem;
+        background-color: $primary;
+        border: 1px solid $secondary;
+    }
+    &::before{
+        transform: translate(50%, 60%) rotate(-50deg);
+        transform-origin: left;
+    }
+    &::after{
+        transform: translate(40%, 50%) rotate(-10deg);
+        transform-origin: left;
+    }
+}
+
+#editor—wrapper {
+    border: 1px solid $secondary;
+}
+.w-e-bar-divider{
+background-color: $secondary;
+}
+#toolbar-container { border-bottom: 1px solid $secondary; width: 100%; }
+#editor-container { min-height: 10rem;}
+.w-e-max-length-info{visibility: hidden;}

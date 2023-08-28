@@ -1,0 +1,36 @@
+.search-value {
+    text-indent: 35px;
+
+    &:focus {
+        border: 1px solid $primary;
+    }
+}
+
+.badge {
+    width: 100%;
+    top: 15px;
+    padding-left: 15px;
+
+    .favorite {
+        right: 15px;
+
+        &:hover {
+            font-variation-settings: 'FILL' 1;
+        }
+    }
+}
+
+.apply {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    bottom: 0;
+    right: 0;
+    margin: 30px 30px;
+}
+
+.comment {
+    resize: none;
+    height: 200px;
+}

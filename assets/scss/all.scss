@@ -1,8 +1,22 @@
 @import './custom.scss'; // BS 樣式導入
 
+@import'./base/base';
+
+@import './components/card';
+@import './components/icon';
+@import './components/modal';
+
+
 // 其他客製樣式
 @import './layout/header.scss';
 @import './layout/footer.scss';
-
+@import './layout/pagination';
+@import './layout/user_nav';
 
 @import './pages/index.scss';
+@import './pages/achievement';
+@import './pages/course';
+@import './pages/comment';
+@import './pages/about';
+@import './pages/contact';
+@import './pages/user';
