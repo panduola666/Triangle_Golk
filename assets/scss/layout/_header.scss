@@ -7,3 +7,9 @@
 ul li {
   list-style: none;
 }
+
+.hover-style:hover{
+  text-decoration: underline;
+      color: var(--primary, #9FE870)
+}
+
