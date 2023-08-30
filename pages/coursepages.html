@@ -27,43 +27,61 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
             </div>
          
             <!-- 課程介紹 -->
-            <div class="container d-flex justify-content-around ms-auto">
+            <div class=" d-flex justify-content-around g-lg-6 g-md-4 g-2">
 
-            <!-- 課程 -->
-            <div class="main-course">
-            <h1 class="page-title fw-bold">JavaScript 核心篇</h1>
+            <!-- 課程標題 -->
+            <div class="main-course g-lg-6 g-md-4 g-2">
 
+            <span class="course-title d-flex justify-content-between mb-3 align-items-center">
+            <span class="d-flex justify-content-between">
+            <button class="btn btn-outline-secondary text-nowrap fw-bold bg-white m-auto">六角學院</button>
+            <h1 class="page-title fw-bold text-nowrap ms-2">JavaScript 核心篇</h1>
+        </span>
+            <button class="favorite material-symbols-outlined outline-icon border-3 rounded-circle p-auto text-secondary bg-white fw-bold fill-icon " style="height: 2.5rem;">favorite</button>      
+        </span>
             <!-- 課程圖片 -->
 
+            <div class="blackboard mb-3 g-lg-6 g-md-4 g-2">
             <div class="pic">
-                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80" alt="2023 Python 全攻略" class="card-pic">
+
+                            <span class="material-symbols-outlined position-absolute text-white top-0 start-0 " style="font-size: 4rem;">
+                                military_tech
+                                </span>
+
+                        <span class="material-symbols-outlined position-absolute text-secondary bottom-0 end-0 " style="font-size: 5rem;">
+                            format_ink_highlighter
+                            </span>
+
+                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80" alt="JavaScript 核心篇
+                " class="card-pic">
             </div>
+        </div>
 
 
 
 
             <!-- 評分 -->
             <div class="stars-icon d-flex text-primary">
-                <span class="material-symbols-outlined ">star</span>
-                <span class="material-symbols-outlined">star</span>
-                <span class="material-symbols-outlined ">star</span>
-                <span class="material-symbols-outlined ">star</span>
-                <span class="material-symbols-outlined outline-icon">star</span>
+                <span class="material-symbols-outlined" style="font-size: 3rem;">star</span>
+                <span class="material-symbols-outlined" style="font-size: 3rem;">star</span>
+                <span class="material-symbols-outlined" style="font-size: 3rem;">star</span>
+                <span class="material-symbols-outlined" style="font-size: 3rem;">star</span>
+                <span class="material-symbols-outlined outline-icon" style="font-size: 3rem;">star</span>
               </div>
 
 
             <!-- 標籤 -->
 
-            <div class="course-label">
+            <div class="course-label mt-2 ">
                 <p class="h6">標籤：</p>
             <div class="switch-tabs d-flex justify-content-between mb-4">
                 <ul class="nav nav-pills gap-2">
                     <li class="nav-item">
-                        <button class="btn btn-secondary active">程式</button>
+                        <button class="btn btn-outline-secondary">程式</button>
                     </li>
 
                     <li class="nav-item">
-                        <button class="btn btn-secondary active">JS</button>
+                        <button class="btn btn-outline-secondary">JS</button>
                     </li>
                     <li class="nav-item">
                         <button class="btn btn-outline-secondary">JavaScript</button>
@@ -74,22 +92,22 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
                 </ul>
             </div>
 
-
-
         </div>
 
 
 
 
 
-     <!-- 小測驗 -->
+    
 
-   
+   <!-- 課程進修室 -->
+<div class="study align-self-center g-lg-6 g-md-4 g-2">
 
+    <!-- 小測驗 -->
                  <form class="needs-validation d-flex flex-column bg-primary bg-gradient p-4 m-4" novalidate>
 
                     <div class="mb-3">
-                        <h4 class="me-auto text-nowrap">課堂小測</h4>
+                        <h4 class="text-nowrap text-center">課堂小測</h4>
                     </div>
 
                      <div class="mb-3">
@@ -112,12 +130,22 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
                      </div>
 
 
-
                     <!-- 送出申請 -->
                     <div class="modal-footer justify-content-around">
                         <button type="submit" class="btn btn-secondary" id="show-alert">提交</button>
                     </div>
                 </form>
+
+                <div class="modal-footer justify-content-around m-4 ">
+                    <button type="submit" class="btn btn-secondary " id="show-alert">課程進修室</button>
+                </div>
+
+                <div class="modal-footer justify-content-around m-4 ">
+                    <!-- <img src="../assets/images/cute.png" style="width: 500px;" alt="mascot"></a> -->
+                    <img src="../assets/images/study.png" style="width: 200px;" alt="mascot"></a>
+                </div>
+
+            </div>
 
 
     
@@ -143,8 +171,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
                 </ul>
             </div>
 
- <!-- 評價 -->
- <ul class="course-list row list-unstyled g-lg-6 g-md-4 g-2 mb-5">
+ <!-- 課程評價 -->
+ <ul class="course-list row list-unstyled g-lg-6 g-md-4 g-2 mb-5 ">
     <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
  <article class="bg-secondary text-primary fw-bold comment-style1 w-90 w-lg-100">
     <div class="stars-icon d-flex text-primary float-end">
@@ -156,6 +184,13 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
     </div>
     <p class="fs-5">汪汪：</p>
     <p class="fs-4">一開始只會跟著照抄而已，很多地方都不是很理解，但是慢慢地也越來越理解為什麼要這樣寫，很推薦這門課大家可以參考看看</p>
+   <span class="thumb-up d-flex align-items-center">
+    <span class="material-icons">
+        thumb_up
+        </span>
+        <p class=" text-primary">10</p>
+    </span>
+
   </article>
 </div>
 </div>
@@ -171,8 +206,14 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
          <span class="material-symbols-outlined ">star</span>
        </div>
        <p class="fs-5">小咪：</p>
-       <p class="fs-4">老師講得太好了,剛好我面試就遇到裡面好多個問題,真的好險有選這門課,老師保佑我面試成功~ </p>
-     </article>
+       <p class="fs-4">老師講得太好了,剛好我面試就遇到裡面好多的問題,真的好險有選這門課,老師保佑我面試成功~很推薦正準備面試的大家可以參考 </p>
+       <span class="thumb-up d-flex align-items-center">
+        <span class="material-icons">
+            thumb_up
+            </span>
+            <p class=" text-secondary">17</p>
+        </span>  
+    </article>
    </div>
    </div>
    </li>
@@ -187,9 +228,15 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
          <span class="material-symbols-outlined outline-icon">star</span>
        </div>
        <p class="fs-5">阿哞：</p>
-       <p class="fs-4">不推薦初學者。
-        有時候老師講的速度太快了，還沒來得及反應就進到下一個重點，希望可以再放慢一點。</p>
-     </article>
+       <p class="fs-4">不推薦初學者，需要有點基礎再上會比較好。有時候老師講的速度太快了，還沒來得及反應就進到下一個重點，希望可以再放慢。</p>
+       <span class="thumb-up d-flex align-items-center">
+        <span class="material-icons">
+            thumb_up
+            </span>
+            <p class=" text-secondary">7</p>
+        </span> 
+    
+    </article>
    </div>
    </div>
    </li>
@@ -204,8 +251,14 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
          <span class="material-symbols-outlined ">star</span>
        </div>
        <p class="fs-5">喵喵最大尾：</p>
-       <p class="fs-4">以前想著能動就好，殊不知有很多地方都是多餘的步驟，自從上了這門課我的code也越來越簡潔了!!!</p>
-     </article>
+       <p class="fs-4">以前想著程式能動就好，殊不知有很多地方都是多餘的步驟，自從上了這門課我的code也越來越簡潔了，推薦這門課!!!</p>
+       <span class="thumb-up d-flex align-items-center">
+        <span class="material-icons">
+            thumb_up
+            </span>
+            <p class=" text-secondary">17</p>
+        </span>  
+    </article>
    </div>
    </div>
    </li>
@@ -222,7 +275,13 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
        </div>
        <p class="fs-5">福豬豬：</p>
        <p class="fs-4">這門課需要有點基礎再上會比較好，沒有基礎的話就要在課程以外的時間自己去補充知識，以免會跟不上</p>
-     </article>
+       <span class="thumb-up d-flex align-items-center">
+        <span class="material-icons">
+            thumb_up
+            </span>
+            <p class=" text-secondary">20</p>
+        </span>  
+    </article>
    </div>
    </div>
    </li>
@@ -238,7 +297,13 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
        </div>
        <p class="fs-5">Mi兔：</p>
        <p class="fs-4">每次聽每次有不同的收穫，老師也會用一些生動的範例給我們講解，但我還是最喜歡漂亮阿姨出現在範例裡面 XD</p>
-     </article>
+       <span class="thumb-up d-flex align-items-center">
+        <span class="material-icons">
+            thumb_up
+            </span>
+            <p class=" text-primary">7</p>
+        </span>  
+    </article>
    </div>
    </div>
    </li>

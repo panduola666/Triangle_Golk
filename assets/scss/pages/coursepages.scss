@@ -36,6 +36,8 @@
 }
 
 
+
+
 .circle {
     color: white;
     font-weight:bold;
@@ -51,3 +53,27 @@
 
     }
   }
+
+
+.blackboard {
+    // background:url("../assets/images/blackboard.png") no-repeat center / cover; 
+    background-color: $secondary;
+    padding: 20px;
+    border: 5px solid $primary;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+ 
+  
+  
+  .pic {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+  }
+  
+  .outline-icon {
+    font-variation-settings: "FILL" 0;
+}
+
