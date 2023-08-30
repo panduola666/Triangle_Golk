@@ -3,7 +3,6 @@ const { VITE_BASEURL } = import.meta.env
 
 //  user 相關 api
 export const User = {
-    content: ['我是user內容1','我是user內容2'],
     // 登入
     async login(data) {
        try {
