@@ -1,17 +1,21 @@
 
 <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-secondary p-3 shadow-sm">
-  <div class="container d-flex justify-content-between ms-auto">
-    <a class="navbar-brand" href="#">
-      <img src="../assets/images/en_logo.png" style="width: 150px;" alt="三角購客logo"></a>
+  <div class="container-fluid d-flex justify-content-around ms-auto ">
 
+    <!-- logo -->
+
+    <div class="container d-flex">
+    <a class="navbar-brand" href="index.html">
+      <img src="../assets/images/en_logo.png" style="width: 150px;" alt="三角購客logo"></a>
+    </div>
     
 
     <!-- 折疊  -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
+  
+    <div class="collapse navbar-collapse d-flex justify-content-around ms-auto" id="navbarSupportedContent">
     </button>
-    <div class="collapse navbar-collapse d-flex justify-content-around   " id="navbarSupportedContent">
-
    <!-- 螢幕顯示  -->
     <!-- <div class="mx-auto my-3 d-lg-block d-none d-xs-none">  -->
 
@@ -23,8 +27,8 @@
         <!-- 平台  -->
 
 
-  <li class="nav-item dropdown d-lg-none">
-    <a class="nav-link dropdown-toggle  " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <li class="nav-item dropdown d-lg-block d-md-none d-sm-none">
+    <a class="nav-link dropdown-toggle text-nowrap " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       平台
     </a>
     <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
@@ -36,7 +40,7 @@
     <!-- 搜尋 -->
         
     <form class="d-flex" >
-      <input class="form-control me-2 d-lg-none " type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control me-2  d-lg-block d-md-none d-sm-none" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-white text-gray-500 " type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
         </svg></button>
@@ -62,8 +66,13 @@
 </div>
 
       <!--課程清單 -->
-      <p  >
-        <a class="btn btn-white text-nowrap" data-bs-toggle="collapse" href="#collapseList" role="button" aria-expanded="false" aria-controls="collapseList">
+
+      <li class="nav-item text-nowrap d-lg-block d-md-none d-sm-none">
+        <a class="nav-link" href="course.html">課程清單</a>
+      </li>
+
+      <!-- <p  >
+        <a class="btn btn-white text-nowrap d-lg-block d-md-none d-sm-none" data-bs-toggle="collapse" href="#collapseList" role="button" aria-expanded="false" aria-controls="collapseList">
          課程清單
         </a>
       </p>
@@ -83,11 +92,17 @@
         <div class="card card-body hover-style">
           顯示更多
         </div>
-      </div>
+      </div> -->
 
       <!-- 我的課程 -->
+
+      <!-- <li class="nav-item text-nowrap d-lg-block d-md-none d-sm-none">
+        <a class="nav-link" href="#">我的課程</a>
+      </li> -->
+
+
       <p >
-        <a class="btn btn-white text-nowrap d-lg-none" data-bs-toggle="collapse" href="#collapseMycourse" role="button" aria-expanded="false" aria-controls="collapseMycourse">
+        <a class="btn btn-white text-nowrap d-lg-block d-md-none d-sm-none " data-bs-toggle="collapse" href="#collapseMycourse" role="button" aria-expanded="false" aria-controls="collapseMycourse">
           我的課程
         </a>
       </p>
@@ -110,13 +125,13 @@
       </div>
 
       <!-- 會員專區-->
-      <li class="nav-item dropdown d-lg-none">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <li class="nav-item dropdown d-lg-block d-md-none d-sm-none ">
+        <a class="nav-link dropdown-toggle text-nowrap" href="user.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           會員專區
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item hover-style text-nowrap" href="#">關注清單</a></li>
-          <li><a class="dropdown-item hover-style text-nowrap" href="#">徽章成就</a></li>
+          <li><a class="dropdown-item hover-style text-nowrap" href="achievement.html">徽章成就</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item text-nowrap" href="#"> 登出</a></li>
         </ul>
@@ -127,7 +142,7 @@
      <button class="btn btn-outline-secondary btn-sm text-nowrap align-self-sm-md-center" onclick="myFunction()" id="myBtn">登入/註冊</button>
 
 
-
+    
 </ul>
 </div>
 
