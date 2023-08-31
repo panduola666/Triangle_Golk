@@ -53,6 +53,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-
-

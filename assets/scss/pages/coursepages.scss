@@ -1,37 +1,18 @@
-
-
-.badge {
-    width: 100%;
-    top: 15px;
-    padding-left: 15px;
-
-    .favorite {
-        right: 15px;
-
-        &:hover {
-            font-variation-settings: 'FILL' 1;
-        }
-    }
-}
-
-
-
-
 .circle {
     color: white;
-    font-weight:bold;
+    font-weight: bold;
     border-radius: 50%;
     background: lightgray;
-    padding: 5px; 
+    padding: 5px;
     margin-bottom: 10px;
-  
-   
+
+
 
     &:hover {
         border: 3px solid $primary;
 
     }
-  }
+}
 
 
 .blackboard {
@@ -40,19 +21,19 @@
     padding: 20px;
     border: 5px solid $primary;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
- 
-  
-  
-  .pic {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+
+
+    .pic {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
 }
-  }
-  
-  .outline-icon {
+
+.outline-icon {
     font-variation-settings: "FILL" 0;
 }
 
