@@ -1,7 +1,7 @@
 import { Comment } from '../api';
 
 
-const modal = document.querySelector('.modal-dialog')
+const modal = document.querySelector('.comment-modal')
 const modalBtn = document.querySelectorAll('.modal-btn')
 
 modalBtn.forEach(btn => {

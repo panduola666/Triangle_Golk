@@ -51,8 +51,13 @@ async function init() {
   } else{
     // 新增
     commentView.classList.add(`comment-style${params.theme}`)
-   const res = await Course.getCourse(courseId)
-   renderCourseCard(res)
+    try{
+      const res = await Course.getCourse(courseId)
+      renderCourseCard(res)
+    }
+    catch(err) {
+      location.href = '/pages/user_courses.html'
+    }
   }
   isShowName(params.showName)
   renderProveImg(params.image)
