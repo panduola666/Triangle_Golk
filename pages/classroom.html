@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
+" rel="stylesheet">
+    <title>進修室</title>
+</head>
+
+<body>
+    <%- include('./layout/header'); -%>
+        <main class="container">
+
+            <div class="page-header my-4 d-flex justify-content-between">
+                <span class="d-flex justify-content-between">
+                <span class="material-symbols-outlined h2">
+                    meeting_room
+                    </span>
+                <h2 class="fw-bold">離開教室</h2>
+            </span>
+                <div class="dropdown">
+                    <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      教室：R1
+                    </a>
+                  
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">教室：R2</a></li>
+                      <li><a class="dropdown-item" href="#">教室：R3</a></li>
+                      <li><a class="dropdown-item" href="#">教室：R4</a></li>
+                    </ul>
+                  </div>
+
+            </div>
+            
+            <!-- 座位區 -->
+
+            <div class="container border border-secondary vh-100 w-auto mb-3">
+
+                <!-- 課程名稱 -->
+                <span class="course-title d-flex justify-content-around mb-3 align-items-center ">
+                <span class="d-flex justify-content-around border border-secondary p-3 bg-primary">
+                    <button class="btn btn-outline-secondary text-nowrap fw-bold bg-white m-auto">六角學院</button>
+                    <h1 class="page-title fw-bold text-nowrap ms-2">JavaScript 核心篇</h1>
+                </span>
+            </span>
+
+
+            <!-- <ul class="course-list row list-unstyled g-lg-6 g-md-4 g-2 mb-5 flex-grow-1 ">
+                <li class="col-lg-4 col-md-6 col-12 d-flex flex-column flex-grow-1 ">
+                    <a class="card card-hover h-100 position-relative" href="#">
+                        <div class="pic">
+                            <span class="triangle"></span>
+                        </div>
+
+
+                        </a>
+
+                        </li>
+                    </ul> -->
+
+
+
+
+
+
+
+
+                <!-- 氣泡框 -->
+            <div class="position-relative message">
+            <button type="button" class=" btn btn-primary fw-bold position-absolute top-100 start-100 translate-middle" data-bs-toggle="modal"
+            data-bs-target="#apply-modal"><span class="material-icons">
+                chat_bubble
+                </span>
+        </button>
+    </div>
+
+        <div class="modal fade" id="apply-modal" tabindex="-1" aria-labelledby="apply-modalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border border-secondary  bg-primary  border-1">
+
+                    <!-- 聊天室 -->
+
+                    <div class="container my-3">
+                       
+            
+                
+                          <!-- <div class="col-md-auto"> -->
+                            <div class="card chatroom">
+                              <div class="card-body pt-1 mb-5">
+                      
+                                <div class="message-block">
+                                  <div class="row gx-2 mb-5 ">
+
+                                    <!-- 圖片 -->
+
+                                    <div class="col-1 d-flex justify-content-center">
+                                      <div class="avator mt-1  ">
+                                        <img class="w-auto h-auto opacity-100 border border-light border-5 rounded-circle" src="../assets/images/avatar-01.svg" alt="完課徽章-LV1">
+                                      </div>
+                                    </div>
+
+                                    <!-- 使用者名稱 -->
+                                    <div class="col-8 text-nowrap fw-bold">
+                                      <div>
+                                        熊熊:
+
+                                        <!-- 訊息 -->
+                                        <small class="text-muted ms-4">
+                                            <button class="btn btn-outline-secondary btn-sm text-nowrap align-self-sm-md-center border border-light border-5" onclick="myFunction()" id="myBtn">哈囉 有人在嗎</button>
+                                         
+
+                                       <!-- 訊息框 -->
+                                      <div class="message-content p-2 mt-2 rounded-3" >
+                                       
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+                         
+                          <div class="col-md-3 align-self-center">
+
+                          </div>
+                        </div>
+                      
+                      <footer>
+                        <div class=" pb-4 input-group bg-primary align-self-center ">
+                            <input type="text" class="form-control" v-model="message"  placeholder="讓我們用訊息，一起寫下學習之旅的感動吧">
+                            <button class="btn btn-outline-secondary" type="button" >
+                                <span class="material-icons">
+                                rocket_launch
+                                </span></button>
+                          </div>
+
+                      </footer>
+                    </div>
+                        </form>
+
+       
+
+
+
+
+            </div>
+            
+      
+
+<!-- 氣泡框 -->
+
+            <!-- <button type="button" class="message btn btn-primary fw-bold position-absolute bottom-0 end-0" data-bs-toggle="modal"
+                data-bs-target="#apply-modal"><span class="material-icons">
+                    chat_bubble
+                    </span>
+            </button>
+
+            <div class="modal fade" id="apply-modal" tabindex="-1" aria-labelledby="apply-modalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border border-secondary  bg-primary  border-1"> -->
+
+                        <!-- 聊天室 -->
+
+                        <!-- <div class="container my-3"> -->
+                           
+                
+                    
+                              <!-- <div class="col-md-auto"> -->
+                                <!-- <div class="card chatroom">
+                                  <div class="card-body pt-1 mb-5">
+                          
+                                    <div class="message-block">
+                                      <div class="row gx-2 mb-5 "> -->
+
+                                        <!-- 圖片 -->
+
+                                        <!-- <div class="col-1 d-flex justify-content-center">
+                                          <div class="avator mt-1  ">
+                                            <img class="w-auto h-auto opacity-100 border border-light border-5 rounded-circle" src="../assets/images/avatar-01.svg" alt="完課徽章-LV1">
+                                          </div>
+                                        </div> -->
+
+                                        <!-- 使用者名稱 -->
+                                        <!-- <div class="col-8 text-nowrap fw-bold">
+                                          <div>
+                                            熊熊: -->
+
+                                            <!-- 訊息 -->
+                                            <!-- <small class="text-muted ms-4">
+                                                <button class="btn btn-outline-secondary btn-sm text-nowrap align-self-sm-md-center border border-light border-5" onclick="myFunction()" id="myBtn">哈囉 有人在嗎</button>
+                                              -->
+
+                                           <!-- 訊息框 -->
+                                          <!-- <div class="message-content p-2 mt-2 rounded-3" >
+                                           
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> -->
+
+
+                             
+                              <!-- <div class="col-md-3 align-self-center">
+    
+                              </div>
+                            </div>
+                          
+                          <footer>
+                            <div class=" pb-4 input-group bg-primary align-self-center ">
+                                <input type="text" class="form-control" v-model="message"  placeholder="讓我們用訊息，一起寫下學習之旅的感動吧">
+                                <button class="btn btn-outline-secondary" type="button" >
+                                    <span class="material-icons">
+                                    rocket_launch
+                                    </span></button>
+                              </div>
+
+                          </footer>
+                        </div>
+                            </form> -->
+
+           
+        </main>
+       
+            <%- include('./layout/footer'); -%>
+                <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+                <script type="module" src="../main.js"></script>
+                <script type="module" src="../assets/js/course.js"></script>
+                <script type="module" src="../assets/js/classroom.js"></script>
+</body>
+
+</html>
