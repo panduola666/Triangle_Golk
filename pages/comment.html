@@ -14,6 +14,8 @@
 </head>
 
 <body>
+  <%- include('./layout/header'); -%>
+
     <main class="container">
       <h2 class="page-title fw-bold my-4">完課評價－<span>JavaScript 核心篇</h2>
 
@@ -23,7 +25,7 @@
             <div class="mb-3">
               <label for="course-img" class="form-label form-required fs-5">完課證明：</label>
               <!-- .is-invalid 控制錯誤訊息提示是否出現 -->
-              <input type="url" class="form-control is-invalid" id="course-img" name="course-img"
+              <input type="url" class="form-control" id="course-img" name="course-img"
                 placeholder="請輸入圖片網址(url)" required>
               <p class="text-gray-400 mb-0">(請由右側預覽，檢查完課證明是否正常顯示)</p>
               <div class="invalid-feedback">請輸入證明圖片網址</div>
@@ -40,10 +42,10 @@
               </div>
             </div>
             <div class="scores-choose mb-3">
-              <h3 class="fs-5 form-required is-invalid">課程評分：</h3>
+              <h3 class="fs-5 form-required course-scores">課程評分：</h3>
               <div class="stars-icon d-flex text-primary me-2">
-                <span class="material-symbols-outlined cur-point" value="1">star</span>
-                <span class="material-symbols-outlined cur-point" value="2">star</span>
+                <span class="material-symbols-outlined cur-point outline-icon" value="1">star</span>
+                <span class="material-symbols-outlined cur-point outline-icon" value="2">star</span>
                 <span class="material-symbols-outlined cur-point outline-icon" value="3">star</span>
                 <span class="material-symbols-outlined cur-point outline-icon" value="4">star</span>
                 <span class="material-symbols-outlined cur-point outline-icon" value="5">star</span>
@@ -51,7 +53,7 @@
               <div class="invalid-feedback">請為課程評分</div>
             </div>
             <div class="flex-grow-1 d-flex flex-column">
-              <h3 class="fs-5 form-required is-invalid">課程評價：</h3>
+              <h3 class="fs-5 form-required course-content">課程評價：</h3>
               <!-- 文字編輯器 start -->
               <div id="editor—wrapper" class="flex-grow-1">
                 <div id="toolbar-container"><!-- 工具栏 --></div>
@@ -77,15 +79,15 @@
             </div>
             <!-- 評價主題 comment-style0:便條紙 comment-style1:書籤 -->
             <article class="bg-secondary text-primary fw-bold comment-style1 w-90 w-lg-100">
-              <div class="stars-icon d-flex text-primary float-end">
-                <span class="material-symbols-outlined ">star</span>
-                <span class="material-symbols-outlined">star</span>
-                <span class="material-symbols-outlined outline-icon">star</span>
-                <span class="material-symbols-outlined outline-icon">star</span>
-                <span class="material-symbols-outlined outline-icon">star</span>
+              <div class="stars-icon d-flex text-primary float-end comment-scores">
+                <span class="material-symbols-outlined outline-icon" value="1">star</span>
+                <span class="material-symbols-outlined outline-icon" value="2">star</span>
+                <span class="material-symbols-outlined outline-icon" value="3">star</span>
+                <span class="material-symbols-outlined outline-icon" value="4">star</span>
+                <span class="material-symbols-outlined outline-icon" value="5">star</span>
               </div>
-              <p class="fs-5">汪汪：</p>
-              <p class="fs-4">一開始只會跟著照抄而已，很多地方都不是很理解，但是慢慢地也越來越理解為什麼要這樣寫，很推薦這門課大家可以參考看看</p>
+              <p class="fs-5 comment-userName">汪汪：</p>
+              <p class="fs-4 comment-content">一開始只會跟著照抄而已，很多地方都不是很理解，但是慢慢地也越來越理解為什麼要這樣寫，很推薦這門課大家可以參考看看</p>
             </article>
           </div>
         </div>
