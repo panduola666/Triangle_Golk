@@ -4,9 +4,16 @@
     margin-right: .2rem;
     vertical-align: middle;
 }
+.prove-img{
+    max-height: 150px;
+    object-fit: cover;
+}
 .comment-style0{ // 便條紙樣式
     border-radius: 1rem;
     padding: $spacer * 3;
+    .comment-style1::after , .comment-style1::before{
+        display: none;
+    }
 }
 .comment-style1{ // 書籤樣式
     padding: $spacer * 4 $spacer * 3;

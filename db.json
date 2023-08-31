@@ -3,7 +3,9 @@
     {
       "email": "admin@gmail.com",
       "password": "$2a$10$o0jLpH4FKyj8xCyGwOwmleRI5uRQ0clWPNyihUdoaxE1kFP93rp6u",
-      "avatars": [1],
+      "avatars": [
+        1
+      ],
       "avatarId": 1,
       "nickName": "圈圈",
       "totalCheckIn": 0,
@@ -11,7 +13,7 @@
       "id": 1
     }
   ],
-  "favorites":[
+  "favorites": [
     {
       "id": 1,
       "userId": 1,
@@ -40,7 +42,11 @@
       "id": 1,
       "title": "JavaScript 核心篇",
       "platform": "六角學院",
-      "tag": ["程式","JS","JavaScript"],
+      "tag": [
+        "程式",
+        "JS",
+        "JavaScript"
+      ],
       "cover": "https://images.unsplash.com/photo-1602992708529-c9fdb12905c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGphdmFzY3JpcHR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
       "url": "https://www.hexschool.com/courses/js-core.html"
     }
@@ -59,23 +65,25 @@
       "userId": 1,
       "courseId": 1,
       "canEdit": true,
-      "image": "",
-      "showName": 1,
-      "score": 4,
-      "content": "非常推薦這門課",
+      "image": "https://images.unsplash.com/file-1635990755334-4bfd90f37242image?dpr=2&auto=format&fit=crop&w=416&q=60",
+      "showName": 0,
+      "score": 5,
+      "content": "<p>非常推薦這門課, 深入淺出我覺得剛剛好</p>",
       "theme": 1,
-      "isPAssed": -1,
+      "isPassed": -1,
       "failContent": "",
       "likes": [],
-      "timer": 1690092142269
+      "timer": 1693496315633
     }
   ],
-  "chatRooms":[
+  "chatRooms": [
     {
       "id": 1,
       "courseId": 1,
       "total": 30,
-      "onlineUsers": [1],
+      "onlineUsers": [
+        1
+      ],
       "name": "教室一"
     }
   ],
@@ -91,7 +99,7 @@
       "timer": 1690092378676
     }
   ],
-  "userMails":[
+  "userMails": [
     {
       "id": 1,
       "userId": 1,

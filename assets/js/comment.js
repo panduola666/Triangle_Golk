@@ -1,50 +1,115 @@
 import 'https://unpkg.com/@wangeditor/editor@latest/dist/index.js'
-import { Course } from '../api';
+import { Course, Comment } from '../api';
 
-// TODO: 需要 1.當前課程id參數  2.userId  3.當前是新增還是編輯
+
+// TODO: 需要 1.當前課程id參數  2.userId  3.當前是新增還是編輯 4.選擇匿名跟實名需要用戶參數才可以使用
 
 const currCourse = document.querySelector('#curr-course')
 const courseForm = document.querySelector('#comment-form')
 const startIcons = document.querySelector('.stars-icon')
 const starts = startIcons.querySelectorAll('.material-symbols-outlined')
+const commentContent = document.querySelector('.comment-content')
+const commentView = document.querySelector('.comment-view')
+const proveImg = document.querySelector('.prove-img')
+const userName = document.querySelector('.comment-userName')
 
-const params = {
-  "userId": 1, // 需參數
-  "courseId": 1, // 需參數
-  "canEdit": true,
-  "isPAssed": -1,
-  "failContent": "",
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.has('id') && urlParams.get('id') // 評論id => 編輯
+const courseId = urlParams.has('courseId') && urlParams.get('courseId') // 課程 id => 新增
+let params = {
+  userId: 1, // 需參數, 這邊先待假資料
+  courseId,
+  isPassed: -1,
+  failContent: '',
+  canEdit: true,
+  theme: 0,
+  likes: []
 } // 完整表單參數
 let text
+const user = {
+  nickName: '',
+  email: ''
+}
 
 // 獲取初始化資料
-function init() {
-  // 新增 or 編輯參數
-  const config = 'new' // 假裝是新增參數
-  params.likes = config === 'new' ? [] : params.likes
-  Course.getCourse(1).then(res => {
-      currCourse.innerHTML = `
-      <div class="row g-0">
-      <div class="col-5 col-lg-4">
-        <img src="${res.cover}" class="img-fluid rounded-start"
-          alt="${res.title}">
-      </div>
-      <div class="col">
-        <div class="card-body">
-          <h4 class="card-title text-truncate">${res.title}</h4>
-        </div>
-        <div class="card-footer">
-        <div class="tags mb-2 mt-auto">
-        ${res.tag.map(tag => (`<span class="fs-8 me-2">#${tag}</span>`)).join('')}
-          </div>
-        </div>
-      </div>
-    </div>`
-  })
+async function init() {
+  if(id) { // 編輯
+   const res = await Comment.getCurrent(id)
+   params = {...params,...res}
+   user.nickName = res.user.nickName
+   user.email = res.user.email.slice(0,res.user.email.indexOf('@'))
+   // 編輯樣式初始化
+   courseForm['course-img'].value = params.image
+   courseForm['public-name'].value = params.showName
+
+   finalStart(params.score)
+   startHover()
+   commentContent.innerHTML = params.content
+   editor.setHtml(params.content)
+   courseForm['comment-style'].value = params.theme
+   renderCourseCard(params.course)
+  } else{
+    // 新增
+    commentView.classList.add(`comment-style${params.theme}`)
+   const res = await Course.getCourse(courseId)
+   renderCourseCard(res)
+  }
+  isShowName(params.showName)
+  renderProveImg(params.image)
+  commentView.classList.add(`comment-style${params.theme}`)
+
+
+
 }
 init()
 
-// 評分
+// 繪製當前課程 card 樣式
+function renderCourseCard (data) {
+  currCourse.innerHTML = `
+  <div class="row g-0">
+  <div class="col-5 col-lg-4">
+    <img src="${data.cover}" class="img-fluid rounded-start"
+      alt="${data.title}">
+  </div>
+  <div class="col">
+    <div class="card-body">
+      <h4 class="card-title text-truncate">${data.title}</h4>
+    </div>
+    <div class="card-footer">
+    <div class="tags mb-2 mt-auto">
+    ${data.tag.map(tag => (`<span class="fs-8 me-2">#${tag}</span>`)).join('')}
+      </div>
+    </div>
+  </div>
+</div>`
+}
+// 繪製完課證明圖片
+function renderProveImg(data = '') {
+  if(data) {
+    proveImg.classList.remove('d-none')
+    proveImg.setAttribute('src', data)
+  } else {
+    proveImg.classList.add('d-none')
+  }
+}
+
+// 輸入網址後渲染圖片
+courseForm['course-img'].addEventListener('change', (e) => renderProveImg(e.target.value))
+
+// 名稱顯示更換
+courseForm['public-name'].forEach(showName => {
+  showName.addEventListener('change', (e) => isShowName(e.target.value))
+})
+function isShowName(value) {
+  if(Number(value)) {
+    userName.innerHTML = `${user.nickName}：`
+  }else{
+    userName.innerHTML = user.email ? `${user.email[0]}***${user.email[user.email.length - 1]}：` : '：'
+  }
+}
+
+
+// 左側課程評分切換
 starts.forEach(start => {
   start.addEventListener('click', (e) => {
     params.score = e.target.getAttribute('value')
@@ -67,7 +132,7 @@ function startHover (e) {
    if(item.getAttribute('value') <= scores )  item.classList.remove('outline-icon')
   })
 }
-// 最終評價 show 出來的評分
+// 右側課程評分 show
 function finalStart(scores){
   const commentScore = document.querySelector('.comment-scores').querySelectorAll('.material-symbols-outlined')
   commentScore.forEach(start => {
@@ -76,6 +141,14 @@ function finalStart(scores){
   })
 }
 
+// 切換評價主題
+courseForm['comment-style'].forEach(themeInput => {
+  themeInput.addEventListener('click', (e) => {
+  commentView.classList.remove('comment-style1')
+  commentView.classList.remove('comment-style0')
+  commentView.classList.add(`comment-style${e.target.value}`)
+  })
+})
 
 // 表單完成送出
 courseForm.addEventListener('submit', (e) => {
@@ -89,7 +162,7 @@ courseForm.addEventListener('submit', (e) => {
   courseForm.querySelector('.course-scores').classList.remove('is-invalid')
   courseForm.querySelector('.course-content').classList.remove('is-invalid')
   
-  if(!params.courseImg) {
+  if(!params.image) {
     courseForm['course-img'].classList.add('is-invalid')
   }
   if(!params.score) {
@@ -107,8 +180,27 @@ courseForm.addEventListener('submit', (e) => {
   }
   if(errorDom) return
 
+  // 驗證全部通過
+  // 修正型別
+  const {courseId, userId, showName, score, theme} = params
+  params.courseId = Number(courseId)
+  params.userId = Number(userId)
+  params.showName = Number(showName)
+  params.score = Number(score)
+  params.theme = Number(theme)
+  if(params.id){
+    // 編輯
+    params.canEdit = false // 後續不可再編輯
+    params.isPassed = -1 // 需重複審核
+    console.log(params);
+    delete params.user
+    delete params.course
 
-  console.log(params);
+    Comment.editorComment(params.id, params)
+  }else{
+    // 新增
+    Comment.addComment(params)
+  }
 })
 
 
@@ -121,6 +213,7 @@ const editorConfig = {
     onChange(editor) {
       const html = editor.getHtml() // 獲取用戶輸入的 html 結構
       text = editor.getText()
+      commentContent.innerHTML = html // 把內容渲染到預覽頁面上
       params.content = html
     }
 }
