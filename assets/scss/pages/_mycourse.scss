@@ -1,0 +1,46 @@
+.notebook{
+  padding-top: 100px;
+}
+.notebook-page-left {
+  width: 44%; /* 設定內頁寬度 */
+  margin: 0 auto; /* 內頁位置 */
+  margin-right: 10px;
+  padding: 20px 5%; /* 添加內容內邊距 */
+  background-color: #fff; /* 內頁背景顏色 */
+  border: 1px solid #ddd; /* 內頁邊框 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 內頁陰影效果 */
+  position: relative; /* 添加紙張紋理 */
+}
+.notebook-page-left::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  right: -10px;
+  bottom: -10px;
+  border: solid 1px #ddd;
+  border-right: solid 1.5px #666;
+  z-index: -1;
+}
+.notebook-page-right {
+  width: 44%; /* 設定內頁寬度 */
+  margin: 0 auto; /* 將內頁置中 */
+  margin-left: 10px;
+  padding: 20px 5%; /* 添加內容內邊距 */
+  background-color: #fff; /* 內頁背景顏色 */
+  border: 1px solid #ddd; /* 內頁邊框 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 內頁陰影效果 */
+  position: relative; /* 添加紙張紋理 */
+}
+
+.notebook-page-right::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -5px;
+  bottom: -10px;
+  border: solid 1px #ddd;
+  border-left: solid 1.5px #666;
+  z-index: -1;
+}
