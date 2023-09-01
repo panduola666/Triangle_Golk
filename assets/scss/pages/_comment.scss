@@ -37,6 +37,14 @@
         transform-origin: left;
     }
 }
+.course-page-comment{
+    @extend .comment-style1;
+    &::after,&::before{
+        background-color: $secondary;
+        border-color: $primary;
+        width: 5.5rem;
+    }
+}
 .btn-state{
     width: 120px;
     height: 120px;
