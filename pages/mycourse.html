@@ -11,21 +11,22 @@
 <body>
   <%- include('./layout/header'); -%>
     <%- include('./layout/user_nav'); -%>
-      <main style="min-height: 100vh;">
-        <div class="notebook d-flex justify-content-center">
-          <div class="notebook-page-left">
+    <!-- 未完成 -->
+      <main class="container min-vh-100">
+        <article class="notebook d-flex justify-content-center">
+          <section class="notebook-page-left">
             <div class="single-note">
-              <img src="" alt="">
-              <h2>課程名稱</h2>
+              <img src="../assets/images/course-001-code.jpeg" alt="course cover">
+              <h2>使用HTML、CSS開發一個網站</h2>
             </div>
-          </div>
-          <div class="notebook-page-right">
+          </section>
+          <section class="notebook-page-right">
             <div class="single-note">
               <!-- 參看課程卡片 -->
-              <!-- <div class="card-body">
+              <div class="card-body">
                 <h3 class="title text-secondary fs-6 fw-bold">JavaScript 核心篇</h3>
-            </div> -->
-            <!-- <div class="card-footer">
+              </div>
+              <div class="card-footer">
                 <div class="tags mb-2 mt-auto">
                     <span class="fs-8 me-2">#程序</span>
                 </div>
@@ -39,10 +40,10 @@
                     </div>
                     <span class="fs-8 text-gray-400">(666)</span>
                 </div>
-            </div> -->
             </div>
-          </div>
-        </div>
+            </div>
+          </section>
+        </article>
       </main>
   <%- include('./layout/footer'); -%>
 
