@@ -11,9 +11,25 @@
     width: 80px;
     height: 80px;
     border-radius: 20px;
-    bottom: 0;
+    bottom: 310px;
     right: 0;
     margin: 30px 30px;
+    animation: float 2s linear infinite;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .comment {
