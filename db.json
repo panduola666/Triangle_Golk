@@ -49,6 +49,62 @@
       ],
       "cover": "https://images.unsplash.com/photo-1602992708529-c9fdb12905c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGphdmFzY3JpcHR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
       "url": "https://www.hexschool.com/courses/js-core.html"
+    },
+    {
+      "id": 2,
+      "title": "使用HTML、CSS開發一個網站",
+      "platform": "六角學院",
+      "tag": ["程式","HTML","CSS", "入門基礎"],
+      "cover": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8SFRNTCUyMENTU3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "url": "https://www.hexschool.com/courses/html_css.html"
+    },
+    {
+      "id": 3,
+      "title": "2023 Python全攻略",
+      "platform": "Udemy",
+      "tag": ["Python", "爬蟲", "程式"],
+      "cover": "https://images.unsplash.com/photo-1649180556628-9ba704115795?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHl0aG9uJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "url": "https://www.udemy.com/course/python-master/"
+    },
+    {
+      "id": 4,
+      "title": "開啟內在安寧：減壓治失眠7節昆達里尼瑜伽冥想呼吸式Kundalini Yoga Meditation",
+      "platform": "Udemy",
+      "tag": ["冥想", "瑜珈", "減壓"],
+      "cover": "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHlvZ2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+      "url": "https://www.udemy.com/course/7kundalini-yoga-meditation/"
+    },
+    {
+      "id": 5,
+      "title": "從零開始學縫紉，手作森林居家三件組",
+      "platform": "Hahow",
+      "tag": ["手作", "縫紉", "零基礎入門"],
+      "cover": "https://images.unsplash.com/photo-1586216583645-bf798306a3d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fHNld2luZ3xlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+      "url": "https://hahow.in/courses/633b9a53f1c5b90006e7f459"
+    },
+    {
+      "id": 6,
+      "title": "After Effects高手之路---零基础入门篇",
+      "platform": "Udemy",
+      "tag": ["After Effects", "3D 與動畫", "零基礎入門"],
+      "cover": "https://images.unsplash.com/photo-1615817957480-39e66547e3f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEFmdGVyJTIwRWZmZWN0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "url": "https://www.udemy.com/course/after-effects-f/"
+    },
+    {
+      "id": 7,
+      "title": "打造設計說服力｜讓作品變現的攻心提案術",
+      "platform": "Hahow",
+      "tag": ["設計", "動態設計"],
+      "cover": "https://images.unsplash.com/photo-1587440871875-191322ee64b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGVzaWdufGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "url": "https://hahow.in/specialization/platform-motioner2"
+    },
+    {
+      "id": 8,
+      "title": "Git & Github 程式時光機",
+      "platform": "六角學院",
+      "tag": ["Git", "版本控制"],
+      "cover": "https://images.unsplash.com/photo-1654277041218-84424c78f0ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGdpdGh1YnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "url": "https://courses.hexschool.com/p/git-github"
     }
   ],
   "passes": [
