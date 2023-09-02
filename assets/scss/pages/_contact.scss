@@ -1,8 +1,8 @@
-// .dev-check{
-//     *, *::before, *::after{
-//         outline: solid 1px #B6B8B5;
-//     }
-// }
+.dev-check{
+    *, *::before, *::after{
+        outline: solid 1px #B6B8B5;
+    }
+}
 .form-required::before{
     content: '*';
     color: $danger;
