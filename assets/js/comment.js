@@ -225,7 +225,7 @@ const editorConfig = {
     onChange(editor) {
       const html = editor.getHtml() // 獲取用戶輸入的 html 結構
       text = editor.getText()
-      commentContent.innerHTML = html // 把內容渲染到預覽頁面上
+      commentContent.innerHTML = html.replace(/<p><br><\/p>/g, "") // 把內容渲染到預覽頁面上
       params.content = html
     }
 }

@@ -151,12 +151,12 @@ function renderComment(comments){
 
 
   // 有評論內容
-  commentList.innerHTML = comments.data.map(comment => {
+  commentList.innerHTML = comments.data.map((comment, index) => {
     const email = comment.user.email.split('@')[0]
     const hiddenName = `${email[0]}***${email[email.length -1]}`
     return `<li class="col-lg-4">
     <article
-      class="fw-bold ${comment.theme ? 'course-page-comment' : 'comment-style0'} bg-primary px-3 pb-3 d-flex flex-column h-100"
+      class="fw-bold ${comment.theme ? 'course-page-comment' : 'comment-style0'} bg-${(index + 1) % 3 === 0 ? 'blue' : (index + 1) % 3 === 1 ? 'primary' : 'orange'} px-3 pb-3 d-flex flex-column h-100"
     >
     <div class="flex-grow-1">
         <div class="stars-icon d-flex float-end">
