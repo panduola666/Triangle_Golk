@@ -1,9 +1,10 @@
-.bookmark{
+.bookmark {
   width: 5em;
-  height: 1.75em;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 1.5em;
+
+  li {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  }
 }
 .notebook-page {
   &-left, &-right {
@@ -49,17 +50,19 @@
   }
 }
 .single-note {
-  @media (max-width: 767px) {
+  border: solid 1px #ddd;
+
+  @media (max-width: 414px) {
     flex-direction: column; /* 垂直排列內容 */
     align-items: center; /* 水平置中內容 */
     text-align: center; /* 文字置中對齊 */
     }
   img {
-    max-width: 110px;
-    max-height: 110px;
+    max-width: 115px;
+    max-height: auto;
     object-fit: cover;
 
-    @media (max-width: 767px){
+    @media (max-width: 414px){
       display: none;
     }
   }
