@@ -73,7 +73,7 @@ init()
 function renderCourseCard (data) {
   currCourse.innerHTML = `
   <div class="row g-0">
-  <div class="col-5 col-lg-4">
+  <div class="col-5 col-lg-4 card-row">
     <img src="${data.cover}" class="img-fluid rounded-start"
       alt="${data.title}">
   </div>
