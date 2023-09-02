@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
-"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <title>課程內頁</title>
   </head>
 
@@ -71,8 +64,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 
               <img
                 src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80"
+                class="course-cover"
                 alt="JavaScript 核心篇"
-                class="card-pic"
               />
             </div>
           </div>
@@ -101,26 +94,28 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
           <!-- 標籤 -->
 
           <div class="course-label mt-2">
-            <p class="h6">標籤：</p>
-            <div class="switch-tabs d-flex justify-content-between">
-              <ul class="nav nav-pills gap-2">
-                <li class="nav-item">
-                  <button class="btn btn-outline-secondary">程式</button>
-                </li>
-
-                <li class="nav-item">
-                  <button class="btn btn-outline-secondary">JS</button>
-                </li>
-                <li class="nav-item">
-                  <button class="btn btn-outline-secondary">JavaScript</button>
-                </li>
-              </ul>
-            </div>
+            <p class="mb-1">標籤：</p>
+            <ul class="p-0 d-flex flex-wrap gap-2">
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
+            </ul>
           </div>
         </div>
 
         <!-- 課程進修室 -->
-        <div class="col col-lg-3 d-flex align-items-center flex-column flex-md-row flex-lg-column">
+        <div class="col col-lg-3 d-flex align-items-center justify-content-center flex-column flex-md-row flex-lg-column">
             <!-- <form
               class="needs-validation d-flex flex-column bg-primary bg-gradient p-4 flex-grow-1 flex-lg-grow-0 w-100"
               novalidate
@@ -186,10 +181,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       <!-- 評論 -->
     <ul class="nav course-page-nav align-items-center gap-2 position-relative my-5">
       <li class="nav-item">
-        <p class="nav-comment-link px-3 py-2 active">最新評論</p>
+        <p class="nav-comment-link fs-6 px-3 py-2 active">最新評論</p>
       </li>
       <li class="nav-item">
-        <p class="nav-comment-link px-3 py-2">最熱評論</p>
+        <p class="nav-comment-link fs-6 px-3 py-2">最熱評論</p>
       </li>
       <li class="flex-grow-1 bg-secondary" style="padding: 1px;"></li>
     </ul>
@@ -846,10 +841,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 
     <%- include('./layout/footer'); -%>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
     <script type="module" src="../main.js"></script>
       <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script type="module" src="../assets/js/apply_course.js"></script>
     <script type="module" src="../assets/js/course_page.js"></script>
   </body>

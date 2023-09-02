@@ -41,6 +41,14 @@
     }
   }
 }
+
+.course-cover{
+  min-height: 200px;
+  max-height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
 .course-link-icon{
     display: block;
     position: absolute;

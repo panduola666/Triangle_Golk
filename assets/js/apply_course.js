@@ -1,4 +1,5 @@
 // 專門用來寫新課申請 API
+import Swal from 'sweetalert2';
 
 $('.needs-validation').each(function (index) {
     $(this).on('submit', function (e) {

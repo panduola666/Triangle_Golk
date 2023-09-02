@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>課程清單</title>
 </head>
 
@@ -80,7 +78,7 @@
             <ul class="course-list row list-unstyled g-lg-6 g-md-4 g-2 mb-5">
                 <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
                     <!-- 課程跳頁後面需要帶該課程 id 參數 -->
-                    <a class="card card-hover h-100 rounded-4 position-relative" href="/pages/coursepages.html?id=1">
+                    <a class="card card-hover h-100 rounded-4 position-relative" href="./coursepages.html?id=1">
                         <div class="pic">
                             <img src="https://fakeimg.pl/350x200/?text=Hello" alt="快速打造響應式網頁" class="card-pic">
                         </div>
@@ -328,7 +326,6 @@
         <%- include('./layout/pagination'); -%>
             <%- include('./layout/footer'); -%>
                 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                 <script type="module" src="../main.js"></script>
                 <script type="module" src="../assets/js/apply_course.js"></script>
                 <script type="module" src="../assets/js/course.js"></script>

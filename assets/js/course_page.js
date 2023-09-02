@@ -1,4 +1,8 @@
-var swiper = new Swiper(".mySwiper", {
+import Swiper from 'swiper';
+import 'swiper/css';
+import { Navigation, Autoplay } from 'swiper/modules';
+
+const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1, // 一頁幾張
     spaceBetween: 30, // 每一頁的間距
     centeredSlides: false,
@@ -8,6 +12,7 @@ var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3
         }
     },
+    modules: [Navigation, Autoplay],
     autoplay: { // 自動撥放配置
       delay: 3000,
       disableOnInteraction: false,
