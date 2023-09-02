@@ -1,7 +1,7 @@
 // 專門用來寫新課申請 API
 import Swal from 'sweetalert2';
 
-$('.needs-validation').each(function (index) {
+$('.apply-form').each(function (index) {
     $(this).on('submit', function (e) {
         e.preventDefault();
         $(this).addClass('was-validated');
@@ -26,7 +26,7 @@ document.getElementById('apply-modal').addEventListener('submit', function (even
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('.needs-validation');
+    const form = document.querySelector('.apply-form');
     const inputFields = form.querySelectorAll('input, textarea');
 
     // 當表單提交時

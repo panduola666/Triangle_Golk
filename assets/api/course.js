@@ -6,8 +6,14 @@ export const Course = {
     // 取得單一課程資料
     async getCourse(id) {
         try {
-             const res = await axios.get(`${VITE_BASEURL}/courses/${id}`);
-             return res.data;
+             const res = await axios.get(`${VITE_BASEURL}/courses/${id}?_embed=comments&_embed=passes`);
+             // 計算課程平均分數
+             const {comments} = res.data
+             const avgScore = comments.reduce((total, item) => total += Number(item.score) ,0) / comments.length
+             return {
+                ...res.data,
+                avgScore: Math.floor(avgScore)
+             };
          } catch (err) {
              console.log(err);
              if(err.response.status === 404) {
