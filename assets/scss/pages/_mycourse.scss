@@ -58,8 +58,8 @@
     text-align: center; /* 文字置中對齊 */
     }
   img {
-    max-width: 115px;
-    max-height: auto;
+    // max-width: 110px;
+    // max-height: 110px;
     object-fit: cover;
 
     @media (max-width: 414px){
