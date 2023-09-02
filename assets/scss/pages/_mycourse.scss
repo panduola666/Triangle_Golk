@@ -1,13 +1,26 @@
+.bookmark{
+  width: 5em;
+  height: 1.75em;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 .notebook-page {
   &-left, &-right {
-    width: 40%; /* 設定內頁寬度 */
     margin: 0 auto; /* 內頁位置 */
     margin-right: 10px; /* 筆記本左頁專用值 */
-    padding: 5% 2.5% 20px; /* 添加內容內邊距 */
+    padding: 2em 2em 20px; /* 添加內容內邊距 */
     background-color: #fff; /* 內頁背景顏色 */
     border: 1px solid #ddd; /* 內頁邊框 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 內頁陰影效果 */
     position: relative; /* 添加紙張紋理 */
+
+    @media (max-width: 1200px) {
+      max-width: 100%; 
+      margin: 0 auto;
+      margin-bottom: 20px; 
+      padding: 2em;
+    }
   }
   &-right { /* 更正筆記本右頁值 完善視覺效果 */
     margin-right: none;
@@ -22,7 +35,11 @@
     bottom: -10px;
     border: solid 1px #ddd;
     border-right: solid 1.5px #666;
-    z-index: -1;
+    z-index: -1; 
+
+    // @media (max-width: 1200px) {
+    //   display: none;
+    // }
   }
   &-right::before { /* 更正筆記本右頁值 完善視覺效果 */
     left: -10px; 
@@ -32,8 +49,18 @@
   }
 }
 .single-note {
+  @media (max-width: 767px) {
+    flex-direction: column; /* 垂直排列內容 */
+    align-items: center; /* 水平置中內容 */
+    text-align: center; /* 文字置中對齊 */
+    }
   img {
-    max-width: 150px;
-    min-height: auto;
+    max-width: 110px;
+    max-height: 110px;
+    object-fit: cover;
+
+    @media (max-width: 767px){
+      display: none;
+    }
   }
 }
