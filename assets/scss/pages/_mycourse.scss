@@ -55,8 +55,8 @@
     text-align: center; /* 文字置中對齊 */
     }
   img {
-    max-width: 110px;
-    max-height: 110px;
+    // max-width: 110px;
+    // max-height: 110px;
     object-fit: cover;
 
     @media (max-width: 767px){
