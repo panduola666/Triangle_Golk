@@ -171,17 +171,19 @@
       "id": 1,
       "userId": 1,
       "courseId": 1,
-      "canEdit": true,
+      "canEdit": false,
       "image": "https://images.unsplash.com/file-1635990755334-4bfd90f37242image?dpr=2&auto=format&fit=crop&w=416&q=60",
-      "showName": 0,
+      "showName": 1,
       "score": 5,
-      "content": "<p>非常推薦這門課, 深入淺出我覺得剛剛好</p>",
+      "content": "<p>非常推薦這門課, 深入淺出我覺得剛剛好, 建議想學習 JS 的小夥伴可以試看看</p>",
       "theme": 1,
       "isPassed": -1,
       "failContent": "",
-      "likes": [3],
+      "likes": [
+        3
+      ],
       "likesNum": 1,
-      "timer": 1693496312222
+      "timer": 1693643063871
     }
   ],
   "chatRooms": [

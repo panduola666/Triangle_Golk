@@ -9,7 +9,8 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <main class="container py-lg-xxl py-xl">
+    <%- include('./layout/user_nav') -%>
+    <main class="container mt-3 mb-lg-xxl mb-xl">
       <div class="row flex-column-reverse gy-5 py-lg-0 flex-lg-row">
         <!-- 徽章圖鑑 -->
         <div class="col border border-secondary border-4 py-xxl text-center position-relative d-flex flex-column justify-content-around badge-book position-relative bg-secondary-subtle fw-bold">
@@ -99,5 +100,6 @@
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
+    <script src="../assets/js/user_nav.js"></script>
   </body>
 </html>

@@ -17,7 +17,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.has('id') && urlParams.get('id') // 評論id => 編輯
 const courseId = urlParams.has('courseId') && urlParams.get('courseId') // 課程 id => 新增
 let params = {
-  userId: 1, // 需參數, 這邊先待假資料
+  userId: 1, //先用假資料
   courseId,
   isPassed: -1,
   failContent: '',
@@ -83,7 +83,7 @@ function renderCourseCard (data) {
     </div>
     <div class="card-footer">
     <div class="tags mb-2 mt-auto">
-    ${data.tag.map(tag => (`<span class="fs-8 me-2">#${tag}</span>`)).join('')}
+    ${data.tags.map(tag => (`<span class="fs-8 me-2">#${tag}</span>`)).join('')}
       </div>
     </div>
   </div>
@@ -200,7 +200,8 @@ courseForm.addEventListener('submit', (e) => {
     failContent: '', // 清空失敗結果
     likes,
     likesNum: likes.length,
-    timer: new Date().getTime()
+    timer: new Date().getTime(),
+    userId: Number(userId)
   }
   if(params.id){
     // 編輯
