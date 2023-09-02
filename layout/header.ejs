@@ -185,17 +185,17 @@
         <div class="modal-content login-modal border-0">
           <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-              <form class="container form-content d-flex flex-column justify-content-between">
+              <form class="login-form container form-content d-flex flex-column justify-content-between">
                 <div class="form-floating">
-                  <input type="email" class="form-control" id="login-email" placeholder="name@example.com">
+                  <input type="email" class="form-control" id="login-email" name="login-email" placeholder="name@example.com">
                   <label for="login-email">信箱</label>
                 </div>
                 <div class="form-floating">
-                  <input type="password" class="form-control" id="login-password" placeholder="Password" autocomplete="on">
+                  <input type="password" class="form-control" id="login-password" name="login-password" placeholder="Password" autocomplete="on">
                   <label for="login-password">密碼</label>
                 </div>
                 <div class="d-flex flex-column gap-4">
-                  <button class="btn btn-secondary" type="button">登入會員</button>
+                  <button class="btn btn-secondary" type="submit" id="login-btn">登入會員</button>
                   <button class="btn btn-outline-secondary" id="forget-btn" type="button">忘記密碼</button>
 
                 </div>
