@@ -23,7 +23,8 @@ let params = {
   failContent: '',
   canEdit: true,
   theme: 0,
-  likes: []
+  likes: [],
+  likesNum: 0
 } // 完整表單參數
 let text
 const user = {
@@ -161,7 +162,6 @@ courseForm.addEventListener('submit', (e) => {
   params.image =  courseForm['course-img'].value
   params.showName = courseForm['public-name'].value
   params.theme = courseForm['comment-style'].value
-  params.timer = new Date().getTime()
 
   courseForm['course-img'].classList.remove('is-invalid')
   courseForm.querySelector('.course-scores').classList.remove('is-invalid')
@@ -187,24 +187,30 @@ courseForm.addEventListener('submit', (e) => {
 
   // 驗證全部通過
   // 修正型別
-  const {courseId, userId, showName, score, theme} = params
-  params.courseId = Number(courseId)
-  params.userId = Number(userId)
-  params.showName = Number(showName)
-  params.score = Number(score)
-  params.theme = Number(theme)
+  const {courseId, userId, showName, score, theme, image, content, likes} = params
+  const data = {
+    courseId: Number(courseId),
+    canEdit: true,
+    image,
+    showName: Number(showName),
+    score:  Number(score),
+    content,
+    theme: Number(theme),
+    isPassed: -1, // 重新審核
+    failContent: '', // 清空失敗結果
+    likes,
+    likesNum: likes.length,
+    timer: new Date().getTime()
+  }
   if(params.id){
     // 編輯
-    params.canEdit = false // 後續不可再編輯
-    params.isPassed = -1 // 需重複審核
-    console.log(params);
-    delete params.user
-    delete params.course
+    data.canEdit = false // 後續不可再編輯
+    data.userId = Number(userId)
 
-    Comment.editorComment(params.id, params)
+    Comment.editorComment(params.id, data)
   }else{
     // 新增
-    Comment.addComment(params)
+    Comment.addComment(data)
   }
 })
 

@@ -5,7 +5,7 @@
   background: lightgray;
   padding: 5px;
   margin-bottom: 10px;
-
+  
   &:hover {
     background-color: $secondary;
   }
@@ -115,8 +115,4 @@ justify-content: space-around;
   &.active{
     font-variation-settings: 'FILL' 1;
   }
-}
-
-.swiper-wrapper{
-  padding: 0;
 }

@@ -71,14 +71,12 @@ export const Comment = {
    * @param {*} order asc:升序 desc:降序
    * @returns
    */
-  async getComments(page = 1, limit = 6, sort='timer', order = 'desc') {
+  async getComments(page = 1, limit = 6, sort='timer', order = 'desc', courseId) {
     try {
-      const total = await axios.get(`${VITE_BASEURL}/comments?_sort=${sort}&_order=${order}`);
-        console.log(total.data);
+      const total = await axios.get(`${VITE_BASEURL}/comments?courseId=${courseId}`);
       const res = await axios.get(
-        `${VITE_BASEURL}/comments?_expand=user&_page=${page}&_limit=${limit}`
+        `${VITE_BASEURL}/comments?courseId=${courseId}&_expand=user&_page=${page}&_limit=${limit}&_sort=${sort}&_order=${order}`
       );
-
       return {
         totalPages: Math.ceil(total.data.length / 6), // 儀控幾頁
         currentPage: page, // 當前在第幾頁
