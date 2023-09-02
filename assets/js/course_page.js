@@ -208,7 +208,7 @@ async function renderOthers() {
   })
 
   // 再篩一次評價需要 3 以上 + 渲染畫面
-  const final = arr.filter(item => item.avgScore >= 3)
+  const final = arr.filter(item => item.avgScore >= 0)
   if(!final.length) {
     otherCourses.innerHTML = `
     <li class="flex-grow-1 text-center">
