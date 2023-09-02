@@ -2,7 +2,8 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Autoplay } from 'swiper/modules';
 
-const swiper = new Swiper(".mySwiper", {
+// swiper 配置
+const swiper = new Swiper(".other-courses", { // 配置你使用的 swiper class 名稱
     slidesPerView: 1, // 一頁幾張
     spaceBetween: 30, // 每一頁的間距
     centeredSlides: false,

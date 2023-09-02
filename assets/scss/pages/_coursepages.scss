@@ -73,17 +73,37 @@ justify-content: space-around;
   height: 60px;
   background-color: $primary;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   transform: skewX(-30deg);
   left: 30px;
   opacity: .7;
 }
+
 .nav-comment-link{
   cursor: pointer;
+  position: relative;
   margin: 0;
   &.active{
     font-weight: bold;
     border-bottom: 2px solid $secondary;
+  }
+  mix-blend-mode: multiply ;
+  
+  &:hover{
+    font-weight: bold;
+    &::after{
+      content: '';
+      width: 3rem;
+      height: 30px;
+      border-radius: 30px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      background-color: $primary;
+      opacity: .8;
+      z-index: -1;
+    }
   }
 }
 
