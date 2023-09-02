@@ -1,12 +1,11 @@
-.page-nav .pagination {
-    --bs-pagination-border-radius: 0;
+.p-hover{
+    border-bottom: 3px solid transparent;
+    &:hover{
+        border-bottom: 3px solid $primary;
+    }
 }
-
-.page-link {
-    border: none;
-
-    &:hover {
-        background: #fff;
-        border-bottom: 2px solid $secondary;
+.pagination{
+    .active{
+        border-bottom: 3px solid $secondary;
     }
 }
