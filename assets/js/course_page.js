@@ -49,10 +49,6 @@ const pagination = document.querySelector('.pagination')
 // 其他人還看了
 const otherCourses = document.querySelector('.other-courses > ul')
 
-// TODO 初始化時判斷該用戶是否已通過測試 => 需登入API串完才可以做
-// TODO 渲染評論時判斷自己是否有點過讚 => 需登入API串完才可以做
-// TODO 缺少評論點讚 => 需登入API串完才可以做
-
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.has('id') && urlParams.get('id');
 const sort = urlParams.has('sort') && urlParams.get('sort');

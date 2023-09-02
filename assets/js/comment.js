@@ -1,8 +1,5 @@
 import 'https://unpkg.com/@wangeditor/editor@latest/dist/index.js'
-import { Course, Comment } from '../api';
-
-
-// TODO: 需要 1.當前課程id參數  2.userId  3.當前是新增還是編輯 4.選擇匿名跟實名需要用戶參數才可以使用
+import { Course, Comment, User } from '../api';
 
 const currCourse = document.querySelector('#curr-course')
 const courseForm = document.querySelector('#comment-form')
@@ -17,14 +14,14 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.has('id') && urlParams.get('id') // 評論id => 編輯
 const courseId = urlParams.has('courseId') && urlParams.get('courseId') // 課程 id => 新增
 let params = {
-  userId: 1, //先用假資料
   courseId,
   isPassed: -1,
   failContent: '',
   canEdit: true,
   theme: 0,
   likes: [],
-  likesNum: 0
+  likesNum: 0,
+  showName: 1
 } // 完整表單參數
 let text
 const user = {
@@ -51,6 +48,9 @@ async function init() {
    renderCourseCard(params.course)
   } else{
     // 新增
+    const res = await User.getUserInfo()
+    user.nickName = res.nickName
+    user.email = res.email.slice(0, res.email.indexOf('@'))
     commentView.classList.add(`comment-style${params.theme}`)
     try{
       const res = await Course.getCourse(courseId)
@@ -187,7 +187,7 @@ courseForm.addEventListener('submit', (e) => {
 
   // 驗證全部通過
   // 修正型別
-  const {courseId, userId, showName, score, theme, image, content, likes} = params
+  const {courseId, showName, score, theme, image, content, likes} = params
   const data = {
     courseId: Number(courseId),
     canEdit: true,
@@ -201,12 +201,11 @@ courseForm.addEventListener('submit', (e) => {
     likes,
     likesNum: likes.length,
     timer: new Date().getTime(),
-    userId: Number(userId)
+    userId: Number(localStorage.getItem('userId'))
   }
   if(params.id){
     // 編輯
     data.canEdit = false // 後續不可再編輯
-    data.userId = Number(userId)
 
     Comment.editorComment(params.id, data)
   }else{
