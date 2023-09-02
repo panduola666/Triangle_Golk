@@ -89,5 +89,26 @@ export const Comment = {
         title: '獲取評論失敗',
       });
     }
-  },
+  }, 
+  // 評論點讚
+  async likeComment (id, data) {
+    try {
+      const res = await axios.patch(`${VITE_BASEURL}/comments/${id}`, data);
+      console.log(res);
+      // const swal = await Swal.fire({
+      //   icon: 'success',
+      //   text: '評價成功，我們將於 7-14 天內審核證明，若成功即可在課程頁面內查看自已的評價！',
+      //   showConfirmButton: false,
+      //   timer: 2000,
+      // });
+      // if (swal.isDismissed) location.href = '/pages/user_courses.html';
+      // return res.data;
+    } catch (err) {
+      console.log(err);
+      // const swal = await Swal.fire({
+      //   icon: 'error',
+      //   text: '新增評論失敗, 請聯繫客服處理',
+      // });
+    }
+  }
 };
