@@ -28,7 +28,7 @@ export const Course = {
     // 取的全部課程並計算課程的平均分
     async getAllCourses() {
         try {
-            const res = await axios.get(`${VITE_BASEURL}/courses?_embed=comments`);
+            const res = await axios.get(`${VITE_BASEURL}/courses?_embed=comments&_embed=favorites`);
             // 計算課程平均分數
            const final = res.data.map(course => {
                 const { comments = [] } = course
