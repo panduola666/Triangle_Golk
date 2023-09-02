@@ -155,10 +155,8 @@
       "theme": 1,
       "isPassed": -1,
       "failContent": "",
-      "likes": [
-        3
-      ],
-      "likesNum": 1,
+      "likes": [],
+      "likesNum": 0,
       "timer": 1693643063871
     }
   ],

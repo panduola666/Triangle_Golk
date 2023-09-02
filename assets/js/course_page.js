@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import Swal from 'sweetalert2';
 import { Navigation, Autoplay } from 'swiper/modules';
-import { Course, Comment, Passes } from '../api';
+import { Course, Comment, Passes, User, Favorites } from '../api';
 
 // swiper 配置
 const swiper = new Swiper('.other-courses', {
@@ -29,11 +29,15 @@ const swiper = new Swiper('.other-courses', {
 });
 
 const courseTitle = document.querySelector('.course-title section')
+const favoriteBtn = document.querySelector('.favorite-btn')
+const favoriteIcon = favoriteBtn.querySelector('.course-favorite-icon')
 const blackboardLink = document.querySelector('.blackboard-mark'); // 課程前往的鏈接
 const blackboardCover = document.querySelector('.course-cover'); // 課程封面
 const courseScores = document.querySelector('.course-scores');
 const courseTags = document.querySelector('.course-tags');
+
 const testForm = document.querySelector('.course-test');
+const classroomBtn = document.querySelector('.classroom-btn')
 const testPassed = document.querySelector('.test-passed')
 // 獲取最新 跟 最熱評論按鈕
 const nav = document.querySelector('.course-page-nav')
@@ -48,7 +52,6 @@ const otherCourses = document.querySelector('.other-courses > ul')
 // TODO 初始化時判斷該用戶是否已通過測試 => 需登入API串完才可以做
 // TODO 渲染評論時判斷自己是否有點過讚 => 需登入API串完才可以做
 // TODO 缺少評論點讚 => 需登入API串完才可以做
-// TODO 更多課程用戶是否按過收藏 => 需登入API串完才可以做
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.has('id') && urlParams.get('id');
@@ -56,9 +59,35 @@ const sort = urlParams.has('sort') && urlParams.get('sort');
 
 let course; // 單頁課程資料
 let comments; // 評論畫面列表
+let user; // 用戶資料
+async function updateUserInfo() {
+  if(!localStorage.getItem('token')) {
+    // 未登入狀態
+    favoriteBtn.classList.add('d-none')
+    classroomBtn.classList.add('d-none')
+    return
+  }
 
+ user = await User.getUserInfo()
+ console.log(user);
+ if(!user) return
+//  當前課程的收藏 icon
+ favoriteBtn.classList.remove('d-none')
+ if( user.favorites.find(item => Number(item.courseId) === Number(id))){
+  favoriteIcon.classList.remove('outline-icon')
+  }else{
+  favoriteIcon.classList.add('outline-icon')
+  }
+
+  // 課程小測是否通過
+  if(user.passes.some(item => Number(item.courseId) === Number(id))) {
+    hasTestPassed()
+  }
+}
 async function init() {
   try {
+    await updateUserInfo()
+    
     course = await Course.getCourse(id);
     comments = await Comment.getComments(1, 6, sort, 'desc', id);
 
@@ -68,6 +97,7 @@ async function init() {
     if(sort === 'timer') navBtn[0].classList.add('active')
     if(sort === 'likesNum') navBtn[1].classList.add('active')
     renderComment(comments)
+    
     // 分類版面初始化
     renderPagination()
 
@@ -80,6 +110,8 @@ async function init() {
 function hasTestPassed() {
   testForm.classList.add('d-none')
   testPassed.classList.remove('d-none')
+  classroomBtn.classList.remove('d-none')
+
 }
 // 上方課程畫面渲染
 function renderCourse(course) {
@@ -139,9 +171,9 @@ function renderComment(comments){
           ${comment.content}
         </div>
     </div>
-      <div class="d-flex align-items-center gap-2">
+      <div class="${localStorage.getItem('token') ? 'd-flex' : 'd-none'} align-items-center gap-2">
           <!-- 用 .active 控制是否點擊 -->
-        <span class="thumb-up material-symbols-outlined cur-point">
+        <span class="thumb-up ${user && comment.likes.includes(user.id) ? 'active' : ''} material-symbols-outlined cur-point" data-comment="${comment.id}">
           thumb_up
           </span>
         <p class="mb-0">${comment.likesNum}</p>
@@ -237,10 +269,12 @@ async function renderOthers() {
               class="brand bg-secondary small text-white rounded-1 py-1 px-3"
               >${item.platform}</span
             >
+            
             <span
-              class="favorite material-symbols-outlined outline-icon position-absolute"
-              >favorite</span
-            >
+            class="${ localStorage.getItem('token') ? '' : 'd-none'} favorite others-favorite-btn material-symbols-outlined position-absolute ${localStorage.getItem('token') && item.favorites.some(userLike => userLike.userId === user.id) ? '' : 'outline-icon'}"
+            data-id="${item.id}"
+            >favorite</span
+          >
           </div>
           <div class="card-body">
             <h3 class="title text-secondary fs-6 fw-bold text-truncate">${item.title}</h3>
@@ -267,11 +301,67 @@ async function renderOthers() {
     </div>
     `
   }).join('')
+
+  // 每個課程內的關注按鈕點擊
+  const otherBtn = document.querySelectorAll('.others-favorite-btn')
+  otherBtn.forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault()
+      console.log(btn);
+
+      // if(!e.target.dataset.id) return
+        const index = user.favorites.findIndex(item => Number(item.courseId) === Number(e.target.dataset.id))
+        if(index === -1) {
+          // 加入
+          await Favorites.add(id)
+          btn.classList.remove('outline-icon')
+        } else{
+          const currId = user.favorites[index].id
+          await Favorites.remove(currId)
+          btn.classList.add('outline-icon')
+        }
+      await updateUserInfo()
+    })
+  })
 }
 
 init();
 
-// 課堂小測
+// 上方加入/移除關注
+favoriteBtn.addEventListener('click', async (e) => {
+  e.stopPropagation()
+  const index = user.favorites.findIndex(item => Number(item.courseId) === Number(id))
+  if(index === -1) {
+    // 加入
+    await Favorites.add(id)
+  } else{
+    // 移除
+    const currId = user.favorites[index].id
+    await Favorites.remove(currId)
+  }
+  await updateUserInfo()
+  console.log(user);
+
+})
+
+// 評論區點讚
+commentList.addEventListener('click', async (e)=>{
+  if(!e.target.dataset.comment) return
+  // 找到當前點擊的評論資料
+  const current = comments.data.find(comment => comment.id === Number(e.target.dataset.comment))
+  const { id, likes ,likesNum } = current
+  if(likes.includes(user.id)) return // 點過讚的人
+  // 點讚
+  likes.push(user.id)
+  const data = {
+    likes,
+    likesNum: likes.length
+  }
+  Comment.likeComment(id, data)
+  renderComment(await Comment.getComments(Number(e.target.dataset.link), 6, sort, 'desc', id))
+})
+
+// 課堂小測提交
 testForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -297,9 +387,20 @@ testForm.addEventListener('submit', (e) => {
     return;
   }
 
+  if(!localStorage.getItem('token')) {
+    // 用戶未登入
+    Swal.fire({
+      icon: 'error',
+      title: '請加入會員',
+      showConfirmButton: false,
+      timer: 1500
+    })
+    return
+  }
+
   // 驗證成功
   Passes.addPasses({
-    userId: 1, // 待串接, 先用假資料
+    userId: user.id, // 待串接, 先用假資料
     courseId: Number(id),
     isFinish: false
   })
