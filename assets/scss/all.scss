@@ -1,10 +1,11 @@
+@import './helpers/mixin';
 @import './custom.scss'; // BS 樣式導入
 
 @import'./base/base';
 
 @import './components/card';
 @import './components/icon';
-@import './components/modal';
+@import './components/form';
 @import './components/navbar';
 
 

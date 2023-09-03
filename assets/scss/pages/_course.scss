@@ -15,7 +15,11 @@
     bottom: 310px;
     right: 16px;
     animation: float 2s linear infinite;
+    @include mob{
+        bottom: 220px;
+    }
 }
+
 .fixed-shadow{
     box-shadow: 0 0 8px -4px $black;
 }

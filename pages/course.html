@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>課程清單</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.ico">
 </head>
 
 <body>
@@ -24,11 +25,11 @@
                             <input id="search-bar" type="search" class="search-value w-100" placeholder="請輸入關鍵字">
                         </div>
                     </div>
-                    <div class="filter-title">
-                        <p class="mb-1">平台</p>
+                    <div class="filter-title d-none d-md-block">
+                        <p class="my-1">平台</p>
                     </div>
-                    <div class="filter-container d-flex justify-content-between align-items-center">
-                        <div class="filter-content">
+                    <div class="filter-container d-flex justify-content-between align-items-center mt-2 mt-md-0">
+                        <div class="filter-content d-none d-md-block">
                             <input class="form-check-input me-1" type="checkbox" id="hex-check">
                             <label class="form-check-label me-3" for="hex-check">六角學院</label>
                             <input class="form-check-input me-1" type="checkbox" id="udemy-check">
@@ -37,6 +38,19 @@
                             <label class="form-check-label me-3" for="hahow-check">Hahow</label>
                             <input class="form-check-input me-1" type="checkbox" id="coursera-check">
                             <label class="form-check-label me-3" for="coursera-check">Coursera</label>
+                        </div>
+                        <div class="d-block d-md-none">
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                平台
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">六角學院</a></li>
+                                <li><a class="dropdown-item" href="#">Udemy</a></li>
+                                <li><a class="dropdown-item" href="#">Hahow</a></li>
+                                <li><a class="dropdown-item" href="#">Coursera</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="side-btn d-flex flex-row">
                             <button class="btn border-0 d-flex flex-row align-items-center">
@@ -48,7 +62,7 @@
                     </div>
                 </form>
             </div>
-            <div class="switch-tabs d-flex justify-content-between mb-4">
+            <div class="switch-tabs d-md-flex justify-content-between mb-4 d-none d-md-block">
                 <ul class="nav nav-pills gap-2">
                     <li class="nav-item">
                         <button class="btn btn-secondary active">全部</button>
@@ -75,6 +89,27 @@
                     </li>
                 </ul>
             </div>
+<div class="d-flex gap-3 d-block d-md-none mb-4">
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          全部
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">評分數</a></li>
+          <li><a class="dropdown-item" href="#">評分</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          正序
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">反序</a></li>
+        </ul>
+      </div>
+</div>
+            
+
             <ul class="course-list row list-unstyled g-lg-6 g-md-4 g-2 mb-5">
                 <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
                     <!-- 課程跳頁後面需要帶該課程 id 參數 -->

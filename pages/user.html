@@ -26,7 +26,7 @@
                             <div class="card-body">
                                 <div class="row mt-5">
                                     <div class="col d-flex flex-column">
-                                        <form clsas="d-flex flex-column">
+                                        <form class="d-flex flex-column">
                                             <div class="d-flex flex-column mb-4">
                                                 <label class="form-label" for="name">暱稱</label>
                                                 <input class="form-control" id="name" type="text" value="林小明" readonly>
@@ -40,7 +40,7 @@
                                         <div class="d-flex justify-content-between mt-auto">
                                             <div>
                                                 <button class="btn btn-outline-secondary border-0"
-                                                    id="next-btn">變更密碼</button>
+                                                    id="changePwd-btn">變更密碼</button>
                                             </div>
                                             <div>
                                                 <button class="btn btn-secondary">編輯</button>
@@ -48,7 +48,7 @@
                                         </div>
                                     </div>
                                     <div class="col position-relative">
-                                        <img src="https://picsum.photos/200/200" alt="會員頭像">
+                                        <img src="../assets/images/avatar-04.svg" alt="會員預設頭像">
                                         <button type="button"
                                             class="change btn rounded-circle d-flex justify-content-between align-items-center"
                                             data-bs-toggle="modal" data-bs-target="#pic-modal">
@@ -66,10 +66,10 @@
                             </div>
                             <div class="w-75 mx-auto">
                                 <div class="card-header">
-                                    <h2 class="fs-4">變更密碼</h2>
+                                    <h2 class="fs-4 fw-bold">變更密碼</h2>
                                 </div>
                                 <div class="card-body">
-                                    <form>
+                                    <form class="needs-validation" id="changePwdForm">
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="floating-old" type="password"
                                                 placeholder="目前的密碼">
@@ -77,16 +77,16 @@
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="floating-new" type="password"
-                                                placeholder="請輸入新密碼">
+                                                placeholder="請輸入新密碼" name="new-pwd">
                                             <label class="form-required" for="floating-new">請輸入新密碼</label>
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="floating-re" type="password"
-                                                placeholder="再次輸入新密碼">
+                                                placeholder="再次輸入新密碼" name="re-pwd">
                                             <label class="form-required" for="floating-re">再次輸入新密碼</label>
                                         </div>
 
-                                        <button type="submit" class="btn btn-secondary w-100 mb-5">更改密碼</button>
+                                        <button type="submit" class="btn btn-secondary w-100 mb-5" id="change-pwd">更改密碼</button>
                                     </form>
                                 </div>
                             </div>
@@ -106,42 +106,42 @@
                             <div class="row g-4">
                                 <div class="col-lg-4 col-6">
                                     <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
+                                        <img src="../assets/images/avatar-04.svg" alt="徽章頭像">
                                     </button>
                                 </div>
                                 <div class="col-lg-4 col-6">
                                     <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
+                                        <img src="../assets/images/avatar-05.svg" alt="徽章頭像">
                                     </button>
                                 </div>
                                 <div class="col-lg-4 col-6">
                                     <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
+                                        <img src="../assets/images/avatar-06.svg" alt="徽章頭像">
                                     </button>
                                 </div>
                                 <div class="col-lg-4 col-6">
                                     <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
+                                        <img src="../assets/images/avatar-07.svg" alt="徽章頭像">
                                     </button>
                                 </div>
                                 <div class="col-lg-4 col-6">
                                     <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
+                                        <img src="../assets/images/avatar-08.svg" alt="徽章頭像">
                                     </button>
                                 </div>
                                 <div class="col-lg-4 col-6">
                                     <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
+                                        <img src="../assets/images/avatar-01.svg" alt="徽章頭像">
                                     </button>
                                 </div>
                                 <div class="col-lg-4 col-6">
                                     <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
+                                        <img src="../assets/images/avatar-02.svg" alt="徽章頭像">
                                     </button>
                                 </div>
                                 <div class="col-lg-4 col-6">
                                     <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
+                                        <img src="../assets/images/avatar-03.svg" alt="徽章頭像">
                                     </button>
                                 </div>
                             </div>
