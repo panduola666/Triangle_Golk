@@ -1,13 +1,7 @@
 
 const scrollTop = document.querySelector('.scroll-top')
 
-// 聯繫客服 icon
-import { Tooltip } from 'bootstrap/dist/js/bootstrap.bundle';
 
-const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new Tooltip(tooltipTriggerEl)
-})
 
 
 scrollTop.addEventListener('click', () => {
