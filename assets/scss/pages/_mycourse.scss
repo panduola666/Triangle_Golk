@@ -1,10 +1,3 @@
-.bookmark {
-  width: 5em;
-
-  li {
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-  }
-}
 .notebook-page {
   &-left, &-right {
     margin: 0 auto; /* 內頁位置 */
@@ -61,6 +54,36 @@
 
     @media (max-width: 414px){
       // display: none;
+    }
+  }
+}
+.bookmark {
+  width: 5em;
+  li {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  }
+  &-unselected{
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ddd; /* 半透明灰色背景 */
+      z-index: auto; /* 確保覆蓋在 li 上方 */
+      opacity: 0.5; /* 初始狀態下顯示半透明灰色背景 */
+      transition: opacity 0.4s ease; /* 添加過渡效果 */
+    }
+    &:hover::before, :active::before {
+      opacity: 0; /* 滑鼠懸停、點選時 */
+    }
+  }
+  &-mobile{
+    li{
+      padding: 0.25em;
+      max-width: 4.5em;
     }
   }
 }
