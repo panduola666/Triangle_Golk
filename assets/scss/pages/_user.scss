@@ -14,7 +14,11 @@
         height: 100%;
     }
 }
-
+.user-pic{
+    @include mob{
+        margin-bottom: 16px;
+    }
+}
 .change {
     position: absolute;
     width: 50px;
@@ -28,8 +32,19 @@
         background: #fff;
         opacity: .8;
     }
+    @include mob{
+        margin: 30px 30px;
+    }
 }
 
 .prev-icon {
     font-size: 32px;
+}
+.album{
+    img{
+        opacity: .7;
+        &:hover{
+        opacity: 1;
+        }
+    }
 }
