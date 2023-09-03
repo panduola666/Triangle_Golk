@@ -49,10 +49,6 @@ const pagination = document.querySelector('.pagination')
 // 其他人還看了
 const otherCourses = document.querySelector('.other-courses > ul')
 
-// TODO 初始化時判斷該用戶是否已通過測試 => 需登入API串完才可以做
-// TODO 渲染評論時判斷自己是否有點過讚 => 需登入API串完才可以做
-// TODO 缺少評論點讚 => 需登入API串完才可以做
-
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.has('id') && urlParams.get('id');
 const sort = urlParams.has('sort') && urlParams.get('sort');
@@ -151,12 +147,12 @@ function renderComment(comments){
 
 
   // 有評論內容
-  commentList.innerHTML = comments.data.map(comment => {
+  commentList.innerHTML = comments.data.map((comment, index) => {
     const email = comment.user.email.split('@')[0]
     const hiddenName = `${email[0]}***${email[email.length -1]}`
     return `<li class="col-lg-4">
     <article
-      class="fw-bold ${comment.theme ? 'course-page-comment' : 'comment-style0'} bg-primary px-3 pb-3 d-flex flex-column h-100"
+      class="fw-bold ${comment.theme ? 'course-page-comment' : 'comment-style0'} bg-${(index + 1) % 3 === 0 ? 'blue' : (index + 1) % 3 === 1 ? 'primary' : 'orange'} px-3 pb-3 d-flex flex-column h-100"
     >
     <div class="flex-grow-1">
         <div class="stars-icon d-flex float-end">

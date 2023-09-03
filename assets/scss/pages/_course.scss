@@ -13,9 +13,11 @@
     height: 80px;
     border-radius: 20px;
     bottom: 310px;
-    right: 0;
-    margin: 30px 30px;
+    right: 30px;
     animation: float 2s linear infinite;
+}
+.fixed-shadow{
+    box-shadow: 0 0 8px -4px $black;
 }
 
 @keyframes float {
