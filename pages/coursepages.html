@@ -9,113 +9,145 @@
   </head>
 
   <body>
-    <%- include('./layout/nav'); -%>
-    <main class="container my-xl">
-      <a class="page-header mb-4 fs-5" href="./course.html">
-        <span class="d-flex align-items-center link-hover">
-          <span class="material-icons"> chevron_right </span>
-          返回列表
-        </span>
-      </a>
+    <div class="min-vh-100 d-flex flex-column">
+      <%- include('./layout/nav'); -%>
+      <main class="container my-xl flex-grow-1">
+        <a class="page-header mb-4 fs-5" href="./course.html">
+          <span class="d-flex align-items-center link-hover">
+            <span class="material-icons"> chevron_right </span>
+            返回列表
+          </span>
+        </a>
 
-      <!-- 課程介紹 -->
-      <div class="row">
         <!-- 課程介紹 -->
-        <div class="col-12 col-lg-9 mb-3">
+        <div class="row">
+          <!-- 課程介紹 -->
+          <div class="col-12 col-lg-9 mb-3">
             <!-- 標題 -->
-          <div
-            class="course-title d-flex align-items-center justify-content-between mb-3"
-          >
-            <section class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center">
-              <span class="bg-secondary text-white py-2 px-4 rounded-1 me-lg-3 me-2 mb-1 mb-lg-0">六角學院</span>
-              <h1 class="page-title fs-lg-2 fs-4 fw-bold text-nowrap">
-                JavaScript 核心篇
-              </h1>
-            </section>
-            <button type="button" class="favorite favorite-btn border-3 rounded-circle bg-white p-2">
-              <span class="material-symbols-outlined outline-icon fw-bold course-favorite-icon"
-                >favorite</span
+            <div
+              class="course-title d-flex align-items-center justify-content-between mb-3"
+            >
+              <section
+                class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center"
               >
-            </button>
-          </div>
-          <!-- 課程圖片 -->
+                <span
+                  class="bg-secondary text-white py-2 px-4 rounded-1 me-lg-3 me-2 mb-1 mb-lg-0"
+                  >六角學院</span
+                >
+                <h1 class="page-title fs-lg-2 fs-4 fw-bold text-nowrap">
+                  JavaScript 核心篇
+                </h1>
+              </section>
+              <button
+                type="button"
+                class="favorite favorite-btn border-3 rounded-circle bg-white p-2"
+              >
+                <span
+                  class="material-symbols-outlined outline-icon fw-bold course-favorite-icon"
+                  >favorite</span
+                >
+              </button>
+            </div>
+            <!-- 課程圖片 -->
 
-          <div class="blackboard mb-3">
-            <div class="pic">
-              <span
-                class="material-symbols-outlined position-absolute text-white top-0 start-0"
-                style="font-size: 4rem"
-              >
-                military_tech
-              </span>
-              <span
-                class="material-symbols-outlined position-absolute text-white bottom-0 end-0"
-                style="font-size: 5rem"
-              >
-                format_ink_highlighter
-              </span>
+            <div class="blackboard mb-3">
+              <div class="pic">
+                <span
+                  class="material-symbols-outlined position-absolute text-white top-0 start-0"
+                  style="font-size: 4rem"
+                >
+                  military_tech
+                </span>
+                <span
+                  class="material-symbols-outlined position-absolute text-white bottom-0 end-0"
+                  style="font-size: 5rem"
+                >
+                  format_ink_highlighter
+                </span>
 
-              <!-- 引導點擊遮罩 -->
-              <a href="#" target="_blank" class="blackboard-mark">
-                <span class="material-symbols-outlined outline-icon text-white course-link-icon">
+                <!-- 引導點擊遮罩 -->
+                <a href="#" target="_blank" class="blackboard-mark">
+                  <span
+                    class="material-symbols-outlined outline-icon text-white course-link-icon"
+                  >
                     play_circle
-                    </span>
-              </a>
-              
+                  </span>
+                </a>
+
                 <img
                   src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80"
                   class="course-cover"
                   alt="JavaScript 核心篇"
                 />
+              </div>
+            </div>
+
+            <!-- 評分 -->
+            <div class="stars-icon d-flex text-primary course-scores mb-3">
+              <span class="fs-2 material-symbols-outlined">star</span>
+              <span class="fs-2 material-symbols-outlined">star</span>
+              <span class="fs-2 material-symbols-outlined">star</span>
+              <span class="fs-2 material-symbols-outlined">star</span>
+              <span class="fs-2 material-symbols-outlined outline-icon"
+                >star</span
+              >
+            </div>
+
+            <!-- 標籤 -->
+
+            <div class="course-label">
+              <p class="mb-1">標籤：</p>
+              <ul class="p-0 d-flex flex-wrap gap-2 course-tags">
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+              </ul>
             </div>
           </div>
 
-          <!-- 評分 -->
-          <div class="stars-icon d-flex text-primary course-scores mb-3">
-            <span class="fs-2 material-symbols-outlined" 
-              >star</span
-            >
-            <span class="fs-2 material-symbols-outlined" 
-              >star</span
-            >
-            <span class="fs-2 material-symbols-outlined" 
-              >star</span
-            >
-            <span class="fs-2 material-symbols-outlined" 
-              >star</span
-            >
-            <span
-              class="fs-2 material-symbols-outlined outline-icon"
-              
-              >star</span
-            >
-          </div>
-
-          <!-- 標籤 -->
-
-          <div class="course-label">
-            <p class="mb-1">標籤：</p>
-            <ul class="p-0 d-flex flex-wrap gap-2 course-tags">
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-              <li class="border border-secondary p-1 px-3 rounded-5 small">程式</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 課程進修室 -->
-        <div class="col col-lg-3 d-flex align-items-center justify-content-center flex-column flex-md-row flex-lg-column">
+          <!-- 課程進修室 -->
+          <div
+            class="col col-lg-3 d-flex align-items-center justify-content-center flex-column flex-md-row flex-lg-column"
+          >
             <form
               class="course-test needs-validation d-flex flex-column bg-primary bg-gradient p-4 flex-grow-1 flex-lg-grow-0 w-100"
               novalidate
@@ -123,7 +155,7 @@
               <div class="mb-3">
                 <h4 class="fw-bold text-nowrap text-center">課堂小測</h4>
               </div>
-  
+
               <div class="mb-3">
                 <label
                   class="form-label form-required fw-bold mb-1"
@@ -140,7 +172,7 @@
                 />
                 <div class="invalid-feedback">請輸入答案</div>
               </div>
-  
+
               <div class="mb-3">
                 <label
                   class="form-label form-required fw-bold mb-1"
@@ -156,182 +188,257 @@
                 />
                 <div class="invalid-feedback">請輸入平台名稱</div>
               </div>
-  
+
               <div class="modal-footer justify-content-around">
-                <button type="submit" class="btn btn-secondary">
-                  提交
-                </button>
+                <button type="submit" class="btn btn-secondary">提交</button>
               </div>
             </form>
-            <p class="test-passed bg-primary bg-gradient p-4 flex-grow-1 flex-lg-grow-0 fs-3 fw-bold mb-0 d-none">已經有 492 人通過測驗，趕快來進來交流吧！</p>
+            <p
+              class="test-passed bg-primary bg-gradient p-4 flex-grow-1 flex-lg-grow-0 fs-3 fw-bold mb-0 d-none"
+            >
+              已經有 492 人通過測驗，趕快來進來交流吧！
+            </p>
             <div class="mt-3 px-3">
-                <a href="./classroom.html" class="btn btn-lg btn-secondary w-100 d-none classroom-btn" id="show-alert">
-                  課程進修室
-                </a>
-                <div class="modal-footer justify-content-around m-4 d-none d-md-block">
-                  <img
-                    src="../assets/images/study.png"
-                    style="object-fit: cover;"
-                    alt="mascot"
-                  />
-                </div>
-            </div>
-        </div>
-      </div>
-
-      <!-- 評論 -->
-    <ul class="nav course-page-nav align-items-center gap-2 position-relative my-5">
-      <li class="nav-item">
-        <p class="nav-comment-link fs-6 px-3 py-2" data-key="timer">最新評論</p>
-      </li>
-      <li class="nav-item">
-        <p class="nav-comment-link fs-6 px-3 py-2" data-key="likesNum">最熱評論</p>
-      </li>
-      <li class="flex-grow-1 bg-secondary" style="padding: 1px;"></li>
-    </ul>
-
-      <!-- 課程評價 -->
-      <!-- 樣式選擇 書籤: .course-page-comment 便條紙: .comment-style0 -->
-      <div class="px-5">
-        <ul
-          class="row list-unstyled g-5 comment-list"
-        ></ul>
-      </div>
-
-      <!-- 換頁 -->
-      <%- include('./layout/pagination'); -%>
-
-      <!-- 其他人還看了 -->
-      <section class="d-flex justify-content-between align-items-center">
-        <h2 class="fs-3 fw-bold p-2">其他人還看了</h2>
-        <div class="other-swiper-btn">
-          <span class="material-icons cur-point circle swiper-prev me-3"> chevron_left </span>
-          <span class="material-icons cur-point circle swiper-next"> chevron_right </span>
-        </div>
-      </section>
-      <div class="swiper other-courses">
-        <ul class="swiper-wrapper px-0 py-3">
-          
-          <!-- <div class="swiper-slide">
-            <li class="d-flex flex-column">
-              <a class="card card-hover h-100 rounded-4 position-relative" href="./coursepages.html?id=2&sort=timer">
-                <div class="pic">
-                  <img
-                    src="https://images.pexels.com/photos/11035386/pexels-photo-11035386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="快速打造響應式網頁"
-                    class="card-pic"
-                  />
-                </div>
-                <div
-                  class="badge d-flex justify-content-between align-items-center position-absolute"
-                >
-                  <span
-                    class="brand bg-secondary small text-white rounded-1 py-1 px-3"
-                    >六角學院</span
-                  >
-                  <span
-                    class="favorite material-symbols-outlined outline-icon position-absolute"
-                    >favorite</span
-                  >
-                </div>
-                <div class="card-body">
-                  <h3 class="title text-secondary fs-6 fw-bold">
-                    使用 HTML、CSS 快速打造屬於自己的響應式網站
-                  </h3>
-                </div>
-                <div class="card-footer">
-                  <div class="tags mb-2 mt-auto">
-                    <span class="fs-8 me-2">#程序</span>
-                  </div>
-                  <div class="stars d-flex">
-                    <div class="stars-icon text-primary me-2">
-                      <span class="material-symbols-outlined">star</span>
-                      <span class="material-symbols-outlined">star</span>
-                      <span class="material-symbols-outlined">star</span>
-                      <span class="material-symbols-outlined">star</span>
-                      <span class="material-symbols-outlined outline-icon"
-                        >star</span
-                      >
-                    </div>
-                    <span class="fs-8 text-gray-400">(666)</span>
-                  </div>
-                </div>
+              <a
+                href="./classroom.html"
+                class="btn btn-lg btn-secondary w-100 d-none classroom-btn"
+                id="show-alert"
+              >
+                課程進修室
               </a>
-            </li>
-          </div> -->
-        </ul>
-      </div>
-   
-
-      <!-- 申請新課 -->
-      <button type="button" class="apply btn btn-blue fw-bold fixed-shadow" data-bs-toggle="modal"
-        data-bs-target="#apply-modal">申請</br>新課
-    </button>
-
-    <div class="modal fade" id="apply-modal" tabindex="-1" aria-labelledby="apply-modalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title fs-5 fw-bold" id="apply-modalLabel">申請新課</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="apply-form needs-validation d-flex flex-column" novalidate>
-                        <div class="mb-3">
-                            <label class="form-label form-required fw-bold mb-1" for="course-name">課程名稱</label>
-                            <input class="form-control small py-1 ps-2" id="course-name" type="text"
-                                placeholder="請輸入課程名稱" required>
-                            <div class="invalid-feedback">
-                                請輸入課程名稱
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label form-required fw-bold mb-1"
-                                for="brand-name">該課程開設在哪家平台</label>
-                            <input class="form-control small py-1 ps-2" id="brand-name" type="text"
-                                placeholder="請輸入平台名稱" required>
-                            <div class="invalid-feedback">
-                                請輸入平台名稱
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label form-required fw-bold mb-1"
-                                for="course-link">該課程的頁面連結</label>
-                            <input class="form-control small py-1 ps-2" id="course-link" type="text"
-                                placeholder="請輸入課程連結" required>
-                            <div class="invalid-feedback">
-                                請輸入課程連結
-                            </div>
-                        </div>
-
-                        <div class="mb-4">
-                            <label class="form-label form-required fw-bold mb-1" for="comment">請寫下你的理由</label>
-                            <textarea class="form-control comment small py-1 ps-2" id="comment" cols="30"
-                                rows="10" placeholder="最多不超過 400 字" maxlength="400" minlength="5"
-                                required></textarea>
-                            <div class="invalid-feedback">
-                                請寫下你的理由
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-secondary"
-                                data-bs-dismiss="modal">取消</button>
-                            <button type="submit" class="btn btn-secondary" id="show-alert">送出申請</button>
-                        </div>
-                    </form>
-                </div>
+              <div
+                class="modal-footer justify-content-around m-4 d-none d-md-block"
+              >
+                <img
+                  src="../assets/images/study.png"
+                  style="object-fit: cover"
+                  alt="mascot"
+                />
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    </main>
 
-    <%- include('./layout/footer'); -%>
+        <!-- 評論 -->
+        <ul
+          class="nav course-page-nav align-items-center gap-2 position-relative my-5"
+        >
+          <li class="nav-item">
+            <p class="nav-comment-link fs-6 px-3 py-2" data-key="timer">
+              最新評論
+            </p>
+          </li>
+          <li class="nav-item">
+            <p class="nav-comment-link fs-6 px-3 py-2" data-key="likesNum">
+              最熱評論
+            </p>
+          </li>
+          <li class="flex-grow-1 bg-secondary" style="padding: 1px"></li>
+        </ul>
+
+        <!-- 課程評價 -->
+        <!-- 樣式選擇 書籤: .course-page-comment 便條紙: .comment-style0 -->
+        <div class="px-5">
+          <ul class="row list-unstyled g-5 comment-list"></ul>
+        </div>
+
+        <!-- 換頁 -->
+        <%- include('./layout/pagination'); -%>
+
+        <!-- 其他人還看了 -->
+        <section class="d-flex justify-content-between align-items-center">
+          <h2 class="fs-3 fw-bold p-2">其他人還看了</h2>
+          <div class="other-swiper-btn">
+            <span class="material-icons cur-point circle swiper-prev me-3">
+              chevron_left
+            </span>
+            <span class="material-icons cur-point circle swiper-next">
+              chevron_right
+            </span>
+          </div>
+        </section>
+        <div class="swiper other-courses">
+          <ul class="swiper-wrapper px-0 py-3">
+            <!-- <div class="swiper-slide">
+          <li class="d-flex flex-column">
+            <a class="card card-hover h-100 rounded-4 position-relative" href="./coursepages.html?id=2&sort=timer">
+              <div class="pic">
+                <img
+                  src="https://images.pexels.com/photos/11035386/pexels-photo-11035386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="快速打造響應式網頁"
+                  class="card-pic"
+                />
+              </div>
+              <div
+                class="badge d-flex justify-content-between align-items-center position-absolute"
+              >
+                <span
+                  class="brand bg-secondary small text-white rounded-1 py-1 px-3"
+                  >六角學院</span
+                >
+                <span
+                  class="favorite material-symbols-outlined outline-icon position-absolute"
+                  >favorite</span
+                >
+              </div>
+              <div class="card-body">
+                <h3 class="title text-secondary fs-6 fw-bold">
+                  使用 HTML、CSS 快速打造屬於自己的響應式網站
+                </h3>
+              </div>
+              <div class="card-footer">
+                <div class="tags mb-2 mt-auto">
+                  <span class="fs-8 me-2">#程序</span>
+                </div>
+                <div class="stars d-flex">
+                  <div class="stars-icon text-primary me-2">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined outline-icon"
+                      >star</span
+                    >
+                  </div>
+                  <span class="fs-8 text-gray-400">(666)</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </div> -->
+          </ul>
+        </div>
+
+        <!-- 申請新課 -->
+        <button
+          type="button"
+          class="apply btn btn-blue fw-bold fixed-shadow"
+          data-bs-toggle="modal"
+          data-bs-target="#apply-modal"
+        >
+          申請<br />新課
+        </button>
+
+        <div
+          class="modal fade"
+          id="apply-modal"
+          tabindex="-1"
+          aria-labelledby="apply-modalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title fs-5 fw-bold" id="apply-modalLabel">
+                  申請新課
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form
+                  class="apply-form needs-validation d-flex flex-column"
+                  novalidate
+                >
+                  <div class="mb-3">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="course-name"
+                      >課程名稱</label
+                    >
+                    <input
+                      class="form-control small py-1 ps-2"
+                      id="course-name"
+                      type="text"
+                      placeholder="請輸入課程名稱"
+                      required
+                    />
+                    <div class="invalid-feedback">請輸入課程名稱</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="brand-name"
+                      >該課程開設在哪家平台</label
+                    >
+                    <input
+                      class="form-control small py-1 ps-2"
+                      id="brand-name"
+                      type="text"
+                      placeholder="請輸入平台名稱"
+                      required
+                    />
+                    <div class="invalid-feedback">請輸入平台名稱</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="course-link"
+                      >該課程的頁面連結</label
+                    >
+                    <input
+                      class="form-control small py-1 ps-2"
+                      id="course-link"
+                      type="text"
+                      placeholder="請輸入課程連結"
+                      required
+                    />
+                    <div class="invalid-feedback">請輸入課程連結</div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="comment"
+                      >請寫下你的理由</label
+                    >
+                    <textarea
+                      class="form-control comment small py-1 ps-2"
+                      id="comment"
+                      cols="30"
+                      rows="10"
+                      placeholder="最多不超過 400 字"
+                      maxlength="400"
+                      minlength="5"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">請寫下你的理由</div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      取消
+                    </button>
+                    <button
+                      type="submit"
+                      class="btn btn-secondary"
+                      id="show-alert"
+                    >
+                      送出申請
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <%- include('./layout/footer'); -%>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script type="module" src="../main.js"></script>
-      <!-- Swiper JS -->
+    <!-- Swiper JS -->
     <script type="module" src="../assets/js/apply_course.js"></script>
     <script type="module" src="../assets/js/course_page.js"></script>
   </body>

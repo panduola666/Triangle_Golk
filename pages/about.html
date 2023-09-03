@@ -11,36 +11,38 @@
 </head>
 
 <body>
-    <%- include('./layout/nav'); -%>
-        <main class="container min-vh-100">
-            <h1 class="fs-2 page-title fw-bold my-4">用戶須知</h1>
-            <ol class="about-list list-unstyled pt-4">
-                <li class="row">
-                    <ul class="about-card mb-5 py-4 px-5 col-9 mx-auto list-unstyled">
-                        <h2 class="fs-5 text-center mb-4 mx-auto">關於三角構客 <span class="text-nowrap">Triangle Golk</span></h2>
-                        <li class="fs-6 mb-2">本平台公平公開透明資訊，陪你找出真正適合自己的課程。</li>
-                        <li class="fs-6 mb-2">以自修室、讀書會的形式開放課程進修室及聊天室。在這裡，你可以與不同學習進程的人交流經驗、並肩學習，只要你不放棄自己，我們就不會放棄你。</li>
-                    </ul>
-                </li>
-                <li class="row">
-                    <ul class="about-card mb-5 py-4 px-5 col-9 mx-auto">
-                        <h2 class="fs-5 text-center mb-4 mx-auto">審核制度</h5>
-                        <li class="fs-6 mb-2 ms-4">守護評價品質，每則課程評價送出時，皆需請用戶附上相關完課證明。</li>
-                        <li class="fs-6 mb-2 ms-4">我們將於7-14天內完成審核，並以系統通知結果。</li>
-                        <li class="fs-6 mb-2 ms-4">通過審核的評價內容，僅開放修改 1 次，往後將無法再次修改。</li>
-                    </ul>
-                </li>
-                <li class="row">
-                    <ul class="about-card mb-5 py-4 px-5 col-9 mx-auto list-unstyled">
-                        <h2 class="fs-5 text-center mb-4 mx-auto">申請新增課程</h5>
-                        <li class="fs-6 mb-2">讓更多好課能被看見，我們開放申請新增課程。</li>
-                        <li class="fs-6 mb-2">歡迎你將自己心儀的課程推上三角構客，推廣給更多人知道。</li>
-                        <li class="fs-6 mb-2">坐在社群的肩膀上，和志同道合的人一起交流研討，拓展認知，看得更遠更廣。</li>
-                    </ul>
-                </li>
-            </ol>
-        </main>
-    <%- include('./layout/footer'); -%>
+    <div class="min-vh-100 d-flex flex-column">
+        <%- include('./layout/nav'); -%>
+            <main class="container min-vh-100 flex-grow-1">
+                <h1 class="fs-2 page-title fw-bold my-4">用戶須知</h1>
+                <ol class="about-list list-unstyled pt-4">
+                    <li class="row">
+                        <ul class="about-card mb-5 py-4 px-5 col-9 mx-auto list-unstyled">
+                            <h2 class="fs-5 text-center mb-4 mx-auto">關於三角構客 <span class="text-nowrap">Triangle Golk</span></h2>
+                            <li class="fs-6 mb-2">本平台公平公開透明資訊，陪你找出真正適合自己的課程。</li>
+                            <li class="fs-6 mb-2">以自修室、讀書會的形式開放課程進修室及聊天室。在這裡，你可以與不同學習進程的人交流經驗、並肩學習，只要你不放棄自己，我們就不會放棄你。</li>
+                        </ul>
+                    </li>
+                    <li class="row">
+                        <ul class="about-card mb-5 py-4 px-5 col-9 mx-auto">
+                            <h2 class="fs-5 text-center mb-4 mx-auto">審核制度</h5>
+                            <li class="fs-6 mb-2 ms-4">守護評價品質，每則課程評價送出時，皆需請用戶附上相關完課證明。</li>
+                            <li class="fs-6 mb-2 ms-4">我們將於7-14天內完成審核，並以系統通知結果。</li>
+                            <li class="fs-6 mb-2 ms-4">通過審核的評價內容，僅開放修改 1 次，往後將無法再次修改。</li>
+                        </ul>
+                    </li>
+                    <li class="row">
+                        <ul class="about-card mb-5 py-4 px-5 col-9 mx-auto list-unstyled">
+                            <h2 class="fs-5 text-center mb-4 mx-auto">申請新增課程</h5>
+                            <li class="fs-6 mb-2">讓更多好課能被看見，我們開放申請新增課程。</li>
+                            <li class="fs-6 mb-2">歡迎你將自己心儀的課程推上三角構客，推廣給更多人知道。</li>
+                            <li class="fs-6 mb-2">坐在社群的肩膀上，和志同道合的人一起交流研討，拓展認知，看得更遠更廣。</li>
+                        </ul>
+                    </li>
+                </ol>
+            </main>
+        <%- include('./layout/footer'); -%>
+    </div>
                 <script type="module" src="../main.js"></script>
                 <script type="module" src="../assets/js/course.js"></script>
 </body>

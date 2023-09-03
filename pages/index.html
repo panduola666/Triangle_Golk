@@ -10,9 +10,13 @@
 </head>
 
 <body>
+<div class="min-vh-100 d-flex flex-column">
   <%- include('./layout/nav'); -%>
-    <main style="min-height: 100vh;"></main>
-    <%- include('./layout/footer'); -%>
+  <main class="flex-grow-1"></main>
+  <%- include('./layout/footer'); -%>
+</div>
+
+  
 
       <script type="module" src="../main.js"></script>
       <script type="module" src="../assets/js/index.js"></script>

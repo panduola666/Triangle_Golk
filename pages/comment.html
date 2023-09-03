@@ -15,12 +15,13 @@
 </head>
 
 <body>
+<div class="min-vh-100 d-flex flex-column">
   <%- include('./layout/nav'); -%>
-
-    <main class="container">
-
+  
+    <main class="container flex-grow-1">
+  
       <h2 class="page-title fw-bold my-4">完課評價－<span>JavaScript 核心篇</h2>
-
+  
       <form action="#" class="needs-validation" id="comment-form" novalidate>
         <div class="row g-3 g-lg-0 g-lg-5 mb-4">
           <div class="col-12 col-lg-6 d-flex flex-column">
@@ -100,16 +101,18 @@
             </article>
           </div>
         </div>
-
+  
         <div class="d-flex justify-content-end gap-4">
           <a href="./user_courses.html" class="btn btn-lg btn-outline-secondary px-5">取消</a>
           <input type="submit" class="btn btn-lg btn-secondary px-5" value="送出">
         </div>
       </form>
-
+  
     </main>
-
+  
     <%- include('./layout/footer'); -%>
+</div>
+
 
       <script type="module" src="../main.js"></script>
       <script type="module" src="../assets/js/comment.js"></script>

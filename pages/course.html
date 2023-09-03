@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>課程清單</title>
     <link rel="icon" type="image/png" href="../assets/images/favicon.ico">
-</head>
+  </head>
 
 <body>
     <%- include('./layout/nav'); -%>
@@ -25,11 +24,11 @@
                             <input id="search-bar" type="search" class="search-value w-100" placeholder="請輸入關鍵字">
                         </div>
                     </div>
-                    <div class="filter-title d-none d-md-block">
-                        <p class="my-1">平台</p>
+                    <div class="filter-title">
+                        <p class="mb-1">平台</p>
                     </div>
-                    <div class="filter-container d-flex justify-content-between align-items-center mt-2 mt-md-0">
-                        <div class="filter-content d-none d-md-block">
+                    <div class="filter-container d-flex justify-content-between align-items-center">
+                        <div class="filter-content">
                             <input class="form-check-input me-1" type="checkbox" id="hex-check">
                             <label class="form-check-label me-3" for="hex-check">六角學院</label>
                             <input class="form-check-input me-1" type="checkbox" id="udemy-check">
@@ -38,19 +37,6 @@
                             <label class="form-check-label me-3" for="hahow-check">Hahow</label>
                             <input class="form-check-input me-1" type="checkbox" id="coursera-check">
                             <label class="form-check-label me-3" for="coursera-check">Coursera</label>
-                        </div>
-                        <div class="d-block d-md-none">
-                            <div class="dropdown">
-                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                平台
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">六角學院</a></li>
-                                <li><a class="dropdown-item" href="#">Udemy</a></li>
-                                <li><a class="dropdown-item" href="#">Hahow</a></li>
-                                <li><a class="dropdown-item" href="#">Coursera</a></li>
-                                </ul>
-                            </div>
                         </div>
                         <div class="side-btn d-flex flex-row">
                             <button class="btn border-0 d-flex flex-row align-items-center">
@@ -62,7 +48,7 @@
                     </div>
                 </form>
             </div>
-            <div class="switch-tabs d-md-flex justify-content-between mb-4 d-none d-md-block">
+            <div class="switch-tabs d-flex justify-content-between mb-4">
                 <ul class="nav nav-pills gap-2">
                     <li class="nav-item">
                         <button class="btn btn-secondary active">全部</button>
@@ -89,27 +75,6 @@
                     </li>
                 </ul>
             </div>
-<div class="d-flex gap-3 d-block d-md-none mb-4">
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          全部
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">評分數</a></li>
-          <li><a class="dropdown-item" href="#">評分</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          正序
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">反序</a></li>
-        </ul>
-      </div>
-</div>
-            
-
             <ul class="course-list row list-unstyled g-lg-6 g-md-4 g-2 mb-5">
                 <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
                     <!-- 課程跳頁後面需要帶該課程 id 參數 -->
@@ -299,71 +264,126 @@
                 data-bs-target="#apply-modal">申請</br>新課
             </button>
 
-            <div class="modal fade" id="apply-modal" tabindex="-1" aria-labelledby="apply-modalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="modal-title fs-5 fw-bold" id="apply-modalLabel">申請新課</h3>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form class="apply-form needs-validation d-flex flex-column" novalidate>
-                                <div class="mb-3">
-                                    <label class="form-label form-required fw-bold mb-1" for="course-name">課程名稱</label>
-                                    <input class="form-control small py-1 ps-2" id="course-name" type="text"
-                                        placeholder="請輸入課程名稱" required>
-                                    <div class="invalid-feedback">
-                                        請輸入課程名稱
-                                    </div>
-                                </div>
+        <div
+          class="modal fade"
+          id="apply-modal"
+          tabindex="-1"
+          aria-labelledby="apply-modalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title fs-5 fw-bold" id="apply-modalLabel">
+                  申請新課
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form
+                  class="apply-form needs-validation d-flex flex-column"
+                  novalidate
+                >
+                  <div class="mb-3">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="course-name"
+                      >課程名稱</label
+                    >
+                    <input
+                      class="form-control small py-1 ps-2"
+                      id="course-name"
+                      type="text"
+                      placeholder="請輸入課程名稱"
+                      required
+                    />
+                    <div class="invalid-feedback">請輸入課程名稱</div>
+                  </div>
 
-                                <div class="mb-3">
-                                    <label class="form-label form-required fw-bold mb-1"
-                                        for="brand-name">該課程開設在哪家平台</label>
-                                    <input class="form-control small py-1 ps-2" id="brand-name" type="text"
-                                        placeholder="請輸入平台名稱" required>
-                                    <div class="invalid-feedback">
-                                        請輸入平台名稱
-                                    </div>
-                                </div>
+                  <div class="mb-3">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="brand-name"
+                      >該課程開設在哪家平台</label
+                    >
+                    <input
+                      class="form-control small py-1 ps-2"
+                      id="brand-name"
+                      type="text"
+                      placeholder="請輸入平台名稱"
+                      required
+                    />
+                    <div class="invalid-feedback">請輸入平台名稱</div>
+                  </div>
 
-                                <div class="mb-3">
-                                    <label class="form-label form-required fw-bold mb-1"
-                                        for="course-link">該課程的頁面連結</label>
-                                    <input class="form-control small py-1 ps-2" id="course-link" type="text"
-                                        placeholder="請輸入課程連結" required>
-                                    <div class="invalid-feedback">
-                                        請輸入課程連結
-                                    </div>
-                                </div>
+                  <div class="mb-3">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="course-link"
+                      >該課程的頁面連結</label
+                    >
+                    <input
+                      class="form-control small py-1 ps-2"
+                      id="course-link"
+                      type="text"
+                      placeholder="請輸入課程連結"
+                      required
+                    />
+                    <div class="invalid-feedback">請輸入課程連結</div>
+                  </div>
 
-                                <div class="mb-4">
-                                    <label class="form-label form-required fw-bold mb-1" for="comment">請寫下你的理由</label>
-                                    <textarea class="form-control comment small py-1 ps-2" id="comment" cols="30"
-                                        rows="10" placeholder="最多不超過 400 字" maxlength="400" minlength="5"
-                                        required></textarea>
-                                    <div class="invalid-feedback">
-                                        請寫下你的理由
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary"
-                                        data-bs-dismiss="modal">取消</button>
-                                    <button type="submit" class="btn btn-secondary" id="show-alert">送出申請</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                  <div class="mb-4">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="comment"
+                      >請寫下你的理由</label
+                    >
+                    <textarea
+                      class="form-control comment small py-1 ps-2"
+                      id="comment"
+                      cols="30"
+                      rows="10"
+                      placeholder="最多不超過 400 字"
+                      maxlength="400"
+                      minlength="5"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">請寫下你的理由</div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      取消
+                    </button>
+                    <button
+                      type="submit"
+                      class="btn btn-secondary"
+                      id="show-alert"
+                    >
+                      送出申請
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-        </main>
-        <%- include('./layout/pagination'); -%>
-            <%- include('./layout/footer'); -%>
-                <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-                <script type="module" src="../main.js"></script>
-                <script type="module" src="../assets/js/apply_course.js"></script>
-                <script type="module" src="../assets/js/course.js"></script>
-</body>
+          </div>
+        </div>
+      </main>
+      <%- include('./layout/pagination'); -%> <%- include('./layout/footer');
+      -%>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/apply_course.js"></script>
+    <script type="module" src="../assets/js/course.js"></script>
+  </body>
 </html>

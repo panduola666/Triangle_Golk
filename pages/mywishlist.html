@@ -10,23 +10,27 @@
 </head>
 
 <body>
+<div class="min-vh-100 d-flex flex-column">
   <%- include('./layout/nav'); -%>
-    <%- include('./layout/user_nav'); -%>
-      <main style="min-height: 100vh;">
-        <article class="notebook d-flex justify-content-center">
-          <div class="notebook-page-left">
-            <div class="single-note">
-              <img src="" alt="">
-              <h2>課程名稱</h2>
-            </div>
+  <%- include('./layout/user_nav'); -%>
+    <main class="flex-grow-1">
+      <article class="notebook d-flex justify-content-center">
+        <div class="notebook-page-left">
+          <div class="single-note">
+            <img src="" alt="">
+            <h2>課程名稱</h2>
           </div>
-          <div class="notebook-page-right">
-            <div class="single-note">
-            </div>
+        </div>
+        <div class="notebook-page-right">
+          <div class="single-note">
           </div>
-        </article>
-      </main>
-  <%- include('./layout/footer'); -%>
+        </div>
+      </article>
+    </main>
+<%- include('./layout/footer'); -%>
+</div>
+
+
 
 <script type="module" src="../main.js"></script>
 <script type="module" src="../assets/js/index.js"></script>

@@ -16,51 +16,55 @@
 </head>
 
 <body>
+<div class="min-vh-100 d-flex flex-column">
     <%- include('./layout/nav'); -%>
-        <main class="container min-vh-100">
-            <h1 class="fs-2 page-title fw-bold my-4">聯繫客服</h1>
-            <!-- not complete yet -->
-            
-            <div class="row d-flex flex-wrap">
-                <div class="col-lg-7 d-flex flex-column">
-                    <ul class="contact-intro mt-lg-4 mb-3">
-                        <li class="fs-6 fs-md-4 fs-lg-2 fw-medium mb-2 mb-md-4 offset-md-2"><img src="/assets/images/contact-emoji-1.svg" alt="emoji" class="d-inline">使用上遇到了障礙？</li>
-                        <li class="fs-6 fs-md-4 fs-lg-2 fw-medium mb-2 mb-md-4 offset-md-1"><img src="/assets/images/contact-emoji-2.svg" alt="emoji" class="d-inline">看到某個用戶似乎怪怪的……</li>
-                        <li class="fs-6 fs-md-4 fs-lg-2 fw-medium mb-2 mb-md-4 offset-md-2"><img src="/assets/images/contact-emoji-3.svg" alt="emoji" class="d-inline">找到了一隻小蟲</li>
-                        <li class="fs-6 fs-md-4 fs-lg-2 fw-medium mb-2 mb-md-4 offset-md-3"><img src="/assets/images/contact-emoji-4.svg" alt="emoji" class="d-inline">有些建議想提供給三角構客——</li>
-                    </ul>
-                    <img src="/assets/images/contact-bird.svg" alt="homing pigeon" class="pic-pigeon px-4 pb-4">
-                </div>
-                <div class="col col-lg-4 mb-4">
-                    <h2 class="fs-3 text-center mb-4 text-nowrap">留言給我們，我們聽你說</h2>
-                    <form action="#" class="needs-validation fs-6" novalidate>
-                        <div class="mb-3 d-flex flex-column">
-                            <div class="form-check form-check-inline ps-0 pe-0 ms-0 me-0">
-                                <label class="form-label fw-medium form-required" for="contact-nickname">暱稱</label>
-                                <input type="text" class="form-control is-invalid" id="contact-nickname" name="nickname">
-                            </div>
-                        </div>
-                        <div class="mb-3 d-flex flex-column">
-                            <div class="form-check form-check-inline ps-0 pe-0 ms-0 me-0">
-                                <label class="form-label fw-medium form-required" for="contact-email">聯絡信箱</label>
-                                <input type="email" class="form-control is-invalid" id="contact-email" name="email">
-                            </div>
-                        </div>
-                        <div class="mb-3 d-flex flex-column">
-                            <div class="form-check form-check-inline ps-0 pe-0 ms-0 me-0">
-                                <label class="form-label fw-medium form-required" for="contact-message">留言內容</label>
-                                <textarea type="text" class="form-control is-invalid" id="contact-message" name="message" rows="6"></textarea>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-secondary" id="contact-send" value="send request">送出</button>
-                        </div>
-                    </form>
-                    <tb></tb>
-                </div>
+    <main class="container flex-grow-1">
+        <h1 class="fs-2 page-title fw-bold my-4">聯繫客服</h1>
+        <!-- not complete yet -->
+        
+        <div class="row d-flex flex-wrap">
+            <div class="col-lg-7 d-flex flex-column">
+                <ul class="contact-intro mt-lg-4 mb-3">
+                    <li class="fs-6 fs-md-4 fs-lg-2 fw-medium mb-2 mb-md-4 offset-md-2"><img src="/assets/images/contact-emoji-1.svg" alt="emoji" class="d-inline">使用上遇到了障礙？</li>
+                    <li class="fs-6 fs-md-4 fs-lg-2 fw-medium mb-2 mb-md-4 offset-md-1"><img src="/assets/images/contact-emoji-2.svg" alt="emoji" class="d-inline">看到某個用戶似乎怪怪的……</li>
+                    <li class="fs-6 fs-md-4 fs-lg-2 fw-medium mb-2 mb-md-4 offset-md-2"><img src="/assets/images/contact-emoji-3.svg" alt="emoji" class="d-inline">找到了一隻小蟲</li>
+                    <li class="fs-6 fs-md-4 fs-lg-2 fw-medium mb-2 mb-md-4 offset-md-3"><img src="/assets/images/contact-emoji-4.svg" alt="emoji" class="d-inline">有些建議想提供給三角構客——</li>
+                </ul>
+                <img src="/assets/images/contact-bird.svg" alt="homing pigeon" class="pic-pigeon px-4 pb-4">
             </div>
-        </main>
-    <%- include('./layout/footer'); -%>
+            <div class="col col-lg-4 mb-4">
+                <h2 class="fs-3 text-center mb-4 text-nowrap">留言給我們，我們聽你說</h2>
+                <form action="#" class="needs-validation fs-6" novalidate>
+                    <div class="mb-3 d-flex flex-column">
+                        <div class="form-check form-check-inline ps-0 pe-0 ms-0 me-0">
+                            <label class="form-label fw-medium form-required" for="contact-nickname">暱稱</label>
+                            <input type="text" class="form-control is-invalid" id="contact-nickname" name="nickname">
+                        </div>
+                    </div>
+                    <div class="mb-3 d-flex flex-column">
+                        <div class="form-check form-check-inline ps-0 pe-0 ms-0 me-0">
+                            <label class="form-label fw-medium form-required" for="contact-email">聯絡信箱</label>
+                            <input type="email" class="form-control is-invalid" id="contact-email" name="email">
+                        </div>
+                    </div>
+                    <div class="mb-3 d-flex flex-column">
+                        <div class="form-check form-check-inline ps-0 pe-0 ms-0 me-0">
+                            <label class="form-label fw-medium form-required" for="contact-message">留言內容</label>
+                            <textarea type="text" class="form-control is-invalid" id="contact-message" name="message" rows="6"></textarea>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-secondary" id="contact-send" value="send request">送出</button>
+                    </div>
+                </form>
+                <tb></tb>
+            </div>
+        </div>
+    </main>
+<%- include('./layout/footer'); -%>
+</div>
+
+    
                 <script type="module" src="../main.js"></script>
                 <script type="module" src="../assets/js/course.js"></script>
 </body>
