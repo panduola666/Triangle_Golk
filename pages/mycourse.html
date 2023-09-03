@@ -11,87 +11,222 @@
 <body>
   <%- include('./layout/header'); -%>
     <%- include('./layout/user_nav'); -%>
-    <!-- 未完成 -->
+    <!-- 未完成  dev-check-->
       <main class="container min-vh-100">
         <div class="row">
-          <article class="notebook row d-flex flex-wrap col-lg-11">
-            <ul class="bookmark text-center p-0 me-8 mb-0">
-              <li>
+          <article class="notebook row mb-xl col-lg-12 gy-md-5">
+            <ul class="bookmark list-unstyled text-center p-1 d-flex flex-column">
+              <li class="bookmark d-lg-block d-none mb-2 py-1 bg-teal">
                 <span class="fs-tiny">六角學院(3)</span>
               </li>
+              <li class="bookmark d-lg-block d-none mb-2 py-1 bg-blue">
+                <span class="fs-tiny">Hahow(6)</span>
+              </li>
+              <li class="bookmark d-lg-block d-none mb-2 py-1 bg-orange">
+                <span class="fs-tiny">Udemy(6)</span>
+              </li>
+              <li class="bookmark d-lg-block d-none mb-2 py-1 bg-yellow">
+                <span class="fs-tiny">Coursera(6)</span>
+              </li>
+              <li class="bookmark d-lg-block d-none mb-2 py-1 bg-gray-200">
+                <span class="fs-tiny">其他平台(6)</span>
+              </li>
+              <li class="bookmark d-lg-block d-none mb-2 py-1 bg-primary mt-auto">
+                <span class="fs-tiny">已完課(6)</span>
+              </li>
             </ul>
-            <section class="notebook-page-left col-lg">
-              <div class="single-note d-flex">
-                <!-- 每一個列表的 card 樣式 => single-note-card 這個 class 給你控制 -->
-                  <div class="card single-note-card">
-                    <div class="row g-0">
-                      <div class="col-4 card-row">
-                        <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start"
-                          alt="">
-                      </div>
-                      <div class="col-8">
-                        <div class="card-body">
-                          <h4 class="card-title text-truncate">使用HTML、CSS開發一個網站</h4>
-                        </div>
-                        <div class="card-footer">
-                          <div class="stars d-flex justify-content-end">
-                            <div class="stars-icon text-primary me-2">
-                                <span class="material-symbols-outlined">star</span>
-                                <span class="material-symbols-outlined">star</span>
-                                <span class="material-symbols-outlined">star</span>
-                                <span class="material-symbols-outlined">star</span>
-                                <span class="material-symbols-outlined outline-icon">star</span>
-                            </div>
-                            <span class="fs-8 text-gray-400">(666)</span>
+            <div class="notebook-pages-only flex-lg-nowrap row g-0 row-cols-lg-2 col">
+              <section class="notebook-page-left col col-lg mb-4">
+              <!-- 每一個列表的 card 樣式 => single-note-card 這個 class 給你控制 -->
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
                           </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-
-                <!-- <img src="../assets/images/course-001-code.jpeg" alt="cover of the course">
-                <div class="ms-3">
-                  <div class="overflow-hidden">
-                    <h2 class="fs-6 fw-bold">使用HTML、CSS開發一個網站</h2>
-                  </div>
-                  <div class="tags mb-2 mt-auto">
-                    <span class="fs-8 me-2">#程序</span>
-                  </div>
-                  <div class="stars d-flex justify-content-end">
-                    <div class="stars-icon text-primary me-2">
-                        <span class="material-symbols-outlined">star</span>
-                        <span class="material-symbols-outlined">star</span>
-                        <span class="material-symbols-outlined">star</span>
-                        <span class="material-symbols-outlined">star</span>
-                        <span class="material-symbols-outlined outline-icon">star</span>
-                    </div>
-                    <span class="fs-8 text-gray-400">(666)</span>
-                  </div>
-                </div>   -->
-              </div>
-            </section>
-            <section class="notebook-page-right col-lg">
-              <div class="single-note d-flex">
-                <img src="../assets/images/course-001-code.jpeg" alt="cover of the course">
-                <div class="ms-3">
-                  <div class="overflow-hidden">
-                    <h2 class="fs-6 fw-bold">使用HTML、CSS開發一個網站</h2>
-                  </div>
-                  <div class="tags mb-2 mt-auto">
-                    <span class="fs-8 me-2">#程序</span>
-                  </div>
-                  <div class="stars d-flex justify-content-end">
-                    <div class="stars-icon text-primary me-2">
-                        <span class="material-symbols-outlined">star</span>
-                        <span class="material-symbols-outlined">star</span>
-                        <span class="material-symbols-outlined">star</span>
-                        <span class="material-symbols-outlined">star</span>
-                        <span class="material-symbols-outlined outline-icon">star</span>
-                    </div>
-                    <span class="fs-8 text-gray-400">(666)</span>
                   </div>
                 </div>
-              </div>
-            </section>
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="notebook-page-right col col-lg mb-4">
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
           </article>
         </div>
       </main>
