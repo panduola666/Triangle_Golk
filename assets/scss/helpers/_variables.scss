@@ -420,7 +420,8 @@ $spacers: (
   xl: $spacer * 4,
   // 64px
   xxl: $spacer * 6,
-  // 96px
+  // 96px,
+  sm: $spacer * 0.75, // 12px
   ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -856,7 +857,7 @@ $btn-link-hover-color: var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color: $gray-600 !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius: var(--#{$prefix}border-radius) !default;
+$btn-border-radius: 4px; // var(--#{$prefix}border-radius) !default;
 $btn-border-radius-sm: var(--#{$prefix}border-radius-sm) !default;
 $btn-border-radius-lg: var(--#{$prefix}border-radius-lg) !default;
 
@@ -1269,7 +1270,7 @@ $dropdown-box-shadow: $box-shadow !default;
 
 $dropdown-link-color: var(--#{$prefix}body-color) !default;
 $dropdown-link-hover-color: $dropdown-link-color !default;
-$dropdown-link-hover-bg: var(--#{$prefix}tertiary-bg) !default;
+$dropdown-link-hover-bg: #16330014; //var(--#{$prefix}tertiary-bg) !default;
 
 $dropdown-link-active-color: $component-active-color !default;
 $dropdown-link-active-bg: $component-active-bg !default;
