@@ -1,5 +1,6 @@
+import Swiper from "swiper";
 //跳轉至變更密碼
-const pwdSwiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper-container', {
     initialSlide: 0, // 初始顯示的頁面
     navigation: {
         nextEl: '#changePwd-btn', // 下一頁按鈕
