@@ -1,3 +1,9 @@
+.mob-set{
+    @include mob{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
 .user-card {
     padding: 20px;
 
