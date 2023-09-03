@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>課程內頁</title>
+    <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico">
+    <script type="module" crossorigin src="/Triangle_Golk/assets/coursepages-c86a944b.js"></script>
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/footer-593f08a3.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/apply_course-860e5b7b.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/swiper-core-d55539fa.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/comment-5b611eab.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/course-45aa811e.js">
+    <link rel="stylesheet" href="/Triangle_Golk/assets/footer-9f6df78e.css">
+    <link rel="stylesheet" href="/Triangle_Golk/assets/coursepages-0705b292.css">
+  </head>
+
+  <body>
+    <div class="min-vh-100 d-flex flex-column">
+      <header class="header-nav py-sm bg-white sticky-top">
+    <nav class="container-fluid container-lg ">
+      <div class="row">
+        <div class="col-2">
+          <a class="d-none d-lg-block" href="../pages/index.html">
+            <img
+              src="/Triangle_Golk/assets/en_logo-52c9e4e7.png"
+              style="width: 150px"
+              alt="三角構客"
+            />
+          </a>
+          <a class="d-lg-none" href="../pages/index.html">
+            <img
+              src="/Triangle_Golk/assets/icon-logo-d99fd1a1.png"
+              style="width: 44px"
+              alt="三角構客"
+            />
+          </a>
+        </div>
+
+        <!-- 右側選單 -->
+        <ul class="nav col align-items-center justify-content-end gap-2 text-gray-600 small fw-normal flex-shrink-0">
+          <!-- 搜索框 -->
+          <li class="nav-search border-0 d-none d-lg-block">
+            <div class="input-group h-100">
+                <button
+                  class="btn border-0 dropdown-toggle nav-search-type d-none"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  平台
+                </button>
+                <ul class="dropdown-menu nav-dropdown-menu">
+                  <li class="dropdown-item">平台</li>
+                  <li class="dropdown-item">關鍵字</li>
+                </ul>
+                <input
+                  type="text"
+                  class="form-control border-0 nav-search-value d-none"
+                  aria-label="搜索框"
+                  placeholder="Search"
+                />
+                <button type="button" class="btn border-0 nav-search-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </button>
+            </div>
+          </li>
+          <li class="d-lg-none">
+            <button type="button" class="btn border-0" data-bs-toggle="modal" data-bs-target="#search-modal">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  />
+                </svg>
+              </button>
+          </li>
+    
+          <!-- 小鈴鐺 -->
+          <li class="position-relative d-flex cur-point notify-btn">
+            <span class="material-symbols-outlined">
+                notifications
+            </span>
+            <!-- 有消息時的提示 -->
+            <span class="notify-info"></span>
+            <!-- 通知欄 -->
+            <ul class="d-none notify-menu nav-dropdown-menu position-absolute end-0 bg-white p-0 py-2">
+               <li class="py-2 px-sm">
+                <p class="text-gray-600 mb-2">恭喜您，「Javascript 核心篇」課程審核通過！</p>
+                <p class="m-0">2023-01-23 12:00:00</p>
+               </li>
+               <li class="py-2 px-sm text-center small cur-point d-none">顯示更多</li>
+            </ul>
+          </li>
+    
+          <li class="nav-item nav-page d-none d-lg-block" data-page="course">
+              <!-- 在當前頁需要添加 .active -->
+            <a class="px-2 text-gray-500 fw-bold" href="../pages/course.html">課程清單</a>
+          </li>
+          
+
+          <!-- 登入註冊 -->
+          <li class="btn btn-outline-secondary py-sm px-3 fw-bold nav-login d-none d-lg-block" data-bs-toggle="modal"
+          data-bs-target="#account">
+            登入 / 註冊
+          </li>
+    
+          <li class="nav-item nav-page d-none d-lg-block" data-page="mycourse">
+            <a class="px-2 text-gray-500 fw-bold" href="../pages/mycourse.html">我的課程</a>
+          </li>
+    
+          <!-- 用戶選單 -->
+          <li class="user-menu d-none d-lg-block">
+            <div
+              class="user-dropdown dropdown-toggle py-2 px-sm d-flex justify-content-between align-items-center"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              會員專區
+            </div>
+            <ul class="dropdown-menu nav-dropdown-menu">
+              <li class="dropdown-item">
+                <a href="../pages/user.html">會員專區</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="../pages/mywishlist.html">關注清單</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="../pages/achievement.html">徽章成就</a>
+              </li>
+              <li class="dropdown-item">登出</li>
+            </ul>
+          </li>
+
+          <li type="button" class="d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <span class="material-symbols-outlined p-2">
+                menu
+            </span>
+        </li>
+
+        </ul>
+      </div>
+    </nav>
+
+     <!-- 側邊選單 -->
+    <div class="offcanvas offcanvas-end bg-primary text-gray-600 fw-bold fs-6" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header justify-content-end py-4 px-3">
+          <span class="material-symbols-outlined" data-bs-dismiss="offcanvas" aria-label="Close">
+            close
+            </span>
+        </div>
+        <ul class="offcanvas-body py-2 px-0">
+           <li data-page="course">
+              <!-- 在當前頁需要添加 .active -->
+            <a class="aside-item py-3 px-4 w-100" href="../pages/course.html">課程清單</a>
+          </li>
+
+          <li class="pt-3 px-4">
+            <div class="aside-user-item d-flex align-content-center justify-content-between pb-3 aside-user cur-point">
+                會員專區 
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+            </div>
+            <ul class="ps-4 d-none aside-user-menu">
+                <li data-page="mycourse">
+                  <a class="py-3 w-100" href="../pages/mycourse.html">我的課程</a>
+                </li>
+                <li data-page="mywishlist">
+                    <a class="py-3 w-100" href="../pages/mywishlist.html">關注清單</a>
+                </li>
+                <li data-page="achievement">
+                    <a class="py-3 w-100" href="../pages/achievement.html">徽章成就</a>
+                </li>
+            </ul>
+          </li>
+
+          <!-- 登入註冊 -->
+          <li class="aside-item aside-login py-3 px-4 cur-point" data-bs-toggle="modal"
+          data-bs-target="#account">
+            登入 / 註冊
+          </li>
+          <li class="aside-item aside-sign-out py-3 px-4 cur-point">登出</li>
+        </ul>
+      </div>
+
+    </header>
+    
+    <!-- 登入註冊modal -->
+    <div class="modal fade" id="account" tabindex="-1" aria-labelledby="accountLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  ">
+          <div class="modal-content login-modal p-3">
+            <div class="modal-header border-bottom-0">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close"></button>
+            </div>
+      
+            <div class="modal-body mb-3">
+              <ul class="nav nav-tabs justify-content-center container mb-4" role="tablist" id="account-tab">
+                <li class="nav-item tabs-item" role="presentation">
+                  <button class="nav-link tab fw-bold active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login"
+                    type="button" role="tab" aria-controls="login" aria-selected="true">登入</button>
+                </li>
+      
+                <li class="nav-item tabs-item" role="presentation">
+                  <button class="nav-link tab fw-bold" id="register-tab" data-bs-toggle="tab" data-bs-target="#register"
+                    type="button" role="tab" aria-controls="register" aria-selected="false">註冊</button>
+                </li>
+              </ul>
+      
+              <div class="modal-content login-modal border-0">
+                <div class="tab-content" id="tab-content">
+                  <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                    <form class="login-form container form-content d-flex flex-column justify-content-between">
+                      <div class="form-floating">
+                        <input type="email" class="form-control" id="login-email" name="login-email" placeholder="name@example.com">
+                        <label for="login-email">信箱</label>
+                      </div>
+                      <div class="form-floating">
+                        <input type="password" class="form-control" id="login-password" name="login-password" placeholder="Password" autocomplete="on">
+                        <label for="login-password">密碼</label>
+                      </div>
+                      <div class="d-flex flex-column gap-4">
+                        <button class="btn btn-secondary" type="submit" id="login-btn">登入會員</button>
+                        <button class="btn btn-outline-secondary" id="forget-btn" type="button">忘記密碼</button>
+      
+                      </div>
+                    </form>
+                  </div>
+      
+                  <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                    <form class="container  form-content">
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floating-input" placeholder="name@example.com">
+                        <label for="floating-input">信箱（註冊後不可更改）</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="nickname" class="form-control" id="floating-nickname" placeholder="nickname">
+                        <label for="floating-nickname">暱稱（日後可更改，最多 5 字）</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floating-password" placeholder="Password" autocomplete="on">
+                        <label for="floating-password">密碼</label>
+                      </div>
+                      <button class="btn btn-secondary w-100">註冊會員</button>
+                    </form>
+                  </div>
+      
+      
+                </div>
+              </div>
+              <div class="slide-forget" id="forget">
+                <form class="container">
+                  <div class="d-flex flex-column align-items-center mb-3">
+                    <span class="material-symbols-outlined lock-icon mb-3">lock_reset</span>
+                    <h2 class="title fs-4 fw-bold">忘記密碼 ?</h2>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="user-email" placeholder="name@example.com">
+                    <label for="user-email">信箱</label>
+                  </div>
+                  <div class="mb-3">
+                    <button class="btn btn-secondary w-100" type="button">寄送重設密碼連結</button>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <a href="#" class="back fw-bold" id="back-btn">返回登入</a>
+                  </div>
+                </form>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- 手機端搜索 -->
+<div class="modal fade" id="search-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">課程搜索</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="modal-body">
+            <div class="mb-3">
+                <label for="nav-search-bar" class="form-label">關鍵字</label>
+                <div class="position-reative">
+                    <span
+                        class="material-symbols-outlined search-icon position-absolute text-gray-300 py-1 px-2">search</span>
+                    <input id="nav-search-bar" type="search" class="form-control  search-value w-100" placeholder="請輸入關鍵字">
+                </div>
+            </div>
+            <p class="mb-2">平台</p>
+            <div class="d-flex gap-3 flex-wrap mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="六角平台" name="platform" id="六角平台">
+                    <label class="form-check-label" for="六角平台">
+                        六角平台
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Udemy" name="platform" id="Udemy">
+                    <label class="form-check-label" for="Udemy">
+                        Udemy
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Hahow" name="platform" id="Hahow">
+                    <label class="form-check-label" for="Hahow">
+                        Hahow
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Coursera" name="platform" id="Coursera">
+                    <label class="form-check-label" for="Coursera">
+                        Coursera
+                    </label>
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-secondary float-end">搜索</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>      <main class="container my-xl flex-grow-1">
+        <a class="page-header mb-4 fs-5" href="./course.html">
+          <span class="d-flex align-items-center link-hover">
+            <span class="material-icons"> chevron_right </span>
+            返回列表
+          </span>
+        </a>
+
+        <!-- 課程介紹 -->
+        <div class="row">
+          <!-- 課程介紹 -->
+          <div class="col-12 col-lg-9 mb-3">
+            <!-- 標題 -->
+            <div
+              class="course-title d-flex align-items-center justify-content-between mb-3"
+            >
+              <section
+                class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center"
+              >
+                <span
+                  class="bg-secondary text-white py-2 px-4 rounded-1 me-lg-3 me-2 mb-1 mb-lg-0"
+                  >六角學院</span
+                >
+                <h1 class="page-title fs-lg-2 fs-4 fw-bold text-nowrap">
+                  JavaScript 核心篇
+                </h1>
+              </section>
+              <button
+                type="button"
+                class="favorite favorite-btn border-3 rounded-circle bg-white p-2"
+              >
+                <span
+                  class="material-symbols-outlined outline-icon fw-bold course-favorite-icon"
+                  >favorite</span
+                >
+              </button>
+            </div>
+            <!-- 課程圖片 -->
+
+            <div class="blackboard mb-3">
+              <div class="pic">
+                <span
+                  class="material-symbols-outlined position-absolute text-white top-0 start-0"
+                  style="font-size: 4rem"
+                >
+                  military_tech
+                </span>
+                <span
+                  class="material-symbols-outlined position-absolute text-white bottom-0 end-0"
+                  style="font-size: 5rem"
+                >
+                  format_ink_highlighter
+                </span>
+
+                <!-- 引導點擊遮罩 -->
+                <a href="#" target="_blank" class="blackboard-mark">
+                  <span
+                    class="material-symbols-outlined outline-icon text-white course-link-icon"
+                  >
+                    play_circle
+                  </span>
+                </a>
+
+                <img
+                  src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80"
+                  class="course-cover"
+                  alt="JavaScript 核心篇"
+                />
+              </div>
+            </div>
+
+            <!-- 評分 -->
+            <div class="stars-icon d-flex text-primary course-scores mb-3">
+              <span class="fs-2 material-symbols-outlined">star</span>
+              <span class="fs-2 material-symbols-outlined">star</span>
+              <span class="fs-2 material-symbols-outlined">star</span>
+              <span class="fs-2 material-symbols-outlined">star</span>
+              <span class="fs-2 material-symbols-outlined outline-icon"
+                >star</span
+              >
+            </div>
+
+            <!-- 標籤 -->
+
+            <div class="course-label">
+              <p class="mb-1">標籤：</p>
+              <ul class="p-0 d-flex flex-wrap gap-2 course-tags">
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+                <li class="border border-secondary p-1 px-3 rounded-5 small">
+                  程式
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 課程進修室 -->
+          <div
+            class="col col-lg-3 d-flex align-items-center justify-content-center flex-column flex-md-row flex-lg-column"
+          >
+            <form
+              class="course-test needs-validation d-flex flex-column bg-primary bg-gradient p-4 flex-grow-1 flex-lg-grow-0 w-100"
+              novalidate
+            >
+              <div class="mb-3">
+                <h4 class="fw-bold text-nowrap text-center">課堂小測</h4>
+              </div>
+
+              <div class="mb-3">
+                <label
+                  class="form-label form-required fw-bold mb-1"
+                  for="test-name"
+                  >1. 該課程的名字是？</label
+                >
+                <input
+                  class="form-control small py-1 ps-2"
+                  id="test-name"
+                  name="test-name"
+                  type="text"
+                  placeholder="請輸入答案"
+                  required
+                />
+                <div class="invalid-feedback">請輸入答案</div>
+              </div>
+
+              <div class="mb-3">
+                <label
+                  class="form-label form-required fw-bold mb-1"
+                  for="test-brand"
+                  >2. 該課程上架於哪個平台?</label
+                >
+                <input
+                  class="form-control small py-1 ps-2"
+                  id="test-brand"
+                  type="text"
+                  placeholder="請輸入平台名稱"
+                  required
+                />
+                <div class="invalid-feedback">請輸入平台名稱</div>
+              </div>
+
+              <div class="modal-footer justify-content-around">
+                <button type="submit" class="btn btn-secondary">提交</button>
+              </div>
+            </form>
+            <p
+              class="test-passed bg-primary bg-gradient p-4 flex-grow-1 flex-lg-grow-0 fs-3 fw-bold mb-0 d-none"
+            >
+              已經有 492 人通過測驗，趕快來進來交流吧！
+            </p>
+            <div class="mt-3 px-3">
+              <a
+                href="./classroom.html"
+                class="btn btn-lg btn-secondary w-100 d-none classroom-btn"
+                id="show-alert"
+              >
+                課程進修室
+              </a>
+              <div
+                class="modal-footer justify-content-around m-4 d-none d-md-block"
+              >
+                <img
+                  src="/Triangle_Golk/assets/study-f86db57b.png"
+                  style="object-fit: cover"
+                  alt="mascot"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 評論 -->
+        <ul
+          class="nav course-page-nav align-items-center gap-2 position-relative my-5"
+        >
+          <li class="nav-item">
+            <p class="nav-comment-link fs-6 px-3 py-2" data-key="timer">
+              最新評論
+            </p>
+          </li>
+          <li class="nav-item">
+            <p class="nav-comment-link fs-6 px-3 py-2" data-key="likesNum">
+              最熱評論
+            </p>
+          </li>
+          <li class="flex-grow-1 bg-secondary" style="padding: 1px"></li>
+        </ul>
+
+        <!-- 課程評價 -->
+        <!-- 樣式選擇 書籤: .course-page-comment 便條紙: .comment-style0 -->
+        <div class="px-5">
+          <ul class="row list-unstyled g-5 comment-list"></ul>
+        </div>
+
+        <!-- 換頁 -->
+        <nav class="page-nav container mb-5" aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item p-hover">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="page-item p-hover active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item p-hover"><a class="page-link" href="#">2</a></li>
+        <li class="page-item p-hover"><a class="page-link" href="#">3</a></li>
+        <li class="page-item p-hover"><a class="page-link" href="#">4</a></li>
+        <li class="page-item p-hover"><a class="page-link" href="#">5</a></li>
+        <li class="page-item p-hover">
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+        <!-- 其他人還看了 -->
+        <section class="d-flex justify-content-between align-items-center">
+          <h2 class="fs-3 fw-bold p-2">其他人還看了</h2>
+          <div class="other-swiper-btn">
+            <span class="material-icons cur-point circle swiper-prev me-3">
+              chevron_left
+            </span>
+            <span class="material-icons cur-point circle swiper-next">
+              chevron_right
+            </span>
+          </div>
+        </section>
+        <div class="swiper other-courses">
+          <ul class="swiper-wrapper px-0 py-3">
+            <!-- <div class="swiper-slide">
+          <li class="d-flex flex-column">
+            <a class="card card-hover h-100 rounded-4 position-relative" href="./coursepages.html?id=2&sort=timer">
+              <div class="pic">
+                <img
+                  src="https://images.pexels.com/photos/11035386/pexels-photo-11035386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="快速打造響應式網頁"
+                  class="card-pic"
+                />
+              </div>
+              <div
+                class="badge d-flex justify-content-between align-items-center position-absolute"
+              >
+                <span
+                  class="brand bg-secondary small text-white rounded-1 py-1 px-3"
+                  >六角學院</span
+                >
+                <span
+                  class="favorite material-symbols-outlined outline-icon position-absolute"
+                  >favorite</span
+                >
+              </div>
+              <div class="card-body">
+                <h3 class="title text-secondary fs-6 fw-bold">
+                  使用 HTML、CSS 快速打造屬於自己的響應式網站
+                </h3>
+              </div>
+              <div class="card-footer">
+                <div class="tags mb-2 mt-auto">
+                  <span class="fs-8 me-2">#程序</span>
+                </div>
+                <div class="stars d-flex">
+                  <div class="stars-icon text-primary me-2">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined outline-icon"
+                      >star</span
+                    >
+                  </div>
+                  <span class="fs-8 text-gray-400">(666)</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </div> -->
+          </ul>
+        </div>
+
+        <!-- 申請新課 -->
+        <button
+          type="button"
+          class="apply btn btn-blue fw-bold fixed-shadow"
+          data-bs-toggle="modal"
+          data-bs-target="#apply-modal"
+        >
+          申請<br />新課
+        </button>
+
+        <div
+          class="modal fade"
+          id="apply-modal"
+          tabindex="-1"
+          aria-labelledby="apply-modalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title fs-5 fw-bold" id="apply-modalLabel">
+                  申請新課
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form
+                  class="apply-form needs-validation d-flex flex-column"
+                  novalidate
+                >
+                  <div class="mb-3">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="course-name"
+                      >課程名稱</label
+                    >
+                    <input
+                      class="form-control small py-1 ps-2"
+                      id="course-name"
+                      type="text"
+                      placeholder="請輸入課程名稱"
+                      required
+                    />
+                    <div class="invalid-feedback">請輸入課程名稱</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="brand-name"
+                      >該課程開設在哪家平台</label
+                    >
+                    <input
+                      class="form-control small py-1 ps-2"
+                      id="brand-name"
+                      type="text"
+                      placeholder="請輸入平台名稱"
+                      required
+                    />
+                    <div class="invalid-feedback">請輸入平台名稱</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="course-link"
+                      >該課程的頁面連結</label
+                    >
+                    <input
+                      class="form-control small py-1 ps-2"
+                      id="course-link"
+                      type="text"
+                      placeholder="請輸入課程連結"
+                      required
+                    />
+                    <div class="invalid-feedback">請輸入課程連結</div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="comment"
+                      >請寫下你的理由</label
+                    >
+                    <textarea
+                      class="form-control comment small py-1 ps-2"
+                      id="comment"
+                      cols="30"
+                      rows="10"
+                      placeholder="最多不超過 400 字"
+                      maxlength="400"
+                      minlength="5"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">請寫下你的理由</div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      取消
+                    </button>
+                    <button
+                      type="submit"
+                      class="btn btn-secondary"
+                      id="show-alert"
+                    >
+                      送出申請
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="container-fluid bg-secondary-subtle py-lg-4 py-3">
+  <div class="row flex-column flex-lg-column-reverse gap-4">
+    <!-- logo -->
+    <div class="col col-lg-4 mx-auto text-center">
+      <a href="../pages/index.html">
+        <img src="/Triangle_Golk/assets/en_logo-52c9e4e7.png" alt="logo" class="footer-logo" />
+      </a>
+    </div>
+
+    <div class="col d-flex flex-column-reverse flex-lg-column align-items-center gap-4">
+      <ul class="d-flex align-items-center gap-l p-0 mb-0 small">
+        <li><a class="text-decoration-underline" href="../pages/about.html">用戶須知</a></li>
+        <li><a class="text-decoration-underline" href="../pages/contact.html">聯繫客服</a></li>
+        <li><a class="text-decoration-underline" href="../pages/terms.html">服務條款</a></li>
+      </ul>
+      <ul class="d-flex align-items-center gap-4 p-0 mb-0 link-icons">
+        <li>
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="/Triangle_Golk/assets/icon-facebook-7aaf6a31.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="/Triangle_Golk/assets/icon-instagram-343849f6.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/" target="_blank">
+            <img src="/Triangle_Golk/assets/icon-youtube-d6d414c8.svg" alt="" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- 聯繫客服 -->
+<div class="footer-fixed d-flex flex-column gap-2">
+  <a href="../pages/contact.html" class="content-icon">
+    <span class="material-symbols-outlined outline-icon">
+      mail
+    </span>
+  </a>
+  
+  <span class="material-symbols-outlined scroll-top">
+    arrow_upward
+    </span>
+</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    
+    <!-- Swiper JS -->
+    
+    
+  </body>
+</html>
