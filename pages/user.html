@@ -17,154 +17,243 @@
 
   <body>
     <div class="min-vh-100 d-flex flex-column">
-        <%- include('./layout/nav'); -%>
-        <%- include('./layout/user_nav'); -%>
-            <div class="container flex-grow-1">
-                <div class="card user-card swiper-container mb-5 w-lg-75 w-100 mx-auto shadow-sm">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="card-header d-flex justify-content-between align-items-center">
-                                <img class="card-logo" src="../assets/images/zh_logo.png" class="card-img-top"
-                                    alt="三角構客logo">
-                                <span class="fs-4 fw-bold">【會員證】</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col d-flex flex-column">
-                                        <form clsas="d-flex flex-column">
-                                            <div class="d-flex flex-column mb-4">
-                                                <label class="form-label" for="name">暱稱</label>
-                                                <input class="form-control" id="name" type="text" value="林小明" readonly>
-                                            </div>
-                                            <div class="d-flex flex-column mb-4">
-                                                <label class="form-label" for="email">帳號</label>
-                                                <input class="form-control" id="email" type="text"
-                                                    value="email@example.com" readonly>
-                                            </div>
-                                        </form>
-                                        <div class="d-flex justify-content-between mt-auto">
-                                            <div>
-                                                <button class="btn btn-outline-secondary border-0"
-                                                    id="next-btn">變更密碼</button>
-                                            </div>
-                                            <div>
-                                                <button class="btn btn-secondary">編輯</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col position-relative">
-                                        <img src="https://picsum.photos/200/200" alt="會員頭像">
-                                        <button type="button"
-                                            class="change btn rounded-circle d-flex justify-content-between align-items-center"
-                                            data-bs-toggle="modal" data-bs-target="#pic-modal">
-                                            <span class="material-symbols-outlined fw-bold">sync_alt</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-prev-btn">
-                                <button class="btn" id="prev-btn">
-                                    <span class="material-symbols-outlined prev-icon">navigate_before</span>
-                                </button>
-                            </div>
-                            <div class="w-75 mx-auto">
-                                <div class="card-header">
-                                    <h2 class="fs-4">變更密碼</h2>
-                                </div>
-                                <div class="card-body">
-                                    <form>
-                                        <div class="form-floating mb-3">
-                                            <input class="form-control" id="floating-old" type="password"
-                                                placeholder="目前的密碼" autocomplete="off">
-                                            <label class="form-required" for="floating-old">目前的密碼</label>
-                                        </div>
-                                        <div class="form-floating mb-3">
-                                            <input class="form-control" id="floating-new" type="password"
-                                                placeholder="請輸入新密碼" autocomplete="off">
-                                            <label class="form-required" for="floating-new">請輸入新密碼</label>
-                                        </div>
-                                        <div class="form-floating mb-3">
-                                            <input class="form-control" id="floating-re" type="password"
-                                                placeholder="再次輸入新密碼" autocomplete="off">
-                                            <label class="form-required" for="floating-re">再次輸入新密碼</label>
-                                        </div>
-
-                                        <button type="submit" class="btn btn-secondary w-100 py-2">更改密碼</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <%- include('./layout/nav'); -%> 
+    <%- include('./layout/user_nav'); -%>
+    <div class="container">
+      <div class="card user-card swiper-container mb-5 w-lg-75 w-100 mx-auto">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="card-header d-flex justify-content-between align-items-center"
+            >
+              <img
+                class="card-logo"
+                src="../assets/images/zh_logo.png"
+                class="card-img-top"
+                alt="三角構客logo"
+              />
+              <span class="fs-4 fw-bold">【會員證】</span>
             </div>
-            <!-- Modal -->
-            <div class="modal fade" id="pic-modal" tabindex="-1" aria-labelledby="pic-modalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title fs-5 fw-bold" id="pic-modalLabel">徽章成就</h2>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body container">
-                            <div class="row g-4">
-                                <div class="col-lg-4 col-6">
-                                    <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
-                                    </button>
-                                </div>
-                                <div class="col-lg-4 col-6">
-                                    <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
-                                    </button>
-                                </div>
-                                <div class="col-lg-4 col-6">
-                                    <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
-                                    </button>
-                                </div>
-                                <div class="col-lg-4 col-6">
-                                    <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
-                                    </button>
-                                </div>
-                                <div class="col-lg-4 col-6">
-                                    <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
-                                    </button>
-                                </div>
-                                <div class="col-lg-4 col-6">
-                                    <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
-                                    </button>
-                                </div>
-                                <div class="col-lg-4 col-6">
-                                    <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
-                                    </button>
-                                </div>
-                                <div class="col-lg-4 col-6">
-                                    <button class="btn p-0" type="button">
-                                        <img src="https://picsum.photos/200/200" alt="徽章頭像">
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">取消</button>
-                            <button type="submit" class="btn btn-secondary" id="success-message">設為頭像</button>
-                        </div>
+            <div class="card-body">
+              <div class="row mt-5">
+                <div class="col d-flex flex-column">
+                  <form class="d-flex flex-column">
+                    <div class="d-flex flex-column mb-4">
+                      <label class="form-label" for="name">暱稱</label>
+                      <input
+                        class="form-control"
+                        id="name"
+                        type="text"
+                        value="林小明"
+                        readonly
+                      />
                     </div>
+                    <div class="d-flex flex-column mb-4">
+                      <label class="form-label" for="email">帳號</label>
+                      <input
+                        class="form-control"
+                        id="email"
+                        type="text"
+                        value="email@example.com"
+                        readonly
+                      />
+                    </div>
+                  </form>
+                  <div class="d-flex justify-content-between mt-auto">
+                    <div>
+                      <button
+                        class="btn btn-outline-secondary border-0"
+                        id="changePwd-btn"
+                      >
+                        變更密碼
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-secondary">編輯</button>
+                    </div>
+                  </div>
                 </div>
+                <div class="col position-relative">
+                  <img
+                    src="../assets/images/avatar-04.svg"
+                    alt="會員預設頭像"
+                  />
+                  <button
+                    type="button"
+                    class="change btn rounded-circle d-flex justify-content-between align-items-center"
+                    data-bs-toggle="modal"
+                    data-bs-target="#pic-modal"
+                  >
+                    <span class="material-symbols-outlined fw-bold"
+                      >sync_alt</span
+                    >
+                  </button>
+                </div>
+              </div>
             </div>
-            <%- include('./layout/footer'); -%>
-                <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-                <script type="module" src="../main.js"></script>
-                <script type="module" src="../assets/js/user.js"></script>
-                <script src="../assets/js/user_nav.js"></script>
-</body>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-prev-btn">
+              <button class="btn" id="prev-btn">
+                <span class="material-symbols-outlined prev-icon"
+                  >navigate_before</span
+                >
+              </button>
+            </div>
+            <div class="w-75 mx-auto">
+              <div class="card-header">
+                <h2 class="fs-4 fw-bold">變更密碼</h2>
+              </div>
+              <div class="card-body">
+                <form class="needs-validation" id="changePwdForm">
+                  <div class="form-floating mb-3">
+                    <input
+                      class="form-control"
+                      id="floating-old"
+                      type="password"
+                      placeholder="目前的密碼"
+                      autocomplete="off"
+                      required
+                    />
+                    <label class="form-required" for="floating-old"
+                      >目前的密碼</label
+                    >
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      class="form-control"
+                      id="floating-new"
+                      type="password"
+                      placeholder="請輸入新密碼"
+                      autocomplete="off"
+                      name="new-pwd"
+                      required
+                    />
+                    <label class="form-required" for="floating-new"
+                      >請輸入新密碼</label
+                    >
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      class="form-control"
+                      id="floating-re"
+                      type="password"
+                      placeholder="再次輸入新密碼"
+                      autocomplete="off"
+                      name="re-pwd"
+                      required
+                    />
+                    <label class="form-required" for="floating-re"
+                      >再次輸入新密碼</label
+                    >
+                  </div>
 
+                  <button
+                    type="submit"
+                    class="btn btn-secondary w-100 mb-5"
+                    id="change-pwd"
+                  >
+                    更改密碼
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="pic-modal"
+      tabindex="-1"
+      aria-labelledby="pic-modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5 fw-bold" id="pic-modalLabel">
+              徽章成就
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body container">
+            <div class="row g-4">
+              <div class="col-lg-4 col-6">
+                <button class="btn p-0" type="button">
+                  <img src="../assets/images/avatar-04.svg" alt="徽章頭像" />
+                </button>
+              </div>
+              <div class="col-lg-4 col-6">
+                <button class="btn p-0" type="button">
+                  <img src="../assets/images/avatar-05.svg" alt="徽章頭像" />
+                </button>
+              </div>
+              <div class="col-lg-4 col-6">
+                <button class="btn p-0" type="button">
+                  <img src="../assets/images/avatar-06.svg" alt="徽章頭像" />
+                </button>
+              </div>
+              <div class="col-lg-4 col-6">
+                <button class="btn p-0" type="button">
+                  <img src="../assets/images/avatar-07.svg" alt="徽章頭像" />
+                </button>
+              </div>
+              <div class="col-lg-4 col-6">
+                <button class="btn p-0" type="button">
+                  <img src="../assets/images/avatar-08.svg" alt="徽章頭像" />
+                </button>
+              </div>
+              <div class="col-lg-4 col-6">
+                <button class="btn p-0" type="button">
+                  <img src="../assets/images/avatar-01.svg" alt="徽章頭像" />
+                </button>
+              </div>
+              <div class="col-lg-4 col-6">
+                <button class="btn p-0" type="button">
+                  <img src="../assets/images/avatar-02.svg" alt="徽章頭像" />
+                </button>
+              </div>
+              <div class="col-lg-4 col-6">
+                <button class="btn p-0" type="button">
+                  <img src="../assets/images/avatar-03.svg" alt="徽章頭像" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              取消
+            </button>
+            <button
+              type="submit"
+              class="btn btn-secondary"
+              id="success-message"
+            >
+              設為頭像
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('./layout/footer'); -%>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/user.js"></script>
+    <script src="../assets/js/user_nav.js"></script>
+  </body>
 </html>
