@@ -1,6 +1,5 @@
 .bookmark {
   width: 5em;
-  height: 1.5em;
 
   li {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
@@ -16,12 +15,12 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 內頁陰影效果 */
     position: relative; /* 添加紙張紋理 */
 
-    @media (max-width: 1200px) {
-      max-width: 100%; 
-      margin: 0 auto;
-      margin-bottom: 20px; 
-      padding: 2em;
-    }
+    // @media (max-width: 1200px) {
+    //   max-width: 100%; 
+    //   margin: 0 auto;
+    //   margin-bottom: 20px; 
+    //   padding: 2em;
+    // }
   }
   &-right { /* 更正筆記本右頁值 完善視覺效果 */
     margin-right: none;
@@ -37,10 +36,6 @@
     border: solid 1px #ddd;
     border-right: solid 1.5px #666;
     z-index: -1; 
-
-    // @media (max-width: 1200px) {
-    //   display: none;
-    // }
   }
   &-right::before { /* 更正筆記本右頁值 完善視覺效果 */
     left: -10px; 
@@ -50,7 +45,11 @@
   }
 }
 .single-note {
-  border: solid 1px #ddd;
+  &-card{
+    img{
+      height: 125px;
+    }
+  }
 
   @media (max-width: 414px) {
     flex-direction: column; /* 垂直排列內容 */
@@ -58,12 +57,10 @@
     text-align: center; /* 文字置中對齊 */
     }
   img {
-    // max-width: 110px;
-    // max-height: 110px;
     object-fit: cover;
 
     @media (max-width: 414px){
-      display: none;
+      // display: none;
     }
   }
 }
