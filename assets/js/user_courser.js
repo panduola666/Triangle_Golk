@@ -7,7 +7,6 @@ const modalBtn = document.querySelectorAll('.modal-btn')
 modalBtn.forEach(btn => {
     btn.addEventListener('click', async (e) => {
        const res = await Comment.getCurrent(btn.dataset.id)
-       console.log(res);
        const { id, score, showName, user, content, canEdit, failContent, isPassed } = res
        const email = user.email.slice(0, user.email.indexOf('@'))
 

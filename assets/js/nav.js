@@ -41,14 +41,9 @@ if(localStorage.getItem('token')) {
 
 // nav 哪個頁面 active
 navItem.forEach(item => {
-    console.log(item.dataset.page);
-    console.log(location.pathname);
-    console.log(location.pathname.endsWith(item.dataset.page));
-    console.log(currentPage);
     if(currentPage === item.dataset.page){
         item.children[0].classList.add('active')
     }else{
-        console.log(item);
         item.children[0].classList.remove('active')
     }
 })
@@ -77,7 +72,6 @@ nav.addEventListener('mouseleave', (e) => {
 })
 
 asideUser.addEventListener('click', (e) => {
-    console.dir();
     if(e.target.children[0].innerText.trim() === 'add') {
         // 展開
         e.target.children[0].innerText = 'remove'

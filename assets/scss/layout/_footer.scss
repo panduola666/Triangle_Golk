@@ -1,57 +1,59 @@
-.footer{
-  // background: var(--background-gray, rgba(22, 51, 0, 0.08));
-  font-size: 64px;
+.footer-logo{
+  width: 20vw;
+  min-width: 150px;
+  max-width: 300px;
+  object-fit: contain;
+
 }
 
-.type-setting{
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.remove-bootstrap-style {
-  list-style: none; 
-
-  li {
-    text-decoration-line: underline;
-
-    a{
-     padding-right:16px ;
-     font-size: 14px;
-
-     &:hover {
-      text-decoration: underline;
-      color: var(--primary, #9FE870)
-
-
+.link-icons{
+  img{
+    @media (min-width: 992px) {
+      width: 32px;
+      height: 32px;
     }
-
-    }  
   }
 }
 
-.website-item{
-  margin: 0 auto;
+.footer-fixed{
+  position: fixed;
+  right: 16px;
+  bottom: 40px;
+  z-index: 30;
+  span{
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    background-color: #16330014;
+    border-radius: 50%;
+    line-height: 64px;
+    text-align: center;
+    transition: background-color 1s;
+    &:hover{
+      transition: background-color 1s;
+      background-color: #16330046;
+    }
+  }
 }
 
-
-.word-ballons{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; 
-  justify-content: end;
-  padding: 20px;
-}
-
-
-.back-to-top-circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--background-gray, rgba(22, 51, 0, 0.08));
-  padding: 8px; 
-  margin-bottom: 10px;
+.content-icon{
+  position: relative;
+  &::before{
+    content: '聯繫客服';
+    width: 5rem;
+    height: 1.5rem;
+    text-align: center;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $secondary;
+    border-radius: 8px;
+    color: $primary;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  &:hover::before{
+    opacity: 1;
+  }
 }
