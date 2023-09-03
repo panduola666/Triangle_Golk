@@ -57,7 +57,7 @@
                 </button>
             </div>
           </li>
-          <li>
+          <li class="d-lg-none">
             <button type="button" class="btn border-0" data-bs-toggle="modal" data-bs-target="#search-modal">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@
             </ul>
           </li>
     
-          <li class="nav-item nav-page d-none d-lg-block" data-page="course.html">
+          <li class="nav-item nav-page d-none d-lg-block" data-page="course">
               <!-- 在當前頁需要添加 .active -->
             <a class="px-2 text-gray-500 fw-bold" href="../pages/course.html">課程清單</a>
           </li>
@@ -103,7 +103,7 @@
             登入 / 註冊
           </li>
     
-          <li class="nav-item nav-page d-none d-lg-block" data-page="mycourse.html">
+          <li class="nav-item nav-page d-none d-lg-block" data-page="mycourse">
             <a class="px-2 text-gray-500 fw-bold" href="../pages/mycourse.html">我的課程</a>
           </li>
     
@@ -118,9 +118,15 @@
               會員專區
             </div>
             <ul class="dropdown-menu nav-dropdown-menu">
-              <li class="dropdown-item">會員專區</li>
-              <li class="dropdown-item">關注清單</li>
-              <li class="dropdown-item">徽章成就</li>
+              <li class="dropdown-item">
+                <a href="../pages/user.html">會員專區</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="../pages/mywishlist.html">關注清單</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="../pages/achievement.html">徽章成就</a>
+              </li>
               <li class="dropdown-item">登出</li>
             </ul>
           </li>
@@ -143,7 +149,7 @@
             </span>
         </div>
         <ul class="offcanvas-body py-2 px-0">
-           <li data-page="course.html">
+           <li data-page="course">
               <!-- 在當前頁需要添加 .active -->
             <a class="aside-item py-3 px-4 w-100" href="../pages/course.html">課程清單</a>
           </li>
@@ -156,14 +162,14 @@
                 </span>
             </div>
             <ul class="ps-4 d-none aside-user-menu">
-                <li data-page="mycourse.html">
+                <li data-page="mycourse">
                   <a class="py-3 w-100" href="../pages/mycourse.html">我的課程</a>
                 </li>
-                <li class="">
-                    <a class="py-3 w-100" href="">關注清單</a>
+                <li data-page="mywishlist">
+                    <a class="py-3 w-100" href="../pages/mywishlist.html">關注清單</a>
                 </li>
-                <li class="">
-                    <a class="py-3 w-100" href="">徽章成就</a>
+                <li data-page="achievement">
+                    <a class="py-3 w-100" href="../pages/achievement.html">徽章成就</a>
                 </li>
             </ul>
           </li>

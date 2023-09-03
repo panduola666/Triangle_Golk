@@ -16,7 +16,8 @@ const userMenu = document.querySelector('.user-menu')
 const asideUser = document.querySelector('.aside-user')
 const asideLogin = document.querySelector('.aside-login')
 const asideSignOut = document.querySelector('.aside-sign-out')
-    
+
+const currentPage = window.location.href.split('/').pop().split('.')[0];
 if(localStorage.getItem('token')) {
     // 已登入要隱藏
     asideLogin.classList.add('d-none')
@@ -38,12 +39,16 @@ if(localStorage.getItem('token')) {
 
 }
 
+// nav 哪個頁面 active
 navItem.forEach(item => {
     console.log(item.dataset.page);
-    console.log(location.href.includes(item.dataset.page));
-    if(location.href.includes(item.dataset.page)){
+    console.log(location.pathname);
+    console.log(location.pathname.endsWith(item.dataset.page));
+    console.log(currentPage);
+    if(currentPage === item.dataset.page){
         item.children[0].classList.add('active')
     }else{
+        console.log(item);
         item.children[0].classList.remove('active')
     }
 })
