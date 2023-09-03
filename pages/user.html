@@ -20,7 +20,7 @@
         <%- include('./layout/nav'); -%>
         <%- include('./layout/user_nav'); -%>
             <div class="container flex-grow-1">
-                <div class="card user-card swiper-container mb-5 w-lg-75 w-100 mx-auto">
+                <div class="card user-card swiper-container mb-5 w-lg-75 w-100 mx-auto shadow-sm">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="card-header d-flex justify-content-between align-items-center">
@@ -77,17 +77,17 @@
                                     <form>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="floating-old" type="password"
-                                                placeholder="目前的密碼">
+                                                placeholder="目前的密碼" autocomplete="off">
                                             <label class="form-required" for="floating-old">目前的密碼</label>
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="floating-new" type="password"
-                                                placeholder="請輸入新密碼">
+                                                placeholder="請輸入新密碼" autocomplete="off">
                                             <label class="form-required" for="floating-new">請輸入新密碼</label>
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="floating-re" type="password"
-                                                placeholder="再次輸入新密碼">
+                                                placeholder="再次輸入新密碼" autocomplete="off">
                                             <label class="form-required" for="floating-re">再次輸入新密碼</label>
                                         </div>
 
