@@ -18,5 +18,13 @@ export const Passes = {
             console.log(err);
         }
      },
+    async getUserPasses() {
+        try {
+            const res = await axios.get(`${VITE_BASEURL}/passes?_expand=user&_expand=course&userId=${localStorage.getItem('userId')}`)
+            return res.data
+        } catch (err) {
+            console.log(err);
+        }
+    }
 
 } 

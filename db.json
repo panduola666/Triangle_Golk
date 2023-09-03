@@ -140,6 +140,18 @@
       "userId": 1,
       "courseId": 1,
       "isFinish": false
+    },
+    {
+      "userId": 1,
+      "courseId": 2,
+      "isFinish": false,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "courseId": 3,
+      "isFinish": false,
+      "id": 3
     }
   ],
   "comments": [

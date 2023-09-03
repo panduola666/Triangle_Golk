@@ -27,6 +27,7 @@ if(localStorage.getItem('token')) {
     userMenu.classList.remove('d-lg-none')
     asideUser.classList.remove('d-none')
     asideSignOut.classList.remove('d-none')
+    notifyBtn.classList.remove('d-none')
 }else{
     // 未登入要隱藏
     loginBtn.classList.add('d-lg-block')
@@ -34,6 +35,7 @@ if(localStorage.getItem('token')) {
     userMenu.classList.add('d-lg-none')
     asideUser.classList.add('d-none')
     asideSignOut.classList.add('d-none')
+    notifyBtn.classList.add('d-none')
     // 未登入要顯示
     asideLogin.classList.remove('d-none')
 
