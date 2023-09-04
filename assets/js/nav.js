@@ -57,13 +57,13 @@ navSearch.addEventListener('mouseenter', (e) => {
     searchValue.classList.remove('d-none')
 })
 // 輸入框隱藏
-navSearch.addEventListener('mouseleave', (e) => {
+document.addEventListener('mouseover', (e) => {
     if(searchValue.value) return
-    setTimeout(()=>{
-    navSearch.classList.add('border-0')
-    searchType.classList.add('d-none')
-    searchValue.classList.add('d-none')
-    },300)
+    if(e.pageY > 180) {
+        navSearch.classList.add('border-0')
+        searchType.classList.add('d-none')
+        searchValue.classList.add('d-none')
+    }
 })
 
 notifyBtn.addEventListener('click', () => {
