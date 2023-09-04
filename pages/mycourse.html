@@ -14,46 +14,47 @@
     <%- include('./layout/nav'); -%>
     <%- include('./layout/user_nav'); -%>
     <!-- 未完成  dev-check-->
-      <main class="container my-xl flex-grow-1">
+      <!-- <main class="container my-xl flex-grow-1"> -->
+      <main class="container my-xl flex-grow-1 dev-check">
           <article class="notebook row mb-xl col-lg-12">
             <ul class="bookmark list-unstyled text-center p-1 d-flex flex-column d-lg-block d-none">
               <li class="bookmark mb-2 py-1 bg-teal">
-                <span class="fs-tiny">六角學院(3)</span>
+                <a href="#"><span class="fs-tiny">六角學院(3)</span></a>
               </li>
               <li class="bookmark bookmark-unselected mb-2 py-1 bg-blue">
-                <span class="fs-tiny">Hahow(6)</span>
+                <a href="#"><span class="fs-tiny">Hahow(6)</span></a>
               </li>
               <li class="bookmark bookmark-unselected mb-2 py-1 bg-orange">
-                <span class="fs-tiny">Udemy(6)</span>
+                <a href="#"><span class="fs-tiny">Udemy(6)</span></a>
               </li>
               <li class="bookmark bookmark-unselected mb-2 py-1 bg-yellow">
-                <span class="fs-tiny">Coursera(6)</span>
+                <a href="#"><span class="fs-tiny">Coursera(6)</span></a>
               </li>
               <li class="bookmark bookmark-unselected mb-2 py-1 bg-gray-200">
-                <span class="fs-tiny">其他平台(6)</span>
+                <a href="#"><span class="fs-tiny">其他平台(6)</span></a>
               </li>
               <li class="bookmark bookmark-unselected mb-2 py-1 bg-primary mt-auto">
-                <span class="fs-tiny">已完課(6)</span>
+                <a href="#"><span class="fs-tiny">已完課(6)</span></a>
               </li>
             </ul>
-            <ul class="bookmark-mobile list-unstyled text-center p-1 d-flex d-lg-none mt-0 mb-0">
+            <ul class="bookmark-mobile list-unstyled text-center p-1 d-flex d-lg-none my-0">
               <li class="bookmark py-1 bg-teal fs-tiny">
-                六角學院 (333)
+                <a href="#">六角學院 (333)</a>
               </li>
               <li class="bookmark bookmark-unselected py-1 bg-blue fs-tiny">
-                Hahow (6)
+                <a href="#">Hahow (6)</a>
               </li>
               <li class="bookmark bookmark-unselected py-1 bg-orange fs-tiny">
-                Udemy (6)
+                <a href="#">Udemy (6)</a>
               </li>
               <li class="bookmark bookmark-unselected py-1 bg-yellow fs-tiny">
-                Coursera (6)
+                <a href="#">Coursera (6)</a>
               </li>
               <li class="bookmark bookmark-unselected py-1 bg-gray-200 fs-tiny">
-                其他平台 (6)
+                <a href="#">其他平台 (6)</a>
               </li>
               <li class="bookmark bookmark-unselected py-1 bg-primary ms-auto fs-tiny">
-                已完課 (6)
+                <a href="#">已完課 (6)</a>
               </li>
             </ul>
             <div class="notebook-pages-only flex-lg-nowrap row g-0 row-cols-lg-2 col">
@@ -101,6 +102,10 @@
                           </div>
                           <span class="small text-gray-400">(666)</span>
                         </div>
+                      </div>
+                      <div class="single-note-card-btn">
+                        <button class="check-course btn btn-outline-primary ">查看課程</button>
+                        <button class="go-comment btn btn-outline-primary">完課評價</button>
                       </div>
                     </div>
                   </div>
