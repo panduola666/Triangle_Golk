@@ -52,5 +52,8 @@
         &:hover{
         opacity: 1;
         }
+        &.active{
+            border: 2px solid $primary;
+        }
     }
 }

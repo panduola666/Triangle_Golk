@@ -9,9 +9,10 @@
   </head>
 
   <body>
+    <%- include('./layout/loading'); -%>
     <div class="min-vh-100 d-flex flex-column">
       <%- include('./layout/nav'); -%>
-      <main class="container my-xl flex-grow-1">
+      <main class="container flex-grow-1">
         <a class="page-header mb-4 fs-5" href="./course.html">
           <span class="d-flex align-items-center link-hover">
             <span class="material-icons"> chevron_right </span>
@@ -66,7 +67,7 @@
                 </span>
 
                 <!-- 引導點擊遮罩 -->
-                <a href="#" target="_blank" class="blackboard-mark">
+                <a target="_blank" class="blackboard-mark">
                   <span
                     class="material-symbols-outlined outline-icon text-white course-link-icon"
                   >

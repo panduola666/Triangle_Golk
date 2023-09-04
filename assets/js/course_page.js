@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import Swal from 'sweetalert2';
 import { Navigation, Autoplay } from 'swiper/modules';
-import { Course, Comment, Passes, User, Favorites } from '../api';
+import { Course, Comment, Passes, User, Favorites, loading } from '../api';
 
 // swiper 配置
 const swiper = new Swiper('.other-courses', {
@@ -49,10 +49,10 @@ const pagination = document.querySelector('.pagination')
 // 其他人還看了
 const otherCourses = document.querySelector('.other-courses > ul')
 
+
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.has('id') && urlParams.get('id');
 const sort = urlParams.has('sort') && urlParams.get('sort');
-
 let course; // 單頁課程資料
 let comments; // 評論畫面列表
 let user; // 用戶資料
@@ -65,7 +65,7 @@ async function updateUserInfo() {
   }
 
  user = await User.getUserInfo()
- console.log(user);
+
  if(!user) return
 //  當前課程的收藏 icon
  favoriteBtn.classList.remove('d-none')
@@ -82,11 +82,11 @@ async function updateUserInfo() {
 }
 async function init() {
   try {
+    loading()
     await updateUserInfo()
-    
     course = await Course.getCourse(id);
     comments = await Comment.getComments(1, 6, sort, 'desc', id);
-
+    loading(course)
     // 課程資料初始化
     renderCourse(course)
     // 中間評論初始化

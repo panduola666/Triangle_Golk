@@ -10,7 +10,7 @@ scrollTop.addEventListener('click', () => {
   timer = requestAnimationFrame(function fn(){
       const oTop = document.body.scrollTop || document.documentElement.scrollTop;
       if(oTop > 0){
-          scrollBy(0,-30); // 控制滾上去的速度
+          scrollBy(0,-35); // 控制滾上去的速度
           timer = requestAnimationFrame(fn);
       }else{
           cancelAnimationFrame(timer);
