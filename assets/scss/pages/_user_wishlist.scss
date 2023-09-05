@@ -14,7 +14,7 @@
     width: 50%;
     height: 100%;
     background-color: $secondary;
-    opacity: 90%;
+    opacity: 95%;
     z-index: 1;
     transition: right 0.3s ease-in-out;
   }
@@ -23,19 +23,18 @@
     right: 0;
     height: 100%;
     width: 50%;
-    opacity: 80%;
+    opacity: 95%;
   }
   
   &-btn {
     position: absolute;
-    // right: 0;
-    // bottom: 0;
-    // width: 100%;
-    // height: 100%;
-    // padding: 0 10%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 50%;
     z-index: 2;
     opacity: 0;
-    // transition: transform 0.2s, opacity 0.2s; 
   }
 
   &:hover .wishlist-note-card-btn {
