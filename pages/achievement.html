@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="../assets/images/favicon.ico">
   </head>
   <body>
+    <%- include('./layout/loading'); -%>
     <div class="min-vh-100 d-flex flex-column">
       <%- include('./layout/nav'); -%>
       <%- include('./layout/user_nav') -%>
@@ -19,13 +20,14 @@
             <span class="badge-circle badge-circle-top"></span>
             <span class="badge-circle badge-circle-middle"></span>
             <span class="badge-circle badge-circle-bottom"></span>
-            <!-- 封面 start -->
-            <!-- <h1 class="fw-bold">徽章圖鑑</h1>
-            <p>請選擇欲察看之徽章</p> -->
+            <div class="badge-content">
+             <!-- 封面 start -->
+              <h1 class="fw-bold">徽章圖鑑</h1>
+              <p>請選擇欲察看之徽章</p>
             <!-- 封面 end -->
   
             <!-- 內頁 start -->
-            <article class="px-4 flex-grow-1">
+            <!-- <article class="px-4 flex-grow-1">
               <div>
                 <span class="btn bg-secondary text-primary float-end py-2 px-3">已獲得</span>
                 <img src="../assets/images/avatar-01.svg" alt="" class="w-100 my-3">
@@ -34,22 +36,29 @@
                 <h2 class="fs-5 mb-4 fw-bold">完課徽章 - LV 1</h2>
                 <p class="mb-0">獲得途徑:</p>
                 <div class="d-flex flex-wrap justify-content-between">
-                  <p>上傳完課證明3次</p>
+                  <div>
+                    <p>上傳完課證明3次</p>
+                    <p class="text-gray-400">已累積學習: 15天</p>
+                  </div>
                   <button type="button" class="btn btn-danger btn-state fs-6 float-end">設為頭像</button>
                 </div>
               </section>
-            </article>
+            </article> -->
               
             <!-- 內頁 end -->
+            </div>
+          
           </div>
+
+
           <!-- 徽章墻 -->
-          <div class="col">
-            <div class="badge-table-cur d-flex flex-column justify-content-around p-5 gap-3 position-relative">
+          <div class="col-11 col-lg mx-auto">
+            <div class="badge-table-cur d-flex flex-column justify-content-around p-3 p-lg-5 gap-3 position-relative">
               <span class="badge-table-top position-absolute"></span>
               <span class="badge-table-right"></span>
               <div class="table-first bg-gray-300 flex-grow-1 p-2 pb-3 d-flex flex-column">
                 <p class="mb-2">完課徽章</p>
-                <div class="row row-cols-3 flex-grow-1">
+                <div class="finish-avatars row row-cols-3 flex-grow-1">
                   <!-- avatar-active 當前選擇要查看樣式的小箭頭, hover 的時候要切換 -->
                   <div class="col avatar-active position-relative">
                     <img class="w-100 h-100 opacity-100" src="../assets/images/avatar-01.svg" alt="完課徽章-LV1">
@@ -66,7 +75,7 @@
                 <div class="table-middle-left bg-gray-300 flex-grow-1 p-3 pt-2 text-center d-flex flex-column">
                   <p class="mb-2">入門徽章</p>
                   <div class="row flex-grow-1">
-                    <div class="col position-relative">
+                    <div class="first-avatar col position-relative">
                       <img class="w-100 h-100" src="../assets/images/avatar-04.svg" alt="入門徽章">
                     </div>
                     
@@ -75,7 +84,7 @@
                 <div class="table-middle-rigth bg-gray-300 flex-grow-1 p-3 pt-2 text-center d-flex flex-column">
                   <p class="mb-2">申課徽章</p>
                   <div class="row flex-grow-1">
-                    <div class="col position-relative">
+                    <div class="apply-avatar col position-relative">
                       <img class="w-100 h-100" src="../assets/images/avatar-05.svg" alt="申課徽章">
                     </div>
                   </div>
@@ -83,7 +92,7 @@
               </div>
               <div class="table-bottom bg-gray-300 flex-grow-1 p-2 pb-3 d-flex flex-column">
                 <p class="mb-2">學習徽章</p>
-                <div class="row row-cols-3 flex-grow-1">
+                <div class="study-avatars row row-cols-3 flex-grow-1">
                   <div class="col position-relative">
                     <img class="w-100 h-100" src="../assets/images/avatar-06.svg" alt="學習徽章-LV1">
                   </div>
@@ -104,5 +113,6 @@
 
     <script type="module" src="../main.js"></script>
     <script type="module" src="../assets/js/user_nav.js"></script>
+    <script type="module" src="../assets/js/achievement.js"></script>
   </body>
 </html>

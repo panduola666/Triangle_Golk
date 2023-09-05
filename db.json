@@ -15,9 +15,9 @@
   ],
   "favorites": [
     {
-      "id": 1,
       "userId": 1,
-      "courseId": 1
+      "courseId": 1,
+      "id": 1
     }
   ],
   "notions": [
@@ -31,10 +31,59 @@
   "avatars": [
     {
       "id": 1,
+      "name": "完課徽章",
+      "level": 1,
+      "getFn": "累積完課 1 次",
+      "image": "https://raw.githubusercontent.com/panduola666/Triangle_Golk/9f25e961cd00257d333e02316e7fc1c8b518ff8e/assets/images/avatar-01.svg"
+    },
+    {
+      "id": 2,
+      "name": "完課徽章",
+      "level": 2,
+      "getFn": "累積完課 5 次",
+      "image": "https://raw.githubusercontent.com/panduola666/Triangle_Golk/9f25e961cd00257d333e02316e7fc1c8b518ff8e/assets/images/avatar-02.svg"
+    },
+    {
+      "id": 3,
+      "name": "完課徽章",
+      "level": 3,
+      "getFn": "累積完課 10 次",
+      "image": "https://raw.githubusercontent.com/panduola666/Triangle_Golk/9f25e961cd00257d333e02316e7fc1c8b518ff8e/assets/images/avatar-03.svg"
+    },
+    {
+      "id": 4,
       "name": "入門徽章",
       "level": 1,
-      "getFn": "",
-      "image": "成功註冊帳號獲取"
+      "getFn": "註冊帳號獲取",
+      "image": "https://raw.githubusercontent.com/panduola666/Triangle_Golk/9f25e961cd00257d333e02316e7fc1c8b518ff8e/assets/images/avatar-04.svg"
+    },
+    {
+      "id": 5,
+      "name": "申課徽章",
+      "level": 1,
+      "getFn": "申請課程 1 次",
+      "image": "https://raw.githubusercontent.com/panduola666/Triangle_Golk/9f25e961cd00257d333e02316e7fc1c8b518ff8e/assets/images/avatar-05.svg"
+    },
+    {
+      "id": 6,
+      "name": "學習徽章",
+      "level": 1,
+      "getFn": "累積學習 7 天",
+      "image": "https://raw.githubusercontent.com/panduola666/Triangle_Golk/9f25e961cd00257d333e02316e7fc1c8b518ff8e/assets/images/avatar-06.svg"
+    },
+    {
+      "id": 7,
+      "name": "學習徽章",
+      "level": 2,
+      "getFn": "累積學習 30 天",
+      "image": "https://raw.githubusercontent.com/panduola666/Triangle_Golk/9f25e961cd00257d333e02316e7fc1c8b518ff8e/assets/images/avatar-07.svg"
+    },
+    {
+      "id": 8,
+      "name": "學習徽章",
+      "level": 3,
+      "getFn": "累積學習 90 天",
+      "image": "https://raw.githubusercontent.com/panduola666/Triangle_Golk/9f25e961cd00257d333e02316e7fc1c8b518ff8e/assets/images/avatar-08.svg"
     }
   ],
   "courses": [

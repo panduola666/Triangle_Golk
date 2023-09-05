@@ -4,30 +4,6 @@ import Swal from 'sweetalert2';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { Course, Comment, Passes, User, Favorites, loading } from '../api';
 
-// swiper 配置
-const swiper = new Swiper('.other-courses', {
-  // 配置你使用的 swiper class 名稱
-  slidesPerView: 1, // 一頁幾張
-  spaceBetween: 30, // 每一頁的間距
-  centeredSlides: false,
-  loop: true, // 循環播放
-  breakpoints: {
-    992: {
-      slidesPerView: 3,
-    },
-  },
-  modules: [Navigation, Autoplay],
-  autoplay: {
-    // 自動撥放配置
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: '.swiper-next', // 控制上一頁箭頭用哪個 class
-    prevEl: '.swiper-prev',
-  },
-});
-
 const courseTitle = document.querySelector('.course-title section')
 const favoriteBtn = document.querySelector('.favorite-btn')
 const favoriteIcon = favoriteBtn.querySelector('.course-favorite-icon')
@@ -297,6 +273,30 @@ async function renderOthers() {
     </div>
     `
   }).join('')
+  
+// swiper 配置
+const swiper = new Swiper('.other-courses', {
+  // 配置你使用的 swiper class 名稱
+  slidesPerView: 1, // 一頁幾張
+  spaceBetween: 30, // 每一頁的間距
+  centeredSlides: false,
+  loop: true, // 循環播放
+  breakpoints: {
+    992: {
+      slidesPerView: 3,
+    },
+  },
+  modules: [Navigation, Autoplay],
+  autoplay: {
+    // 自動撥放配置
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: '.swiper-next', // 控制上一頁箭頭用哪個 class
+    prevEl: '.swiper-prev',
+  },
+});
 
   // 每個課程內的關注按鈕點擊
   const otherBtn = document.querySelectorAll('.others-favorite-btn')

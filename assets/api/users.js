@@ -46,7 +46,10 @@ export const User = {
         })
       if(swal.isDismissed || swal.isConfirmed) {
         this.clearUserInfo()
-        location.href = '/pages/index.html'
+        location.href = 'index.html'
+        // location.href = process.env.NODE_ENV === 'production'
+        // ? '/Triangle_Golk/pages/index.html'
+        // : '/pages/index.html'
       }
     },
     // 獲得所有用戶有關聯的資料
@@ -66,7 +69,6 @@ export const User = {
             if(err.response.status === 401 || err.response.statusText === 'Unauthorized') {
                 // 登入過期, needBack 裡面的頁面要回到首頁
                 const needBack = ['user.html', 'achievement.html', 'classroom.html', 'comment.html', 'user_courses.html', 'user_wishlist.html']
-                console.log(location.pathname);
                 if(needBack.some(pageName => location.pathname.match(pageName))) {
                     this.plsReLogin()
                 }

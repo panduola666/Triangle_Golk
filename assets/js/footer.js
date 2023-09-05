@@ -1,19 +1,14 @@
-
-const scrollTop = document.querySelector('.scroll-top')
-
-
-
+const scrollTop = document.querySelector('.scroll-top');
 
 scrollTop.addEventListener('click', () => {
-  let timer;
-  cancelAnimationFrame(timer);
-  timer = requestAnimationFrame(function fn(){
-      const oTop = document.body.scrollTop || document.documentElement.scrollTop;
-      if(oTop > 0){
-          scrollBy(0,-35); // 控制滾上去的速度
-          timer = requestAnimationFrame(fn);
-      }else{
-          cancelAnimationFrame(timer);
-      }    
-  });
-})
+  var height = document.documentElement.scrollTop || document.body.scrollTop;
+  var t = setInterval(() => {
+    height -= 50;
+    if (height > 0) {
+      window.scrollTo(0, height);
+    } else {
+      window.scrollTo(0, 0);
+      clearInterval(t);
+    }
+  }, 10);
+});

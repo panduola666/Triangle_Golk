@@ -4,6 +4,7 @@ import { Comment } from './comment';
 import { Course } from './course';
 import { Passes } from './passes';
 import { Favorites } from './favorites';
+import { Avatars } from './avatars';
 
 function loading(apiData) {
     const loading = document.querySelector('.loading')
@@ -18,4 +19,4 @@ function loading(apiData) {
     }
 }
 
-export { User, About, Comment, Course, Passes, Favorites, loading }
+export { User, About, Comment, Course, Passes, Favorites, Avatars, loading }
