@@ -1,1 +1,0 @@
-import"./footer-933fc89a.js";const n=[].slice.call(document.querySelectorAll(".dropdown-toggle"));n.map(function(o){return new bootstrap.Dropdown(o)});new bootstrap.Dropdown(element,{popperConfig:function(o){}});const e=document.getElementById("myDropdown");e.addEventListener("show.bs.dropdown",function(){});
