@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>index</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.ico">
+</head>
+
+<body>
+<div class="min-vh-100 d-flex flex-column">
+
+  <%- include('./layout/nav'); -%>
+<!-- Button trigger modal -->
+
+<!-- 編輯評論的 btn 要選染 data-id 對應到評論的 id -->
+<button type="button" class="btn btn-secondary modal-btn" data-bs-toggle="modal" data-bs-target="#course-comment" data-id="1">
+  我的評價
+</button>
+<!-- 新增評論使用 a 連接, 渲染出課程的 id -->
+<a href="./comment.html?courseId=1" class="btn btn-secondary">完課評價</a>
+
+<!-- Modal -->
+<div class="modal fade" id="course-comment" tabindex="-1" aria-labelledby="couse-comment" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered comment-modal">
+    <!-- 評價主題 comment-style0:便條紙 comment-style1:書籤 -->
+  </div>
+</div>
+    <%- include('./layout/footer'); -%>
+</div>
+
+
+      <script type="module" src="../main.js"></script>
+      <script type="module" src="../assets/js/user_courser.js"></script>
+</body>
+
+</html>
