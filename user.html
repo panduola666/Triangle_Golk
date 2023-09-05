@@ -10,11 +10,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    <script type="module" crossorigin src="/Triangle_Golk/assets/user-1f5f9d0b.js"></script>
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/footer-051867de.js">
+    <script type="module" crossorigin src="/Triangle_Golk/assets/user-92b98551.js"></script>
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/footer-203576fd.js">
     <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/swiper-core-d55539fa.js">
     <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/user_nav-b8e04adf.js">
-    <link rel="stylesheet" href="/Triangle_Golk/assets/footer-ecc189ad.css">
+    <link rel="stylesheet" href="/Triangle_Golk/assets/footer-d001f7a1.css">
   </head>
 
   <body>
@@ -436,9 +436,7 @@
             <div class="swiper-slide">
               <div class="swiper-prev-btn">
                 <button class="btn" id="prev-btn">
-                  <span class="material-symbols-outlined prev-icon"
-                    >navigate_before</span
-                  >
+                  <span class="material-symbols-outlined prev-icon">navigate_before<span>
                 </button>
               </div>
               <div class="w-75 mx-auto">
@@ -446,7 +444,7 @@
                   <h2 class="fs-4 fw-bold">變更密碼</h2>
                 </div>
                 <div class="card-body">
-                  <form>
+                  <form id="changePwdForm">
                     <div class="form-floating mb-3">
                       <input
                         class="form-control"
@@ -466,6 +464,7 @@
                         type="password"
                         placeholder="請輸入新密碼"
                         autocomplete="off"
+                        name="new-pwd"
                       />
                       <label class="form-required" for="floating-new">
                         請輸入新密碼
@@ -478,6 +477,7 @@
                         type="password"
                         placeholder="再次輸入新密碼"
                         autocomplete="off"
+                        name="re-pwd"
                       />
                       <label class="form-required" for="floating-re">
                         再次輸入新密碼

@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>課程清單</title>
     <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico" />
-    <script type="module" crossorigin src="/Triangle_Golk/assets/footer-051867de.js"></script>
-    <script type="module" crossorigin src="/Triangle_Golk/assets/apply_course-bf4e62e0.js"></script>
-    <link rel="stylesheet" href="/Triangle_Golk/assets/footer-ecc189ad.css">
+    <script type="module" crossorigin src="/Triangle_Golk/assets/footer-203576fd.js"></script>
+    <script type="module" crossorigin src="/Triangle_Golk/assets/apply_course-6d710997.js"></script>
+    <script type="module" crossorigin src="/Triangle_Golk/assets/course-ff10a44c.js"></script>
+    <link rel="stylesheet" href="/Triangle_Golk/assets/footer-d001f7a1.css">
   </head>
 
   <body>
@@ -336,556 +337,565 @@
         </form>
       </div>
     </div>
-  </div>    <main class="container">
-      <div class="page-header my-4">
-        <h2 class="page-title fw-bold">課程清單</h2>
-      </div>
-      <div class="filter-panel bg-light p-3 mb-4">
-        <form>
-          <div class="search-box d-flex flex-row align-items-center">
-            <label for="search-bar" class="me-3">關鍵字</label>
-            <div class="search-bar position-reative flex-grow-1 py-1 ps-2">
-              <span
-                class="material-symbols-outlined search-icon position-absolute text-gray-300 py-1 px-2"
-                >search</span
-              >
-              <input
-                id="search-bar"
-                type="search"
-                class="search-value w-100"
-                placeholder="請輸入關鍵字"
-              />
-            </div>
-          </div>
-          <div class="filter-title d-none d-md-block">
-            <p class="my-1">平台</p>
-          </div>
-          <div
-            class="filter-container d-flex justify-content-between align-items-center mt-2 mt-md-0"
-          >
-            <div class="filter-content d-none d-md-block">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                id="hex-check"
-              />
-              <label class="form-check-label me-3" for="hex-check"
-                >六角學院</label
-              >
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                id="udemy-check"
-              />
-              <label class="form-check-label me-3" for="udemy-check"
-                >Udemy</label
-              >
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                id="hahow-check"
-              />
-              <label class="form-check-label me-3" for="hahow-check"
-                >Hahow</label
-              >
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                id="coursera-check"
-              />
-              <label class="form-check-label me-3" for="coursera-check"
-                >Coursera</label
-              >
-            </div>
-            <div class="d-block d-md-none">
-              <div class="dropdown">
-                <button
-                  class="btn btn-outline-secondary dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  平台
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">六角學院</a></li>
-                  <li><a class="dropdown-item" href="#">Udemy</a></li>
-                  <li><a class="dropdown-item" href="#">Hahow</a></li>
-                  <li><a class="dropdown-item" href="#">Coursera</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="side-btn d-flex flex-row">
-              <button class="btn border-0 d-flex flex-row align-items-center">
-                <span class="material-symbols-outlined outline-icon"
-                  >delete</span
-                >
-                <span>清空條件</span>
-              </button>
-              <button class="btn btn-secondary text-secondry">搜尋</button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div
-        class="switch-tabs d-md-flex justify-content-between mb-4 d-none d-md-block"
-      >
-        <ul class="nav nav-pills gap-2">
-          <li class="nav-item">
-            <button class="btn btn-secondary active">全部</button>
-          </li>
-          <li class="nav-item">
-            <button class="btn btn-outline-secondary">評價數</button>
-          </li>
-          <li class="nav-item">
-            <button class="btn btn-outline-secondary">評分</button>
-          </li>
-        </ul>
-        <ul class="nav nav-pills gap-2">
-          <li class="nav-item active">
-            <button class="btn btn-secondary d-flex flex-row">
-              <span class="material-symbols-outlined">arrow_drop_up</span>
-              <span>正序</span>
-            </button>
-          </li>
-          <li class="nav-item">
-            <button class="btn btn-outline-secondary d-flex flex-row">
-              <span class="material-symbols-outlined">arrow_drop_down</span>
-              <span>倒序</span>
-            </button>
-          </li>
-        </ul>
-      </div>
-      <div class="d-flex gap-3 d-block d-md-none mb-4">
-        <div class="dropdown">
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            全部
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">評分數</a></li>
-            <li><a class="dropdown-item" href="#">評分</a></li>
-          </ul>
+  </div>      <main class="container">
+        <div class="page-header my-4">
+          <h2 class="page-title fw-bold">課程清單</h2>
         </div>
-        <div class="dropdown">
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            正序
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">反序</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <ul class="course-list row list-unstyled g-lg-6 g-md-4 g-2 mb-5">
-        <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
-          <!-- 課程跳頁後面需要帶該課程 id 參數 -->
-          <a
-            class="card card-hover h-100 rounded-4 position-relative"
-            href="./coursepages.html?id=1&sort=timer"
-          >
-            <div class="pic">
-              <img
-                src="https://fakeimg.pl/350x200/?text=Hello"
-                alt="快速打造響應式網頁"
-                class="card-pic"
-              />
+        <div class="filter-panel bg-light p-3 mb-4">
+          <form>
+            <div class="search-box d-flex flex-row align-items-center">
+              <label for="search-bar" class="me-3">關鍵字</label>
+              <div class="search-bar position-reative flex-grow-1 py-1 ps-2">
+                <span
+                  class="material-symbols-outlined search-icon position-absolute text-gray-300 py-1 px-2"
+                  >search</span
+                >
+                <input
+                  id="search-bar"
+                  type="search"
+                  class="search-value w-100"
+                  placeholder="請輸入關鍵字"
+                />
+              </div>
+            </div>
+            <div class="filter-title d-none d-md-block">
+              <p class="my-1">平台</p>
             </div>
             <div
-              class="badge d-flex justify-content-between align-items-center position-absolute"
+              class="filter-container d-flex justify-content-between align-items-center mt-2 mt-md-0"
             >
-              <span
-                class="brand bg-secondary small text-white rounded-1 py-1 px-3"
-                >六角學院</span
-              >
-              <span
-                class="favorite material-symbols-outlined outline-icon position-absolute"
-                >favorite</span
-              >
-            </div>
-            <div class="card-body">
-              <h3 class="title text-secondary fs-6 fw-bold">
-                使用 HTML、CSS 快速打造屬於自己的響應式網站
-              </h3>
-            </div>
-            <div class="card-footer">
-              <div class="tags mb-2 mt-auto">
-                <span class="fs-8 me-2">#程序</span>
+              <div class="filter-content d-none d-md-block">
+                <input
+                  class="form-check-input me-1"
+                  type="checkbox"
+                  id="hex-check"
+                />
+                <label class="form-check-label me-3" for="hex-check"
+                  >六角學院</label
+                >
+                <input
+                  class="form-check-input me-1"
+                  type="checkbox"
+                  id="udemy-check"
+                />
+                <label class="form-check-label me-3" for="udemy-check"
+                  >Udemy</label
+                >
+                <input
+                  class="form-check-input me-1"
+                  type="checkbox"
+                  id="hahow-check"
+                />
+                <label class="form-check-label me-3" for="hahow-check"
+                  >Hahow</label
+                >
+                <input
+                  class="form-check-input me-1"
+                  type="checkbox"
+                  id="coursera-check"
+                />
+                <label class="form-check-label me-3" for="coursera-check"
+                  >Coursera</label
+                >
               </div>
-              <div class="stars d-flex">
-                <div class="stars-icon text-primary me-2">
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined outline-icon"
-                    >star</span
-                  >
-                </div>
-                <span class="fs-8 text-gray-400">(666)</span>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
-          <a class="card card-hover h-100 rounded-4" href="#">
-            <div class="pic">
-              <img
-                src="https://fakeimg.pl/350x200/?text=Hello"
-                alt="JavaScript 核心篇"
-                class="card-pic"
-              />
-            </div>
-            <div
-              class="badge d-flex justify-content-between align-items-center position-absolute"
-            >
-              <span
-                class="brand bg-secondary small text-white rounded-1 py-1 px-3"
-                >六角學院</span
-              >
-              <span
-                class="favorite material-symbols-outlined outline-icon position-absolute"
-                >favorite</span
-              >
-            </div>
-            <div class="card-body">
-              <h3 class="title text-secondary fs-6 fw-bold">
-                JavaScript 核心篇
-              </h3>
-            </div>
-            <div class="card-footer">
-              <div class="tags mb-2 mt-auto">
-                <span class="fs-8 me-2">#程序</span>
-              </div>
-              <div class="stars d-flex">
-                <div class="stars-icon text-primary me-2">
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined outline-icon"
-                    >star</span
-                  >
-                </div>
-                <span class="fs-8 text-gray-400">(666)</span>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
-          <a class="card card-hover h-100 rounded-4" href="#">
-            <div class="pic">
-              <img
-                src="https://fakeimg.pl/350x200/?text=Hello"
-                alt="2023 Python 全攻略"
-                class="card-pic"
-              />
-            </div>
-            <div
-              class="badge d-flex justify-content-between align-items-center position-absolute"
-            >
-              <span
-                class="brand bg-secondary small text-white rounded-1 py-1 px-3"
-                >Udemy</span
-              >
-              <span
-                class="favorite material-symbols-outlined outline-icon position-absolute"
-                >favorite</span
-              >
-            </div>
-            <div class="card-body">
-              <h3 class="title text-secondary fs-6 fw-bold">
-                2023 Python 全攻略
-              </h3>
-            </div>
-            <div class="card-footer">
-              <div class="tags mb-2 mt-auto">
-                <span class="fs-8 me-2">#程序</span>
-              </div>
-              <div class="stars d-flex">
-                <div class="stars-icon text-primary me-2">
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined outline-icon"
-                    >star</span
-                  >
-                </div>
-                <span class="fs-8 text-gray-400">(666)</span>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
-          <a class="card card-hover h-100 rounded-4" href="#">
-            <div class="pic">
-              <img
-                src="https://fakeimg.pl/350x200/?text=Hello"
-                alt="大數據分析－Power BI圖表視覺化"
-                class="card-pic"
-              />
-            </div>
-            <div
-              class="badge d-flex justify-content-between align-items-center position-absolute"
-            >
-              <span
-                class="brand bg-secondary small text-white rounded-1 py-1 px-3"
-                >Udemy</span
-              >
-              <span
-                class="favorite material-symbols-outlined outline-icon position-absolute"
-                >favorite</span
-              >
-            </div>
-            <div class="card-body">
-              <h3 class="title text-secondary fs-6 fw-bold">
-                大數據分析－Power BI圖表視覺化
-              </h3>
-            </div>
-            <div class="card-footer">
-              <div class="tags mb-2 mt-auto">
-                <span class="fs-8 me-2">#數據分析</span>
-              </div>
-              <div class="stars d-flex">
-                <div class="stars-icon text-primary me-2">
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined outline-icon"
-                    >star</span
-                  >
-                </div>
-                <span class="fs-8 text-gray-400">(666)</span>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
-          <a class="card card-hover h-100 rounded-4" href="#">
-            <div class="pic">
-              <img
-                src="https://fakeimg.pl/350x200/?text=Hello"
-                alt="凱蒂瑜伽：用瑜伽開啟身心對話，從脈輪調理內在課題"
-                class="card-pic"
-              />
-            </div>
-            <div
-              class="badge d-flex justify-content-between align-items-center position-absolute"
-            >
-              <span
-                class="brand bg-secondary small text-white rounded-1 py-1 px-3"
-                >Hahow</span
-              >
-              <span
-                class="favorite material-symbols-outlined outline-icon position-absolute"
-                >favorite</span
-              >
-            </div>
-            <div class="card-body">
-              <h3 class="title text-secondary fs-6 fw-bold">
-                凱蒂瑜伽：用瑜伽開啟身心對話，從脈輪調理內在課題
-              </h3>
-            </div>
-            <div class="card-footer">
-              <div class="tags mb-2 mt-auto">
-                <span class="fs-8 me-2">#瑜珈</span>
-              </div>
-              <div class="stars d-flex">
-                <div class="stars-icon text-primary me-2">
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined outline-icon"
-                    >star</span
-                  >
-                </div>
-                <span class="fs-8 text-gray-400">(666)</span>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
-          <a class="card card-hover h-100 rounded-4" href="#">
-            <div class="pic">
-              <img
-                src="https://fakeimg.pl/350x200/?text=Hello"
-                alt="吉他從零開始"
-                class="card-pic"
-              />
-            </div>
-            <div
-              class="badge d-flex justify-content-between align-items-center position-absolute"
-            >
-              <span
-                class="brand bg-secondary small text-white rounded-1 py-1 px-3"
-                >Hahow</span
-              >
-              <span
-                class="favorite material-symbols-outlined outline-icon position-absolute"
-                >favorite</span
-              >
-            </div>
-            <div class="card-body">
-              <h3 class="title text-secondary fs-6 fw-bold">吉他從零開始</h3>
-            </div>
-            <div class="card-footer">
-              <div class="tags mb-2 mt-auto">
-                <span class="fs-8 me-2">#音樂</span>
-              </div>
-              <div class="stars d-flex">
-                <div class="stars-icon text-primary me-2">
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined">star</span>
-                  <span class="material-symbols-outlined outline-icon"
-                    >star</span
-                  >
-                </div>
-                <span class="fs-8 text-gray-400">(666)</span>
-              </div>
-            </div>
-          </a>
-        </li>
-      </ul>
-      <button
-        type="button"
-        class="apply btn btn-blue fw-bold"
-        data-bs-toggle="modal"
-        data-bs-target="#apply-modal"
-      >
-        申請<br />新課
-      </button>
-
-      <div
-        class="modal fade"
-        id="apply-modal"
-        tabindex="-1"
-        aria-labelledby="apply-modalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3 class="modal-title fs-5 fw-bold" id="apply-modalLabel">
-                申請新課
-              </h3>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <form
-                class="apply-form needs-validation d-flex flex-column"
-                novalidate
-              >
-                <div class="mb-3">
-                  <label
-                    class="form-label form-required fw-bold mb-1"
-                    for="course-name"
-                    >課程名稱</label
-                  >
-                  <input
-                    class="form-control small py-1 ps-2"
-                    id="course-name"
-                    type="text"
-                    placeholder="請輸入課程名稱"
-                    required
-                  />
-                  <div class="invalid-feedback">請輸入課程名稱</div>
-                </div>
-
-                <div class="mb-3">
-                  <label
-                    class="form-label form-required fw-bold mb-1"
-                    for="brand-name"
-                    >該課程開設在哪家平台</label
-                  >
-                  <input
-                    class="form-control small py-1 ps-2"
-                    id="brand-name"
-                    type="text"
-                    placeholder="請輸入平台名稱"
-                    required
-                  />
-                  <div class="invalid-feedback">請輸入平台名稱</div>
-                </div>
-
-                <div class="mb-3">
-                  <label
-                    class="form-label form-required fw-bold mb-1"
-                    for="course-link"
-                    >該課程的頁面連結</label
-                  >
-                  <input
-                    class="form-control small py-1 ps-2"
-                    id="course-link"
-                    type="text"
-                    placeholder="請輸入課程連結"
-                    required
-                  />
-                  <div class="invalid-feedback">請輸入課程連結</div>
-                </div>
-
-                <div class="mb-4">
-                  <label
-                    class="form-label form-required fw-bold mb-1"
-                    for="comment"
-                    >請寫下你的理由</label
-                  >
-                  <textarea
-                    class="form-control comment small py-1 ps-2"
-                    id="comment"
-                    cols="30"
-                    rows="10"
-                    placeholder="最多不超過 400 字"
-                    maxlength="400"
-                    minlength="5"
-                    required
-                  ></textarea>
-                  <div class="invalid-feedback">請寫下你的理由</div>
-                </div>
-                <div class="modal-footer">
+              <div class="d-block d-md-none">
+                <div class="dropdown">
                   <button
+                    class="btn btn-outline-secondary dropdown-toggle"
                     type="button"
-                    class="btn btn-outline-secondary"
-                    data-bs-dismiss="modal"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                   >
-                    取消
+                    平台
                   </button>
-                  <button
-                    type="submit"
-                    class="btn btn-secondary"
-                    id="show-alert"
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
                   >
-                    送出申請
-                  </button>
+                    <li><a class="dropdown-item" href="#">六角學院</a></li>
+                    <li><a class="dropdown-item" href="#">Udemy</a></li>
+                    <li><a class="dropdown-item" href="#">Hahow</a></li>
+                    <li><a class="dropdown-item" href="#">Coursera</a></li>
+                  </ul>
                 </div>
-              </form>
+              </div>
+              <div class="side-btn d-flex flex-row">
+                <button class="btn border-0 d-flex flex-row align-items-center">
+                  <span class="material-symbols-outlined outline-icon"
+                    >delete</span
+                  >
+                  <span>清空條件</span>
+                </button>
+                <button class="btn btn-secondary text-secondry">搜尋</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div
+          class="switch-tabs d-md-flex justify-content-between mb-4 d-none d-md-block"
+        >
+          <ul class="nav nav-pills gap-2">
+            <li class="nav-item">
+              <button class="btn btn-secondary active">全部</button>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-secondary">評價數</button>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-secondary">評分</button>
+            </li>
+          </ul>
+          <ul class="nav nav-pills gap-2">
+            <li class="nav-item active">
+              <button class="btn btn-secondary d-flex flex-row">
+                <span class="material-symbols-outlined">arrow_drop_up</span>
+                <span>正序</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-secondary d-flex flex-row">
+                <span class="material-symbols-outlined">arrow_drop_down</span>
+                <span>倒序</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex gap-3 d-block d-md-none mb-4">
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              全部
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">評分數</a></li>
+              <li><a class="dropdown-item" href="#">評分</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              正序
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">反序</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="course-list row list-unstyled g-lg-6 g-md-4 g-2 mb-5">
+          <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
+            <!-- 課程跳頁後面需要帶該課程 id 參數 -->
+            <a
+              class="card card-hover h-100 rounded-4 position-relative"
+              href="./coursepages.html?id=1&sort=timer"
+            >
+              <div class="pic">
+                <img
+                  src="https://fakeimg.pl/350x200/?text=Hello"
+                  alt="快速打造響應式網頁"
+                  class="card-pic"
+                />
+              </div>
+              <div
+                class="badge d-flex justify-content-between align-items-center position-absolute"
+              >
+                <span
+                  class="brand bg-secondary small text-white rounded-1 py-1 px-3"
+                  >六角學院</span
+                >
+                <span
+                  class="favorite material-symbols-outlined outline-icon position-absolute"
+                  id="fav-btn"
+                  >favorite</span
+                >
+              </div>
+              <div class="card-body">
+                <h3 class="title text-secondary fs-6 fw-bold">
+                  使用 HTML、CSS 快速打造屬於自己的響應式網站
+                </h3>
+              </div>
+              <div class="card-footer">
+                <div class="tags mb-2 mt-auto">
+                  <span class="fs-8 me-2">#程序</span>
+                </div>
+                <div class="stars d-flex">
+                  <div class="stars-icon text-primary me-2">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined outline-icon"
+                      >star</span
+                    >
+                  </div>
+                  <span class="fs-8 text-gray-400">(666)</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
+            <a class="card card-hover h-100 rounded-4" href="#">
+              <div class="pic">
+                <img
+                  src="https://fakeimg.pl/350x200/?text=Hello"
+                  alt="JavaScript 核心篇"
+                  class="card-pic"
+                />
+              </div>
+              <div
+                class="badge d-flex justify-content-between align-items-center position-absolute"
+              >
+                <span
+                  class="brand bg-secondary small text-white rounded-1 py-1 px-3"
+                  >六角學院</span
+                >
+                <span
+                  class="favorite material-symbols-outlined outline-icon position-absolute"
+                  id="fav-btn"
+                  >favorite</span
+                >
+              </div>
+              <div class="card-body">
+                <h3 class="title text-secondary fs-6 fw-bold">
+                  JavaScript 核心篇
+                </h3>
+              </div>
+              <div class="card-footer">
+                <div class="tags mb-2 mt-auto">
+                  <span class="fs-8 me-2">#程序</span>
+                </div>
+                <div class="stars d-flex">
+                  <div class="stars-icon text-primary me-2">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined outline-icon"
+                      >star</span
+                    >
+                  </div>
+                  <span class="fs-8 text-gray-400">(666)</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
+            <a class="card card-hover h-100 rounded-4" href="#">
+              <div class="pic">
+                <img
+                  src="https://fakeimg.pl/350x200/?text=Hello"
+                  alt="2023 Python 全攻略"
+                  class="card-pic"
+                />
+              </div>
+              <div
+                class="badge d-flex justify-content-between align-items-center position-absolute"
+              >
+                <span
+                  class="brand bg-secondary small text-white rounded-1 py-1 px-3"
+                  >Udemy</span
+                >
+                <span
+                  class="favorite material-symbols-outlined outline-icon position-absolute"
+                  id="fav-btn"
+                  >favorite</span
+                >
+              </div>
+              <div class="card-body">
+                <h3 class="title text-secondary fs-6 fw-bold">
+                  2023 Python 全攻略
+                </h3>
+              </div>
+              <div class="card-footer">
+                <div class="tags mb-2 mt-auto">
+                  <span class="fs-8 me-2">#程序</span>
+                </div>
+                <div class="stars d-flex">
+                  <div class="stars-icon text-primary me-2">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined outline-icon"
+                      >star</span
+                    >
+                  </div>
+                  <span class="fs-8 text-gray-400">(666)</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
+            <a class="card card-hover h-100 rounded-4" href="#">
+              <div class="pic">
+                <img
+                  src="https://fakeimg.pl/350x200/?text=Hello"
+                  alt="大數據分析－Power BI圖表視覺化"
+                  class="card-pic"
+                />
+              </div>
+              <div
+                class="badge d-flex justify-content-between align-items-center position-absolute"
+              >
+                <span
+                  class="brand bg-secondary small text-white rounded-1 py-1 px-3"
+                  >Udemy</span
+                >
+                <span
+                  class="favorite material-symbols-outlined outline-icon position-absolute"
+                  id="fav-btn"
+                  >favorite</span
+                >
+              </div>
+              <div class="card-body">
+                <h3 class="title text-secondary fs-6 fw-bold">
+                  大數據分析－Power BI圖表視覺化
+                </h3>
+              </div>
+              <div class="card-footer">
+                <div class="tags mb-2 mt-auto">
+                  <span class="fs-8 me-2">#數據分析</span>
+                </div>
+                <div class="stars d-flex">
+                  <div class="stars-icon text-primary me-2">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined outline-icon"
+                      >star</span
+                    >
+                  </div>
+                  <span class="fs-8 text-gray-400">(666)</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
+            <a class="card card-hover h-100 rounded-4" href="#">
+              <div class="pic">
+                <img
+                  src="https://fakeimg.pl/350x200/?text=Hello"
+                  alt="凱蒂瑜伽：用瑜伽開啟身心對話，從脈輪調理內在課題"
+                  class="card-pic"
+                />
+              </div>
+              <div
+                class="badge d-flex justify-content-between align-items-center position-absolute"
+              >
+                <span
+                  class="brand bg-secondary small text-white rounded-1 py-1 px-3"
+                  >Hahow</span
+                >
+                <span
+                  class="favorite material-symbols-outlined outline-icon position-absolute"
+                  id="fav-btn"
+                  >favorite</span
+                >
+              </div>
+              <div class="card-body">
+                <h3 class="title text-secondary fs-6 fw-bold">
+                  凱蒂瑜伽：用瑜伽開啟身心對話，從脈輪調理內在課題
+                </h3>
+              </div>
+              <div class="card-footer">
+                <div class="tags mb-2 mt-auto">
+                  <span class="fs-8 me-2">#瑜珈</span>
+                </div>
+                <div class="stars d-flex">
+                  <div class="stars-icon text-primary me-2">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined outline-icon"
+                      >star</span
+                    >
+                  </div>
+                  <span class="fs-8 text-gray-400">(666)</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
+            <a class="card card-hover h-100 rounded-4" href="#">
+              <div class="pic">
+                <img
+                  src="https://fakeimg.pl/350x200/?text=Hello"
+                  alt="吉他從零開始"
+                  class="card-pic"
+                />
+              </div>
+              <div
+                class="badge d-flex justify-content-between align-items-center position-absolute"
+              >
+                <span
+                  class="brand bg-secondary small text-white rounded-1 py-1 px-3"
+                  >Hahow</span
+                >
+                <span
+                  class="favorite material-symbols-outlined outline-icon position-absolute"
+                  id="fav-btn"
+                  >favorite</span
+                >
+              </div>
+              <div class="card-body">
+                <h3 class="title text-secondary fs-6 fw-bold">吉他從零開始</h3>
+              </div>
+              <div class="card-footer">
+                <div class="tags mb-2 mt-auto">
+                  <span class="fs-8 me-2">#音樂</span>
+                </div>
+                <div class="stars d-flex">
+                  <div class="stars-icon text-primary me-2">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined outline-icon"
+                      >star</span
+                    >
+                  </div>
+                  <span class="fs-8 text-gray-400">(666)</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="apply btn btn-blue fw-bold"
+          data-bs-toggle="modal"
+          data-bs-target="#apply-modal"
+        >
+          申請<br />新課
+        </button>
+
+        <div
+          class="modal fade"
+          id="apply-modal"
+          tabindex="-1"
+          aria-labelledby="apply-modalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title fs-5 fw-bold" id="apply-modalLabel">
+                  申請新課
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form
+                  class="apply-form needs-validation d-flex flex-column"
+                  novalidate
+                >
+                  <div class="mb-3">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="course-name"
+                      >課程名稱</label
+                    >
+                    <input
+                      class="form-control small py-1 ps-2"
+                      id="course-name"
+                      type="text"
+                      placeholder="請輸入課程名稱"
+                      required
+                    />
+                    <div class="invalid-feedback">請輸入課程名稱</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="brand-name"
+                      >該課程開設在哪家平台</label
+                    >
+                    <input
+                      class="form-control small py-1 ps-2"
+                      id="brand-name"
+                      type="text"
+                      placeholder="請輸入平台名稱"
+                      required
+                    />
+                    <div class="invalid-feedback">請輸入平台名稱</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="course-link"
+                      >該課程的頁面連結</label
+                    >
+                    <input
+                      class="form-control small py-1 ps-2"
+                      id="course-link"
+                      type="text"
+                      placeholder="請輸入課程連結"
+                      required
+                    />
+                    <div class="invalid-feedback">請輸入課程連結</div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label
+                      class="form-label form-required fw-bold mb-1"
+                      for="comment"
+                      >請寫下你的理由</label
+                    >
+                    <textarea
+                      class="form-control comment small py-1 ps-2"
+                      id="comment"
+                      cols="30"
+                      rows="10"
+                      placeholder="最多不超過 400 字"
+                      maxlength="400"
+                      minlength="5"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">請寫下你的理由</div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      取消
+                    </button>
+                    <button
+                      type="submit"
+                      class="btn btn-secondary"
+                      id="show-alert"
+                    >
+                      送出申請
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-    <nav class="page-nav container my-3" aria-label="Page navigation example">
+      </main>
+      <nav class="page-nav container my-3" aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
         <li class="page-item p-hover">
             <a class="page-link" href="#" aria-label="Previous">
@@ -903,8 +913,7 @@
             </a>
         </li>
     </ul>
-</nav> 
-    <footer class="container-fluid bg-secondary-subtle py-lg-4 py-3 mt-lg-xxl mt-xl">
+</nav> <footer class="container-fluid bg-secondary-subtle py-lg-4 py-3 mt-lg-xxl mt-xl">
   <div class="row flex-column flex-lg-column-reverse gap-4">
     <!-- logo -->
     <div class="col col-lg-4 mx-auto text-center">
@@ -953,7 +962,7 @@
     </span>
 </div>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     
     

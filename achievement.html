@@ -7,12 +7,32 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>徽章成就</title>
     <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico">
-    <script type="module" crossorigin src="/Triangle_Golk/assets/footer-051867de.js"></script>
-    <script type="module" crossorigin src="/Triangle_Golk/assets/user_nav-b8e04adf.js"></script>
-    <link rel="stylesheet" href="/Triangle_Golk/assets/footer-ecc189ad.css">
+    <script type="module" crossorigin src="/Triangle_Golk/assets/achievement-e125365a.js"></script>
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/footer-203576fd.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/user_nav-b8e04adf.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/index-ac7bb0e8.js">
+    <link rel="stylesheet" href="/Triangle_Golk/assets/footer-d001f7a1.css">
   </head>
   <body>
-    <div class="min-vh-100 d-flex flex-column">
+    <div class="loading d-none">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;display:block;" width="255px" height="255px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+        <g transform="translate(50 42)">
+          <g transform="scale(0.8)">
+            <g transform="translate(-50 -50)">
+              <polygon fill="#163300" points="72.5 50 50 11 27.5 50 50 50">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="2.5s" values="0 50 38.5;360 50 38.5" keyTimes="0;1"></animateTransform>
+              </polygon>
+              <polygon fill="#163300" points="5 89 50 89 27.5 50">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="2.5s" values="0 27.5 77.5;360 27.5 77.5" keyTimes="0;1"></animateTransform>
+              </polygon>
+              <polygon fill="#163300" points="72.5 50 50 89 95 89">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="2.5s" values="0 72.5 77.5;360 72 77.5" keyTimes="0;1"></animateTransform>
+              </polygon>
+            </g>
+          </g>
+        </g>
+        </svg>
+</div>    <div class="min-vh-100 d-flex flex-column">
       <header class="header-nav py-sm bg-white sticky-top">
     <nav class="container-fluid container-lg ">
       <div class="row">
@@ -358,37 +378,45 @@
             <span class="badge-circle badge-circle-top"></span>
             <span class="badge-circle badge-circle-middle"></span>
             <span class="badge-circle badge-circle-bottom"></span>
-            <!-- 封面 start -->
-            <!-- <h1 class="fw-bold">徽章圖鑑</h1>
-            <p>請選擇欲察看之徽章</p> -->
+            <div class="badge-content">
+             <!-- 封面 start -->
+              <h1 class="fw-bold">徽章圖鑑</h1>
+              <p>請選擇欲察看之徽章</p>
             <!-- 封面 end -->
   
             <!-- 內頁 start -->
-            <article class="px-4 flex-grow-1">
+            <!-- <article class="px-4 flex-grow-1">
               <div>
                 <span class="btn bg-secondary text-primary float-end py-2 px-3">已獲得</span>
-                <img src="/Triangle_Golk/assets/avatar-01-1b969a41.svg" alt="" class="w-100 my-3">
+                <img src="../assets/images/avatar-01.svg" alt="" class="w-100 my-3">
               </div>
               <section class="text-start">
                 <h2 class="fs-5 mb-4 fw-bold">完課徽章 - LV 1</h2>
                 <p class="mb-0">獲得途徑:</p>
                 <div class="d-flex flex-wrap justify-content-between">
-                  <p>上傳完課證明3次</p>
+                  <div>
+                    <p>上傳完課證明3次</p>
+                    <p class="text-gray-400">已累積學習: 15天</p>
+                  </div>
                   <button type="button" class="btn btn-danger btn-state fs-6 float-end">設為頭像</button>
                 </div>
               </section>
-            </article>
+            </article> -->
               
             <!-- 內頁 end -->
+            </div>
+          
           </div>
+
+
           <!-- 徽章墻 -->
-          <div class="col">
-            <div class="badge-table-cur d-flex flex-column justify-content-around p-5 gap-3 position-relative">
+          <div class="col-11 col-lg mx-auto">
+            <div class="badge-table-cur d-flex flex-column justify-content-around p-3 p-lg-5 gap-3 position-relative">
               <span class="badge-table-top position-absolute"></span>
               <span class="badge-table-right"></span>
               <div class="table-first bg-gray-300 flex-grow-1 p-2 pb-3 d-flex flex-column">
                 <p class="mb-2">完課徽章</p>
-                <div class="row row-cols-3 flex-grow-1">
+                <div class="finish-avatars row row-cols-3 flex-grow-1">
                   <!-- avatar-active 當前選擇要查看樣式的小箭頭, hover 的時候要切換 -->
                   <div class="col avatar-active position-relative">
                     <img class="w-100 h-100 opacity-100" src="/Triangle_Golk/assets/avatar-01-1b969a41.svg" alt="完課徽章-LV1">
@@ -405,7 +433,7 @@
                 <div class="table-middle-left bg-gray-300 flex-grow-1 p-3 pt-2 text-center d-flex flex-column">
                   <p class="mb-2">入門徽章</p>
                   <div class="row flex-grow-1">
-                    <div class="col position-relative">
+                    <div class="first-avatar col position-relative">
                       <img class="w-100 h-100" src="/Triangle_Golk/assets/avatar-04-828ea1d6.svg" alt="入門徽章">
                     </div>
                     
@@ -414,7 +442,7 @@
                 <div class="table-middle-rigth bg-gray-300 flex-grow-1 p-3 pt-2 text-center d-flex flex-column">
                   <p class="mb-2">申課徽章</p>
                   <div class="row flex-grow-1">
-                    <div class="col position-relative">
+                    <div class="apply-avatar col position-relative">
                       <img class="w-100 h-100" src="/Triangle_Golk/assets/avatar-05-caaec6cb.svg" alt="申課徽章">
                     </div>
                   </div>
@@ -422,7 +450,7 @@
               </div>
               <div class="table-bottom bg-gray-300 flex-grow-1 p-2 pb-3 d-flex flex-column">
                 <p class="mb-2">學習徽章</p>
-                <div class="row row-cols-3 flex-grow-1">
+                <div class="study-avatars row row-cols-3 flex-grow-1">
                   <div class="col position-relative">
                     <img class="w-100 h-100" src="/Triangle_Golk/assets/avatar-06-d5e1d0a8.svg" alt="學習徽章-LV1">
                   </div>
@@ -488,6 +516,7 @@
 </div>
     </div>
 
+    
     
     
   </body>

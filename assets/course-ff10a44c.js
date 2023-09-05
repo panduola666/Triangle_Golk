@@ -1,0 +1,1 @@
+import{S as i}from"./footer-203576fd.js";n();function n(){document.querySelectorAll("#fav-btn").forEach(a=>{a.addEventListener("click",t=>{t.preventDefault(),t.target.dataset.href,localStorage.getItem("token")?location.href="./mywishlist.html":i.fire({title:"請先登入"}).then(e=>{(e.isConfirmed||e.isDismissed)&&$("#account").modal("show")})})})}
