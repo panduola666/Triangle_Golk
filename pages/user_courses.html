@@ -5,35 +5,316 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>index</title>
+  <title>我的課程</title>
   <link rel="icon" type="image/png" href="../assets/images/favicon.ico">
 </head>
 
 <body>
-<div class="min-vh-100 d-flex flex-column">
+  <div class="min-vh-100 d-flex flex-column">
+    <%- include('./layout/nav'); -%>
+    <%- include('./layout/user_nav'); -%>
+    <!-- 未完成  dev-check-->
+      <main class="container my-xl flex-grow-1">
+      <!-- <main class="container my-xl flex-grow-1 dev-check"> -->
+          <article class="notebook row mb-xl col-lg-12">
+            <ul class="bookmark list-unstyled text-center p-1 d-flex flex-column d-lg-block d-none">
+              <li class="bookmark mb-2 py-1 bg-teal">
+                <a href="#"><span class="fs-tiny">六角學院(3)</span></a>
+              </li>
+              <li class="bookmark bookmark-unselected mb-2 py-1 bg-blue">
+                <a href="#"><span class="fs-tiny">Hahow(6)</span></a>
+              </li>
+              <li class="bookmark bookmark-unselected mb-2 py-1 bg-orange">
+                <a href="#"><span class="fs-tiny">Udemy(6)</span></a>
+              </li>
+              <li class="bookmark bookmark-unselected mb-2 py-1 bg-yellow">
+                <a href="#"><span class="fs-tiny">Coursera(6)</span></a>
+              </li>
+              <li class="bookmark bookmark-unselected mb-2 py-1 bg-gray-200">
+                <a href="#"><span class="fs-tiny">其他平台(6)</span></a>
+              </li>
+              <li class="bookmark bookmark-unselected mb-2 py-1 bg-primary mt-auto">
+                <a href="#"><span class="fs-tiny">已完課(6)</span></a>
+              </li>
+            </ul>
+            <ul class="bookmark-mobile list-unstyled text-center p-1 d-flex d-lg-none my-0">
+              <li class="bookmark me-1 py-1 bg-teal fs-tiny">
+                <a href="#">六角學院 (333)</a>
+              </li>
+              <li class="bookmark me-1 bookmark-unselected py-1 bg-blue fs-tiny">
+                <a href="#">Hahow (6)</a>
+              </li>
+              <li class="bookmark me-1 bookmark-unselected py-1 bg-orange fs-tiny">
+                <a href="#">Udemy (6)</a>
+              </li>
+              <li class="bookmark me-1 bookmark-unselected py-1 bg-yellow fs-tiny">
+                <a href="#">Coursera (6)</a>
+              </li>
+              <li class="bookmark me-1 bookmark-unselected py-1 bg-gray-200 fs-tiny">
+                <a href="#">其他平台 (6)</a>
+              </li>
+              <li class="bookmark bookmark-unselected py-1 bg-primary ms-auto fs-tiny">
+                <a href="#">已完課 (6)</a>
+              </li>
+            </ul>
+            <div class="notebook-pages-only flex-lg-nowrap row g-0 row-cols-lg-2 col">
+              <section class="notebook-page-left col col-lg mb-4">
+              <!-- 課程卡片的 card 樣式 => single-note-card -->
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="single-note-card-btn d-flex justify-content-evenly align-items-center">
+                      <button class="check-course btn btn-primary "><a href="./coursepages.html?id=1&sort=timer?id=1&sort=timer">查看課程</a></button>
+                      <div class="vertical-line"></div>
+                      <button class="go-comment btn btn-outline-primary"><a href="./comment.html?courseId=1">完課評價</a></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="single-note-card-btn d-flex justify-content-evenly align-items-center">
+                      <button class="check-course btn btn-primary "><a href="./coursepages.html?id=1&sort=timer">查看課程</a></button>
+                      <div class="vertical-line"></div>
+                      <button class="go-comment btn btn-outline-primary"><a href="./comment.html?courseId=1">完課評價</a></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="single-note-card-btn d-flex justify-content-evenly align-items-center">
+                      <button class="check-course btn btn-primary "><a href="./coursepages.html?id=1&sort=timer">查看課程</a></button>
+                      <div class="vertical-line"></div>
+                      <button class="go-comment btn btn-outline-primary"><a href="./comment.html?courseId=1">完課評價</a></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="single-note-card-btn d-flex justify-content-evenly align-items-center">
+                      <button class="check-course btn btn-primary "><a href="./coursepages.html?id=1&sort=timer">查看課程</a></button>
+                      <div class="vertical-line"></div>
+                      <button class="go-comment btn btn-outline-primary"><a href="./comment.html?courseId=1">完課評價</a></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-lg-start justify-content-end">
+                  <button class="btn btn-secondary px-3 py-2 mt-3 small">上一頁</button>
+                </div>
+              </section>
 
-  <%- include('./layout/nav'); -%>
-<!-- Button trigger modal -->
-
-<!-- 編輯評論的 btn 要選染 data-id 對應到評論的 id -->
-<button type="button" class="btn btn-secondary modal-btn" data-bs-toggle="modal" data-bs-target="#course-comment" data-id="1">
-  我的評價
-</button>
-<!-- 新增評論使用 a 連接, 渲染出課程的 id -->
-<a href="./comment.html?courseId=1" class="btn btn-secondary">完課評價</a>
-
-<!-- Modal -->
-<div class="modal fade" id="course-comment" tabindex="-1" aria-labelledby="couse-comment" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered comment-modal">
-    <!-- 評價主題 comment-style0:便條紙 comment-style1:書籤 -->
-  </div>
-</div>
+              <section class="notebook-page-right col col-lg mb-4">
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="single-note-card-btn d-flex justify-content-evenly align-items-center">
+                      <button class="check-course btn btn-primary "><a href="./coursepages.html?id=1&sort=timer">查看課程</a></button>
+                      <div class="vertical-line"></div>
+                      <button class="go-comment btn btn-outline-primary"><a href="./comment.html?courseId=1">完課評價</a></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-001-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="single-note-card-btn d-flex justify-content-evenly align-items-center">
+                      <button class="check-course btn btn-primary "><a href="./coursepages.html?id=1&sort=timer">查看課程</a></button>
+                      <div class="vertical-line"></div>
+                      <button class="go-comment btn btn-outline-primary"><a href="./comment.html?courseId=1">完課評價</a></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card single-note-card mb-3">
+                  <span class="comment-alerttag bg-danger small text-white rounded-1 py-1 px-3">未過審</span>
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-002-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">JavaScript 核心篇</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="single-note-card-btn d-flex justify-content-evenly align-items-center">
+                      <button class="check-course btn btn-primary "><a href="./coursepages.html?id=1&sort=timer">查看課程</a></button>
+                      <div class="vertical-line"></div>
+                      <button type="button" class="btn btn-secondary modal-btn" data-bs-toggle="modal" data-bs-target="#course-comment" data-id="1">
+                        我的評價
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card single-note-card mb-3">
+                  <div class="row g-0">
+                    <div class="col-4 card-row">
+                      <img src="../assets/images/course-003-code.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body pb-1">
+                        <h2 class="fs-6 text-truncate">2023 Python全攻略</h2>
+                        <p>#程序</p>
+                        <div class="stars d-flex justify-content-end">
+                          <div class="stars-icon text-primary me-2">
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined fs-6">star</span>
+                              <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                          </div>
+                          <span class="small text-gray-400">(666)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="single-note-card-btn d-flex justify-content-evenly align-items-center">
+                      <button class="check-course btn btn-primary "><a href="./coursepages.html?id=1&sort=timer">查看課程</a></button>
+                      <div class="vertical-line"></div>
+                      <button type="button" class="btn btn-secondary modal-btn" data-bs-toggle="modal" data-bs-target="#course-comment" data-id="1">
+                        我的評價
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <button class="btn btn-secondary px-3 py-2 mt-3 small">下一頁</button>
+                </div>
+              </section>
+            </div>
+          </article>
+          <div class="box-shadow"></div>
+      </main>
+      <!-- Modal -->
+      <div class="modal fade" id="course-comment" tabindex="-1" aria-labelledby="couse-comment" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered comment-modal">
+          <!-- 評價主題 comment-style0:便條紙 comment-style1:書籤 -->
+        </div>
+      </div>
     <%- include('./layout/footer'); -%>
-</div>
+  </div>
 
-
-      <script type="module" src="../main.js"></script>
-      <script type="module" src="../assets/js/user_courser.js"></script>
+  <script type="module" src="../main.js"></script>
+  <script type="module" src="../assets/js/user_nav.js"></script>
+  <script type="module" src="../assets/js/user_courses.js"></script>
 </body>
 
 </html>

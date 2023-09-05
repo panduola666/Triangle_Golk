@@ -65,7 +65,7 @@ export const User = {
             console.log(err);
             if(err.response.status === 401 || err.response.statusText === 'Unauthorized') {
                 // 登入過期, needBack 裡面的頁面要回到首頁
-                const needBack = ['user.html', 'achievement.html', 'classroom.html', 'comment.html', 'mycourse.html', 'mywishlist.html']
+                const needBack = ['user.html', 'achievement.html', 'classroom.html', 'comment.html', 'user_courses.html', 'user_wishlist.html']
                 console.log(location.pathname);
                 if(needBack.some(pageName => location.pathname.match(pageName))) {
                     this.plsReLogin()
