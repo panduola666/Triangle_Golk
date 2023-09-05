@@ -4,8 +4,8 @@ import { Passes, User } from '../api/index'
 const modal = document.querySelector('.comment-modal')
 const modalBtn = document.querySelectorAll('.modal-btn')
 
-const originData = await Passes.getUserPasses()
-const user = await User.getUserInfo()
+// const originData = await Passes.getUserPasses()
+// const user = await User.getUserInfo()
 
 modalBtn.forEach(btn => {
     btn.addEventListener('click', async (e) => {
