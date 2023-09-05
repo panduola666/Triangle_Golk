@@ -64,7 +64,7 @@
   }
   &-unselected{
     position: relative;
-    &::before {
+    &::after {
       content: '';
       position: absolute;
       top: 0;
@@ -73,18 +73,62 @@
       height: 100%;
       background-color: #ddd; /* 半透明灰色背景 */
       z-index: auto; /* 確保覆蓋在 li 上方 */
-      opacity: 0.5; /* 初始狀態下顯示半透明灰色背景 */
+      opacity: 0.75; /* 初始狀態下顯示半透明灰色背景 */
       transition: opacity 0.4s ease; /* 添加過渡效果 */
     }
-    &:hover::before, :active::before {
-      opacity: 0; /* 滑鼠懸停、點選時 */
+    &:hover::after {
+      opacity: 0.5; /* 懸停時透明度降低 */
     }
+    // &:active::after {
+    //   opacity: 0; /* 點選後不透明 */
+    // }
   }
   &-mobile{
     li{
       padding: 0.25em;
       max-width: 4.5em;
     }
+  }
+}
+.single-note-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s; /* 添加變換效果 */
+  &:hover{
+    transform: translateY(-10px); /* 卡片浮動效果 */
+  }
+
+  &-btn{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%); /* 初始位置在下方隱藏 */
+    z-index: 2;
+    opacity: 0;
+    transition: transform 0.2s, opacity 0.2s; /* 添加變換和透明度效果 */
+  }
+  &:hover .single-note-card-btn {
+    transform: translateY(0); /* 顯示按鈕 */
+    opacity: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -50%; /* 開始位置在底部之下 */
+    left: 0;
+    width: 100%;
+    height: 40%; /* 半透明底色的起始高度 */
+    background-color: $secondary; /* 半透明底色 */
+    opacity: 50%;
+    z-index: 1; /* 確保覆蓋在 card 上方 */
+    transition: bottom 0.3s ease-in-out; /* 過渡效果 下方滑入 */
+  }
+  &:hover::before {
+    bottom: 0; /* 滑入到底部 */
+    height: 100%; /* 半透明底色的目標高度 */
   }
 }
 
