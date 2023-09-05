@@ -6,13 +6,6 @@
     border: 1px solid #ddd; /* 內頁邊框 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 內頁陰影效果 */
     position: relative; /* 添加紙張紋理 */
-
-    // @media (max-width: 1200px) {
-    //   max-width: 100%; 
-    //   margin: 0 auto;
-    //   margin-bottom: 20px; 
-    //   padding: 2em;
-    // }
   }
   &-right { /* 更正筆記本右頁值 完善視覺效果 */
     margin-left: 4px;
@@ -38,12 +31,6 @@
   }
 }
 .single-note {
-  &-card{
-    img{
-      height: 125px;
-    }
-  }
-
   @media (max-width: 414px) {
     flex-direction: column; /* 垂直排列內容 */
     align-items: center; /* 水平置中內容 */
@@ -51,10 +38,6 @@
     }
   img {
     object-fit: cover;
-
-    @media (max-width: 414px){
-      // display: none;
-    }
   }
 }
 .bookmark {
@@ -79,9 +62,6 @@
     &:hover::after {
       opacity: 0.5; /* 懸停時透明度降低 */
     }
-    // &:active::after {
-    //   opacity: 0; /* 點選後不透明 */
-    // }
   }
   &-mobile{
     li{
@@ -91,26 +71,47 @@
   }
 }
 .single-note-card {
+  img{
+    height: 125px;
+  }
   position: relative;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: visible;
   transition: transform 0.2s; /* 添加變換效果 */
-  &:hover{
-    transform: translateY(-10px); /* 卡片浮動效果 */
+  & .comment-alerttag{
+    top: 1em;
+    left: -0.75em;
+    position: absolute;
+    z-index: 3;
+    overflow: visible;
+  }
+  &-errorcomment::before{
+    content: '未過審';
+    background: $danger;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 0.25rem;
+    // padding: 0.25em 1em;
+    top: 1em;
+    left: -1em;
+    position: absolute;
+    z-index: 3;
   }
 
   &-btn{
     display: none;
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
-    transform: translateY(100%); /* 初始位置在下方隱藏 */
+    height: 100%;
+    padding: 0 10%;
     z-index: 2;
     opacity: 0;
     transition: transform 0.2s, opacity 0.2s; /* 添加變換和透明度效果 */
   }
   &:hover .single-note-card-btn {
-    transform: translateY(0); /* 顯示按鈕 */
+    display: block; /* 顯示按鈕 */
     opacity: 1;
   }
 
@@ -121,8 +122,8 @@
     left: 0;
     width: 100%;
     height: 40%; /* 半透明底色的起始高度 */
-    background-color: $secondary; /* 半透明底色 */
-    opacity: 50%;
+    background-color: $black; /* 半透明底色 */
+    opacity: 75%;
     z-index: 1; /* 確保覆蓋在 card 上方 */
     transition: bottom 0.3s ease-in-out; /* 過渡效果 下方滑入 */
   }
@@ -130,6 +131,12 @@
     bottom: 0; /* 滑入到底部 */
     height: 100%; /* 半透明底色的目標高度 */
   }
+}
+.vertical-line {
+  width: 2px; /* 設定分隔線的寬度 */
+  height: 75%;
+  background-color: #fff;
+  margin: 0 10%; /* 設定左右邊距 */
 }
 
 .box-shadow{
