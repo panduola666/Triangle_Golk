@@ -7,8 +7,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>徽章成就</title>
     <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico">
-    <script type="module" crossorigin src="/Triangle_Golk/assets/footer-593f08a3.js"></script>
-    <link rel="stylesheet" href="/Triangle_Golk/assets/footer-9f6df78e.css">
+    <script type="module" crossorigin src="/Triangle_Golk/assets/footer-933fc89a.js"></script>
+    <script type="module" crossorigin src="/Triangle_Golk/assets/user_nav-b8e04adf.js"></script>
+    <link rel="stylesheet" href="/Triangle_Golk/assets/footer-a9fc4c7c.css">
   </head>
   <body>
     <div class="min-vh-100 d-flex flex-column">
@@ -117,8 +118,8 @@
             登入 / 註冊
           </li>
     
-          <li class="nav-item nav-page d-none d-lg-block" data-page="mycourse">
-            <a class="px-2 text-gray-500 fw-bold" href="./mycourse.html">我的課程</a>
+          <li class="nav-item nav-page d-none d-lg-block" data-page="user_courses">
+            <a class="px-2 text-gray-500 fw-bold" href="./user_courses.html">我的課程</a>
           </li>
     
           <!-- 用戶選單 -->
@@ -136,7 +137,7 @@
                 <a href="./user.html">會員專區</a>
               </li>
               <li class="dropdown-item">
-                <a href="./mywishlist.html">關注清單</a>
+                <a href="./user_wishlist.html">關注清單</a>
               </li>
               <li class="dropdown-item">
                 <a href="./achievement.html">徽章成就</a>
@@ -176,11 +177,11 @@
                 </span>
             </div>
             <ul class="ps-4 d-none aside-user-menu">
-                <li data-page="mycourse">
-                  <a class="py-3 w-100" href="./mycourse.html">我的課程</a>
+                <li data-page="user_courses">
+                  <a class="py-3 w-100" href="./user_courses.html">我的課程</a>
                 </li>
-                <li data-page="mywishlist">
-                    <a class="py-3 w-100" href="./mywishlist.html">關注清單</a>
+                <li data-page="user_wishlist">
+                    <a class="py-3 w-100" href="./user_wishlist.html">關注清單</a>
                 </li>
                 <li data-page="achievement">
                     <a class="py-3 w-100" href="./achievement.html">徽章成就</a>
@@ -220,7 +221,7 @@
                 </li>
               </ul>
       
-              <div class="modal-content login-modal border-0">
+              <div class="modal-content login-modal border-0 py-1">
                 <div class="tab-content" id="tab-content">
                   <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
                     <form class="login-form container form-content d-flex flex-column justify-content-between">
@@ -336,21 +337,21 @@
       </div>
     </div>
   </div>      <nav class="container d-flex justify-content-center py-5">
-    <ul class="nav" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link fs-6 fw-bold" aria-current="page" href="user.html" role="tab" data-toggle="tab" data-page="user">會員資料</a>
+    <ul class="nav d-flex justify-content-center gap-2" role="tablist">
+        <li class="nav-item mb-2" role="presentation">
+            <a class="nav-link fs-6 fw-bold" aria-current="page" href="./user.html" role="tab" data-toggle="tab" data-page="user">會員資料</a>
         </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link fs-6 fw-bold" href="mycourse.html" role="tab" data-toggle="tab" data-page="mycourse">我的課程</a>
+        <li class="nav-item mb-2" role="presentation">
+            <a class="nav-link fs-6 fw-bold" href="./user_courses.html" role="tab" data-toggle="tab" data-page="user_courses">我的課程</a>
         </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link fs-6 fw-bold" href="mywishlist.html" role="tab" data-toggle="tab" data-page="mywishlist">關注清單</a>
+        <li class="nav-item mb-2" role="presentation">
+            <a class="nav-link fs-6 fw-bold" href="./user_wishlist.html" role="tab" data-toggle="tab" data-page="user_wishlist">關注清單</a>
         </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link fs-6 fw-bold" href="achievement.html" role="tab" data-toggle="tab" data-page="achievement">徽章成就</a>
+        <li class="nav-item mb-2" role="presentation">
+            <a class="nav-link fs-6 fw-bold" href="./achievement.html" role="tab" data-toggle="tab" data-page="achievement">徽章成就</a>
         </li>
     </ul>
-</nav>      <main class="container mt-3 mb-lg-xxl mb-xl flex-grow-1">
+</nav>      <main class="container mt-5 flex-grow-1">
         <div class="row flex-column-reverse gy-5 py-lg-0 flex-lg-row">
           <!-- 徽章圖鑑 -->
           <div class="col border border-secondary border-4 py-xxl text-center position-relative d-flex flex-column justify-content-around badge-book position-relative bg-secondary-subtle fw-bold" style=" background: linear-gradient(to left,#fff,#EDEFEB);">
@@ -437,7 +438,7 @@
           </div>
         </div>
       </main>
-      <footer class="container-fluid bg-secondary-subtle py-lg-4 py-3">
+      <footer class="container-fluid bg-secondary-subtle py-lg-4 py-3 mt-lg-xxl mt-xl">
   <div class="row flex-column flex-lg-column-reverse gap-4">
     <!-- logo -->
     <div class="col col-lg-4 mx-auto text-center">
@@ -488,6 +489,6 @@
     </div>
 
     
-    <script src="../assets/js/user_nav.js"></script>
+    
   </body>
 </html>

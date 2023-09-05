@@ -5,14 +5,15 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>關注清單</title>
+  <title>index</title>
   <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico">
-  <script type="module" crossorigin src="/Triangle_Golk/assets/footer-593f08a3.js"></script>
-  <link rel="stylesheet" href="/Triangle_Golk/assets/footer-9f6df78e.css">
+  <script type="module" crossorigin src="/Triangle_Golk/assets/footer-933fc89a.js"></script>
+  <link rel="stylesheet" href="/Triangle_Golk/assets/footer-a9fc4c7c.css">
 </head>
 
 <body>
 <div class="min-vh-100 d-flex flex-column">
+
   <header class="header-nav py-sm bg-white sticky-top">
     <nav class="container-fluid container-lg ">
       <div class="row">
@@ -118,8 +119,8 @@
             登入 / 註冊
           </li>
     
-          <li class="nav-item nav-page d-none d-lg-block" data-page="mycourse">
-            <a class="px-2 text-gray-500 fw-bold" href="./mycourse.html">我的課程</a>
+          <li class="nav-item nav-page d-none d-lg-block" data-page="user_courses">
+            <a class="px-2 text-gray-500 fw-bold" href="./user_courses.html">我的課程</a>
           </li>
     
           <!-- 用戶選單 -->
@@ -137,7 +138,7 @@
                 <a href="./user.html">會員專區</a>
               </li>
               <li class="dropdown-item">
-                <a href="./mywishlist.html">關注清單</a>
+                <a href="./user_wishlist.html">關注清單</a>
               </li>
               <li class="dropdown-item">
                 <a href="./achievement.html">徽章成就</a>
@@ -177,11 +178,11 @@
                 </span>
             </div>
             <ul class="ps-4 d-none aside-user-menu">
-                <li data-page="mycourse">
-                  <a class="py-3 w-100" href="./mycourse.html">我的課程</a>
+                <li data-page="user_courses">
+                  <a class="py-3 w-100" href="./user_courses.html">我的課程</a>
                 </li>
-                <li data-page="mywishlist">
-                    <a class="py-3 w-100" href="./mywishlist.html">關注清單</a>
+                <li data-page="user_wishlist">
+                    <a class="py-3 w-100" href="./user_wishlist.html">關注清單</a>
                 </li>
                 <li data-page="achievement">
                     <a class="py-3 w-100" href="./achievement.html">徽章成就</a>
@@ -221,7 +222,7 @@
                 </li>
               </ul>
       
-              <div class="modal-content login-modal border-0">
+              <div class="modal-content login-modal border-0 py-1">
                 <div class="tab-content" id="tab-content">
                   <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
                     <form class="login-form container form-content d-flex flex-column justify-content-between">
@@ -336,36 +337,22 @@
         </form>
       </div>
     </div>
-  </div>  <nav class="container d-flex justify-content-center py-5">
-    <ul class="nav" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link fs-6 fw-bold" aria-current="page" href="user.html" role="tab" data-toggle="tab" data-page="user">會員資料</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link fs-6 fw-bold" href="mycourse.html" role="tab" data-toggle="tab" data-page="mycourse">我的課程</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link fs-6 fw-bold" href="mywishlist.html" role="tab" data-toggle="tab" data-page="mywishlist">關注清單</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link fs-6 fw-bold" href="achievement.html" role="tab" data-toggle="tab" data-page="achievement">徽章成就</a>
-        </li>
-    </ul>
-</nav>    <main class="flex-grow-1">
-      <article class="notebook d-flex justify-content-center">
-        <div class="notebook-page-left">
-          <div class="single-note">
-            <img src="" alt="">
-            <h2>課程名稱</h2>
-          </div>
-        </div>
-        <div class="notebook-page-right">
-          <div class="single-note">
-          </div>
-        </div>
-      </article>
-    </main>
-<footer class="container-fluid bg-secondary-subtle py-lg-4 py-3">
+  </div><!-- Button trigger modal -->
+
+<!-- 編輯評論的 btn 要選染 data-id 對應到評論的 id -->
+<button type="button" class="btn btn-secondary modal-btn" data-bs-toggle="modal" data-bs-target="#course-comment" data-id="1">
+  我的評價
+</button>
+<!-- 新增評論使用 a 連接, 渲染出課程的 id -->
+<a href="./comment.html?courseId=1" class="btn btn-secondary">完課評價</a>
+
+<!-- Modal -->
+<div class="modal fade" id="course-comment" tabindex="-1" aria-labelledby="couse-comment" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered comment-modal">
+    <!-- 評價主題 comment-style0:便條紙 comment-style1:書籤 -->
+  </div>
+</div>
+    <footer class="container-fluid bg-secondary-subtle py-lg-4 py-3 mt-lg-xxl mt-xl">
   <div class="row flex-column flex-lg-column-reverse gap-4">
     <!-- logo -->
     <div class="col col-lg-4 mx-auto text-center">
@@ -416,10 +403,7 @@
 </div>
 
 
-
-
-
-<script src="../assets/js/user_nav.js"></script>
+      
 </body>
 
 </html>

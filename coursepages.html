@@ -6,18 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>課程內頁</title>
     <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico">
-    <script type="module" crossorigin src="/Triangle_Golk/assets/coursepages-c86a944b.js"></script>
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/footer-593f08a3.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/apply_course-860e5b7b.js">
+    <script type="module" crossorigin src="/Triangle_Golk/assets/coursepages-c8cb608c.js"></script>
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/footer-933fc89a.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/apply_course-8b2ce101.js">
     <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/swiper-core-d55539fa.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/comment-5b611eab.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/course-45aa811e.js">
-    <link rel="stylesheet" href="/Triangle_Golk/assets/footer-9f6df78e.css">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/comment-5cc362ad.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/passes-8703464e.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/course-c79b2046.js">
+    <link rel="stylesheet" href="/Triangle_Golk/assets/footer-a9fc4c7c.css">
     <link rel="stylesheet" href="/Triangle_Golk/assets/coursepages-0705b292.css">
   </head>
 
   <body>
-    <div class="min-vh-100 d-flex flex-column">
+    <div class="loading d-none">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;display:block;" width="255px" height="255px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+        <g transform="translate(50 42)">
+          <g transform="scale(0.8)">
+            <g transform="translate(-50 -50)">
+              <polygon fill="#163300" points="72.5 50 50 11 27.5 50 50 50">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="2.5s" values="0 50 38.5;360 50 38.5" keyTimes="0;1"></animateTransform>
+              </polygon>
+              <polygon fill="#163300" points="5 89 50 89 27.5 50">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="2.5s" values="0 27.5 77.5;360 27.5 77.5" keyTimes="0;1"></animateTransform>
+              </polygon>
+              <polygon fill="#163300" points="72.5 50 50 89 95 89">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="2.5s" values="0 72.5 77.5;360 72 77.5" keyTimes="0;1"></animateTransform>
+              </polygon>
+            </g>
+          </g>
+        </g>
+        </svg>
+</div>    <div class="min-vh-100 d-flex flex-column">
       <header class="header-nav py-sm bg-white sticky-top">
     <nav class="container-fluid container-lg ">
       <div class="row">
@@ -123,8 +142,8 @@
             登入 / 註冊
           </li>
     
-          <li class="nav-item nav-page d-none d-lg-block" data-page="mycourse">
-            <a class="px-2 text-gray-500 fw-bold" href="./mycourse.html">我的課程</a>
+          <li class="nav-item nav-page d-none d-lg-block" data-page="user_courses">
+            <a class="px-2 text-gray-500 fw-bold" href="./user_courses.html">我的課程</a>
           </li>
     
           <!-- 用戶選單 -->
@@ -142,7 +161,7 @@
                 <a href="./user.html">會員專區</a>
               </li>
               <li class="dropdown-item">
-                <a href="./mywishlist.html">關注清單</a>
+                <a href="./user_wishlist.html">關注清單</a>
               </li>
               <li class="dropdown-item">
                 <a href="./achievement.html">徽章成就</a>
@@ -182,11 +201,11 @@
                 </span>
             </div>
             <ul class="ps-4 d-none aside-user-menu">
-                <li data-page="mycourse">
-                  <a class="py-3 w-100" href="./mycourse.html">我的課程</a>
+                <li data-page="user_courses">
+                  <a class="py-3 w-100" href="./user_courses.html">我的課程</a>
                 </li>
-                <li data-page="mywishlist">
-                    <a class="py-3 w-100" href="./mywishlist.html">關注清單</a>
+                <li data-page="user_wishlist">
+                    <a class="py-3 w-100" href="./user_wishlist.html">關注清單</a>
                 </li>
                 <li data-page="achievement">
                     <a class="py-3 w-100" href="./achievement.html">徽章成就</a>
@@ -226,7 +245,7 @@
                 </li>
               </ul>
       
-              <div class="modal-content login-modal border-0">
+              <div class="modal-content login-modal border-0 py-1">
                 <div class="tab-content" id="tab-content">
                   <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
                     <form class="login-form container form-content d-flex flex-column justify-content-between">
@@ -341,7 +360,7 @@
         </form>
       </div>
     </div>
-  </div>      <main class="container my-xl flex-grow-1">
+  </div>      <main class="container flex-grow-1">
         <a class="page-header mb-4 fs-5" href="./course.html">
           <span class="d-flex align-items-center link-hover">
             <span class="material-icons"> chevron_right </span>
@@ -396,7 +415,7 @@
                 </span>
 
                 <!-- 引導點擊遮罩 -->
-                <a href="#" target="_blank" class="blackboard-mark">
+                <a target="_blank" class="blackboard-mark">
                   <span
                     class="material-symbols-outlined outline-icon text-white course-link-icon"
                   >
@@ -573,7 +592,7 @@
         </div>
 
         <!-- 換頁 -->
-        <nav class="page-nav container mb-5" aria-label="Page navigation example">
+        <nav class="page-nav container my-3" aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
         <li class="page-item p-hover">
             <a class="page-link" href="#" aria-label="Previous">
@@ -780,7 +799,7 @@
         </div>
       </main>
 
-      <footer class="container-fluid bg-secondary-subtle py-lg-4 py-3">
+      <footer class="container-fluid bg-secondary-subtle py-lg-4 py-3 mt-lg-xxl mt-xl">
   <div class="row flex-column flex-lg-column-reverse gap-4">
     <!-- logo -->
     <div class="col col-lg-4 mx-auto text-center">

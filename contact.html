@@ -13,8 +13,8 @@
     <!-- <link rel="stylesheet" href="path/to/sweetalert2.css"> -->
     <title>聯繫客服</title>
     <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico">
-  <script type="module" crossorigin src="/Triangle_Golk/assets/footer-593f08a3.js"></script>
-  <link rel="stylesheet" href="/Triangle_Golk/assets/footer-9f6df78e.css">
+  <script type="module" crossorigin src="/Triangle_Golk/assets/footer-933fc89a.js"></script>
+  <link rel="stylesheet" href="/Triangle_Golk/assets/footer-a9fc4c7c.css">
 </head>
 
 <body>
@@ -124,8 +124,8 @@
             登入 / 註冊
           </li>
     
-          <li class="nav-item nav-page d-none d-lg-block" data-page="mycourse">
-            <a class="px-2 text-gray-500 fw-bold" href="./mycourse.html">我的課程</a>
+          <li class="nav-item nav-page d-none d-lg-block" data-page="user_courses">
+            <a class="px-2 text-gray-500 fw-bold" href="./user_courses.html">我的課程</a>
           </li>
     
           <!-- 用戶選單 -->
@@ -143,7 +143,7 @@
                 <a href="./user.html">會員專區</a>
               </li>
               <li class="dropdown-item">
-                <a href="./mywishlist.html">關注清單</a>
+                <a href="./user_wishlist.html">關注清單</a>
               </li>
               <li class="dropdown-item">
                 <a href="./achievement.html">徽章成就</a>
@@ -183,11 +183,11 @@
                 </span>
             </div>
             <ul class="ps-4 d-none aside-user-menu">
-                <li data-page="mycourse">
-                  <a class="py-3 w-100" href="./mycourse.html">我的課程</a>
+                <li data-page="user_courses">
+                  <a class="py-3 w-100" href="./user_courses.html">我的課程</a>
                 </li>
-                <li data-page="mywishlist">
-                    <a class="py-3 w-100" href="./mywishlist.html">關注清單</a>
+                <li data-page="user_wishlist">
+                    <a class="py-3 w-100" href="./user_wishlist.html">關注清單</a>
                 </li>
                 <li data-page="achievement">
                     <a class="py-3 w-100" href="./achievement.html">徽章成就</a>
@@ -227,7 +227,7 @@
                 </li>
               </ul>
       
-              <div class="modal-content login-modal border-0">
+              <div class="modal-content login-modal border-0 py-1">
                 <div class="tab-content" id="tab-content">
                   <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
                     <form class="login-form container form-content d-flex flex-column justify-content-between">
@@ -344,7 +344,6 @@
     </div>
   </div>    <main class="container flex-grow-1">
         <h1 class="fs-2 page-title fw-bold my-4">聯繫客服</h1>
-        <!-- not complete yet -->
         
         <div class="row d-flex flex-wrap">
             <div class="col-lg-7 d-flex flex-column">
@@ -354,27 +353,27 @@
                     <li class="fs-6 fs-md-4 fs-lg-2 fw-medium mb-2 mb-md-4 offset-md-2"><img src="/Triangle_Golk/assets/contact-emoji-3-e66b478a.svg" alt="emoji" class="d-inline">找到了一隻小蟲</li>
                     <li class="fs-6 fs-md-4 fs-lg-2 fw-medium mb-2 mb-md-4 offset-md-3"><img src="/Triangle_Golk/assets/contact-emoji-4-a7582bcd.svg" alt="emoji" class="d-inline">有些建議想提供給三角構客——</li>
                 </ul>
-                <img src="/Triangle_Golk/assets/contact-bird-2aa8fa95.svg" alt="homing pigeon" class="pic-pigeon px-4 pb-4">
+                <img src="/Triangle_Golk/assets/contact-bird-e7e2924c.svg" alt="homing pigeon" class="pic-pigeon px-lg-5 pb-4">
             </div>
-            <div class="col col-lg-4 mb-4">
-                <h2 class="fs-3 text-center mb-4 text-nowrap">留言給我們，我們聽你說</h2>
+            <section class="col col-lg-4 mb-4 d-flex flex-column">
+                <h2 class="fs-3 text-center mb-4 mb-lg-5 text-nowrap">留言給我們，我們聽你說</h2>
                 <form action="#" class="needs-validation fs-6" novalidate>
-                    <div class="mb-3 d-flex flex-column">
-                        <div class="form-check form-check-inline ps-0 pe-0 ms-0 me-0">
+                    <div class="mb-3 mb-lg-4 d-flex flex-column">
+                        <div class="form-check form-check-inline mx-0 px-0">
                             <label class="form-label fw-medium form-required" for="contact-nickname">暱稱</label>
-                            <input type="text" class="form-control is-invalid" id="contact-nickname" name="nickname">
+                            <input type="text" class="form-control" id="contact-nickname" name="nickname" required>
                         </div>
                     </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <div class="form-check form-check-inline ps-0 pe-0 ms-0 me-0">
+                    <div class="mb-3 mb-lg-4 d-flex flex-column">
+                        <div class="form-check form-check-inline mx-0 px-0">
                             <label class="form-label fw-medium form-required" for="contact-email">聯絡信箱</label>
-                            <input type="email" class="form-control is-invalid" id="contact-email" name="email">
+                            <input type="email" class="form-control" id="contact-email" name="email" required>
                         </div>
                     </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <div class="form-check form-check-inline ps-0 pe-0 ms-0 me-0">
+                    <div class="mb-3 mb-lg-4 d-flex flex-column">
+                        <div class="form-check form-check-inline mx-0 px-0">
                             <label class="form-label fw-medium form-required" for="contact-message">留言內容</label>
-                            <textarea type="text" class="form-control is-invalid" id="contact-message" name="message" rows="6"></textarea>
+                            <textarea type="text" class="form-control" id="contact-message" name="message" rows="6" required></textarea>
                         </div>
                     </div>
                     <div class="text-center">
@@ -382,10 +381,10 @@
                     </div>
                 </form>
                 <tb></tb>
-            </div>
+            </section>
         </div>
     </main>
-<footer class="container-fluid bg-secondary-subtle py-lg-4 py-3">
+<footer class="container-fluid bg-secondary-subtle py-lg-4 py-3 mt-lg-xxl mt-xl">
   <div class="row flex-column flex-lg-column-reverse gap-4">
     <!-- logo -->
     <div class="col col-lg-4 mx-auto text-center">
