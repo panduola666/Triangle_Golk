@@ -16,6 +16,7 @@
     <!-- 未完成  dev-check-->
       <main class="container my-xl flex-grow-1">
         <article class="notebook row">
+          <!-- 電腦版標籤 -->
           <ul class="bookmark list-unstyled text-center p-1 d-flex flex-column d-lg-block d-none">
             <li class="bookmark mb-2 py-1 bg-teal">
               <a href="#"><span class="fs-tiny">六角學院(3)</span></a>
@@ -36,6 +37,7 @@
               <a href="#"><span class="fs-tiny">已完課(6)</span></a>
             </li>
           </ul>
+          <!-- 手機板標籤 -->
           <ul class="bookmark-mobile list-unstyled text-center p-1 d-flex d-lg-none my-0">
             <li class="bookmark me-1 py-1 bg-teal fs-tiny">
               <a href="#">六角學院 (333)</a>
@@ -59,7 +61,7 @@
           <div class="notebook-pages-only row col g-0">
             <section class="notebook-page-left row col mb-4 row-cols-lg-2 gx-lg-5">
             <!-- 課程卡片的 card 樣式 => single-note-card -->
-              <div class="notebook-page-innersection col-lg-6 col-12">
+              <div class="book-left notebook-page-innersection col-lg-6 col-12">
                 <div class="notebook-card-frame position-relative">
                   <div class="card single-note-card mb-3">
                   <div class="row g-0">
@@ -180,12 +182,13 @@
                   </div>
                   </div>
                 </div>
+                <!-- 分頁按鈕 -->
                 <div class="d-none d-lg-block justify-content-lg-start">
                   <button class="btn btn-secondary px-2 py-1 mt-3 small" disabled>上一頁</button>
                 </div>
               </div>
 
-              <div class="notebook-page-innersection col-lg-6 col-12">
+              <div class="boot-right notebook-page-innersection col-lg-6 col-12">
                 <div class="notebook-card-frame position-relative">
                   <div class="card single-note-card mb-3">
                   <div class="row g-0">
@@ -311,6 +314,8 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- 分頁按鈕 -->
                 <div class="d-flex justify-content-between justify-content-lg-end">
                   <div class="d-lg-none">
                     <button class="btn btn-secondary px-2 py-1 mt-3 small" disabled>上一頁</button>
@@ -323,7 +328,8 @@
         </article>
         <div class="box-shadow"></div>
       </main>
-      <!-- Modal -->
+
+      <!-- 我的評論 modal -->
       <div class="modal fade" id="course-comment" tabindex="-1" aria-labelledby="couse-comment" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered comment-modal">
           <!-- 評價主題 comment-style0:便條紙 comment-style1:書籤 -->

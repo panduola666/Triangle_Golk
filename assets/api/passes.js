@@ -1,6 +1,7 @@
 import axios from "axios";
 import Swal from 'sweetalert2';
 const { VITE_BASEURL } = import.meta.env
+import { Course } from './index'
 
 export const Passes = {
     // 添加到我的課程
@@ -20,8 +21,18 @@ export const Passes = {
      },
     async getUserPasses() {
         try {
+            const courses = await Course.getAllCourses()
             const res = await axios.get(`${VITE_BASEURL}/passes?_expand=user&_expand=course&userId=${localStorage.getItem('userId')}`)
-            return res.data
+            return res.data.map(data => {
+                const course = courses.find(course => course.id === data.courseId)
+                if(course) {
+                    return {
+                        ...data,
+                        avgScore: course.avgScore,
+                        totalComment: course.comments.length
+                    }
+                }
+            }).filter(data => data)
         } catch (err) {
             console.log(err);
         }
