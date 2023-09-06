@@ -7,29 +7,56 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 內頁陰影效果 */
     position: relative; /* 添加紙張紋理 */
   }
-  &-right { /* 更正筆記本右頁值 完善視覺效果 */
-    margin-left: 4px;
-    background: linear-gradient(to left,$gray-200,$white 5%, 97%,$gray-200 99%);
-  }
+  // &-right { /* 更正筆記本右頁值 完善視覺效果 */
+  //   margin-left: 4px;
+  //   background: linear-gradient(to left,$gray-200,$white 5%, 97%,$gray-200 99%);
+  // }
   &-left::before, &-right::before {
     content: '';
     position: absolute;
     top: -10px;
     left: -15px;  /* 筆記本左頁專用值 */
-    right: -5px; /* 筆記本左頁專用值 */
+    right: -15px; /* 筆記本左頁專用值-5px */
     bottom: -10px;
     border: solid 1px #ddd;
     border-right: solid 1.5px #666;
     z-index: -1; 
     background-color: $secondary;
   }
-  &-right::before { /* 更正筆記本右頁值 完善視覺效果 */
-    left: -5px; 
-    right: -15px;
-    border-right: solid 1px #ddd;
-    border-left: solid 1.5px #666;
+  &-left::after{  /* 中間分隔線 */
+      position: absolute;
+      left: 50%;
+      top: -4px;
+      z-index: 3;
+      content: '';
+      width: 4px;
+      height: 101%;
+      background: $secondary;
+      @media(max-width: 992px){
+        display: none;
+      }
+    }
   }
-}
+  // &-right::before { /* 更正筆記本右頁值 完善視覺效果 */
+  //   left: -5px; 
+  //   right: -15px;
+  //   border-right: solid 1px #ddd;
+  //   border-left: solid 1.5px #666;
+  // }
+// }
+// .notebook-pages-only {
+//   position: relative;
+//   &::before{
+//     position: absolute;
+//     left: 47.5%;
+//     top: 0;
+//     z-index: 3;
+//     content: '';
+//     width: 4px;
+//     height: 97%;
+//     background: $secondary;
+//   }
+// }
 .single-note {
   @media (max-width: 414px) {
     flex-direction: column; /* 垂直排列內容 */
@@ -41,6 +68,7 @@
   }
 }
 .bookmark {
+  z-index: 3;
   width: 5em;
   li {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
@@ -72,31 +100,12 @@
 }
 .single-note-card {
   img{
-    height: 125px;
+    max-height: 125px;
   }
   position: relative;
   overflow-y: hidden;
   overflow-x: visible;
   transition: transform 0.2s; /* 添加變換效果 */
-  & .comment-alerttag{
-    top: 1em;
-    left: -0.75em;
-    position: absolute;
-    z-index: 3;
-    overflow: visible;
-  }
-  &-errorcomment::before{
-    content: '未過審';
-    background: $danger;
-    color: #fff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 0.25rem;
-    // padding: 0.25em 1em;
-    top: 1em;
-    left: -1em;
-    position: absolute;
-    z-index: 3;
-  }
 
   &-btn{
     display: none;
@@ -137,6 +146,19 @@
   height: 75%;
   background-color: #fff;
   margin: 0 10%; /* 設定左右邊距 */
+}
+.star-fs{
+  font-size: 10px;
+  @media(min-width: 768px){
+    font-size: 20px;
+  }
+}
+.comment-alerttag{
+  top: 1em;
+  left: -0.75em;
+  position: absolute;
+  z-index: 3;
+  overflow: visible;
 }
 
 .box-shadow{

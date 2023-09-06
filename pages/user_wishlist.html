@@ -15,44 +15,46 @@
   <%- include('./layout/user_nav'); -%>
 
   <main class="container my-xl flex-grow-1">
-        <article class="notebook row mb-xl col-lg-12">
-          <ul class="bookmark list-unstyled text-center p-1 d-flex flex-column d-lg-block d-none">
-            <li class="bookmark mb-2 py-1 bg-teal">
-              <a href="#"><span class="fs-tiny">六角學院(3)</span></a>
-            </li>
-            <li class="bookmark bookmark-unselected mb-2 py-1 bg-blue">
-              <a href="#"><span class="fs-tiny">Hahow(6)</span></a>
-            </li>
-            <li class="bookmark bookmark-unselected mb-2 py-1 bg-orange">
-              <a href="#"><span class="fs-tiny">Udemy(6)</span></a>
-            </li>
-            <li class="bookmark bookmark-unselected mb-2 py-1 bg-yellow">
-              <a href="#"><span class="fs-tiny">Coursera(6)</span></a>
-            </li>
-            <li class="bookmark bookmark-unselected mb-2 py-1 bg-gray-200">
-              <a href="#"><span class="fs-tiny">其他平台(6)</span></a>
-            </li>
-          </ul>
-          <ul class="bookmark-mobile list-unstyled text-center p-1 d-flex d-lg-none my-0">
-            <li class="bookmark me-1 py-1 bg-teal fs-tiny">
-              <a href="#">六角學院 (333)</a>
-            </li>
-            <li class="bookmark me-1 bookmark-unselected py-1 bg-blue fs-tiny">
-              <a href="#">Hahow (6)</a>
-            </li>
-            <li class="bookmark me-1 bookmark-unselected py-1 bg-orange fs-tiny">
-              <a href="#">Udemy (6)</a>
-            </li>
-            <li class="bookmark me-1 bookmark-unselected py-1 bg-yellow fs-tiny">
-              <a href="#">Coursera (6)</a>
-            </li>
-            <li class="bookmark me-1 bookmark-unselected py-1 bg-gray-200 fs-tiny">
-              <a href="#">其他平台 (6)</a>
-            </li>
-          </ul>
-          <div class="notebook-pages-only flex-lg-nowrap row g-0 row-cols-lg-2 col">
-            <section class="notebook-page-left col col-lg mb-4">
-            <!-- 願望清單課程卡片的 card 樣式 => wishlist-note-card -->
+    <article class="notebook row">
+      <ul class="bookmark list-unstyled text-center p-1 d-flex flex-column d-lg-block d-none">
+        <li class="bookmark mb-2 py-1 bg-teal">
+          <a href="#"><span class="fs-tiny">六角學院(3)</span></a>
+        </li>
+        <li class="bookmark bookmark-unselected mb-2 py-1 bg-blue">
+          <a href="#"><span class="fs-tiny">Hahow(6)</span></a>
+        </li>
+        <li class="bookmark bookmark-unselected mb-2 py-1 bg-orange">
+          <a href="#"><span class="fs-tiny">Udemy(6)</span></a>
+        </li>
+        <li class="bookmark bookmark-unselected mb-2 py-1 bg-yellow">
+          <a href="#"><span class="fs-tiny">Coursera(6)</span></a>
+        </li>
+        <li class="bookmark bookmark-unselected mb-2 py-1 bg-gray-200">
+          <a href="#"><span class="fs-tiny">其他平台(6)</span></a>
+        </li>
+      </ul>
+      <ul class="bookmark-mobile list-unstyled text-center p-1 d-flex d-lg-none my-0">
+        <li class="bookmark me-1 py-1 bg-teal fs-tiny">
+          <a href="#">六角學院 (333)</a>
+        </li>
+        <li class="bookmark me-1 bookmark-unselected py-1 bg-blue fs-tiny">
+          <a href="#">Hahow (6)</a>
+        </li>
+        <li class="bookmark me-1 bookmark-unselected py-1 bg-orange fs-tiny">
+          <a href="#">Udemy (6)</a>
+        </li>
+        <li class="bookmark me-1 bookmark-unselected py-1 bg-yellow fs-tiny">
+          <a href="#">Coursera (6)</a>
+        </li>
+        <li class="bookmark me-1 bookmark-unselected py-1 bg-gray-200 fs-tiny">
+          <a href="#">其他平台 (6)</a>
+        </li>
+      </ul>
+      <div class="notebook-pages-only row col g-0">
+        <section class="notebook-page-left row col mb-4 row-cols-lg-2 gx-lg-5">
+        <!-- 關注清單卡片的 card 樣式 => wishlist-note-card -->
+          <div class="notebook-page-innersection col-lg-6 col-12">
+            <div class="notebook-card-frame">
               <div class="card wishlist-note-card mb-3">
                 <div class="row g-0">
                   <div class="col-4 card-row">
@@ -63,14 +65,14 @@
                       <h2 class="fs-6 text-truncate">從新手到人人稱讚好廚藝</h2>
                       <p>#烹飪</p>
                       <div class="stars d-flex justify-content-end">
-                        <div class="stars-icon text-primary me-2">
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                        <div class="stars-icon text-primary me-1 me-md-2">
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined outline-icon star-fs">star</span>
                         </div>
-                        <span class="small text-gray-400">(666)</span>
+                        <span class="text-gray-400 small">(666)</span>
                       </div>
                     </div>
                   </div>
@@ -79,6 +81,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="notebook-card-frame">
               <div class="card wishlist-note-card mb-3">
                 <div class="row g-0">
                   <div class="col-4 card-row">
@@ -89,14 +93,14 @@
                       <h2 class="fs-6 text-truncate">從新手到人人稱讚好廚藝</h2>
                       <p>#烹飪</p>
                       <div class="stars d-flex justify-content-end">
-                        <div class="stars-icon text-primary me-2">
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                        <div class="stars-icon text-primary me-1 me-md-2">
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined outline-icon star-fs">star</span>
                         </div>
-                        <span class="small text-gray-400">(666)</span>
+                        <span class="text-gray-400 small">(666)</span>
                       </div>
                     </div>
                   </div>
@@ -105,6 +109,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="notebook-card-frame">
               <div class="card wishlist-note-card mb-3">
                 <div class="row g-0">
                   <div class="col-4 card-row">
@@ -115,14 +121,14 @@
                       <h2 class="fs-6 text-truncate">從新手到人人稱讚好廚藝</h2>
                       <p>#烹飪</p>
                       <div class="stars d-flex justify-content-end">
-                        <div class="stars-icon text-primary me-2">
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                        <div class="stars-icon text-primary me-1 me-md-2">
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined outline-icon star-fs">star</span>
                         </div>
-                        <span class="small text-gray-400">(666)</span>
+                        <span class="text-gray-400 small">(666)</span>
                       </div>
                     </div>
                   </div>
@@ -131,6 +137,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="notebook-card-frame">
               <div class="card wishlist-note-card mb-3">
                 <div class="row g-0">
                   <div class="col-4 card-row">
@@ -141,14 +149,14 @@
                       <h2 class="fs-6 text-truncate">從新手到人人稱讚好廚藝</h2>
                       <p>#烹飪</p>
                       <div class="stars d-flex justify-content-end">
-                        <div class="stars-icon text-primary me-2">
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined outline-icon fs-6">star</span>
+                        <div class="stars-icon text-primary me-1 me-md-2">
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined outline-icon star-fs">star</span>
                         </div>
-                        <span class="small text-gray-400">(666)</span>
+                        <span class="text-gray-400 small">(666)</span>
                       </div>
                     </div>
                   </div>
@@ -157,124 +165,137 @@
                   </div>
                 </div>
               </div>
-              <div class="d-flex justify-content-lg-start justify-content-end">
-                <button class="btn btn-secondary px-3 py-2 mt-3 small"><a href="#">上一頁</a></button>
-              </div>
-            </section>
-
-            <section class="notebook-page-right col col-lg mb-4">
-              <div class="card wishlist-note-card mb-3">
-                <div class="row g-0">
-                  <div class="col-4 card-row">
-                    <img src="../assets/images/course-006-cook.jpeg" class="img-fluid rounded-start" alt="cover of course">
-                  </div>
-                  <div class="col-8">
-                    <div class="card-body pb-1">
-                      <h2 class="fs-6 text-truncate">從新手到人人稱讚好廚藝</h2>
-                      <p>#烹飪</p>
-                      <div class="stars d-flex justify-content-end">
-                        <div class="stars-icon text-primary me-2">
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined outline-icon fs-6">star</span>
-                        </div>
-                        <span class="small text-gray-400">(666)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="wishlist-note-card-btn d-flex justify-content-center flex-nowrap">
-                    <a href="./coursepages.html" target="_self" class="d-block text-white fs-5 align-self-center text-nowrap p-xxl">查看課程</a>
-                  </div>
-                </div>
-              </div>
-              <div class="card wishlist-note-card mb-3">
-                <div class="row g-0">
-                  <div class="col-4 card-row">
-                    <img src="../assets/images/course-006-cook.jpeg" class="img-fluid rounded-start" alt="cover of course">
-                  </div>
-                  <div class="col-8">
-                    <div class="card-body pb-1">
-                      <h2 class="fs-6 text-truncate">從新手到人人稱讚好廚藝</h2>
-                      <p>#烹飪</p>
-                      <div class="stars d-flex justify-content-end">
-                        <div class="stars-icon text-primary me-2">
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined outline-icon fs-6">star</span>
-                        </div>
-                        <span class="small text-gray-400">(666)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="wishlist-note-card-btn d-flex justify-content-center flex-nowrap">
-                    <a href="./coursepages.html" target="_self" class="d-block text-white fs-5 align-self-center text-nowrap p-xxl">查看課程</a>
-                  </div>
-                </div>
-              </div>
-              <div class="card wishlist-note-card mb-3">
-                <div class="row g-0">
-                  <div class="col-4 card-row">
-                    <img src="../assets/images/course-006-cook.jpeg" class="img-fluid rounded-start" alt="cover of course">
-                  </div>
-                  <div class="col-8">
-                    <div class="card-body pb-1">
-                      <h2 class="fs-6 text-truncate">從新手到人人稱讚好廚藝</h2>
-                      <p>#烹飪</p>
-                      <div class="stars d-flex justify-content-end">
-                        <div class="stars-icon text-primary me-2">
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined outline-icon fs-6">star</span>
-                        </div>
-                        <span class="small text-gray-400">(666)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="wishlist-note-card-btn d-flex justify-content-center flex-nowrap">
-                    <a href="./coursepages.html" target="_self" class="d-block text-white fs-5 align-self-center text-nowrap p-xxl">查看課程</a>
-                  </div>
-                </div>
-              </div>
-              <div class="card wishlist-note-card mb-3">
-                <div class="row g-0">
-                  <div class="col-4 card-row">
-                    <img src="../assets/images/course-006-cook.jpeg" class="img-fluid rounded-start" alt="cover of course">
-                  </div>
-                  <div class="col-8">
-                    <div class="card-body pb-1">
-                      <h2 class="fs-6 text-truncate">從新手到人人稱讚好廚藝</h2>
-                      <p>#烹飪</p>
-                      <div class="stars d-flex justify-content-end">
-                        <div class="stars-icon text-primary me-2">
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined fs-6">star</span>
-                            <span class="material-symbols-outlined outline-icon fs-6">star</span>
-                        </div>
-                        <span class="small text-gray-400">(666)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="wishlist-note-card-btn d-flex justify-content-center flex-nowrap">
-                    <a href="./coursepages.html" target="_self" class="d-block text-white fs-5 align-self-center text-nowrap p-xxl">查看課程</a>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex justify-content-end">
-                <button class="btn btn-secondary px-3 py-2 mt-3 small"><a href="#">下一頁</a></button>
-              </div>
-            </section>
+            </div>
+            <div class="d-none d-lg-block justify-content-lg-start">
+              <button class="btn btn-secondary px-2 py-1 mt-3 small" disabled>上一頁</button>
+            </div>
           </div>
-        </article>
-        <div class="box-shadow"></div>
-    </main>
+
+          <div class="notebook-page-innersection col-lg-6 col-12">
+            <div class="notebook-card-frame">
+              <div class="card wishlist-note-card mb-3">
+                <div class="row g-0">
+                  <div class="col-4 card-row">
+                    <img src="../assets/images/course-006-cook.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body pb-1">
+                      <h2 class="fs-6 text-truncate">從新手到人人稱讚好廚藝</h2>
+                      <p>#烹飪</p>
+                      <div class="stars d-flex justify-content-end">
+                        <div class="stars-icon text-primary me-1 me-md-2">
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined outline-icon star-fs">star</span>
+                        </div>
+                        <span class="text-gray-400 small">(666)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wishlist-note-card-btn d-flex justify-content-center flex-nowrap">
+                    <a href="./coursepages.html" target="_self" class="d-block text-white fs-5 align-self-center text-nowrap p-xxl">查看課程</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="notebook-card-frame">
+              <div class="card wishlist-note-card mb-3">
+                <div class="row g-0">
+                  <div class="col-4 card-row">
+                    <img src="../assets/images/course-006-cook.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body pb-1">
+                      <h2 class="fs-6 text-truncate">從新手到人人稱讚好廚藝</h2>
+                      <p>#烹飪</p>
+                      <div class="stars d-flex justify-content-end">
+                        <div class="stars-icon text-primary me-1 me-md-2">
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined outline-icon star-fs">star</span>
+                        </div>
+                        <span class="text-gray-400 small">(666)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wishlist-note-card-btn d-flex justify-content-center flex-nowrap">
+                    <a href="./coursepages.html" target="_self" class="d-block text-white fs-5 align-self-center text-nowrap p-xxl">查看課程</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="notebook-card-frame">
+              <div class="card wishlist-note-card mb-3">
+                <div class="row g-0">
+                  <div class="col-4 card-row">
+                    <img src="../assets/images/course-006-cook.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body pb-1">
+                      <h2 class="fs-6 text-truncate">從新手到人人稱讚好廚藝</h2>
+                      <p>#烹飪</p>
+                      <div class="stars d-flex justify-content-end">
+                        <div class="stars-icon text-primary me-1 me-md-2">
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined outline-icon star-fs">star</span>
+                        </div>
+                        <span class="text-gray-400 small">(666)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wishlist-note-card-btn d-flex justify-content-center flex-nowrap">
+                    <a href="./coursepages.html" target="_self" class="d-block text-white fs-5 align-self-center text-nowrap p-xxl">查看課程</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="notebook-card-frame">
+              <div class="card wishlist-note-card mb-3">
+                <div class="row g-0">
+                  <div class="col-4 card-row">
+                    <img src="../assets/images/course-006-cook.jpeg" class="img-fluid rounded-start" alt="cover of course">
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body pb-1">
+                      <h2 class="fs-6 text-truncate">從新手到人人稱讚好廚藝</h2>
+                      <p>#烹飪</p>
+                      <div class="stars d-flex justify-content-end">
+                        <div class="stars-icon text-primary me-1 me-md-2">
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined star-fs">star</span>
+                            <span class="material-symbols-outlined outline-icon star-fs">star</span>
+                        </div>
+                        <span class="text-gray-400 small">(666)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wishlist-note-card-btn d-flex justify-content-center flex-nowrap">
+                    <a href="./coursepages.html" target="_self" class="d-block text-white fs-5 align-self-center text-nowrap p-xxl">查看課程</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between justify-content-lg-end">
+              <div class="d-lg-none">
+                <button class="btn btn-secondary px-2 py-1 mt-3 small" disabled>上一頁</button>
+              </div>
+              <button class="btn btn-secondary px-2 py-1 mt-3 small">下一頁</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+    <div class="box-shadow"></div>
+  </main>
 <%- include('./layout/footer'); -%>
 </div>
 
