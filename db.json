@@ -215,7 +215,7 @@
     },
     {
       "userId": 1,
-      "courseId": 5,
+      "courseId": 1,
       "isFinish": false,
       "id": 4
     },
@@ -227,13 +227,13 @@
     },
     {
       "userId": 1,
-      "courseId": 9,
+      "courseId": 1,
       "isFinish": false,
       "id": 6
     },
     {
       "userId": 1,
-      "courseId": 9,
+      "courseId": 1,
       "isFinish": false,
       "id": 7
     },
