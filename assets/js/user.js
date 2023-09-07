@@ -1,4 +1,8 @@
 import Swiper from "swiper";
+import { User } from '../api/index';
+
+user = await User.getUserInfo();
+
 //跳轉至變更密碼
 const swiper = new Swiper('.swiper-container', {
     initialSlide: 0, // 初始顯示的頁面
@@ -17,7 +21,6 @@ document.getElementById('changePwd-btn').addEventListener('click', function () {
 document.getElementById('prev-btn').addEventListener('click', function () {
     swiper.slidePrev();
 });
-
 
 //頭像修改成功彈窗
 const successMessage = document.querySelector('#success-message')
