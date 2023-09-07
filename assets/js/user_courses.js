@@ -5,6 +5,8 @@ const notebook = document.querySelector('.notebook')
 const bookLeft = document.querySelector('.book-left')
 const bootRight = document.querySelector('.boot-right')
 const modal = document.querySelector('.comment-modal');
+const pcMarks = document.querySelector('.pc-marks')
+const h5Marks = document.querySelector('.h5-marks')
 
 // TODO: 側邊標籤還未篩選渲染, 先確認頁面樣式修正
 
@@ -29,12 +31,21 @@ async function init() {
       };
       obj[item.course.platform]
         ? obj[item.course.platform].push(data)
-        : (obj[item.course.platform] = [data]);
-      return obj;
-    }, {});
+        : obj['其他平台'].push(data);
+        item.isFinish && obj['已完課'].push(data)
+        return obj
+    }, {
+      六角學院: [],
+      Hahow: [],
+      Udemy: [],
+      Coursera: [],
+      其他平台: [],
+      已完課: []
+    });
+    console.log(filterData);
     curTag = Object.keys(filterData)[0]
     renderBook(pagination(filterData, 1, curTag))
-    
+    renderMark()
   } catch (error) {
     console.log(error);
   }
@@ -52,6 +63,7 @@ function renderBook(curData) {
   console.log(curData);
   const { currentPage, totalPages, data } = curData
   bookLeft.innerHTML = `
+  <div class="notebook-cards-group">
   ${data[0].map(item => (`
   <div class="notebook-card-frame position-relative">
     <span class="comment-alerttag bg-danger small text-white rounded-1 py-1 px-3 position-absolute ${item.comment.isPassed !== 0 ? 'd-none' : ''}">未過審</span>
@@ -63,7 +75,9 @@ function renderBook(curData) {
       <div class="col-8">
         <div class="card-body pb-1">
           <h2 class="card-title fs-6 text-truncate">${item.course.title}</h2>
-          <div class="user-courses-tags mb-2 mb-lg-3">${item.course.tags.map(tag => `<span>#${tag}</span>`).join('')}</div>
+          <div class="user-courses-tags mb-2 mb-lg-3">
+          ${item.course.tags.map(tag => `<span>#${tag}</span>`).join('')}
+          </div>
           <div class="stars d-flex justify-content-end">
             <div class="stars-icon text-primary me-1 me-md-2">
                 <span class="material-symbols-outlined star-fs ${item.avgScore >= 1 ? '' : 'outline-icon'}">star</span>
@@ -90,11 +104,13 @@ function renderBook(curData) {
     </div>
   </div>
   `)).join('')}
+  </div>
   <div class="d-none d-lg-block justify-content-lg-start">
     <button class="btn btn-secondary px-2 py-1 mt-3 small ${currentPage === 1 ? 'd-none' : ''}" data-page="${currentPage - 1}">上一頁</button>
   </div>
   `
   bootRight.innerHTML = `
+  <div class="notebook-cards-group">
   ${data[1].map(item => (`
   <div class="notebook-card-frame position-relative">
     <span class="comment-alerttag bg-danger small text-white rounded-1 py-1 px-3 position-absolute ${item.comment.isPassed !== 0 ? 'd-none' : ''}">未過審</span>
@@ -133,6 +149,7 @@ function renderBook(curData) {
     </div>
   </div>
   `)).join('')}
+  </div>
   <div class="d-flex justify-content-between justify-content-lg-end">
     <div class="d-lg-none">
       <button class="btn btn-secondary px-2 py-1 mt-3 small ${currentPage === 1 ? 'd-none' : ''}" data-page="${currentPage - 1}">上一頁</button>
@@ -141,11 +158,24 @@ function renderBook(curData) {
   </div>
   `
 
+
   const modalBtn = document.querySelectorAll('.modal-btn');
 
     modalBtn.forEach((btn) => {
       btn.addEventListener('click', () => renderModal(btn));
     });
+}
+function renderMark(){
+  const tagsColor = ['teal', 'blue', 'orange', 'yellow', 'gray-200', 'primary']
+  pcMarks.innerHTML = Object.keys(filterData).map((tag, index) => {
+    return `<li class="bookmark ${curTag === tag ? '' : 'bookmark-unselected'} mb-2 py-1 bg-${tagsColor[index]} cur-point fs-tiny" data-tag="${tag}">
+    ${tag}(${filterData[tag].length})
+      </li>`
+  }).join('')
+  h5Marks.innerHTML = Object.keys(filterData).map((tag, index) => {
+    return ` <li class="bookmark ${curTag === tag ? '' : 'bookmark-unselected'} ${tag === '已完課'? 'ms-auto' : 'me-1'} py-1 bg-${tagsColor[index]} fs-tiny" data-tag="${tag}">
+    ${tag}(${filterData[tag].length})
+  </li>`}).join('')
 }
 
 // 渲染評價 modal
@@ -251,4 +281,9 @@ function halfSlice(data) {
   return [data.slice(0, 4),data.slice(4)]
 }
 
+pcMarks.addEventListener('click', (e) => {
+  if(!e.target.dataset.tag) return
+  curTag = e.target.dataset.tag
+  renderBook(pagination(filterData, 1, curTag))
+})
 
