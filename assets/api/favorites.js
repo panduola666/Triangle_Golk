@@ -1,6 +1,8 @@
 import axios from "axios";
 import Swal from 'sweetalert2';
 const { VITE_BASEURL } = import.meta.env
+import { Course } from './index'
+
 
 export const Favorites = {
     async add(courseId) {
@@ -31,6 +33,24 @@ export const Favorites = {
                 timer: 1500,
                 allowOutsideClick: false
             })
+        } catch (err) {
+            console.log(err);
+        }
+    },
+    async getUserFavorites() {
+        try {
+            const courses = await Course.getAllCourses()
+            const res = await axios.get(`${VITE_BASEURL}/favorites?_expand=course&userId=${localStorage.getItem('userId')}`)
+            return res.data.map(data => {
+                const course = courses.find(course => course.id === data.courseId)
+                if(course) {
+                    return {
+                        ...data,
+                        avgScore: course.avgScore,
+                        totalComment: course.comments.length
+                    }
+                }
+            }).filter(data => data)
         } catch (err) {
             console.log(err);
         }

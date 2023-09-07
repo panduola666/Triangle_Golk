@@ -1,5 +1,5 @@
 import { Comment } from '../api';
-import { Passes, User } from '../api/index';
+import { Passes, User, loading } from '../api/index';
 // DOM
 const notebook = document.querySelector('.notebook')
 const bookLeft = document.querySelector('.book-left')
@@ -17,6 +17,7 @@ let filterData;
 let curTag;
 async function init() {
   try {
+    loading()
     originData = await Passes.getUserPasses();
     user = await User.getUserInfo();
 
@@ -42,7 +43,8 @@ async function init() {
       其他平台: [],
       已完課: []
     });
-    console.log(filterData);
+    loading(filterData)
+
     curTag = Object.keys(filterData)[0]
     renderBook(pagination(filterData, 1, curTag))
     renderMark()
@@ -168,12 +170,12 @@ function renderBook(curData) {
 function renderMark(){
   const tagsColor = ['teal', 'blue', 'orange', 'yellow', 'gray-200', 'primary']
   pcMarks.innerHTML = Object.keys(filterData).map((tag, index) => {
-    return `<li class="bookmark ${curTag === tag ? '' : 'bookmark-unselected'} mb-2 py-1 bg-${tagsColor[index]} cur-point fs-tiny" data-tag="${tag}">
-    ${tag}(${filterData[tag].length})
+    return `<li class="bookmark ${curTag === tag ? '' : 'bookmark-unselected'} mb-2 py-1 bg-${tagsColor[index]} cur-point" data-tag="${tag}">
+    <span class="fs-tiny">${tag}(${filterData[tag].length})</span>
       </li>`
   }).join('')
   h5Marks.innerHTML = Object.keys(filterData).map((tag, index) => {
-    return ` <li class="bookmark ${curTag === tag ? '' : 'bookmark-unselected'} ${tag === '已完課'? 'ms-auto' : 'me-1'} py-1 bg-${tagsColor[index]} fs-tiny" data-tag="${tag}">
+    return ` <li class="bookmark ${curTag === tag ? '' : 'bookmark-unselected'} ${tag === '已完課'? 'ms-auto' : 'me-1'} py-1 bg-${tagsColor[index]} fs-tiny cur-point" data-tag="${tag}">
     ${tag}(${filterData[tag].length})
   </li>`}).join('')
 }
@@ -285,5 +287,12 @@ pcMarks.addEventListener('click', (e) => {
   if(!e.target.dataset.tag) return
   curTag = e.target.dataset.tag
   renderBook(pagination(filterData, 1, curTag))
+  renderMark()
+})
+h5Marks.addEventListener('click', (e) => {
+  if(!e.target.dataset.tag) return
+  curTag = e.target.dataset.tag
+  renderBook(pagination(filterData, 1, curTag))
+  renderMark()
 })
 

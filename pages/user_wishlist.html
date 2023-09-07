@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <%- include('./layout/loading'); -%>
 <div class="min-vh-100 d-flex flex-column">
   <%- include('./layout/nav'); -%>
   <%- include('./layout/user_nav'); -%>
@@ -17,7 +18,7 @@
   <main class="container my-xl flex-grow-1">
     <article class="notebook row">
       <ul class="pc-marks bookmark list-unstyled text-center p-1 d-flex flex-column d-lg-block d-none">
-        <li class="bookmark mb-2 py-1 bg-teal">
+        <!-- <li class="bookmark mb-2 py-1 bg-teal">
           <span class="fs-tiny">六角學院(3)</span>
         </li>
         <li class="bookmark bookmark-unselected mb-2 py-1 bg-blue">
@@ -31,10 +32,10 @@
         </li>
         <li class="bookmark bookmark-unselected mb-2 py-1 bg-gray-200">
           <span class="fs-tiny">其他平台(6)</span>
-        </li>
+        </li> -->
       </ul>
       <ul class="h5-marks bookmark-mobile list-unstyled text-center p-1 d-flex d-lg-none my-0">
-        <li class="bookmark me-1 py-1 bg-teal fs-tiny">
+        <!-- <li class="bookmark me-1 py-1 bg-teal fs-tiny">
           六角學院 (333)
         </li>
         <li class="bookmark me-1 bookmark-unselected py-1 bg-blue fs-tiny">
@@ -48,13 +49,13 @@
         </li>
         <li class="bookmark me-1 bookmark-unselected py-1 bg-gray-200 fs-tiny">
           其他平台 (6)
-        </li>
+        </li> -->
       </ul>
       <div class="notebook-pages-only row col g-0">
         <section class="notebook-page-left row col mb-4 row-cols-lg-2 gx-lg-5">
         <!-- 關注清單卡片的 card 樣式 => wishlist-note-card -->
-          <div class="notebook-page-innersection col-lg-6 col-12">
-            <div class="notebook-cards-group">
+          <div class="book-left notebook-page-innersection col-lg-6 col-12">
+            <!-- <div class="notebook-cards-group">
               <div class="notebook-card-frame">
                 <div class="card wishlist-note-card mb-3">
                   <div class="row g-0">
@@ -178,11 +179,11 @@
             </div>
             <div class="d-none d-lg-block justify-content-lg-start">
               <button class="btn btn-secondary px-2 py-1 mt-3 small" disabled>上一頁</button>
-            </div>
+            </div> -->
           </div>
 
-          <div class="notebook-page-innersection col-lg-6 col-12">
-            <div class="notebook-cards-group">
+          <div class="boot-right notebook-page-innersection col-lg-6 col-12">
+            <!-- <div class="notebook-cards-group">
               <div class="notebook-card-frame">
                 <div class="card wishlist-note-card mb-3">
                   <div class="row g-0">
@@ -309,7 +310,7 @@
                 <button class="btn btn-secondary px-2 py-1 mt-3 small" disabled>上一頁</button>
               </div>
               <button class="btn btn-secondary px-2 py-1 mt-3 small">下一頁</button>
-            </div>
+            </div> -->
           </div>
         </section>
       </div>
@@ -323,6 +324,7 @@
 
 <script type="module" src="../main.js"></script>
 <script type="module" src="../assets/js/user_nav.js"></script>
+<script type="module" src="../assets/js/user_wishlist.js"></script>
 </body>
 
 </html>

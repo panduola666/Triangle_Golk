@@ -10,6 +10,8 @@
 </head>
 
 <body>
+  <%- include('./layout/loading'); -%>
+
   <div class="min-vh-100 d-flex flex-column">
     <%- include('./layout/nav'); -%>
     <%- include('./layout/user_nav'); -%>
@@ -18,7 +20,7 @@
         <article class="notebook row">
           <!-- 電腦版標籤 -->
           <ul class="pc-marks bookmark list-unstyled text-center p-1 d-flex flex-column d-lg-block d-none">
-            <li class="bookmark mb-2 py-1 bg-teal">
+            <!-- <li class="bookmark mb-2 py-1 bg-teal">
               <span class="fs-tiny">六角學院(3)</span>
             </li>
             <li class="bookmark bookmark-unselected mb-2 py-1 bg-blue">
@@ -35,11 +37,11 @@
             </li>
             <li class="bookmark bookmark-unselected mb-2 py-1 bg-primary mt-auto">
               <span class="fs-tiny">已完課(6)</span>
-            </li>
+            </li> -->
           </ul>
           <!-- 手機板標籤 -->
           <ul class="h5-marks bookmark-mobile list-unstyled text-center p-1 d-flex d-lg-none my-0">
-            <li class="bookmark me-1 py-1 bg-teal fs-tiny">
+            <!-- <li class="bookmark me-1 py-1 bg-teal fs-tiny">
               六角學院 (333)
             </li>
             <li class="bookmark me-1 bookmark-unselected py-1 bg-blue fs-tiny">
@@ -56,13 +58,13 @@
             </li>
             <li class="bookmark bookmark-unselected py-1 bg-primary ms-auto fs-tiny">
               已完課 (6)
-            </li>
+            </li> -->
           </ul>
           <div class="notebook-pages-only row col g-0">
             <section class="notebook-page-left row col mb-4 row-cols-lg-2 gx-lg-5">
             <!-- 課程卡片的 card 樣式 => single-note-card -->
               <div class="book-left notebook-page-innersection col-lg-6 col">
-                <div class="notebook-cards-group">
+                <!-- <div class="notebook-cards-group">
                   <div class="notebook-card-frame position-relative">
                     <div class="card single-note-card mb-3">
                     <div class="row g-0">
@@ -191,15 +193,15 @@
                     </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!-- 分頁按鈕 -->
-                <div class="d-none d-lg-block justify-content-lg-start">
+                <!-- <div class="d-none d-lg-block justify-content-lg-start">
                   <button class="btn btn-secondary px-2 py-1 mt-3 small" disabled>上一頁</button>
-                </div>
+                </div> -->
               </div>
 
               <div class="boot-right notebook-page-innersection col-lg-6 col-12">
-                <div class="notebook-cards-group">
+                <!-- <div class="notebook-cards-group">
                   <div class="notebook-card-frame position-relative">
                     <div class="card single-note-card mb-3">
                     <div class="row g-0">
@@ -333,15 +335,15 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
                 <!-- 分頁按鈕 -->
-                <div class="d-flex justify-content-between justify-content-lg-end">
+                <!-- <div class="d-flex justify-content-between justify-content-lg-end">
                   <div class="d-lg-none">
                     <button class="btn btn-secondary px-2 py-1 mt-3 small" disabled>上一頁</button>
                   </div>
                   <button class="btn btn-secondary px-2 py-1 mt-3 small">下一頁</button>
-                </div>
+                </div> -->
               </div>
             </section>
           </div>
