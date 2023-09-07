@@ -1,6 +1,8 @@
 .wishlist-note-card {
-  img {
-    height: 125px;
+  @media(min-width: 768px){
+    img{
+      max-height: 125px;
+    }
   }
   position: relative;
   overflow: hidden;
