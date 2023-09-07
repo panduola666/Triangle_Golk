@@ -4,11 +4,11 @@
     right: 0;
 }
 
-.triangle {
-    width: 0;
-    height: 0;
-    border: 100px solid;
-    border-color: red pink orange blue;
+.triangle img:hover {
+    // -webkit-filter: grayscale(10%);
+			// filter: grayscale(10%);
+            -webkit-filter: brightness(1.75);
+            filter: brightness(1.75);
   }
 
 
@@ -16,3 +16,82 @@
     resize: none;
     height: 200px;
 }
+
+// 三角形
+
+
+.triangle-container {
+    transform: scale(1.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%; /* 让容器高度充满 li 的高度 */
+    max-width: 50%; /* 调整容器宽度 */
+}
+
+.triangle-container span{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    opacity: 0.4;
+}
+  
+  
+  .triangle-one{
+
+    border-color:transparent transparent gray;
+    transform-origin:center bottom;
+    transform: translateX(50px) translateY(50px) rotateX(-90deg);
+    border-width:0 50px 87px;
+ 
+
+    &:hover{
+        border-color:transparent transparent yellow;
+    }
+}
+
+
+.triangle-two{
+    
+    border-color:transparent transparent lightgrey;
+    transform-origin:center bottom;
+    transform: translateX(50px) translateY(50px) rotateX(-19.5deg);
+    border-width:0 50px 87px;
+    
+
+    &:hover{
+        border-color:transparent transparent yellow;
+    }
+}
+
+
+.triangle-three{
+   
+    border-color:transparent transparent lightgray;
+    transform-origin:right bottom;
+    transform :translateX(50px) translateY(50px) rotateY(60deg) rotateX(19.5deg);
+   
+    border-width:0 50px 87px;
+    
+
+    &:hover{
+        border-color:transparent transparent yellow;
+    }
+}
+
+.triangle-four{
+ 
+    border-width:10px 50px 30px;
+    border-color:transparent transparent darkgray;
+    transform-origin:left bottom;
+    transform: translateX(50px) translateY(75px) rotateY(0deg) rotateX(9deg);
+  
+
+ &:hover{
+        border-color:transparent transparent yellow;
+    }
+}
+
+
+
