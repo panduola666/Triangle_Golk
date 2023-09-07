@@ -77,9 +77,12 @@
 }
 .bookmark {
   z-index: 3;
-  width: 5em;
+  width: 6em;
   li {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    padding: 0.25em;
+    word-break: break-all;
+    line-height: 1.2;
   }
   &-unselected{
     position: relative;
@@ -101,17 +104,14 @@
   }
   &-mobile{
     li{
+      max-width: 5em;
       padding: 0.25em;
-      max-width: 4.5em;
+      word-break: break-all;
+      line-height: 1.2;
     }
   }
 }
 .single-note-card {
-  @media(min-width: 768px){
-    img{
-      max-height: 125px;
-    }
-  }
   position: relative;
   overflow-y: hidden;
   overflow-x: visible;

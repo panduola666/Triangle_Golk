@@ -1,9 +1,4 @@
 .wishlist-note-card {
-  @media(min-width: 768px){
-    img{
-      max-height: 125px;
-    }
-  }
   position: relative;
   overflow: hidden;
   transition: transform 0.2s;
