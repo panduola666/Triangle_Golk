@@ -1,3 +1,11 @@
+.notebook-cards-group{
+  min-height: 34.75em;
+  min-width: 28em;
+  @media (max-width: 992px){
+    min-height: auto;
+    min-width: none;
+  }
+}
 .notebook-page {
   &-left, &-right {
     margin-right: 4px; /* 筆記本左頁專用值 */
@@ -44,7 +52,7 @@
   //   border-left: solid 1.5px #666;
   // }
 // }
-// .notebook-pages-only {
+// .notebook-pages-only {  /* 搭配v1筆記本樣式 */
 //   position: relative;
 //   &::before{
 //     position: absolute;
@@ -99,8 +107,10 @@
   }
 }
 .single-note-card {
-  img{
-    max-height: 125px;
+  @media(min-width: 768px){
+    img{
+      max-height: 125px;
+    }
   }
   position: relative;
   overflow-y: hidden;
