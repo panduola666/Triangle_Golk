@@ -105,7 +105,7 @@ function renderBook(curData) {
   </div>
   `)).join('')}
   </div>
-  <div class="d-none d-lg-block justify-content-lg-start">
+  <div class="d-none ${totalPages ? 'd-lg-block' : ''} justify-content-lg-start">
     <button class="btn btn-secondary px-2 py-1 mt-3 small ${currentPage === 1 ? 'd-none' : ''}" data-page="${currentPage - 1}">上一頁</button>
   </div>
   `
@@ -150,7 +150,7 @@ function renderBook(curData) {
   </div>
   `)).join('')}
   </div>
-  <div class="d-flex justify-content-between justify-content-lg-end">
+  <div class="d-flex justify-content-between justify-content-lg-end ${totalPages ? '' : 'd-none'}">
     <div class="d-lg-none">
       <button class="btn btn-secondary px-2 py-1 mt-3 small ${currentPage === 1 ? 'd-none' : ''}" data-page="${currentPage - 1}">上一頁</button>
     </div>
