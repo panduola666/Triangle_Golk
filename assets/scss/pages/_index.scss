@@ -1,6 +1,18 @@
-.index-title {
-  font-size: 100px;
-}
 .banner{
-  background-image: url(/assets/images/index_banner_1.svg);
+  padding-top: 48px;
+  &-text{
+    margin-left: 64px;
+  }
+}
+.index-tag{
+  color: $secondary;
+  background: #fff;
+  border-radius: 99px;
+  padding: 6px 16px;
+  font-size: 16px;
+  &s{
+    @media(min-width: 992px){
+    width: 51rem;
+    }
+  }
 }

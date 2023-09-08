@@ -13,32 +13,90 @@
   <!--  dev-check -->
 <div class="min-vh-100 d-flex flex-column">
   <%- include('./layout/nav'); -%>
-  <main class="container flex-grow-1">
-    <header class="row">
-      <div class="banner col-lg-6 d-flex flex-column justify-content-center">
-        <div class="ms-lg-xl">
-          <h2 class="fs-1 fw-bold mb-3 mt-4">專為線上學習者打造</h2>
-          <h3 class="fs-4 fw-bold mb-4">評課找課，遇見最適合你的課程</h3>
-          <button type="button" class="btn btn-primary"><a href="./course.html">探索課程</a></button>
+  <main class="flex-grow-1 dev-check">
+    <header class="container">
+      <div class="row">
+        <div class="banner col-lg-6 d-flex flex-column justify-content-center">
+          <img src="../assets/images/index_banner_1.svg" alt="banner" class="position-relative">
+          <div class="banner-text position-absolute">
+            <h2 class="fs-1 fw-bold mb-3 mt-4">專為線上學習者打造</h2>
+            <h3 class="fs-4 fw-bold mb-4">評課找課，遇見最適合你的課程</h3>
+            <button type="button" class="btn btn-primary"><a href="./course.html">探索課程</a></button>
+          </div>
+        </div>
+        <div class="banner-deco col-lg-6 d-none d-lg-block">
+          <img src="/assets/images/index_banner2.svg" alt="banner">
         </div>
       </div>
-      <div class="banner-deco col-lg-6 d-none d-lg-block">
-        <img src="/assets/images/index_banner2.svg" alt="banner">
-      </div>
     </header>
-    <div class="index-tag-group bg-secondary mx-0 px-0">
-      0
+    <div class="index-tag-group bg-secondary pt-3">
+      <div class="container">
+        <div class="d-flex justify-content-center flex-column align-items-center flex-lg-row">
+          <p class="text-white me-4 text-nowrap">
+            熱門關鍵字
+          </p>
+          <ul class="p-0 d-flex flex-lg-wrap gap-2 index-tags list-unstyled">
+            <li class="index-tag">CSS</li>
+            <li class="index-tag">手工藝</li>
+            <li class="index-tag">程式</li>
+            <li class="index-tag">日文</li>
+            <li class="index-tag">理財</li>
+            <li class="index-tag">電繪</li>
+            <li class="index-tag">AI 智能</li>
+            <li class="index-tag">工業設計</li>
+            <li class="index-tag">市場行銷</li>
+            <li class="index-tag">英語會話</li>
+            <li class="index-tag">比特幣</li>
+            <li class="index-tag">資訊安全</li>
+            <li class="index-tag">刺繡</li>
+            <li class="index-tag">投資理財</li>
+            <li class="index-tag">影音剪辑</li>
+            <li class="index-tag">商業攝影</li>
+            <li class="index-tag">表演藝術</li>
+          </ul>
+        </div>
+      </div>
     </div>
+    <!-- 三角構客是什麼 -->
     <article>
+      <div class="container">
+        <div class="golk-intro my-xxl">
+          <div class="golk-introduction">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="me-3">
+                  <img src="../assets/images/icon-logo.png" alt="三角構客logo">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h2 class="fs-4 fw-bold">Triangle Golk</h2>
+                <h1 class="fs-2 fw-bold">三角構客是什麼？</h1>
+              </div>
+            </div>
+          </div>
+          <div class="golk-situation">
+            <h2>如果你也想過</h2>
+            <div class="situation-card-group">
+              <div class="situation-card">
+                <img src="../assets/images/index_intro1_question.svg" alt="pain point-question">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </article>
+    <!-- 學員推課 -->
     <div class="index-recommend">
     </div>
+    <!-- 最新課程 -->
     <div class="latest-courses bg-blue">
       0
     </div>
+    <!-- 申請新課 -->
     <div class="applying-intro bg-primary">
       0
     </div>
+    <!-- 常見問答 -->
     <footer class="faq">
     </footer>
   </main>
