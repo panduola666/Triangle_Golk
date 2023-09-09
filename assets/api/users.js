@@ -80,19 +80,4 @@ export const User = {
             this.clearUserInfo()
         }
     },
-    // nav 用戶系統公告
-    async getNotions(id) {
-        const token = localStorage.getItem('token')
-        console.log(token);
-        axios.defaults.headers.common['Authorization'] = token
-
-        return axios.get(`${VITE_BASEURL}/600/users/${id}?_embed=notions`)
-        .then(res => {
-            console.log(res.data);
-            return res.data
-        })
-        .catch(err => {
-            console.log(err);
-        })
-    }
 } 
