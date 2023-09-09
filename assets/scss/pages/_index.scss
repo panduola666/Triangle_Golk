@@ -35,20 +35,33 @@
   }
   .swiper{
     padding-bottom: 64px;
+    @media(min-width: 992px){
+      left: 17vw
+    }
   }
   .swiper-wrapper{
-    min-height: 540px;
+    height: 400px;
+    @media(min-width: 992px){
+      height: 540px;
+    }
   }
   .swiper-slide{
-    width: 420px;
-    height: 420px;
+    width: 320px;
+    height: 400px;
     transition: height 1s;
     float: left;
+    @media(min-width: 992px){
+      height: 420px;
+      width: 420px;
+    }
   }
   
   .swiper-slide-active{
     transition: height 1s;
-    height: 540px;
+    height: 400px;
+    @media(min-width: 992px){
+      height: 540px;
+    }
   }
   .swiper-pagination-bullet{
     width: 16px;
@@ -65,3 +78,4 @@
     font-size: 20px;
   }
 }
+
