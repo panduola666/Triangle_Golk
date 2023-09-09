@@ -76,7 +76,7 @@ const editorConfig = {
 }
 
 const editor = createEditor({
-    selector: '#apply-container',
+    selector: '#editor-container',
     html: '<p><br></p>',
     config: editorConfig,
     mode: 'simple', // or 'simple'
@@ -88,7 +88,7 @@ const toolbarConfig = {
 
 const toolbar = createToolbar({
     editor,
-    selector: '#toolbar-apply',
+    selector: '#toolbar-container',
     config: toolbarConfig,
     mode: 'default', // or 'simple'
 })
