@@ -8,9 +8,7 @@
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- 富文本編輯器 wangeditor -->
-    <!-- <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet"> -->
-    <!-- SweetAlert2 -->
-    <!-- <link rel="stylesheet" href="path/to/sweetalert2.css"> -->
+    <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
     <title>聯繫客服</title>
     <link rel="icon" type="image/png" href="../assets/images/favicon.ico">
 </head>
@@ -49,7 +47,11 @@
                     <div class="mb-3 mb-lg-4 d-flex flex-column">
                         <div class="form-check form-check-inline mx-0 px-0">
                             <label class="form-label fw-medium form-required" for="contact-message">留言內容</label>
-                            <textarea type="text" class="form-control" id="contact-message" name="message" rows="6" required></textarea>
+                            <!-- <textarea type="text" class="form-control" id="contact-message" name="message" rows="6" required></textarea> -->
+                            <div class="form-control">
+                                <div id="editor-container"><!-- 编辑器 --></div>
+                            </div>
+                          
                         </div>
                     </div>
                     <div class="text-center">
@@ -60,11 +62,13 @@
             </section>
         </div>
     </main>
+
 <%- include('./layout/footer'); -%>
 </div>
 
     
                 <script type="module" src="../main.js"></script>
-                <script type="module" src="../assets/js/course.js"></script>
+                <script type="module" src="../assets/js/contact.js"></script>
+
 </body>
 </html>

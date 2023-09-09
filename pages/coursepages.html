@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>課程內頁</title>
+    <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/images/favicon.ico">
   </head>
 
@@ -399,7 +400,7 @@
                       for="comment"
                       >請寫下你的理由</label
                     >
-                    <textarea
+                    <!-- <textarea
                       class="form-control comment small py-1 ps-2"
                       id="comment"
                       cols="30"
@@ -408,7 +409,11 @@
                       maxlength="400"
                       minlength="5"
                       required
-                    ></textarea>
+                    ></textarea> -->
+                    <div id="apply—wrapper" class="form-control">
+                      <div id="toolbar-apply"><!-- 工具栏 --></div>
+                      <div id="apply-container"><!-- 编辑器 --></div>
+                    </div>
                     <div class="invalid-feedback">請寫下你的理由</div>
                   </div>
                   <div class="modal-footer">

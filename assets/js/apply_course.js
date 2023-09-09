@@ -1,4 +1,6 @@
 // 專門用來寫新課申請 API
+import 'https://unpkg.com/@wangeditor/editor@latest/dist/index.js'
+
 import Swal from 'sweetalert2';
 
 $('.apply-form').each(function (index) {
@@ -58,3 +60,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+
+// 富文本編輯器配置
+const { createEditor, createToolbar } = window.wangEditor
+
+const editorConfig = {
+    placeholder: '最多不超過 400 字',
+    maxLength: 400, // 字數最大限制
+    onChange(editor) {
+      const html = editor.getHtml() // 獲取用戶輸入的 html 結構
+        console.log(html);
+    }
+}
+
+const editor = createEditor({
+    selector: '#apply-container',
+    html: '<p><br></p>',
+    config: editorConfig,
+    mode: 'simple', // or 'simple'
+})
+
+const toolbarConfig = {
+    toolbarKeys:['bold', 'underline', 'italic', '|','undo','redo'] // 工具欄重新配置
+}
+
+const toolbar = createToolbar({
+    editor,
+    selector: '#toolbar-apply',
+    config: toolbarConfig,
+    mode: 'default', // or 'simple'
+})
