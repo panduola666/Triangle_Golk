@@ -21,6 +21,7 @@
         min-width: 240px;
         color: $gray-400;
         top: calc(100% + 7px);
+        max-height: 475px;
         li:hover{
             background-color: #16330014;
         }

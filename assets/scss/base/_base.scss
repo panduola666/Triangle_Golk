@@ -12,9 +12,24 @@ img {
     height: auto;
 }
 
-// body {
-//     padding-right: 0 !important;
-//   }
+/* 滚动調整體樣式 */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+/* 滾動條深色部分 */
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: $gray-200;
+    // -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+}
+/* 滚动条軌道 */
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: $primary;
+    // -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
+
 
 
 .material-symbols-outlined {

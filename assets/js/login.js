@@ -7,7 +7,7 @@ const back = document.querySelector("#back-btn");
 const forms = document.querySelectorAll('.needs-validation');
 const loginForm = document.querySelector('.login-form');
 const registerForm = document.querySelector('.register-form');
-const logoutBtn = document.querySelector("#logout-btn");
+const logoutBtn = document.querySelectorAll(".logout-btn");
 const loginEmail = document.getElementById('login-email');
 const loginPwd = document.getElementById('login-password');
 const registerEmail = document.getElementById('register-email');
@@ -98,29 +98,32 @@ document.addEventListener("DOMContentLoaded", function () {
             })
     })
     // 登出
-    logoutBtn.addEventListener('click', async (e) => {
-        e.preventDefault()
-        validation()
-        // 彈出是否登出視窗
-        const confirmation = await Swal.fire({
-            scrollbarPadding: false,
-            icon: 'question',
-            title: '確定要登出嗎',
-            showCancelButton: true,
-        });
-
-        if (confirmation.isConfirmed) {
-            // 登出成功視窗
-            Swal.fire({
+    logoutBtn.forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+            e.preventDefault()
+            validation()
+            // 彈出是否登出視窗
+            const confirmation = await Swal.fire({
                 scrollbarPadding: false,
-                icon: 'success',
-                title: '登出成功',
-                text: '將跳回首頁',
-            }).then((result) => {
-                logout = User.clearUserInfo();
-                reLogin = User.plsReLogin();
+                icon: 'question',
+                title: '確定要登出嗎',
+                showCancelButton: true,
             });
-        }
+    
+            if (confirmation.isConfirmed) {
+                // 登出成功視窗
+                Swal.fire({
+                    scrollbarPadding: false,
+                    icon: 'success',
+                    title: '登出成功',
+                    text: '將跳回首頁',
+                }).then((result) => {
+                    logout = User.clearUserInfo();
+                    location.href = 'index.html'
+                    // reLogin = User.plsReLogin();
+                });
+            }
+        })
     })
 });
 
