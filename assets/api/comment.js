@@ -8,6 +8,7 @@ export const Comment = {
     try {
       const res = await axios.post(`${VITE_BASEURL}/comments`, params);
       const swal = await Swal.fire({
+        scrollbarPadding: false,
         icon: 'success',
         text: '評價成功，我們將於 7-14 天內審核證明，若成功即可在課程頁面內查看自已的評價！',
         showConfirmButton: false,
@@ -18,6 +19,7 @@ export const Comment = {
     } catch (err) {
       console.log(err);
       const swal = await Swal.fire({
+        scrollbarPadding: false,
         icon: 'error',
         text: '新增評論失敗, 請聯繫客服處理',
       });
@@ -28,6 +30,7 @@ export const Comment = {
     try {
       const res = await axios.patch(`${VITE_BASEURL}/comments/${id}`, params);
       const swal = await Swal.fire({
+        scrollbarPadding: false,
         icon: 'success',
         text: '修改評價成功，我們將於 7-14 天內審核證明，若成功即可在課程頁面內查看自已的評價！',
         showConfirmButton: false,
@@ -38,6 +41,7 @@ export const Comment = {
     } catch (err) {
       console.log(err);
       const swal = await Swal.fire({
+        scrollbarPadding: false,
         icon: 'error',
         text: '修改評論失敗, 請聯繫客服處理',
       });
@@ -56,6 +60,7 @@ export const Comment = {
     } catch (err) {
       console.log(err);
       const swal = await Swal.fire({
+        scrollbarPadding: false,
         icon: 'error',
         text: '查無此評論',
       });
@@ -85,6 +90,7 @@ export const Comment = {
     } catch (err) {
       console.log(err);
       await Swal.fire({
+        scrollbarPadding: false,
         icon: 'error',
         title: '獲取評論失敗',
       });

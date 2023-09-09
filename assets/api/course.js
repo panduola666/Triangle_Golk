@@ -18,6 +18,7 @@ export const Course = {
              console.log(err);
              if(err.response.status === 404) {
                const swal = await Swal.fire({
+                scrollbarPadding: false,
                     icon: 'error',
                     text: '查無此課程'
                 })
@@ -44,6 +45,7 @@ export const Course = {
         } catch (err) {
             console.log(err);
             const swal = await Swal.fire({
+                scrollbarPadding: false,
                  icon: 'error',
                  text: '取得課程失敗'
              })

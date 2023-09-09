@@ -1,7 +1,7 @@
 import Swiper from "swiper";
 import { User } from '../api/index';
 
-const user = await User.getUserInfo();
+// const user = await User.getUserInfo();
 
 //跳轉至變更密碼
 const swiper = new Swiper('.swiper-container', {

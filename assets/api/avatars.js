@@ -19,6 +19,7 @@ export const Avatars = {
         avatarId: Number(id)
       });
       Swal.fire({
+        scrollbarPadding: false,
         icon: 'success',
         title: '頭像變更成功'
       })
