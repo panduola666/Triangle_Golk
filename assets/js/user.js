@@ -1,7 +1,7 @@
 import Swiper from "swiper";
 import { User } from '../api/index';
 
-user = await User.getUserInfo();
+const user = await User.getUserInfo();
 
 //跳轉至變更密碼
 const swiper = new Swiper('.swiper-container', {
@@ -26,6 +26,7 @@ document.getElementById('prev-btn').addEventListener('click', function () {
 const successMessage = document.querySelector('#success-message')
 successMessage.addEventListener('click', function () {
     Swal.fire({
+        scrollbarPadding: false,
         title: "修改成功",
         icon: "success",
         showConfirmButton: false,

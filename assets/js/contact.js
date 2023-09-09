@@ -3,6 +3,7 @@ import 'sweetalert2/src/sweetalert2.scss';
 
 //
 Swal.fire({
+    scrollbarPadding: false,
     position: 'top-end',
     icon: 'success',
     title: 'Your work has been saved',
@@ -12,6 +13,7 @@ Swal.fire({
 // 當按下按鈕時，顯示 SweetAlert2 提示框
 document.getElementById('contact-send').addEventListener('click', function() {
 Swal.fire({
+    scrollbarPadding: false,
     title: 'Hello!',
     text: 'This is a SweetAlert2 alert!',
     icon: 'success',

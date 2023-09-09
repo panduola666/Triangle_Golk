@@ -4,6 +4,8 @@ clickFavBtn()
 
 // 點擊「收藏列表」時，判斷是否登入
 // 登入才能加入收藏
+
+// 待修正: 未登入時需隱藏愛心, 已登入時點籍行為是 添加/移除關注清單, 可參考課程內頁
 function clickFavBtn() {
     const favBtn = document.querySelectorAll("#fav-btn");
     let hrefKeyword;
@@ -16,6 +18,7 @@ function clickFavBtn() {
             if (!localStorage.getItem('token')) {
                 //彈出 請先登入 視窗
                 Swal.fire({
+                    scrollbarPadding: false,
                     title: "請先登入"
                 }).then((result) => {
                     if (result.isConfirmed || result.isDismissed) {
@@ -25,7 +28,7 @@ function clickFavBtn() {
                 });
 
             } else {
-                location.href = './mywishlist.html';
+                // location.href = './mywishlist.html';
             }
         })
     })

@@ -377,6 +377,7 @@ testForm.addEventListener('submit', (e) => {
   ) {
     testForm.reset();
     Swal.fire({
+      scrollbarPadding: false,
       icon: 'error',
       title: '回答錯誤,再找找答案吧',
     });
@@ -386,6 +387,7 @@ testForm.addEventListener('submit', (e) => {
   if(!localStorage.getItem('token')) {
     // 用戶未登入
     Swal.fire({
+      scrollbarPadding: false,
       icon: 'error',
       title: '請加入會員',
       showConfirmButton: false,

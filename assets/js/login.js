@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(res => {
                 // 註冊成功後續處理
                 Swal.fire({
+                    scrollbarPadding: false,
                     icon: 'success',
                     title: "註冊成功"
                 });
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .catch(err => {
                 Swal.fire({
+                    scrollbarPadding: false,
                     icon: 'error',
                     title: "註冊失敗"
                 });
@@ -76,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(res => {
                 // 登入成功後續處理
                 Swal.fire({
+                    scrollbarPadding: false,
                     icon: 'success',
                     title: "登入成功"
                 });
@@ -86,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // 登入失敗後續處理
                 // 情況例如: 帳號密碼不正確
                 Swal.fire({
+                    scrollbarPadding: false,
                     icon: "error",
                     title: "此帳號不存在或帳號密碼錯誤"
                 });
@@ -99,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         validation()
         // 彈出是否登出視窗
         const confirmation = await Swal.fire({
+            scrollbarPadding: false,
             icon: 'question',
             title: '確定要登出嗎',
             showCancelButton: true,
@@ -107,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (confirmation.isConfirmed) {
             // 登出成功視窗
             Swal.fire({
+                scrollbarPadding: false,
                 icon: 'success',
                 title: '登出成功',
                 text: '將跳回首頁',

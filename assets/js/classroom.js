@@ -1,11 +1,12 @@
+import { Dropdown } from "bootstrap"
 const dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
 const dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-  return new bootstrap.Dropdown(dropdownToggleEl)
+  return new Dropdown(dropdownToggleEl)
 })
 
 
 // Using function with popperConfig
-const dropdown = new bootstrap.Dropdown(element, {
+const dropdown = new Dropdown(element, {
     popperConfig: function (defaultBsPopperConfig) {
       // var newPopperConfig = {...}
       // use defaultBsPopperConfig if needed...

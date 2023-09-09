@@ -13,6 +13,7 @@ export const User = {
             localStorage.setItem('token', `Bearer ${res.data.accessToken}`) 
             localStorage.setItem('userId', res.data.user.id)
             const swal = await Swal.fire({
+                scrollbarPadding: false,
                 icon: 'success',
                 title: '登入成功'
             })
@@ -42,6 +43,7 @@ export const User = {
     // 請重新登入的 swal 彈窗
     async plsReLogin() {
         const swal = await Swal.fire({
+            scrollbarPadding: false,
             title: '請重新登入'
         })
       if(swal.isDismissed || swal.isConfirmed) {

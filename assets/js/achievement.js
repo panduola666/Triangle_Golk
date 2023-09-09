@@ -13,12 +13,13 @@ async function init() {
     loading()
     avatars = await Avatars.getTotal()
     user = await User.getUserInfo()
-    loading(avatars)
-    console.log(avatars);
+
     const filterData = avatars.reduce((obj, avatar) => {
         obj[avatar.name] ? obj[avatar.name].push(avatar) : obj[avatar.name] = [{...avatar}]
         return obj
     }, {})
+    loading(filterData)
+
     finishAvatars.innerHTML = filterData['完課徽章'].map(item => `
     <div class="col position-relative">
         <img data-id="${item.id}" class="w-100 h-100 avatar-img" src="${item.image}" alt="完課徽章-LV${item.level}">

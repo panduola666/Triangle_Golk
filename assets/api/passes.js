@@ -9,6 +9,7 @@ export const Passes = {
        try {
             const res = await axios.post(`${VITE_BASEURL}/passes`, params);
             Swal.fire({
+                scrollbarPadding: false,
                 icon: 'success',
                 title: '通過測試',
                 showConfirmButton: false,

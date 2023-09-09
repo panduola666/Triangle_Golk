@@ -16,6 +16,7 @@ document.getElementById('apply-modal').addEventListener('submit', function (even
 
     // 彈出 SweetAlert 視窗
     Swal.fire({
+        scrollbarPadding: false,
         title: "已送出",
         icon: "success",
         text: "感謝您的推薦，我們將於 7-14 天內給予您答覆！",
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 顯示 SweetAlert 窗口
         Swal.fire({
+            scrollbarPadding: false,
             title: '成功！',
             text: '你的申請已成功提交。',
             icon: 'success',

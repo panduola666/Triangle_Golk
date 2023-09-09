@@ -4,9 +4,10 @@
       "email": "admin@gmail.com",
       "password": "$2a$10$o0jLpH4FKyj8xCyGwOwmleRI5uRQ0clWPNyihUdoaxE1kFP93rp6u",
       "avatars": [
-        4, 5
+        4,
+        5
       ],
-      "avatarId": 1,
+      "avatarId": 4,
       "nickName": "圈圈",
       "totalCheckIn": 0,
       "isAdmin": true,

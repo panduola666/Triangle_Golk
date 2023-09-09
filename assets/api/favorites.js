@@ -13,6 +13,7 @@ export const Favorites = {
             }
             const res = await axios.post(`${VITE_BASEURL}/favorites`, data);
             Swal.fire({
+                scrollbarPadding: false,
                 icon: 'success',
                 title: '已加入關注清單',
                 showConfirmButton: false,
@@ -27,6 +28,7 @@ export const Favorites = {
         try {
             const res = await axios.delete(`${VITE_BASEURL}/favorites/${id}`);
             Swal.fire({
+                scrollbarPadding: false,
                 icon: 'success',
                 title: '已移出關注清單',
                 showConfirmButton: false,
