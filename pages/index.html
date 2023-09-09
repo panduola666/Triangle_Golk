@@ -13,7 +13,7 @@
   <!--  dev-check -->
 <div class="min-vh-100 d-flex flex-column">
   <%- include('./layout/nav'); -%>
-  <main class="flex-grow-1">
+  <main class="flex-grow-1 overflow-hidden">
     <header class="container">
       <div class="row">
         <div class="banner col-lg-6 d-flex flex-column justify-content-center">
@@ -86,19 +86,109 @@
       </div>
     </article>
     <!-- 學員推課 -->
-    <div class="index-recommend">
-    </div>
+      <div class="container recommend d-flex flex-column flex-lg-row align-items-center">
+        <section class="flex-shrink-0">
+          <h3 class="fs-2 fw-bold d-flex align-items-center gap-3 mb-lg-xl mb-l">
+            <span class="material-symbols-outlined text-primary fs-1">
+              thumb_up
+              </span>
+              學員推課</h3>
+          <div class="other-swiper-btn d-none d-lg-block">
+            <span class="material-icons cur-point circle-lg swiper-pre me-3">
+              west
+            </span>
+            <span class="material-icons cur-point circle-lg swiper-next">
+              east
+            </span>
+          </div>
+        </section>
+          <div class="swiper other-courses w-100 position-relative pt-2 pt-lg-0">
+            <ul class="swiper-wrapper align-items-center px-3">
+              <li class="swiper-slide p-5 bg-primary rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="../assets/images/avatar-02.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+              <li class="swiper-slide p-5 bg-orange rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="../assets/images/avatar-02.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+              <li class="swiper-slide p-5 bg-blue rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="../assets/images/avatar-02.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+              <li class="swiper-slide p-5 bg-primary rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="../assets/images/avatar-02.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+              <li class="swiper-slide p-5 bg-orange rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="../assets/images/avatar-02.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+              <li class="swiper-slide p-5 bg-blue rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="../assets/images/avatar-02.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+              <li class="swiper-slide p-5 bg-primary rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="../assets/images/avatar-02.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+            </ul>
+          <div class="swiper-pagination d-flex justify-content-center justify-content-lg-start gap-3"></div>
+        </div>
+      </div>
     <!-- 最新課程 -->
-    <div class="latest-courses bg-blue">
+    <!-- <div class="latest-courses bg-blue">
       0
-    </div>
+    </div> -->
     <!-- 申請新課 -->
-    <div class="applying-intro bg-primary">
+    <!-- <div class="applying-intro bg-primary">
       0
-    </div>
+    </div> -->
     <!-- 常見問答 -->
-    <footer class="faq">
-    </footer>
+    <!-- <footer class="faq">
+    </footer> -->
   </main>
   <%- include('./layout/footer'); -%>
 </div>

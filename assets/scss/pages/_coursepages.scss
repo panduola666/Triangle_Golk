@@ -10,6 +10,15 @@
     background-color: $secondary;
   }
 }
+.circle-lg{
+  @extend .circle;
+  padding: 20px;
+  background-color: $gray-200;
+  color: $gray-500;
+  &:hover {
+    color: $gray-200;
+  }
+}
 .link-hover:hover{
     font-weight: bold;
 }

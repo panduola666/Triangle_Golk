@@ -16,3 +16,66 @@
     }
   }
 }
+
+.recommend{
+  &-avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .carousel-inner .carousel-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .carousel-inner .carousel-item img {
+    flex: 0 0 calc(33.3333% - 10px); /* 让每个轮播项占据三分之一的宽度，考虑到间距 */
+    max-width: 100%;
+  }
+  .swiper{
+    padding-bottom: 64px;
+    @media(min-width: 992px){
+      left: 17vw
+    }
+  }
+  .swiper-wrapper{
+    height: 400px;
+    @media(min-width: 992px){
+      height: 540px;
+    }
+  }
+  .swiper-slide{
+    width: 320px;
+    height: 400px;
+    transition: height 1s;
+    float: left;
+    @media(min-width: 992px){
+      height: 420px;
+      width: 420px;
+    }
+  }
+  
+  .swiper-slide-active{
+    transition: height 1s;
+    height: 400px;
+    @media(min-width: 992px){
+      height: 540px;
+    }
+  }
+  .swiper-pagination-bullet{
+    width: 16px;
+    height: 16px;
+    background-color: #16330014;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: $primary;
+  }
+  &-user{
+    font-size: 20px;
+  }
+}
+
