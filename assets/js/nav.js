@@ -6,7 +6,7 @@ const searchType = document.querySelector('.nav-search-type')
 const searchValue = document.querySelector('.nav-search-value')
 const searchBtn = document.querySelector('.nav-search-btn')
 const searchChoose = document.querySelector('.search-dropdown')
-
+const searchModal = document.querySelector('.search-modal')
 // 小鈴鐺
 const notifyBtn = document.querySelector('.notify-btn')
 const notifyMenu = document.querySelector('.notify-menu')
@@ -63,6 +63,20 @@ searchBtn.addEventListener('click', e => {
     const key = searchType.textContent.trim() === '平台' ? 'platform' : 'q'
     const value = searchValue.value.trim()
         location.href = `/pages/course.html${value? `?${key}=${value}` : ''}`
+})
+searchModal.addEventListener('submit',(e) => {
+    e.preventDefault()
+     // 获取所有复选框元素
+    const checkboxes = searchModal.querySelectorAll('input[type="checkbox"]');
+    // 遍历复选框元素并获取选中的复选框的值
+    const platform = [];
+    checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked) {
+            platform.push(`platform=${checkbox.value}`);
+        }
+    });
+
+    console.log(searchModal['nav-search-bar'].value);
 })
 
 // 小鈴鐺

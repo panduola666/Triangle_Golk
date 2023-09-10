@@ -451,7 +451,7 @@
           aria-label="Close"
         ></button>
       </div>
-      <form class="modal-body">
+      <form class="modal-body search-modal">
         <div class="mb-3">
           <label for="nav-search-bar" class="form-label">關鍵字</label>
           <div class="position-reative">
@@ -462,6 +462,7 @@
             <input
               id="nav-search-bar"
               type="search"
+              name="nav-search-bar"
               class="form-control search-value w-100"
               placeholder="請輸入關鍵字"
             />
@@ -473,11 +474,11 @@
             <input
               class="form-check-input"
               type="checkbox"
-              value="六角平台"
+              value="六角學院"
               name="platform"
-              id="六角平台"
+              id="六角學院"
             />
-            <label class="form-check-label" for="六角平台"> 六角平台 </label>
+            <label class="form-check-label" for="六角學院"> 六角學院 </label>
           </div>
           <div class="form-check">
             <input
@@ -508,6 +509,16 @@
               id="Coursera"
             />
             <label class="form-check-label" for="Coursera"> Coursera </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="其他平台"
+              name="platform"
+              id="其他平台"
+            />
+            <label class="form-check-label" for="其他平台"> 其他平台 </label>
           </div>
         </div>
         <div>
