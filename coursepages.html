@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>課程內頁</title>
+    <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico">
-    <script type="module" crossorigin src="/Triangle_Golk/assets/coursepages-57666699.js"></script>
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/footer-b5e551b8.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/apply_course-a6ef7b6a.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/swiper-core-d55539fa.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/index-ea213776.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/course-944b0619.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/favorites-e1a28145.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/comment-ec1c430b.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/passes-09adcf24.js">
-    <link rel="stylesheet" href="/Triangle_Golk/assets/footer-b07af336.css">
-    <link rel="stylesheet" href="/Triangle_Golk/assets/coursepages-0705b292.css">
+    <script type="module" crossorigin src="/Triangle_Golk/assets/coursepages-4cbe5b79.js"></script>
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/main-4c0e2c7d.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/apply_course-d3ddfdd4.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/swiper-core-19160206.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/autoplay-054b67c1.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/index-67a1f798.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/course-4f13abac.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/favorites-13c837a1.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/comment-0c515d44.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/passes-6cca1e0b.js">
+    <link rel="stylesheet" href="/Triangle_Golk/assets/main-752ef303.css">
+    <link rel="stylesheet" href="/Triangle_Golk/assets/autoplay-0705b292.css">
   </head>
 
   <body>
@@ -74,7 +76,7 @@
             >
               平台
             </button>
-            <ul class="dropdown-menu nav-dropdown-menu">
+            <ul class="dropdown-menu nav-dropdown-menu search-dropdown">
               <li class="dropdown-item">平台</li>
               <li class="dropdown-item">關鍵字</li>
             </ul>
@@ -123,23 +125,28 @@
         </li>
 
         <!-- 小鈴鐺 -->
-        <li class="position-relative d-flex cur-point notify-btn">
-          <span class="material-symbols-outlined"> notifications </span>
+        <li class="position-relative d-flex">
+          <span class="material-symbols-outlined cur-point notify-btn">
+            notifications
+          </span>
           <!-- 有消息時的提示 -->
-          <span class="notify-info"></span>
+          <span class="notify-info d-none"></span>
           <!-- 通知欄 -->
           <ul
-            class="d-none notify-menu nav-dropdown-menu position-absolute end-0 bg-white p-0 py-2"
+            class="d-none notify-menu nav-dropdown-menu position-absolute end-0 bg-white p-0 py-2 overflow-y-auto"
           >
             <li class="py-2 px-sm">
               <p class="text-gray-600 mb-2">
                 恭喜您，「Javascript 核心篇」課程審核通過！
               </p>
-              <p class="m-0">2023-01-23 12:00:00</p>
+              <p class="m-0 d-flex align-items-center justify-content-between">
+                <span>2023-01-23 12:00:00</span>
+                <span class="material-symbols-outlined cur-point">
+                  delete
+                </span>
+              </p>
             </li>
-            <li class="py-2 px-sm text-center small cur-point d-none">
-              顯示更多
-            </li>
+            <li class="py-2 px-sm text-center small cur-point">顯示更多</li>
           </ul>
         </li>
 
@@ -188,7 +195,7 @@
             <li>
               <a class="dropdown-item" href="./achievement.html">徽章成就</a>
             </li>
-            <li class="dropdown-item cur-point">登出</li>
+            <li class="dropdown-item cur-point logout-btn">登出</li>
           </ul>
         </li>
 
@@ -258,7 +265,10 @@
       >
         登入 / 註冊
       </li>
-      <li class="aside-item aside-sign-out py-3 px-4 cur-point" id="logout-btn">
+      <li
+        class="aside-item aside-sign-out py-3 px-4 cur-point logout-btn"
+        id="logout-btn"
+      >
         登出
       </li>
     </ul>
@@ -344,7 +354,7 @@
                     required
                   />
                   <label for="login-email">信箱</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <div class="invalid-feedback">信箱不得為空</div>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -357,7 +367,7 @@
                     required
                   />
                   <label for="login-password">密碼</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <div class="invalid-feedback">密碼不得為空</div>
                 </div>
                 <div class="d-flex flex-column gap-4">
                   <button
@@ -397,8 +407,8 @@
                     placeholder="name@example.com"
                     required
                   />
-                  <label for="floating-input">信箱（註冊後不可更改）</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <label for="register-email">信箱（註冊後不可更改）</label>
+                  <div class="invalid-feedback">信箱不得為空</div>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -409,10 +419,10 @@
                     placeholder="nickname"
                     required
                   />
-                  <label for="floating-nickname"
+                  <label for="register-nickname"
                     >暱稱（日後可更改，最多 5 字）</label
                   >
-                  <div class="invalid-feedback">Error message</div>
+                  <div class="invalid-feedback">暱稱不得為空</div>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -424,8 +434,8 @@
                     autocomplete="on"
                     required
                   />
-                  <label for="floating-password">密碼</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <label for="register-password">密碼（至少 6 個字元）</label>
+                  <div class="invalid-feedback">密碼不得為空</div>
                 </div>
                 <button class="btn btn-secondary w-100" type="submit">
                   註冊會員
@@ -447,6 +457,7 @@
                 type="email"
                 class="form-control"
                 id="verify-email"
+                name="verify-email"
                 placeholder="name@example.com"
                 required
               />
@@ -454,7 +465,7 @@
               <div class="invalid-feedback">請輸入信箱</div>
             </div>
             <div class="mb-3">
-              <button class="btn btn-secondary w-100" type="button">
+              <button class="btn btn-secondary w-100" type="submit">
                 寄送重設密碼連結
               </button>
             </div>
@@ -487,7 +498,7 @@
           aria-label="Close"
         ></button>
       </div>
-      <form class="modal-body">
+      <form class="modal-body search-modal">
         <div class="mb-3">
           <label for="nav-search-bar" class="form-label">關鍵字</label>
           <div class="position-reative">
@@ -498,6 +509,7 @@
             <input
               id="nav-search-bar"
               type="search"
+              name="nav-search-bar"
               class="form-control search-value w-100"
               placeholder="請輸入關鍵字"
             />
@@ -509,11 +521,11 @@
             <input
               class="form-check-input"
               type="checkbox"
-              value="六角平台"
+              value="六角學院"
               name="platform"
-              id="六角平台"
+              id="六角學院"
             />
-            <label class="form-check-label" for="六角平台"> 六角平台 </label>
+            <label class="form-check-label" for="六角學院"> 六角學院 </label>
           </div>
           <div class="form-check">
             <input
@@ -544,6 +556,16 @@
               id="Coursera"
             />
             <label class="form-check-label" for="Coursera"> Coursera </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="其他平台"
+              name="platform"
+              id="其他平台"
+            />
+            <label class="form-check-label" for="其他平台"> 其他平台 </label>
           </div>
         </div>
         <div>
@@ -959,16 +981,10 @@
                       for="comment"
                       >請寫下你的理由</label
                     >
-                    <textarea
-                      class="form-control comment small py-1 ps-2"
-                      id="comment"
-                      cols="30"
-                      rows="10"
-                      placeholder="最多不超過 400 字"
-                      maxlength="400"
-                      minlength="5"
-                      required
-                    ></textarea>
+                    <div id="editor—wrapper">
+                      <div id="toolbar-container"><!-- 工具栏 --></div>
+                      <div id="editor-container"><!-- 编辑器 --></div>
+                    </div>
                     <div class="invalid-feedback">請寫下你的理由</div>
                   </div>
                   <div class="modal-footer">

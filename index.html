@@ -7,8 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>三角構客</title>
   <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico">
-  <script type="module" crossorigin src="/Triangle_Golk/assets/footer-b5e551b8.js"></script>
-  <link rel="stylesheet" href="/Triangle_Golk/assets/footer-b07af336.css">
+  <script type="module" crossorigin src="/Triangle_Golk/assets/main-4c0e2c7d.js"></script>
+  <script type="module" crossorigin src="/Triangle_Golk/assets/swiper-core-19160206.js"></script>
+  <script type="module" crossorigin src="/Triangle_Golk/assets/autoplay-054b67c1.js"></script>
+  <script type="module" crossorigin src="/Triangle_Golk/assets/index-aea19d58.js"></script>
+  <link rel="stylesheet" href="/Triangle_Golk/assets/main-752ef303.css">
+  <link rel="stylesheet" href="/Triangle_Golk/assets/autoplay-0705b292.css">
 </head>
 
 <body>
@@ -49,7 +53,7 @@
             >
               平台
             </button>
-            <ul class="dropdown-menu nav-dropdown-menu">
+            <ul class="dropdown-menu nav-dropdown-menu search-dropdown">
               <li class="dropdown-item">平台</li>
               <li class="dropdown-item">關鍵字</li>
             </ul>
@@ -98,23 +102,28 @@
         </li>
 
         <!-- 小鈴鐺 -->
-        <li class="position-relative d-flex cur-point notify-btn">
-          <span class="material-symbols-outlined"> notifications </span>
+        <li class="position-relative d-flex">
+          <span class="material-symbols-outlined cur-point notify-btn">
+            notifications
+          </span>
           <!-- 有消息時的提示 -->
-          <span class="notify-info"></span>
+          <span class="notify-info d-none"></span>
           <!-- 通知欄 -->
           <ul
-            class="d-none notify-menu nav-dropdown-menu position-absolute end-0 bg-white p-0 py-2"
+            class="d-none notify-menu nav-dropdown-menu position-absolute end-0 bg-white p-0 py-2 overflow-y-auto"
           >
             <li class="py-2 px-sm">
               <p class="text-gray-600 mb-2">
                 恭喜您，「Javascript 核心篇」課程審核通過！
               </p>
-              <p class="m-0">2023-01-23 12:00:00</p>
+              <p class="m-0 d-flex align-items-center justify-content-between">
+                <span>2023-01-23 12:00:00</span>
+                <span class="material-symbols-outlined cur-point">
+                  delete
+                </span>
+              </p>
             </li>
-            <li class="py-2 px-sm text-center small cur-point d-none">
-              顯示更多
-            </li>
+            <li class="py-2 px-sm text-center small cur-point">顯示更多</li>
           </ul>
         </li>
 
@@ -163,7 +172,7 @@
             <li>
               <a class="dropdown-item" href="./achievement.html">徽章成就</a>
             </li>
-            <li class="dropdown-item cur-point">登出</li>
+            <li class="dropdown-item cur-point logout-btn">登出</li>
           </ul>
         </li>
 
@@ -233,7 +242,10 @@
       >
         登入 / 註冊
       </li>
-      <li class="aside-item aside-sign-out py-3 px-4 cur-point" id="logout-btn">
+      <li
+        class="aside-item aside-sign-out py-3 px-4 cur-point logout-btn"
+        id="logout-btn"
+      >
         登出
       </li>
     </ul>
@@ -319,7 +331,7 @@
                     required
                   />
                   <label for="login-email">信箱</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <div class="invalid-feedback">信箱不得為空</div>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -332,7 +344,7 @@
                     required
                   />
                   <label for="login-password">密碼</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <div class="invalid-feedback">密碼不得為空</div>
                 </div>
                 <div class="d-flex flex-column gap-4">
                   <button
@@ -372,8 +384,8 @@
                     placeholder="name@example.com"
                     required
                   />
-                  <label for="floating-input">信箱（註冊後不可更改）</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <label for="register-email">信箱（註冊後不可更改）</label>
+                  <div class="invalid-feedback">信箱不得為空</div>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -384,10 +396,10 @@
                     placeholder="nickname"
                     required
                   />
-                  <label for="floating-nickname"
+                  <label for="register-nickname"
                     >暱稱（日後可更改，最多 5 字）</label
                   >
-                  <div class="invalid-feedback">Error message</div>
+                  <div class="invalid-feedback">暱稱不得為空</div>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -399,8 +411,8 @@
                     autocomplete="on"
                     required
                   />
-                  <label for="floating-password">密碼</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <label for="register-password">密碼（至少 6 個字元）</label>
+                  <div class="invalid-feedback">密碼不得為空</div>
                 </div>
                 <button class="btn btn-secondary w-100" type="submit">
                   註冊會員
@@ -422,6 +434,7 @@
                 type="email"
                 class="form-control"
                 id="verify-email"
+                name="verify-email"
                 placeholder="name@example.com"
                 required
               />
@@ -429,7 +442,7 @@
               <div class="invalid-feedback">請輸入信箱</div>
             </div>
             <div class="mb-3">
-              <button class="btn btn-secondary w-100" type="button">
+              <button class="btn btn-secondary w-100" type="submit">
                 寄送重設密碼連結
               </button>
             </div>
@@ -462,7 +475,7 @@
           aria-label="Close"
         ></button>
       </div>
-      <form class="modal-body">
+      <form class="modal-body search-modal">
         <div class="mb-3">
           <label for="nav-search-bar" class="form-label">關鍵字</label>
           <div class="position-reative">
@@ -473,6 +486,7 @@
             <input
               id="nav-search-bar"
               type="search"
+              name="nav-search-bar"
               class="form-control search-value w-100"
               placeholder="請輸入關鍵字"
             />
@@ -484,11 +498,11 @@
             <input
               class="form-check-input"
               type="checkbox"
-              value="六角平台"
+              value="六角學院"
               name="platform"
-              id="六角平台"
+              id="六角學院"
             />
-            <label class="form-check-label" for="六角平台"> 六角平台 </label>
+            <label class="form-check-label" for="六角學院"> 六角學院 </label>
           </div>
           <div class="form-check">
             <input
@@ -520,6 +534,16 @@
             />
             <label class="form-check-label" for="Coursera"> Coursera </label>
           </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="其他平台"
+              name="platform"
+              id="其他平台"
+            />
+            <label class="form-check-label" for="其他平台"> 其他平台 </label>
+          </div>
         </div>
         <div>
           <button type="submit" class="btn btn-secondary float-end">
@@ -530,7 +554,7 @@
     </div>
   </div>
 </div>
-  <main class="flex-grow-1">
+  <main class="flex-grow-1 overflow-hidden">
     <header class="container">
       <div class="row">
         <div class="banner col-lg-6 d-flex flex-column justify-content-center">
@@ -553,69 +577,180 @@
             熱門關鍵字
           </p>
           <ul class="p-0 d-flex flex-lg-wrap gap-2 index-tags list-unstyled">
-            <li class="index-tag">CSS</li>
-            <li class="index-tag">手工藝</li>
-            <li class="index-tag">程式</li>
-            <li class="index-tag">日文</li>
-            <li class="index-tag">理財</li>
-            <li class="index-tag">電繪</li>
-            <li class="index-tag">AI 智能</li>
-            <li class="index-tag">工業設計</li>
-            <li class="index-tag">市場行銷</li>
-            <li class="index-tag">英語會話</li>
-            <li class="index-tag">比特幣</li>
-            <li class="index-tag">資訊安全</li>
-            <li class="index-tag">刺繡</li>
-            <li class="index-tag">投資理財</li>
-            <li class="index-tag">影音剪辑</li>
-            <li class="index-tag">商業攝影</li>
-            <li class="index-tag">表演藝術</li>
+            <li class="index-tag text-nowrap">CSS</li>
+            <li class="index-tag text-nowrap">手工藝</li>
+            <li class="index-tag text-nowrap">程式</li>
+            <li class="index-tag text-nowrap">日文</li>
+            <li class="index-tag text-nowrap">理財</li>
+            <li class="index-tag text-nowrap">電繪</li>
+            <li class="index-tag text-nowrap">AI 智能</li>
+            <li class="index-tag text-nowrap">工業設計</li>
+            <li class="index-tag text-nowrap">市場行銷</li>
+            <li class="index-tag text-nowrap">英語會話</li>
+            <li class="index-tag text-nowrap">比特幣</li>
+            <li class="index-tag text-nowrap">資訊安全</li>
+            <li class="index-tag text-nowrap">刺繡</li>
+            <li class="index-tag text-nowrap">投資理財</li>
+            <li class="index-tag text-nowrap">影音剪辑</li>
+            <li class="index-tag text-nowrap">商業攝影</li>
+            <li class="index-tag text-nowrap">表演藝術</li>
           </ul>
         </div>
       </div>
     </div>
     <!-- 三角構客是什麼 -->
-    <article>
-      <div class="container">
-        <div class="golk-intro my-xxl">
-          <div class="golk-introduction">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="me-3">
-                  <img src="/Triangle_Golk/assets/icon-logo-d99fd1a1.png" alt="三角構客logo">
-                </div>
-              </div>
-              <div class="col-lg-6">
+    <article class="container">
+      <div class="golk-intro-questions py-lg-xxl">
+        <div data-aos="fade-up" class="golk-introduction row mb-lg-xl">
+          <div class="col-lg-6 d-none d-lg-flex justify-content-end ">
+            <div class="me-3">
+              <img src="/Triangle_Golk/assets/icon-logo-d99fd1a1.png" alt="三角構客logo">
+            </div>
+          </div>
+          <div class="col-lg-6 col">
+            <div class="golk-introduction-card d-flex flex-column justify-content-center align-items-center align-items-lg-start">
+              <div class="golk-introduction-title mb-5">
                 <h2 class="fs-4 fw-bold">Triangle Golk</h2>
                 <h1 class="fs-2 fw-bold">三角構客是什麼？</h1>
               </div>
-            </div>
-          </div>
-          <div class="golk-situation">
-            <h2>如果你也想過</h2>
-            <div class="situation-card-group">
-              <div class="situation-card">
-                <img src="/Triangle_Golk/assets/index_intro1_question-e3211b4e.svg" alt="pain point-question">
+              <div class="golk-introduction-body fs-5">
+                <p class="mb-mid"><span class="d-inline-block fw-bold bg-gray-200 py-2 px-3">三角 (Triangle)</span><span class="d-inline-block ">= 學習者 + 授課者 + 相伴守候的我們</span></p>
+                <p class=""><span class="d-inline-block fw-bold bg-gray-200 py-2 px-3">構客 (Golk)</span><span class="d-inline-block ">= 構成一同邁向目標 (Goal) 的夥伴 (Folk)</span></p>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="golk-intro-situation">
+          <h2 data-aos="fade-up" class="fw-bold text-center mb-5">如果你也想過</h2>
+          <div class="situation-card-group row">
+            <div class="situation-card col-lg-4 col">
+              <img data-aos="fade-right" src="/Triangle_Golk/assets/index_intro1_question-e3211b4e.svg" alt="pain point-question">
+              <p class="fs-4 text-center mt-3 me-2">開課平台上好評一片</p>
+              <p class="fs-4 text-center">是不是有被篩選過</p>
+            </div>
+            <div class="situation-card col-lg-4 col">
+              <img data-aos="zoom-in" src="/Triangle_Golk/assets/index_intro2_sad-aa1d0d07.svg" alt="pain point-question">
+              <p class="fs-4 text-center mt-3 me-2">對課程有想法</p>
+              <p class="fs-4 text-center">但不習慣當面評論老師</p>
+            </div>
+            <div data-aos="fade-left" class="situation-card col-lg-4 col">
+              <img src="/Triangle_Golk/assets/index_intro3_choose-233fd99c.svg" alt="pain point-question">
+              <p class="fs-4 text-center mt-3 me-2">錢錢花在刀口上</p>
+              <p class="fs-4 text-center">想多看多逛多比較課程</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 在這裡 你可以 -->
+      <div class="golk-features py-lg-xxl bg-secondary-subtle">
+
       </div>
     </article>
     <!-- 學員推課 -->
-    <div class="index-recommend">
-    </div>
+      <div class="container recommend py-lg-xxl d-flex flex-column flex-lg-row align-items-center">
+        <section class="flex-shrink-0">
+          <h3 class="fs-2 fw-bold d-flex align-items-center gap-3 mb-lg-xl mb-l">
+            <span class="material-symbols-outlined text-primary fs-1">
+              thumb_up
+              </span>
+              學員推課</h3>
+          <div class="other-swiper-btn d-none d-lg-block">
+            <span class="material-icons cur-point circle-lg swiper-pre me-3">
+              west
+            </span>
+            <span class="material-icons cur-point circle-lg swiper-next">
+              east
+            </span>
+          </div>
+        </section>
+          <div class="swiper other-courses w-100 position-relative pt-2 pt-lg-0">
+            <ul class="swiper-wrapper align-items-center px-3">
+              <li class="swiper-slide p-5 bg-primary rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="/Triangle_Golk/assets/avatar-02-a290b376.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+              <li class="swiper-slide p-5 bg-orange rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="/Triangle_Golk/assets/avatar-02-a290b376.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+              <li class="swiper-slide p-5 bg-blue rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="/Triangle_Golk/assets/avatar-02-a290b376.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+              <li class="swiper-slide p-5 bg-primary rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="/Triangle_Golk/assets/avatar-02-a290b376.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+              <li class="swiper-slide p-5 bg-orange rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="/Triangle_Golk/assets/avatar-02-a290b376.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+              <li class="swiper-slide p-5 bg-blue rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="/Triangle_Golk/assets/avatar-02-a290b376.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+              <li class="swiper-slide p-5 bg-primary rounded-4 d-flex flex-column cur-point card-hover">
+                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
+                <div class="fs-4 mb-4 flex-grow-1">
+                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="/Triangle_Golk/assets/avatar-02-a290b376.svg" alt="" class="recommend-avatar">
+                  <p class="fs-6 mb-0">Arkii</p>
+                </div>
+              </li>
+            </ul>
+          <div class="swiper-pagination d-flex justify-content-center justify-content-lg-start gap-3"></div>
+        </div>
+      </div>
     <!-- 最新課程 -->
-    <div class="latest-courses bg-blue">
+    <!-- <div class="latest-courses bg-blue">
       0
-    </div>
+    </div> -->
     <!-- 申請新課 -->
-    <div class="applying-intro bg-primary">
+    <!-- <div class="applying-intro bg-primary">
       0
-    </div>
+    </div> -->
     <!-- 常見問答 -->
-    <footer class="faq">
-    </footer>
+    <!-- <footer class="faq">
+    </footer> -->
   </main>
   <footer class="container-fluid bg-secondary-subtle py-lg-4 py-3 mt-lg-xxl mt-xl">
   <div class="row flex-column flex-lg-column-reverse gap-4">
@@ -669,8 +804,8 @@
 
   
 
-      
-      
+    
+    
 </body>
 
 </html>

@@ -8,14 +8,12 @@
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- 富文本編輯器 wangeditor -->
-    <!-- <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet"> -->
-    <!-- SweetAlert2 -->
-    <!-- <link rel="stylesheet" href="path/to/sweetalert2.css"> -->
+    <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
     <title>聯繫客服</title>
     <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico">
-  <script type="module" crossorigin src="/Triangle_Golk/assets/footer-b5e551b8.js"></script>
-  <script type="module" crossorigin src="/Triangle_Golk/assets/course-06d265d9.js"></script>
-  <link rel="stylesheet" href="/Triangle_Golk/assets/footer-b07af336.css">
+  <script type="module" crossorigin src="/Triangle_Golk/assets/contact-d500b83e.js"></script>
+  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/main-4c0e2c7d.js">
+  <link rel="stylesheet" href="/Triangle_Golk/assets/main-752ef303.css">
 </head>
 
 <body>
@@ -55,7 +53,7 @@
             >
               平台
             </button>
-            <ul class="dropdown-menu nav-dropdown-menu">
+            <ul class="dropdown-menu nav-dropdown-menu search-dropdown">
               <li class="dropdown-item">平台</li>
               <li class="dropdown-item">關鍵字</li>
             </ul>
@@ -104,23 +102,28 @@
         </li>
 
         <!-- 小鈴鐺 -->
-        <li class="position-relative d-flex cur-point notify-btn">
-          <span class="material-symbols-outlined"> notifications </span>
+        <li class="position-relative d-flex">
+          <span class="material-symbols-outlined cur-point notify-btn">
+            notifications
+          </span>
           <!-- 有消息時的提示 -->
-          <span class="notify-info"></span>
+          <span class="notify-info d-none"></span>
           <!-- 通知欄 -->
           <ul
-            class="d-none notify-menu nav-dropdown-menu position-absolute end-0 bg-white p-0 py-2"
+            class="d-none notify-menu nav-dropdown-menu position-absolute end-0 bg-white p-0 py-2 overflow-y-auto"
           >
             <li class="py-2 px-sm">
               <p class="text-gray-600 mb-2">
                 恭喜您，「Javascript 核心篇」課程審核通過！
               </p>
-              <p class="m-0">2023-01-23 12:00:00</p>
+              <p class="m-0 d-flex align-items-center justify-content-between">
+                <span>2023-01-23 12:00:00</span>
+                <span class="material-symbols-outlined cur-point">
+                  delete
+                </span>
+              </p>
             </li>
-            <li class="py-2 px-sm text-center small cur-point d-none">
-              顯示更多
-            </li>
+            <li class="py-2 px-sm text-center small cur-point">顯示更多</li>
           </ul>
         </li>
 
@@ -169,7 +172,7 @@
             <li>
               <a class="dropdown-item" href="./achievement.html">徽章成就</a>
             </li>
-            <li class="dropdown-item cur-point">登出</li>
+            <li class="dropdown-item cur-point logout-btn">登出</li>
           </ul>
         </li>
 
@@ -239,7 +242,10 @@
       >
         登入 / 註冊
       </li>
-      <li class="aside-item aside-sign-out py-3 px-4 cur-point" id="logout-btn">
+      <li
+        class="aside-item aside-sign-out py-3 px-4 cur-point logout-btn"
+        id="logout-btn"
+      >
         登出
       </li>
     </ul>
@@ -325,7 +331,7 @@
                     required
                   />
                   <label for="login-email">信箱</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <div class="invalid-feedback">信箱不得為空</div>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -338,7 +344,7 @@
                     required
                   />
                   <label for="login-password">密碼</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <div class="invalid-feedback">密碼不得為空</div>
                 </div>
                 <div class="d-flex flex-column gap-4">
                   <button
@@ -378,8 +384,8 @@
                     placeholder="name@example.com"
                     required
                   />
-                  <label for="floating-input">信箱（註冊後不可更改）</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <label for="register-email">信箱（註冊後不可更改）</label>
+                  <div class="invalid-feedback">信箱不得為空</div>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -390,10 +396,10 @@
                     placeholder="nickname"
                     required
                   />
-                  <label for="floating-nickname"
+                  <label for="register-nickname"
                     >暱稱（日後可更改，最多 5 字）</label
                   >
-                  <div class="invalid-feedback">Error message</div>
+                  <div class="invalid-feedback">暱稱不得為空</div>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -405,8 +411,8 @@
                     autocomplete="on"
                     required
                   />
-                  <label for="floating-password">密碼</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <label for="register-password">密碼（至少 6 個字元）</label>
+                  <div class="invalid-feedback">密碼不得為空</div>
                 </div>
                 <button class="btn btn-secondary w-100" type="submit">
                   註冊會員
@@ -428,6 +434,7 @@
                 type="email"
                 class="form-control"
                 id="verify-email"
+                name="verify-email"
                 placeholder="name@example.com"
                 required
               />
@@ -435,7 +442,7 @@
               <div class="invalid-feedback">請輸入信箱</div>
             </div>
             <div class="mb-3">
-              <button class="btn btn-secondary w-100" type="button">
+              <button class="btn btn-secondary w-100" type="submit">
                 寄送重設密碼連結
               </button>
             </div>
@@ -468,7 +475,7 @@
           aria-label="Close"
         ></button>
       </div>
-      <form class="modal-body">
+      <form class="modal-body search-modal">
         <div class="mb-3">
           <label for="nav-search-bar" class="form-label">關鍵字</label>
           <div class="position-reative">
@@ -479,6 +486,7 @@
             <input
               id="nav-search-bar"
               type="search"
+              name="nav-search-bar"
               class="form-control search-value w-100"
               placeholder="請輸入關鍵字"
             />
@@ -490,11 +498,11 @@
             <input
               class="form-check-input"
               type="checkbox"
-              value="六角平台"
+              value="六角學院"
               name="platform"
-              id="六角平台"
+              id="六角學院"
             />
-            <label class="form-check-label" for="六角平台"> 六角平台 </label>
+            <label class="form-check-label" for="六角學院"> 六角學院 </label>
           </div>
           <div class="form-check">
             <input
@@ -525,6 +533,16 @@
               id="Coursera"
             />
             <label class="form-check-label" for="Coursera"> Coursera </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="其他平台"
+              name="platform"
+              id="其他平台"
+            />
+            <label class="form-check-label" for="其他平台"> 其他平台 </label>
           </div>
         </div>
         <div>
@@ -567,7 +585,11 @@
                     <div class="mb-3 mb-lg-4 d-flex flex-column">
                         <div class="form-check form-check-inline mx-0 px-0">
                             <label class="form-label fw-medium form-required" for="contact-message">留言內容</label>
-                            <textarea type="text" class="form-control" id="contact-message" name="message" rows="6" required></textarea>
+                            <!-- <textarea type="text" class="form-control" id="contact-message" name="message" rows="6" required></textarea> -->
+                            <div class="form-control">
+                                <div id="editor-container"><!-- 编辑器 --></div>
+                            </div>
+                          
                         </div>
                     </div>
                     <div class="text-center">
@@ -578,6 +600,7 @@
             </section>
         </div>
     </main>
+
 <footer class="container-fluid bg-secondary-subtle py-lg-4 py-3 mt-lg-xxl mt-xl">
   <div class="row flex-column flex-lg-column-reverse gap-4">
     <!-- logo -->
@@ -631,5 +654,6 @@
     
                 
                 
+
 </body>
 </html>
