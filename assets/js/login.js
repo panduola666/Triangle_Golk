@@ -1,13 +1,15 @@
 import { User } from '../api';
+import axios from "axios";
+const { VITE_BASEURL } = import.meta.env
 import Swal from 'sweetalert2';
-
 
 const forget = document.querySelector("#forget-btn");
 const back = document.querySelector("#back-btn");
 const forms = document.querySelectorAll('.needs-validation');
 const loginForm = document.querySelector('.login-form');
 const registerForm = document.querySelector('.register-form');
-const logoutBtn = document.querySelector("#logout-btn");
+const forgetForm = document.querySelector('.forget-from');
+const logoutBtn = document.querySelectorAll(".logout-btn");
 const loginEmail = document.getElementById('login-email');
 const loginPwd = document.getElementById('login-password');
 const registerEmail = document.getElementById('register-email');
@@ -37,9 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const data = {
             email: registerForm['register-email'].value,
-            // nickName: registerForm['register-nickName'].value,
+            nickName: registerForm['register-nickname'].value,
             password: registerForm['register-password'].value
         }
+
         User.register(data)
             .then(res => {
                 // 註冊成功後續處理
@@ -49,17 +52,17 @@ document.addEventListener("DOMContentLoaded", function () {
                     title: "註冊成功"
                 });
                 console.log(res);
+                registerForm.reset();
                 return res.data;
             })
             .catch(err => {
                 Swal.fire({
                     scrollbarPadding: false,
                     icon: 'error',
-                    title: "註冊失敗"
+                    title: "註冊失敗",
+                    text: '帳號或密碼有誤，請輸入正確資訊'
                 });
-                console.log(res);
                 // 註冊失敗後續處理
-                // 情況例如: 帳號密碼不正確
                 console.log(err);
             });
     });
@@ -94,36 +97,95 @@ document.addEventListener("DOMContentLoaded", function () {
                     title: "此帳號不存在或帳號密碼錯誤"
                 });
                 console.log(err);
-                return err.data;
+
             })
     })
     // 登出
-    logoutBtn.addEventListener('click', async (e) => {
-        e.preventDefault()
-        validation()
-        // 彈出是否登出視窗
-        const confirmation = await Swal.fire({
-            scrollbarPadding: false,
-            icon: 'question',
-            title: '確定要登出嗎',
-            showCancelButton: true,
-        });
+    logoutBtn.forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+            e.preventDefault()
+            validation()
+            // 彈出是否登出視窗
+            const confirmation = await Swal.fire({
+                scrollbarPadding: false,
+                icon: 'question',
+                title: '確定要登出嗎',
+                showCancelButton: true,
+            });
+            if (confirmation.isConfirmed) {
+                // 登出成功視窗
+                Swal.fire({
+                    scrollbarPadding: false,
+                    icon: 'success',
+                    title: '登出成功',
+                    text: '將跳回首頁',
+                }).then((result) => {
+                    logout = User.clearUserInfo();
+                    location.href = 'index.html'
+                    // reLogin = User.plsReLogin();
+                });
+            }
+        })
+    })
 
-        if (confirmation.isConfirmed) {
-            // 登出成功視窗
+    //忘記密碼
+    forgetForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        validation();
+        const email = forgetForm['verify-email'].value.trim();
+
+        // 發送請求以查找用戶
+        if (isEmail(email)) {
+            // 發送請求以查找用戶
+            getUserByEmail(email)
+                .then((user) => {
+                    if (user) {
+                        console.log(`用戶的 email 為：${user.email}`);
+                        Swal.fire({
+                            scrollbarPadding: false,
+                            icon: 'success',
+                            title: '已寄送重設密碼連結'
+                        });
+                        location.href = 'reset_password.html';
+                    } else {
+                        Swal.fire({
+                            scrollbarPadding: false,
+                            icon: 'error',
+                            title: '查無此帳號'
+                        });
+                    }
+                })
+                .catch((err) => {
+                    console.log('查找用戶時發生錯誤', err);
+                });
+        } else {
+            // 如果電子郵件地址無效，顯示錯誤消息
             Swal.fire({
                 scrollbarPadding: false,
-                icon: 'success',
-                title: '登出成功',
-                text: '將跳回首頁',
-            }).then((result) => {
-                logout = User.clearUserInfo();
-                reLogin = User.plsReLogin();
+                icon: 'error',
+                title: '請輸入有效的電子郵件地址'
             });
         }
-    })
+    });
 });
 
+async function getUserByEmail(email) {
+    try {
+        const token = localStorage.getItem('token');
+        axios.defaults.headers.common['Authorization'] = token;
+
+        const res = await axios.get(`${VITE_BASEURL}/users/${email}`);
+        if (res.data) {
+            return res.data;
+        } else {
+            console.log('找不到用戶資料');
+            return null;
+        }
+    } catch (err) {
+        console.log(err);
+        return null;
+    }
+}
 
 
 forms.forEach(function (form) {
@@ -165,13 +227,15 @@ function validation() {
     }
 
     if (registerNicknameValue === '') {
-        setErrorFor(registerNickname, '密碼不得為空');
+        setErrorFor(registerNickname, '暱稱不得為空');
     } else {
         setSuccessFor(registerNickname);
     }
 
     if (registerPwdValue === '') {
         setErrorFor(registerPwd, '密碼不得為空');
+    } else if (registerPwdValue.length < 6) {
+        setErrorFor(registerPwd, '密碼至少需要6個字元');
     } else {
         setSuccessFor(registerPwd);
     }
@@ -183,6 +247,7 @@ function validation() {
     } else {
         setSuccessFor(verifyEmail);
     }
+    return;
 }
 
 function setErrorFor(input, message) {
@@ -191,7 +256,7 @@ function setErrorFor(input, message) {
     errTxt.innerText = message;
 }
 function setSuccessFor(input) {
-    const formFloating = input.parentElement;
+    const formControl = input.parentElement;
 }
 function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
