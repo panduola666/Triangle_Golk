@@ -75,8 +75,12 @@ searchModal.addEventListener('submit',(e) => {
             platform.push(`platform=${checkbox.value}`);
         }
     });
-
-    console.log(searchModal['nav-search-bar'].value);
+    let str = '?'
+    str += platform.join('&')
+    if(searchModal['nav-search-bar'].value){
+        str += `${platform.length ? '&' : ''}q=${searchModal['nav-search-bar'].value}`
+    }
+    location.href = `/pages/course.html${str === '?' ? '' : str}`
 })
 
 // 小鈴鐺
