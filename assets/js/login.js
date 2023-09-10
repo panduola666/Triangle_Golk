@@ -102,74 +102,72 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     // 登出
     logoutBtn.forEach(btn => {
-        btn.forEach(btn => {
-            btn.addEventListener('click', async (e) => {
-                e.preventDefault()
-                validation()
-                // 彈出是否登出視窗
-                const confirmation = await Swal.fire({
-                    scrollbarPadding: false,
-                    icon: 'question',
-                    title: '確定要登出嗎',
-                    showCancelButton: true,
-                });
-                if (confirmation.isConfirmed) {
-                    // 登出成功視窗
-                    Swal.fire({
-                        scrollbarPadding: false,
-                        icon: 'success',
-                        title: '登出成功',
-                        text: '將跳回首頁',
-                    }).then((result) => {
-                        logout = User.clearUserInfo();
-                        location.href = 'index.html'
-                        //     location.href = 'index.html'
-                        // reLogin = User.plsReLogin();
-                    });
-                }
-            })
-        })
-
-        //忘記密碼
-        forgetForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            validation();
-            const email = forgetForm['verify-email'].value.trim();
-
-            // 發送請求以查找用戶
-            if (isEmail(email)) {
-                // 發送請求以查找用戶
-                getUserByEmail(email)
-                    .then((user) => {
-                        if (user) {
-                            console.log(`用戶的 email 為：${user.email}`);
-                            Swal.fire({
-                                scrollbarPadding: false,
-                                icon: 'success',
-                                title: '已寄送重設密碼連結'
-                            });
-                            location.href = 'reset_password.html';
-                        } else {
-                            Swal.fire({
-                                scrollbarPadding: false,
-                                icon: 'error',
-                                title: '查無此帳號'
-                            });
-                        }
-                    })
-                    .catch((err) => {
-                        console.log('查找用戶時發生錯誤', err);
-                    });
-            } else {
-                // 如果電子郵件地址無效，顯示錯誤消息
+        btn.addEventListener('click', async (e) => {
+            e.preventDefault()
+            validation()
+            // 彈出是否登出視窗
+            const confirmation = await Swal.fire({
+                scrollbarPadding: false,
+                icon: 'question',
+                title: '確定要登出嗎',
+                showCancelButton: true,
+            });
+            if (confirmation.isConfirmed) {
+                // 登出成功視窗
                 Swal.fire({
                     scrollbarPadding: false,
-                    icon: 'error',
-                    title: '請輸入有效的電子郵件地址'
+                    icon: 'success',
+                    title: '登出成功',
+                    text: '將跳回首頁',
+                }).then((result) => {
+                    logout = User.clearUserInfo();
+                    location.href = 'index.html'
+                    //     location.href = 'index.html'
+                    // reLogin = User.plsReLogin();
                 });
             }
-        });
-    })
+        })
+    });
+
+    //忘記密碼
+    forgetForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        validation();
+        const email = forgetForm['verify-email'].value.trim();
+
+        // 發送請求以查找用戶
+        if (isEmail(email)) {
+            // 發送請求以查找用戶
+            getUserByEmail(email)
+                .then((user) => {
+                    if (user) {
+                        console.log(`用戶的 email 為：${user.email}`);
+                        Swal.fire({
+                            scrollbarPadding: false,
+                            icon: 'success',
+                            title: '已寄送重設密碼連結'
+                        });
+                        location.href = 'reset_password.html';
+                    } else {
+                        Swal.fire({
+                            scrollbarPadding: false,
+                            icon: 'error',
+                            title: '查無此帳號'
+                        });
+                    }
+                })
+                .catch((err) => {
+                    console.log('查找用戶時發生錯誤', err);
+                });
+        } else {
+            // 如果電子郵件地址無效，顯示錯誤消息
+            Swal.fire({
+                scrollbarPadding: false,
+                icon: 'error',
+                title: '請輸入有效的電子郵件地址'
+            });
+        }
+    });
 });
 
 async function getUserByEmail(email) {
