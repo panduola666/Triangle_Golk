@@ -10,9 +10,18 @@
   border-radius: 99px;
   padding: 6px 16px;
   font-size: 16px;
-  &s{
+  &-list{
+    max-width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* mobile隱藏scroll軸 */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome Safari */
+    }
     @media(min-width: 992px){
-    width: 51rem;
+    max-width: 51rem;
     }
   }
 }
