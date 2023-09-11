@@ -83,7 +83,9 @@
 
         <!-- 小鈴鐺 -->
         <li class="position-relative d-flex">
-          <span class="material-symbols-outlined cur-point notify-btn"> notifications </span>
+          <span class="material-symbols-outlined cur-point notify-btn">
+            notifications
+          </span>
           <!-- 有消息時的提示 -->
           <span class="notify-info d-none"></span>
           <!-- 通知欄 -->
@@ -98,12 +100,10 @@
                 <span>2023-01-23 12:00:00</span>
                 <span class="material-symbols-outlined cur-point">
                   delete
-                  </span>
+                </span>
               </p>
             </li>
-            <li class="py-2 px-sm text-center small cur-point">
-              顯示更多
-            </li>
+            <li class="py-2 px-sm text-center small cur-point">顯示更多</li>
           </ul>
         </li>
 
@@ -222,7 +222,10 @@
       >
         登入 / 註冊
       </li>
-      <li class="aside-item aside-sign-out py-3 px-4 cur-point logout-btn" id="logout-btn">
+      <li
+        class="aside-item aside-sign-out py-3 px-4 cur-point logout-btn"
+        id="logout-btn"
+      >
         登出
       </li>
     </ul>
@@ -308,7 +311,7 @@
                     required
                   />
                   <label for="login-email">信箱</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <div class="invalid-feedback">信箱不得為空</div>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -321,7 +324,7 @@
                     required
                   />
                   <label for="login-password">密碼</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <div class="invalid-feedback">密碼不得為空</div>
                 </div>
                 <div class="d-flex flex-column gap-4">
                   <button
@@ -361,8 +364,8 @@
                     placeholder="name@example.com"
                     required
                   />
-                  <label for="floating-input">信箱（註冊後不可更改）</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <label for="register-email">信箱（註冊後不可更改）</label>
+                  <div class="invalid-feedback">信箱不得為空</div>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -373,10 +376,10 @@
                     placeholder="nickname"
                     required
                   />
-                  <label for="floating-nickname"
+                  <label for="register-nickname"
                     >暱稱（日後可更改，最多 5 字）</label
                   >
-                  <div class="invalid-feedback">Error message</div>
+                  <div class="invalid-feedback">暱稱不得為空</div>
                 </div>
                 <div class="form-floating mb-3">
                   <input
@@ -388,8 +391,8 @@
                     autocomplete="on"
                     required
                   />
-                  <label for="floating-password">密碼</label>
-                  <div class="invalid-feedback">Error message</div>
+                  <label for="register-password">密碼（至少 6 個字元）</label>
+                  <div class="invalid-feedback">密碼不得為空</div>
                 </div>
                 <button class="btn btn-secondary w-100" type="submit">
                   註冊會員
@@ -411,6 +414,7 @@
                 type="email"
                 class="form-control"
                 id="verify-email"
+                name="verify-email"
                 placeholder="name@example.com"
                 required
               />
@@ -418,7 +422,7 @@
               <div class="invalid-feedback">請輸入信箱</div>
             </div>
             <div class="mb-3">
-              <button class="btn btn-secondary w-100" type="button">
+              <button class="btn btn-secondary w-100" type="submit">
                 寄送重設密碼連結
               </button>
             </div>
@@ -451,7 +455,7 @@
           aria-label="Close"
         ></button>
       </div>
-      <form class="modal-body">
+      <form class="modal-body search-modal">
         <div class="mb-3">
           <label for="nav-search-bar" class="form-label">關鍵字</label>
           <div class="position-reative">
@@ -462,6 +466,7 @@
             <input
               id="nav-search-bar"
               type="search"
+              name="nav-search-bar"
               class="form-control search-value w-100"
               placeholder="請輸入關鍵字"
             />
@@ -473,11 +478,11 @@
             <input
               class="form-check-input"
               type="checkbox"
-              value="六角平台"
+              value="六角學院"
               name="platform"
-              id="六角平台"
+              id="六角學院"
             />
-            <label class="form-check-label" for="六角平台"> 六角平台 </label>
+            <label class="form-check-label" for="六角學院"> 六角學院 </label>
           </div>
           <div class="form-check">
             <input
@@ -508,6 +513,16 @@
               id="Coursera"
             />
             <label class="form-check-label" for="Coursera"> Coursera </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="其他平台"
+              name="platform"
+              id="其他平台"
+            />
+            <label class="form-check-label" for="其他平台"> 其他平台 </label>
           </div>
         </div>
         <div>

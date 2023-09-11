@@ -1,8 +1,15 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+import { Course, Comment } from '../api/index'
 
-
+// TODO
+// 1. 點擊關鍵字跳轉搜尋
+// 2. 學員推課獲取評論
+// 3. 最新課程
+// 4. 申請新課
+// console.log(await Comment.getBest()); => 獲取評分高於4的評論
+// console.log(await Course.getNewThree()); => 獲取最新的三個課程
 
 // swiper 配置
 const swiper = new Swiper('.other-courses', {

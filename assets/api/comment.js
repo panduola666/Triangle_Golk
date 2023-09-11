@@ -103,5 +103,13 @@ export const Comment = {
     } catch (err) {
       console.log(err);
     }
+  },
+  async getBest() {
+    try {
+      const res = await axios.get(`${VITE_BASEURL}/comments?score_gte=4`);
+      return res.data
+    } catch (err) {
+      console.log(err);
+    }
   }
-};
+}
