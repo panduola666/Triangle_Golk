@@ -11,17 +11,52 @@
   padding: 6px 16px;
   font-size: 16px;
   &-list{
+    @media(min-width: 992px){
+      max-width: 51rem;
+    }
     max-width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
-    /* mobile隱藏scroll軸 */
+    /* mobile版標籤群隱藏scroll軸 */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
     &::-webkit-scrollbar {
       display: none; /* Chrome Safari */
     }
+  }
+}
+.introduction-body{
+  &-title{
+    padding: 12px 16px;
+  }
+  &-text{
+    font-size: 20px;
     @media(min-width: 992px){
-    max-width: 51rem;
+      font-size: 24px;
+    }
+  }
+}
+.feature-card {
+  border-radius: 16px;
+  padding: 24px 8px;
+  @media(min-width: 992px){
+    padding: 24px 16px;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img{
+    max-width: 88px;
+    max-height: 88px;
+  }
+  p{
+    margin-bottom: 0;
+  }
+  text-align: center;
+  &-text{
+    font-size: 16px;
+    @media(min-width: 992px){
+      font-size: 20px;
     }
   }
 }
@@ -88,3 +123,19 @@
   }
 }
 
+.latest-courses{
+  &-title{
+    margin-bottom: 36px;
+    @media(min-width: 992px){
+      margin-bottom: 48px;
+    }
+  }
+  &-hover:hover{
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.30);
+  }
+}
+.applying-pic-view{
+  position: absolute;
+  top: 0;
+  right: 20%;
+}
