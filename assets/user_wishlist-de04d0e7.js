@@ -1,6 +1,6 @@
-import"./main-4c0e2c7d.js";import"./user_nav-b8e04adf.js";import{l as p}from"./index-67a1f798.js";import{F as m}from"./favorites-13c837a1.js";import"https://cdn.jsdelivr.net/npm/aos@2.3.4/+esm";import"./course-4f13abac.js";const b=document.querySelector(".book-left"),y=document.querySelector(".boot-right"),g=document.querySelector(".pc-marks"),f=document.querySelector(".h5-marks");let v,n,l;async function $(){try{p(),v=await m.getUserFavorites(),n=v.reduce((t,s)=>(t[s.course.platform]?t[s.course.platform].push(s):t.其他平台.push(s),t),{六角學院:[],Hahow:[],Udemy:[],Coursera:[],其他平台:[]}),p(n),l=Object.keys(n)[0],i(u(n,1,l)),d()}catch(t){console.log(t)}}$();function i(t){const{currentPage:s,totalPages:e,data:o}=t;console.log(o),b.innerHTML=`
+import"./main-c97ccc8c.js";import"./user_nav-b8e04adf.js";import{l as p}from"./index-9c62c766.js";import{F as m}from"./favorites-c1abf628.js";import"https://cdn.jsdelivr.net/npm/aos@2.3.4/+esm";import"./course-70a6c6b8.js";const b=document.querySelector(".book-left"),y=document.querySelector(".boot-right"),f=document.querySelector(".pc-marks"),g=document.querySelector(".h5-marks");let v,r,c;async function $(){try{p(),v=await m.getUserFavorites(),r=v.reduce((t,s)=>(t[s.course.platform]?t[s.course.platform].push(s):t.其他平台.push(s),t),{六角學院:[],Hahow:[],Udemy:[],Coursera:[],其他平台:[]}),p(r),c=Object.keys(r)[0],i(u(r,1,c)),d()}catch(t){console.log(t)}}$();function i(t){const{currentPage:s,totalPages:e,data:n}=t;b.innerHTML=`
     <div class="notebook-cards-group">
-    ${o[0].map(a=>`
+    ${n[0].map(a=>`
     <div class="notebook-card-frame">
         <div class="card wishlist-note-card mb-3">
         <div class="row g-0">
@@ -11,7 +11,7 @@ import"./main-4c0e2c7d.js";import"./user_nav-b8e04adf.js";import{l as p}from"./i
             <div class="card-body pb-1">
                 <h2 class="card-title fs-6 text-truncate">${a.course.title}</h2>
                 <div class="user-courses-tags mb-2 mb-lg-3">
-                ${a.course.tags.map(r=>`<span class="card-text me-2 fs-8">#${r}</span>`).join("")}
+                ${a.course.tags.map(o=>`<span class="card-text me-2 fs-8">#${o}</span>`).join("")}
                 </div>
                 <div class="stars d-flex justify-content-end">
                 <div class="stars-icon text-primary me-1 me-md-2">
@@ -38,7 +38,7 @@ import"./main-4c0e2c7d.js";import"./user_nav-b8e04adf.js";import{l as p}from"./i
     </div>
     `,y.innerHTML=`
     <div class="notebook-cards-group">
-    ${o[1].map(a=>`
+    ${n[1].map(a=>`
     <div class="notebook-card-frame">
         <div class="card wishlist-note-card mb-3">
         <div class="row g-0">
@@ -49,7 +49,7 @@ import"./main-4c0e2c7d.js";import"./user_nav-b8e04adf.js";import{l as p}from"./i
             <div class="card-body pb-1">
                 <h2 class="card-title fs-6 text-truncate">${a.course.title}</h2>
                 <div class="user-courses-tags mb-2 mb-lg-3">
-                ${a.course.tags.map(r=>`<span class="card-text me-2 fs-8">#${r}</span>`).join("")}
+                ${a.course.tags.map(o=>`<span class="card-text me-2 fs-8">#${o}</span>`).join("")}
                 </div>
                 <div class="stars d-flex justify-content-end">
                 <div class="stars-icon text-primary me-1 me-md-2">
@@ -77,8 +77,8 @@ import"./main-4c0e2c7d.js";import"./user_nav-b8e04adf.js";import{l as p}from"./i
       </div>
       <button class="btn btn-secondary px-2 py-1 mt-3 small ${s===e?"d-none":""}" data-page="${s+1}">下一頁</button>
     </div>
-    `}function d(){const t=["teal","blue","orange","yellow","gray-200"];g.innerHTML=Object.keys(n).map((s,e)=>`<li class="bookmark ${l===s?"":"bookmark-unselected"} mb-2 py-1 bg-${t[e]} cur-point" data-tag="${s}">
-      <span class="fs-tiny"> ${s}(${n[s].length})</span>
-        </li>`).join(""),f.innerHTML=Object.keys(n).map((s,e)=>` <li class="bookmark ${l===s?"":"bookmark-unselected"} me-1 py-1 bg-${t[e]} fs-tiny cur-point" data-tag="${s}">
-      ${s}(${n[s].length})
-    </li>`).join("")}function u(t,s=1,e,o=8){const a=Math.ceil(t[e].length/o),r=t[e];return s<1?(console.log("已經在第一頁"),{totalPages:a,currentPage:s,data:c(r.slice(0,o))}):s>a?(console.log("已經最後一頁"),{totalPages:a,currentPage:s,data:c(r.slice(r.length-o))}):{totalPages:a,currentPage:s,data:c(r.slice(s*o-o,s*o))}}function c(t){return[t.slice(0,4),t.slice(4)]}g.addEventListener("click",t=>{t.target.dataset.tag&&(l=t.target.dataset.tag,i(u(n,1,l)),d())});f.addEventListener("click",t=>{t.target.dataset.tag&&(l=t.target.dataset.tag,i(u(n,1,l)),d())});
+    `}function d(){const t=["teal","blue","orange","yellow","gray-200"];f.innerHTML=Object.keys(r).map((s,e)=>`<li class="bookmark ${c===s?"":"bookmark-unselected"} mb-2 py-1 bg-${t[e]} cur-point" data-tag="${s}">
+      <span class="fs-tiny"> ${s}(${r[s].length})</span>
+        </li>`).join(""),g.innerHTML=Object.keys(r).map((s,e)=>` <li class="bookmark ${c===s?"":"bookmark-unselected"} me-1 py-1 bg-${t[e]} fs-tiny cur-point" data-tag="${s}">
+      ${s}(${r[s].length})
+    </li>`).join("")}function u(t,s=1,e,n=8){const a=Math.ceil(t[e].length/n),o=t[e];return s<1?{totalPages:a,currentPage:s,data:l(o.slice(0,n))}:s>a?{totalPages:a,currentPage:s,data:l(o.slice(o.length-n))}:{totalPages:a,currentPage:s,data:l(o.slice(s*n-n,s*n))}}function l(t){return[t.slice(0,4),t.slice(4)]}f.addEventListener("click",t=>{t.target.dataset.tag&&(c=t.target.dataset.tag,i(u(r,1,c)),d())});g.addEventListener("click",t=>{t.target.dataset.tag&&(c=t.target.dataset.tag,i(u(r,1,c)),d())});

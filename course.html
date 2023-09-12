@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>課程清單</title>
     <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico" />
-    <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
-    <script type="module" crossorigin src="/Triangle_Golk/assets/main-4c0e2c7d.js"></script>
-    <script type="module" crossorigin src="/Triangle_Golk/assets/apply_course-d3ddfdd4.js"></script>
-    <script type="module" crossorigin src="/Triangle_Golk/assets/course-e457a27c.js"></script>
-    <link rel="stylesheet" href="/Triangle_Golk/assets/main-752ef303.css">
+    <link
+      href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/Triangle_Golk/assets/main-c97ccc8c.js"></script>
+    <script type="module" crossorigin src="/Triangle_Golk/assets/apply_course-832c2178.js"></script>
+    <script type="module" crossorigin src="/Triangle_Golk/assets/course-0eba3b26.js"></script>
+    <link rel="stylesheet" href="/Triangle_Golk/assets/main-9ccd8961.css">
   </head>
 
   <body>
@@ -419,7 +422,7 @@
           </div>
         </div>
         <div class="slide-forget" id="forget">
-          <form class="container forget-from needs-validation" novalidate>
+          <form class="container forget-form needs-validation" novalidate>
             <div class="d-flex flex-column align-items-center mb-3">
               <span class="material-symbols-outlined lock-icon mb-3"
                 >lock_reset</span
@@ -557,8 +560,8 @@
         </div>
         <div class="filter-panel bg-light p-3 mb-4">
           <form>
-            <div class="search-box d-flex flex-row align-items-center">
-              <label for="search-bar" class="me-3">關鍵字</label>
+            <div class="search-box d-flex flex-row align-items-center mb-1">
+              <label for="search-bar" class="fw-bold me-3">關鍵字</label>
               <div class="search-bar position-reative flex-grow-1 py-1 ps-2">
                 <span
                   class="material-symbols-outlined search-icon position-absolute text-gray-300 py-1 px-2"
@@ -572,74 +575,70 @@
                 />
               </div>
             </div>
-            <div class="filter-title d-none d-md-block">
-              <p class="my-1">平台</p>
-            </div>
-            <div
-              class="filter-container d-flex justify-content-between align-items-center mt-2 mt-md-0"
-            >
-              <div class="filter-content d-none d-md-block">
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  id="hex-check"
-                />
-                <label class="form-check-label me-3" for="hex-check"
-                  >六角學院</label
-                >
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  id="udemy-check"
-                />
-                <label class="form-check-label me-3" for="udemy-check"
-                  >Udemy</label
-                >
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  id="hahow-check"
-                />
-                <label class="form-check-label me-3" for="hahow-check"
-                  >Hahow</label
-                >
-                <input
-                  class="form-check-input me-1"
-                  type="checkbox"
-                  id="coursera-check"
-                />
-                <label class="form-check-label me-3" for="coursera-check"
-                  >Coursera</label
-                >
-              </div>
-              <div class="d-block d-md-none">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-outline-secondary dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+            <div class="d-flex align-items-center">
+              <p class="fw-bold my-1 me-5 text-nowrap">平台</p>
+              <div class="filter-content d-flex flex-wrap">
+                <div>
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    id="hex-check"
+                  />
+                  <label class="form-check-label me-3" for="hex-check"
+                    >六角學院</label
                   >
-                    平台
-                  </button>
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton1"
+                </div>
+                <div>
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    id="udemy-check"
+                  />
+                  <label class="form-check-label me-3" for="udemy-check"
+                    >Udemy</label
                   >
-                    <li><a class="dropdown-item" href="#">六角學院</a></li>
-                    <li><a class="dropdown-item" href="#">Udemy</a></li>
-                    <li><a class="dropdown-item" href="#">Hahow</a></li>
-                    <li><a class="dropdown-item" href="#">Coursera</a></li>
-                  </ul>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    id="hahow-check"
+                  />
+                  <label class="form-check-label me-3" for="hahow-check"
+                    >Hahow</label
+                  >
+                </div>
+                <div>
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    id="coursera-check"
+                  />
+                  <label class="form-check-label me-3" for="coursera-check"
+                    >Coursera</label
+                  >
+                </div>
+                <div>
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    id="coursera-check"
+                  />
+                  <label class="form-check-label me-3" for="coursera-check"
+                    >其他平台</label
+                  >
                 </div>
               </div>
+            </div>
+            <div
+              class="filter-container d-flex justify-content-end align-items-center mt-2 mt-md-0"
+            >
               <div class="side-btn d-flex flex-row">
                 <button class="btn border-0 d-flex flex-row align-items-center">
                   <span class="material-symbols-outlined outline-icon"
                     >delete</span
                   >
-                  <span>清空條件</span>
+                  <span clasa="text-nowrap">清空條件</span>
                 </button>
                 <button class="btn btn-secondary text-secondry">搜尋</button>
               </div>
@@ -1075,11 +1074,11 @@
                       for="comment"
                       >請寫下你的理由</label
                     >
-                   <!-- 文字編輯器 start -->
-                   <div id="editor—wrapper">
-                    <div id="toolbar-container"><!-- 工具栏 --></div>
-                    <div id="editor-container"><!-- 编辑器 --></div>
-                  </div>
+                    <!-- 文字編輯器 start -->
+                    <div id="editor—wrapper">
+                      <div id="toolbar-container"><!-- 工具栏 --></div>
+                      <div id="editor-container"><!-- 编辑器 --></div>
+                    </div>
                     <!-- <textarea
                       class="form-control comment small py-1 ps-2"
                       id="comment"
