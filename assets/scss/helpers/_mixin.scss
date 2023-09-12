@@ -1,5 +1,11 @@
 @mixin mob {
-    @media(max-width:375px){
-        @content;
-    }
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+/* Medium devices (tablets, 768px and down) */
+@mixin pad {
+  @media (max-width: 767px) {
+    @content;
+  }
 }
