@@ -20,7 +20,7 @@
   
   
   .triangle-one{
-
+    cursor: pointer;
     border-color:transparent transparent gray;
     transform-origin:center bottom;
     transform: translateX(50px) translateY(50px) rotateX(-90deg);
@@ -51,13 +51,13 @@
 
 
 .triangle-two{
-    
-    border-color:transparent transparent lightgrey;
+    cursor: pointer;
+    border-color:transparent transparent rgb(184, 184, 184);
     transform-origin:center bottom;
-    transform: translateX(50px) translateY(50px) rotateX(-19.5deg);
+    // transform: translateX(50px) translateY(50px) rotateX(-19.5deg);
+    transform: translateX(25px) translateY(50px) rotateY(60deg) rotateX(-19.5deg);
     border-width:0 50px 87px;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    transition: border-color 5s;
     
 
     &:hover{
@@ -82,7 +82,7 @@
 
 
 .triangle-three{
-   
+    cursor: pointer;
     border-color:transparent transparent lightgray;
     transform-origin:right bottom;
     transform :translateX(50px) translateY(50px) rotateY(60deg) rotateX(19.5deg);
@@ -113,7 +113,7 @@
 }
 
 .triangle-four{
- 
+    cursor: pointer;
     border-width:10px 50px 30px;
     border-color:transparent transparent darkgray;
     transform-origin:left bottom;
