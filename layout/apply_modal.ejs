@@ -1,0 +1,106 @@
+<div
+  class="modal fade"
+  id="apply-modal"
+  tabindex="-1"
+  aria-labelledby="apply-modalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5 fw-bold" id="apply-modalLabel">申請新課</h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form class="apply-form needs-validation d-flex flex-column" novalidate>
+          <div class="mb-3">
+            <label
+              class="form-label form-required fw-bold mb-1"
+              for="course-name"
+              >課程名稱</label
+            >
+            <input
+              class="form-control small py-1 ps-2"
+              id="course-name"
+              type="text"
+              placeholder="請輸入課程名稱"
+              required
+            />
+            <div class="invalid-feedback">請輸入課程名稱</div>
+          </div>
+
+          <div class="mb-3">
+            <label
+              class="form-label form-required fw-bold mb-1"
+              for="brand-name"
+              >該課程開設在哪家平台</label
+            >
+            <input
+              class="form-control small py-1 ps-2"
+              id="brand-name"
+              type="text"
+              placeholder="請輸入平台名稱"
+              required
+            />
+            <div class="invalid-feedback">請輸入平台名稱</div>
+          </div>
+
+          <div class="mb-3">
+            <label
+              class="form-label form-required fw-bold mb-1"
+              for="course-link"
+              >該課程的頁面連結</label
+            >
+            <input
+              class="form-control small py-1 ps-2"
+              id="course-link"
+              type="text"
+              placeholder="請輸入課程連結"
+              required
+            />
+            <div class="invalid-feedback">請輸入課程連結</div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label form-required fw-bold mb-1" for="comment"
+              >請寫下你的理由</label
+            >
+            <!-- 文字編輯器 start -->
+            <div id="editor—wrapper">
+              <div id="toolbar-container"><!-- 工具栏 --></div>
+              <div id="editor-container"><!-- 编辑器 --></div>
+            </div>
+            <!-- <textarea
+                      class="form-control comment small py-1 ps-2"
+                      id="comment"
+                      cols="30"
+                      rows="10"
+                      placeholder="最多不超過 400 字"
+                      maxlength="400"
+                      minlength="5"
+                      required
+                    ></textarea> -->
+            <div class="invalid-feedback">請寫下你的理由</div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              取消
+            </button>
+            <button type="submit" class="btn btn-secondary" id="show-alert">
+              送出申請
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
