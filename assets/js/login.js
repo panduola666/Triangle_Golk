@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     icon: 'success',
                     title: "註冊成功"
                 });
-                console.log(res);
                 registerForm.reset();
                 return res.data;
             })
@@ -85,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     icon: 'success',
                     title: "登入成功"
                 });
-                console.log(res);
                 return res.data;
             })
             .catch(err => {

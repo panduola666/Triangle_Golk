@@ -132,7 +132,6 @@ notifyMenu.addEventListener('click',async (e) => {
 navSearch.addEventListener('mouseenter', showSearch)
 navSearch.addEventListener('click', showSearch)
 function showSearch() {
-    console.log(1);
     navSearch.classList.remove('border-0')
     searchType.classList.remove('d-none')
     searchValue.classList.remove('d-none')

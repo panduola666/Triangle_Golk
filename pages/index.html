@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>三角構客</title>
   <link rel="icon" type="image/png" href="../assets/images/favicon.ico">
+  <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -36,7 +38,7 @@
             熱門關鍵字
           </p>
           <ul class="index-tag-list w-100 p-0 d-flex flex-nowrap flex-lg-wrap gap-2 list-unstyled">
-            <li class="index-tag text-nowrap">CSS</li>
+            <!-- <li class="index-tag text-nowrap">CSS</li>
             <li class="index-tag text-nowrap">手工藝</li>
             <li class="index-tag text-nowrap">程式</li>
             <li class="index-tag text-nowrap">日文</li>
@@ -52,7 +54,7 @@
             <li class="index-tag text-nowrap">商業攝影</li>
             <li class="index-tag text-nowrap">投資理財</li>
             <li class="index-tag text-nowrap">影音剪辑</li>
-            <li class="index-tag text-nowrap">表演藝術</li>
+            <li class="index-tag text-nowrap">表演藝術</li> -->
           </ul>
         </div>
       </div>
@@ -201,8 +203,9 @@
           </div>
         </section>
           <div class="swiper other-courses w-100 position-relative pt-2 pt-lg-0">
+            <p class="mb-0 fs-3 d-none">暫無推課</p>
             <ul class="swiper-wrapper align-items-center px-3">
-              <li class="swiper-slide p-5 bg-primary rounded-4 d-flex flex-column cur-point card-hover">
+              <!-- <li class="swiper-slide p-5 bg-primary rounded-4 d-flex flex-column cur-point card-hover">
                 <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
                 <div class="fs-4 mb-4 flex-grow-1">
                   <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
@@ -231,47 +234,7 @@
                   <img src="../assets/images/avatar-02.svg" alt="" class="recommend-avatar">
                   <p class="fs-6 mb-0">Arkii</p>
                 </div>
-              </li>
-              <li class="swiper-slide p-5 bg-primary rounded-4 d-flex flex-column cur-point card-hover">
-                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
-                <div class="fs-4 mb-4 flex-grow-1">
-                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
-                </div>
-                <div class="d-flex align-items-center gap-3">
-                  <img src="../assets/images/avatar-02.svg" alt="" class="recommend-avatar">
-                  <p class="fs-6 mb-0">Arkii</p>
-                </div>
-              </li>
-              <li class="swiper-slide p-5 bg-orange rounded-4 d-flex flex-column cur-point card-hover">
-                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
-                <div class="fs-4 mb-4 flex-grow-1">
-                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
-                </div>
-                <div class="d-flex align-items-center gap-3">
-                  <img src="../assets/images/avatar-02.svg" alt="" class="recommend-avatar">
-                  <p class="fs-6 mb-0">Arkii</p>
-                </div>
-              </li>
-              <li class="swiper-slide p-5 bg-blue rounded-4 d-flex flex-column cur-point card-hover">
-                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
-                <div class="fs-4 mb-4 flex-grow-1">
-                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
-                </div>
-                <div class="d-flex align-items-center gap-3">
-                  <img src="../assets/images/avatar-02.svg" alt="" class="recommend-avatar">
-                  <p class="fs-6 mb-0">Arkii</p>
-                </div>
-              </li>
-              <li class="swiper-slide p-5 bg-primary rounded-4 d-flex flex-column cur-point card-hover">
-                <h4 class="fs-5 mb-4">JavaScript 核心篇</h4>
-                <div class="fs-4 mb-4 flex-grow-1">
-                  <p>講解用心，不但提供許多範例，也有問必答，是最佳的學習管道</p>
-                </div>
-                <div class="d-flex align-items-center gap-3">
-                  <img src="../assets/images/avatar-02.svg" alt="" class="recommend-avatar">
-                  <p class="fs-6 mb-0">Arkii</p>
-                </div>
-              </li>
+              </li> -->
             </ul>
           <div class="swiper-pagination d-flex justify-content-center justify-content-lg-start gap-3"></div>
         </div>
@@ -280,9 +243,9 @@
     <div class="bg-blue py-xl py-lg-xxl">
       <section class="container">
         <h3 class="latest-courses-title fs-2 fw-bold text-center">最新課程</h3>
-        <ul class="row row-cols-1 row-cols-lg-3 gy-3 gy-md-l list-unstyled">
-          <li class="d-flex flex-column">
-            <a class="card border-0 latest-courses-hover h-100 rounded-4" href="#">
+        <ul class="row row-cols-1 row-cols-lg-3 gy-3 gy-md-l list-unstyled new-courses">
+          <!-- <li class="d-flex flex-column">
+            <a class="card border-0 latest-courses-hover h-100 rounded-4" href="./coursepages.html">
               <div class="pic">
                 <img
                   src="/assets/images/index_course1.jpeg"
@@ -403,7 +366,7 @@
                 </div>
               </div>
             </a>
-          </li>
+          </li> -->
         </ul>
       </section>
     </div>
@@ -426,7 +389,10 @@
               <p class="mb-4">Triangle Golk 提供「課程申請」服務，
                 <span class="d-lg-block">只要向我們提出申請，待審核通過後，就能在平台上看到課程哦！</span>
               </p>
-              <button class="btn btn-secondary align-self-lg-start">申請新課程</button>
+              <button  type="button" class="btn btn-secondary align-self-lg-start"
+              data-bs-toggle="modal"
+          data-bs-target="#apply-modal"
+          >申請新課程</button>
             </div>
           </div>
         </div>
@@ -486,11 +452,122 @@
       </div>
     </section>
   </main>
+
   <%- include('./layout/footer'); -%>
+</div>
+<!-- 申請新課 modal -->
+<div
+class="modal fade"
+id="apply-modal"
+tabindex="-1"
+aria-labelledby="apply-modalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 class="modal-title fs-5 fw-bold" id="apply-modalLabel">
+        申請新課
+      </h3>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form
+        class="apply-form needs-validation d-flex flex-column"
+        novalidate
+      >
+        <div class="mb-3">
+          <label
+            class="form-label form-required fw-bold mb-1"
+            for="course-name"
+            >課程名稱</label
+          >
+          <input
+            class="form-control small py-1 ps-2"
+            id="course-name"
+            type="text"
+            placeholder="請輸入課程名稱"
+            required
+          />
+          <div class="invalid-feedback">請輸入課程名稱</div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label form-required fw-bold mb-1"
+            for="brand-name"
+            >該課程開設在哪家平台</label
+          >
+          <input
+            class="form-control small py-1 ps-2"
+            id="brand-name"
+            type="text"
+            placeholder="請輸入平台名稱"
+            required
+          />
+          <div class="invalid-feedback">請輸入平台名稱</div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label form-required fw-bold mb-1"
+            for="course-link"
+            >該課程的頁面連結</label
+          >
+          <input
+            class="form-control small py-1 ps-2"
+            id="course-link"
+            type="text"
+            placeholder="請輸入課程連結"
+            required
+          />
+          <div class="invalid-feedback">請輸入課程連結</div>
+        </div>
+
+        <div class="mb-4">
+          <label
+            class="form-label form-required fw-bold mb-1"
+            for="comment"
+            >請寫下你的理由</label
+          >
+          <div id="editor—wrapper">
+            <div id="toolbar-container"><!-- 工具栏 --></div>
+            <div id="editor-container"><!-- 编辑器 --></div>
+          </div>
+          <div class="invalid-feedback">請寫下你的理由</div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            data-bs-dismiss="modal"
+          >
+            取消
+          </button>
+          <button
+            type="submit"
+            class="btn btn-secondary"
+            id="show-alert"
+          >
+            送出申請
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 </div>
 
     <script type="module" src="../main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script type="module" src="../assets/js/index.js"></script>
+    <script type="module" src="../assets/js/apply_course.js"></script>
+
 </body>
 
 </html>

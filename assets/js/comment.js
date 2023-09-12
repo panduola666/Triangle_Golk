@@ -57,7 +57,7 @@ async function init() {
       renderCourseCard(res)
     }
     catch(err) {
-      location.href = '/pages/user_courses.html'
+      location.href = 'user_courses.html'
     }
   }
   isShowName(params.showName)
