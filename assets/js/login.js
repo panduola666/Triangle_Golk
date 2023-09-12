@@ -139,15 +139,21 @@ document.addEventListener("DOMContentLoaded", function () {
         if (isEmail(email)) {
             // 發送請求以查找用戶
             getUserByEmail(email)
-                .then((user) => {
+                .then(async (user) => {
                     if (user) {
                         console.log(`用戶的 email 為：${user.email}`);
-                        Swal.fire({
+                        const swal = await Swal.fire({
                             scrollbarPadding: false,
                             icon: 'success',
-                            title: '已寄送重設密碼連結'
+                            title: '已寄送重設密碼連結',
+                            showConfirmButton: false, // 隱藏確認按鈕
+                            timer: 1500, // 過多少毫秒後消失
                         });
-                        location.href = 'reset_password.html';
+                        if(swal.isDismissed || swal.isConfirmed) {
+                            // 這邊判斷 swal 彈窗消失 or 點擊確認按鈕後才會往下繼續的行為
+                            // 這樣就不會彈窗還沒看到就立刻換頁
+                            location.href = 'reset_password.html';
+                        }
                     } else {
                         Swal.fire({
                             scrollbarPadding: false,
@@ -175,13 +181,15 @@ async function getUserByEmail(email) {
         const token = localStorage.getItem('token');
         axios.defaults.headers.common['Authorization'] = token;
 
-        const res = await axios.get(`${VITE_BASEURL}/users/${email}`);
-        if (res.data) {
-            return res.data;
-        } else {
-            console.log('找不到用戶資料');
-            return null;
-        }
+        // 1. 這邊找到指定 email 的用戶
+        const res = await axios.get(`${VITE_BASEURL}/users?email=${email}`);
+        // 2. 這個方式的回傳是一個陣列, 如果找不到會回傳 []
+        return res.data[0];
+        // if (res.data) {
+        // } else {
+        //     console.log('找不到用戶資料');
+        //     return null;
+        // }
     } catch (err) {
         console.log(err);
         return null;

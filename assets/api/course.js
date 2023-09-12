@@ -87,4 +87,25 @@ export const Course = {
       });
     }
   },
+  async getNewThree() {
+    try {
+      const res = await axios.get(`${VITE_BASEURL}/courses?_sort=id&_order=desc&_limit=3&_embed=comments`);
+       // 計算課程平均分數
+       const final = res.data.map((course) => {
+        const { comments = [] } = course;
+
+        const avgScore =
+          comments.reduce((total, item) => (total += Number(item.score)), 0) /
+          (comments.length || 1);
+
+        return {
+          ...course,
+          avgScore: Math.floor(avgScore),
+        };
+      });
+      return final;
+    } catch (err) {
+      console.log(err);
+    }
+  }
 };
