@@ -62,7 +62,7 @@ searchChoose.addEventListener('click', e => {
 searchBtn.addEventListener('click', e => {
     const key = searchType.textContent.trim() === '平台' ? 'platform' : 'q'
     const value = searchValue.value.trim()
-        location.href = `/pages/course.html${value? `?${key}=${value}` : ''}`
+        location.href = `course.html${value? `?${key}=${value}` : ''}`
 })
 searchModal.addEventListener('submit',(e) => {
     e.preventDefault()
@@ -80,7 +80,7 @@ searchModal.addEventListener('submit',(e) => {
     if(searchModal['nav-search-bar'].value){
         str += `${platform.length ? '&' : ''}q=${searchModal['nav-search-bar'].value}`
     }
-    location.href = `/pages/course.html${str === '?' ? '' : str}`
+    location.href = `course.html${str === '?' ? '' : str}`
 })
 
 // 小鈴鐺
