@@ -40,8 +40,10 @@
     &:hover {
       opacity: 1;
     }
-    &.active {
-      border: 2px solid $primary;
-    }
   }
+}
+.albumPic-active {
+  border-radius: 25px;
+  overflow: hidden;
+  transition: 0.5s;
 }

@@ -8,7 +8,7 @@ const back = document.querySelector("#back-btn");
 const forms = document.querySelectorAll('.needs-validation');
 const loginForm = document.querySelector('.login-form');
 const registerForm = document.querySelector('.register-form');
-const forgetForm = document.querySelector('.forget-from');
+const forgetForm = document.querySelector('.forget-form');
 const logoutBtn = document.querySelectorAll(".logout-btn");
 const loginEmail = document.getElementById('login-email');
 const loginPwd = document.getElementById('login-password');
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             showConfirmButton: false, // 隱藏確認按鈕
                             timer: 1500, // 過多少毫秒後消失
                         });
-                        if(swal.isDismissed || swal.isConfirmed) {
+                        if (swal.isDismissed || swal.isConfirmed) {
                             // 這邊判斷 swal 彈窗消失 or 點擊確認按鈕後才會往下繼續的行為
                             // 這樣就不會彈窗還沒看到就立刻換頁
                             location.href = 'reset_password.html';

@@ -35,13 +35,12 @@
                   <div class="col-12 col-md-6 d-flex flex-column">
                     <form class="d-flex flex-column">
                       <div class="d-flex flex-column mb-4">
-                        <label class="form-label" for="name">暱稱</label>
+                        <label class="form-label" for="nickName">暱稱</label>
                         <input
-                          class="form-control"
-                          id="name"
+                          class="form-control name"
+                          id="nickName"
                           type="text"
                           value="林小明"
-                          readonly
                         />
                       </div>
                       <div class="d-flex flex-column mb-4">
@@ -49,25 +48,26 @@
                         <input
                           class="form-control"
                           id="email"
-                          type="text"
+                          type="email"
                           value="email@example.com"
                           readonly
                         />
                       </div>
                     </form>
                     <div
-                      class="edit-btn d-flex justify-content-between mt-auto"
+                      class="d-flex justify-content-between mt-auto"
                     >
                       <div>
                         <button
                           class="btn btn-outline-secondary border-0"
-                          id="changePwd-btn"
+                          id="changePwd-btn" type="button"
                         >
                           變更密碼
                         </button>
                       </div>
                       <div>
-                        <button class="btn btn-secondary">編輯</button>
+                        <button class="btn btn-secondary" id="edit-btn">編輯</button>
+                        <button class="btn btn-secondary d-none" id="save-btn">儲存</button>
                       </div>
                     </div>
                   </div>
@@ -92,7 +92,7 @@
             </div>
             <div class="swiper-slide">
               <div class="swiper-prev-btn">
-                <button class="btn" id="prev-btn">
+                <button class="btn" id="prev-btn" type="button">
                   <span class="material-symbols-outlined prev-icon">navigate_before<span>
                 </button>
               </div>
@@ -101,47 +101,50 @@
                   <h2 class="fs-4 fw-bold">變更密碼</h2>
                 </div>
                 <div class="card-body">
-                  <form id="changePwdForm">
+                  <form action="#" class="needs-validation"  id="changePwdForm" novalidate>
                     <div class="form-floating mb-3">
                       <input
                         class="form-control"
-                        id="floating-old"
+                        id="now-pwd"
                         type="password"
                         placeholder="目前的密碼"
                         autocomplete="off"
-                      />
-                      <label class="form-required" for="floating-old">
+                        required/>
+                      <label class="form-required" for="now-pwd">
                         目前的密碼
                       </label>
+                      <div class="invalid-feedback">欄位不得為空</div>
                     </div>
                     <div class="form-floating mb-3">
                       <input
                         class="form-control"
-                        id="floating-new"
+                        id="set-newPwd"
                         type="password"
                         placeholder="請輸入新密碼"
                         autocomplete="off"
-                        name="new-pwd"
-                      />
-                      <label class="form-required" for="floating-new">
+                        name="set-newPwd"
+                        required/>
+                      <label class="form-required" for="set-newPwd">
                         請輸入新密碼
                       </label>
+                      <div class="invalid-feedback">欄位不得為空</div>
                     </div>
                     <div class="form-floating mb-3">
                       <input
                         class="form-control"
-                        id="floating-re"
+                        id="re-pwd"
                         type="password"
                         placeholder="再次輸入新密碼"
                         autocomplete="off"
                         name="re-pwd"
-                      />
-                      <label class="form-required" for="floating-re">
+                        required/>
+                      <label class="form-required" for="re-pwd">
                         再次輸入新密碼
                       </label>
+                      <div class="invalid-feedback">欄位不得為空</div>
                     </div>
 
-                    <button type="submit" class="btn btn-secondary w-100 py-2">
+                    <button type="submit" class="btn btn-secondary w-100 py-2" id="save-changePwd">
                       更改密碼
                     </button>
                   </form>
@@ -177,7 +180,7 @@
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
                     <img
-                      class="opacity-100"
+                      class="avatar-img opacity-100"
                       src="../assets/images/avatar-04.svg"
                       alt="徽章頭像"
                     />
@@ -185,37 +188,37 @@
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img src="../assets/images/avatar-05.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-05.svg" alt="徽章頭像" />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img src="../assets/images/avatar-06.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-06.svg" alt="徽章頭像" />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img src="../assets/images/avatar-07.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-07.svg" alt="徽章頭像" />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img src="../assets/images/avatar-08.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-08.svg" alt="徽章頭像" />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img src="../assets/images/avatar-01.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-01.svg" alt="徽章頭像" />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img src="../assets/images/avatar-02.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-02.svg" alt="徽章頭像" />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img src="../assets/images/avatar-03.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-03.svg" alt="徽章頭像" />
                   </button>
                 </div>
               </div>
