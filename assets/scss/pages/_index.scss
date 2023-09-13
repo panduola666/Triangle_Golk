@@ -155,34 +155,41 @@
     transform: translateY(-20px) rotate(5deg);
   }
 }
-.apply-index-btn {
-  position: relative;
-  border-radius: 0 10px;
-  transition: background-color 0.3s ease-in-out;
-  transition: border 0.3s ease-in-out;
-  z-index: 3;
-  overflow: visible;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 2px solid $secondary;
+@media(min-width: 992px){
+  .apply-index-btn {
+    position: relative;
     border-radius: 0 10px;
-    opacity: 1;
-    z-index: 1;
-    pointer-events: none;
-    transition: transform 0.3s ease-in-out; 
-    transform: translate(-100px, 0px); /* 初始狀態下在btn底部 */
-  }
-  &:hover {
-    background-color: $blue;
-    color: $white;
-    border: $blue;
+    transition: background-color 0.3s ease-in-out;
+    transition: border 0.3s ease-in-out;
+    z-index: 3;
+    overflow: visible;
+    &:hover {
+      background-color: $blue;
+      color: $white;
+      border: $blue;
+    }
     &::after {
-      transform: translate(-90px, -5px); /* hover時向上 */
-      outline: 2px solid $white;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      outline: 2px solid $secondary;
+      border-radius: 0 10px;
+      opacity: 1;
+      z-index: 1;
       pointer-events: none;
+      transition: transform 0.3s ease-in-out; 
+      transform: translate(-100px, 0px); /* 初始狀態下在btn底部 */
+    }
+    &:hover {
+      background-color: $blue;
+      color: $white;
+      border: $blue;
+      &::after {
+        transform: translate(-90px, -5px); /* hover時向上 */
+        outline: 2px solid $white;
+        pointer-events: none;
+      }
     }
   }
 }
