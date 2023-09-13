@@ -1,13 +1,13 @@
 // 專門用來寫新課申請 API
 import 'https://unpkg.com/@wangeditor/editor@latest/dist/index.js';
 import Swal from 'sweetalert2';
-import { Modal } from 'bootstrap';
+import bootstrap from 'bootstrap';
 import { CoursesApplies } from '../api/index';
 
 const applyForm = document.querySelector('.apply-form');
 const applyBtn = document.querySelector('.apply-btn');
 const modal = document.querySelector('#apply-modal')
-const applyModal = new Modal(modal);
+const applyModal = new bootstrap.Modal(modal);
 
 let content;
 applyBtn.addEventListener('click', () => applyModal.show());
