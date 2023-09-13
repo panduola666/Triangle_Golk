@@ -25,7 +25,6 @@ async function init() {
     try {
 
         const res = await axios.get(`${VITE_BASEURL}/users`);
-        console.log(res.data);
 
         if (res.data && res.data.length > 0) {
             userInfo.nickName = res.data[0].nickName;

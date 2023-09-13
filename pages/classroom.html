@@ -12,12 +12,18 @@
     <link href="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 " rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
     <title>進修室</title>
     <link rel="icon" type="image/png" href="../assets/images/favicon.ico">
 </head>
 
 <body>
 <div class="min-vh-100 d-flex flex-column">  
+
       <%- include('./layout/nav'); -%>
           <main class="container ">
   
@@ -42,17 +48,17 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
                       </ul>
                     </div>
   
-              </div>
+                  </div>
               
               <!-- 座位區 -->
   
               <div class="container border border-secondary w-auto  pb-4 px-5 col-9 m-auto ">
   
                   <!-- 課程名稱 -->
-                  <span class=" container course-title d-flex justify-content-around mb-3 align-items-center ">
-                  <span class=" d-flex justify-content-around border border-secondary p-3 bg-primary">
-                      <button class=" btn btn-outline-secondary text-nowrap fw-bold bg-white m-auto">六角學院</button>
-                      <h1 class=" page-title fw-bold  ms-2 ">JavaScript 核心篇</h1>
+                  <span class=" container course-title d-flex justify-content-around mb-3 align-items-center">
+                  <span class=" d-flex justify-content-around border border-secondary p-3 bg-primary  shadow-sm">
+                      <span class=" border border-secondary bg-secondary rounded text-nowrap text-primary fw-bold m-auto p-2 align-content-center">六角學院</span>
+                      <h1 class=" page-title fw-bold text-secondary ms-2 m-auto ">JavaScript 核心篇</h1>
                   </span>
               </span>
   
@@ -60,25 +66,25 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 <!-- 座位 -->
 
 
-<div class="container py-5">
+<div class="seat container py-5">
 
-    <ul class="container col-auto row list-unstyled g-lg-6 g-md-4 g-2 mb-5  align-items-center m-auto h-auto justify-content-around  ">
+    <ul class="container col-auto row list-unstyled g-lg-6 g-md-3 g-2 mb-5  align-items-center m-auto h-auto justify-content-around  m-lg-auto m-sm-auto m-md-auto ">
 
-     <li class=" triangle col-lg-3 col-md-4 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+     <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
       <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
       <!-- <div class="triangle-container  d-flex d-inline-block align-middle position-relative flex-shrink-1  "> -->
 
         <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto  "></span>
-            <span class="triangle-two   col-auto  "></span>
-            <span class="triangle-three col-auto  "></span>
-            <span class="triangle-four col-auto  "></span>
+            <span class="triangle-one col-auto"> </span>
+            <span class="triangle-two  col-auto">  </span>
+            <span class="triangle-three col-auto"> </span>
+            <span class="triangle-four col-auto"> </span>
             
       </div>
     </li>
 
 
-    <li class=" triangle col-lg-3 col-md-4 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
       <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
       
 
@@ -92,7 +98,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
     </li>
 
 
-    <li class=" triangle col-lg-3 col-md-4 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
       <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
      
 
@@ -106,7 +112,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
     </li>
 
 
-    <li class=" triangle col-lg-3 col-md-4 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
       <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
      
 
@@ -119,7 +125,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       </div>
     </li>
 
-    <li class=" triangle col-lg-3 col-md-4 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
       <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
      
 
@@ -133,7 +139,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
     </li>
 
 
-    <li class=" triangle col-lg-3 col-md-4 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
       <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
      
 
@@ -146,7 +152,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       </div>
     </li>
 
-    <li class=" triangle col-lg-3 col-md-4 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
       <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
      
 
@@ -159,7 +165,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       </div>
     </li>
 
-    <li class=" triangle col-lg-3 col-md-4 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
       <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
      
 
@@ -174,7 +180,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 
  
 
-    <li class=" triangle col-lg-3 col-md-4 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
       <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
      
 
@@ -188,7 +194,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
     </li>
 
 
-    <li class=" triangle col-lg-3 col-md-4 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
       <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
      
 
@@ -201,7 +207,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       </div>
     </li>
 
-    <li class=" triangle col-lg-3 col-md-4 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
       <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
      
 
@@ -214,7 +220,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       </div>
     </li>
 
-    <li class=" triangle col-lg-3 col-md-4 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
       <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
      
 
@@ -228,127 +234,111 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
     </li>
 
   </ul>
+
+</div>
+
+<!-- 聊天窗 -->
+
+ <!--button-->
+ <div id="chat-circle" class="border border-primary bg-primary fw-bold  m-5 shadow rounded-circle p-3 d-flex justify-content-center align-items-center">
+  <div id="chat-overlay shadow"></div>
+  <span class="material-icons text-secondary">
+    chat_bubble
+    </span>
+</div>
+
+<!--chat-bot-->
+<div class="chat-box ms-lg-5 ms-md-5 ms-sm-1  me-lg-5 me-md-5 shadow">
+  <div class="chat-box-body bg-primary">
+      
+    <!--welcome message-->
+      <div class="chat-box-welcome__header">
+          <div class="chat-box__header-text">
+              <p3 class="chat-box-welcome__company-name"></p3>
+              <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+          </div>
+
+          <div id="chat-box-welcome__ava">
+              <img class="chat-box-welcome_robot" src="../assets/images/icon-logo.png">
+          </div>
+          <div class="chat-box-welcome__welcome-text">
+              <p class="mt-4 text-secondary h6">Hi Goalker! 準備好一起建構未來的夥伴關係了嗎？讓我們一起向前進吧 🚀</p>
+          </div>
+      </div>
+
+
+      <!--chat-bot after welcome was toggled-->
+      <div id="chat-box__wraper">
+          <div class="chat-box-header bg-primary  text-secondary fw-bold">熊熊
+              <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+          </div>
+
+
+          <div class="chat-box-overlay">
+          </div>
+          <div class="chat-logs bg-light">
+              <div id="cm-msg-0" class="chat-msg bot">
+                  <span class="msg-avatar">
+             <img class="chat-box-overlay_robot rounded-circle" src="../assets/images/chat.png" alt="完課徽章-LV1">     
+            </span>
+            <span class="cm-msg-text shadow-sm rounded text-secondary fw-bold bg-light">哈囉 我是熊熊 有人在嗎 </span>
+              </div>
+
+              <div id="cm-msg-0" class="chat-msg bot">
+                <span class="msg-avatar">
+           <img class="chat-box-overlay_robot rounded-circle" src="../assets/images/chat.png" alt="完課徽章-LV1">     
+           </span>
+          <span class="cm-msg-text shadow-sm rounded text-secondary fw-bold bg-light">這裡好安靜啊 😆 </span>
+            </div>
+
+            <!-- <div id="cm-msg-0" class="chat-msg bot d-flex justify-content-end mt-5">
+              <span class="msg-avatar">
+         <img class="chat-box-overlay_robot rounded-circle" src="../assets/images/chat2.png" alt="完課徽章-LV1">  
+         <span class="bg-primary text-white m-auto shadow" style="font-size: xx-small;">兔</span>   
+         </span>
+         
+        <span class="cm-msg-text shadow-sm rounded text-secondary fw-bold bg-secondary-subtle"> 
+          哈囉 我是兔兔 </span>
+          </div> -->
+
+
+              <div class="spin-container">
+                  <div class="spiner">
+                      <div aria-hidden="true"></div>
+                      <div aria-hidden="true"></div>
+                      <div aria-hidden="true"></div>
+                  </div>
+              </div>
+          </div>
+
+          <!--chat-log-->
+      </div>
+
+  </div>
+  <div class="chat-input-box" id="chatLog">
+      <form class="chat-input__form">
+         <input type="text" class="chat-input__text" id="chat-input__text" placeholder="寫下學習的點點滴滴..." /> 
+          <button type="submit" class="chat-submit" id="chat-submit">
+            <i class="material-icons text-secondary">send</i>
+        </button>
+      </form>
+      <p6 class="chat-box__sign text-secondary">Triangle Golk</p6>
+  </div>
 </div>
 
 
-  
-                  <!-- 氣泡框 -->
-              <div class="position-relative message accordion">
-              <button type="button" class=" btn btn-primary fw-bold position-absolute top-100 start-100 translate-middle rounded-circle d-flex justify-content-center align-items-center" data-bs-toggle="modal"
-              data-bs-target="#apply-modal"><span class="material-icons">
-                  chat_bubble
-                  </span>
-          </button>
-      </div>
-  
-          <div class="modal fade" id="apply-modal" tabindex="-1" aria-labelledby="apply-modalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered ">
-                  <div class="modal-content border border-secondary  bg-primary  border-1">
-                  
-                  <!-- 關閉按鈕 -->
-                    <div class="d-flex justify-content-end pt-2 pe-2">
-                    <button type="button" class="btn-close  border border-secondary shadow=" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                      <!-- 聊天室 -->
-  
-                      <div class="container mt-3">
-                         
-              
-                  
-                            <!-- <div class="col-md-auto"> -->
-                              <div class="card chatroom ">
-                                <div class=" pt-1 pb-5">
-                        
-                                  <!-- <div class="message-block"> -->
 
-      <!-- 訊息1 -->
-
-
-           <div class="row gx-2 mb-5 d-flex justify-content-start align-content-center">
-  
-
-     <!-- 圖片 -->
-  
-     <div class="d-flex justify-content-start align-content-start">
-
-     <div class="col-1 mh-100">
-      <div class="avator mt-1  ">
-        <img class="w-auto h-auto opacity-100 border border-light border-5 rounded-circle me-5" src="../assets/images/chat.png" alt="完課徽章-LV1">
-      </div>
-    </div>
-
-    <!-- 使用者名稱 -->
-    <span class="col-8 text-nowrap fw-bold">
-      <span> 熊熊:
-
-        <!-- 訊息 -->
-        <small class="text-muted ms-1">
-            <button class="btn btn-outline-secondary btn-sm text-nowrap align-self-sm-md-center border border-light bg-light border-5 shadow-sm  ">哈囉 有人在嗎 </button>
-        </span>
-    </span>
-       
-      </div>
-
-
-      <div class="d-flex justify-content-start align-content-start">
-
-        <div class="col-1 mh-100">
-         <div class="avator mt-1  ">
-           <img class="w-auto h-auto opacity-100 border border-light border-5 rounded-circle me-5" src="../assets/images/chat.png" alt="完課徽章-LV1">
-         </div>
-       </div>
-   
-       <!-- 使用者名稱 -->
-       <span class="col-8 text-nowrap fw-bold  align-self-center">
-         <span class="fw-bold text-secondary" style="font-size: 16px;"> 熊熊:
-   
-           <!-- 訊息 -->
-               <button class="btn btn-outline-secondary btn-sm text-nowrap align-self-sm-md-center border border-light bg-light shadow-sm  border-5">這裡好安靜啊 </button>
-           </span>
-         </span>
-         </div>
-         </div>
-  
-                                
-                          </div>
-
-                              </div>
-              
-                            <div class="col-md-3 align-self-center">
-  
-                            </div>
-                          
-                        
-                        <footer>
-                          <div class=" pb-3 input-group bg-primary align-self-center rounded ">
-                              <input type="text" class="form-control rounded" v-model="message"  placeholder="讓我們一起用文字，寫下學習之旅的感動吧">
-                              <button class="btn btn-light   rounded-circle align-self-center ms-3" type="button" >
-                                  <span class="material-icons ">
-                                  rocket_launch
-                                  </span></button>
-                            </div>
-                          </div>
-  
-                        </footer>
-                      </div>
-                          </form>
-  
-                        </div>
-                      </div>
-  
-              </div>
-              
-        
-             
+             <!-- 外層 -->
+              </div>    
           </main>
+        </div>
          
     <%- include('./layout/footer'); -%>
-</div>
+
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
       <script type="module" src="../main.js"></script>
-      <script type="module" src="../assets/js/course.js"></script>
       <script type="module" src="../assets/js/classroom.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 
 </html>

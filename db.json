@@ -268,7 +268,7 @@
       "score": 5,
       "content": "<p>非常推薦這門課, 深入淺出我覺得剛剛好, 建議想學習 JS 的小夥伴可以試看看</p>",
       "theme": 1,
-      "isPassed": -1,
+      "isPassed": 1,
       "failContent": "",
       "likes": [],
       "likesNum": 0,
@@ -292,7 +292,7 @@
       "userId": 1,
       "title": "使用HTML、CSS開發一個網站",
       "platform": "六角學院",
-      "reason": "前端三劍客怎麼可以少了 HTML 和 CSS",
+      "reason": "<p>前端三劍客怎麼可以少了 HTML 和 CSS</p>",
       "isPassed": -1,
       "url": "https://www.hexschool.com/courses/html_css.html",
       "timer": 1690092378676
@@ -312,6 +312,70 @@
     {
       "id": 1,
       "keyWord": "CSS"
+    },
+    {
+      "id": 2,
+      "keyWord": "手工藝"
+    },
+    {
+      "id": 3,
+      "keyWord": "程式"
+    },
+    {
+      "id": 4,
+      "keyWord": "日文"
+    },
+    {
+      "id": 5,
+      "keyWord": "比特幣"
+    },
+    {
+      "id": 6,
+      "keyWord": "UI / UX"
+    },
+    {
+      "id": 7,
+      "keyWord": "AI 智能"
+    },
+    {
+      "id": 8,
+      "keyWord": "工業設計"
+    },
+    {
+      "id": 9,
+      "keyWord": "市場行銷"
+    },
+    {
+      "id": 10,
+      "keyWord": "英語會話"
+    },
+    {
+      "id": 11,
+      "keyWord": "寵物溝通"
+    },
+    {
+      "id": 12,
+      "keyWord": "資訊安全"
+    },
+    {
+      "id": 13,
+      "keyWord": "刺繡"
+    },
+    {
+      "id": 14,
+      "keyWord": "商業攝影"
+    },
+    {
+      "id": 15,
+      "keyWord": "投資理財"
+    },
+    {
+      "id": 16,
+      "keyWord": "影音剪辑"
+    },
+    {
+      "id": 17,
+      "keyWord": "表演藝術"
     }
   ]
 }
