@@ -39,7 +39,6 @@ async function init() {
   // 渲染左右頁的課程內容
 function renderBook(curData) {
     const { currentPage, totalPages, data } = curData
-    console.log(data);
     bookLeft.innerHTML = `
     <div class="notebook-cards-group">
     ${data[0].map(item => (`
@@ -144,7 +143,7 @@ function pagination(resData, page = 1, curTag, limit = 8) {
   const data = resData[curTag];
 
   if (page < 1) {
-    console.log('已經在第一頁');
+    // console.log('已經在第一頁');
     // 回傳第一頁資料
     return {
       totalPages,
@@ -153,7 +152,7 @@ function pagination(resData, page = 1, curTag, limit = 8) {
     };
   }
   if (page > totalPages) {
-    console.log('已經最後一頁');
+    // console.log('已經最後一頁');
     // 回傳最後一頁資料
     return {
       totalPages,

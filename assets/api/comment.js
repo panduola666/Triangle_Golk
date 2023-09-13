@@ -1,6 +1,7 @@
 import axios from 'axios';
 import Swal from 'sweetalert2';
 const { VITE_BASEURL } = import.meta.env;
+import { Avatars } from './avatars';
 
 export const Comment = {
   // 新增評論
@@ -14,7 +15,7 @@ export const Comment = {
         showConfirmButton: false,
         timer: 2000,
       });
-      if (swal.isDismissed) location.href = '/pages/user_courses.html';
+      if (swal.isDismissed) location.href = 'user_courses.html';
       return res.data;
     } catch (err) {
       console.log(err);
@@ -36,7 +37,7 @@ export const Comment = {
         showConfirmButton: false,
         timer: 2000,
       });
-      if (swal.isDismissed) location.href = '/pages/user_courses.html';
+      if (swal.isDismissed) location.href = 'user_courses.html';
       return res.data;
     } catch (err) {
       console.log(err);
@@ -46,7 +47,7 @@ export const Comment = {
         text: '修改評論失敗, 請聯繫客服處理',
       });
       if (swal.isConfirmed || swal.isDismissed)
-        location.href = '/pages/user_courses.html';
+        location.href = 'user_courses.html';
     }
   },
   // 獲得當前 id 的評論
@@ -65,7 +66,7 @@ export const Comment = {
         text: '查無此評論',
       });
       if (swal.isConfirmed || swal.isDismissed)
-        location.href = '/pages/user_courses.html';
+        location.href = 'user_courses.html';
     }
   },
   /**
@@ -106,8 +107,12 @@ export const Comment = {
   },
   async getBest() {
     try {
-      const res = await axios.get(`${VITE_BASEURL}/comments?score_gte=4`);
-      return res.data
+      const res = await axios.get(`${VITE_BASEURL}/comments?score_gte=4&_expand=user&_expand=course&isPassed=1`);
+      const avatars = await Avatars.getTotal()
+      return res.data.map(data => ({
+        ...data,
+        avatarUrl: avatars.find(avatar => data.user.avatarId === avatar.id).image
+      }))
     } catch (err) {
       console.log(err);
     }

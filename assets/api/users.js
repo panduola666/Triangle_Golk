@@ -21,7 +21,6 @@ export const User = {
             if(swal.isConfirmed || swal.isDismissed) location.reload()
             return res.data;
         } catch (err) {
-            console.log('登入失敗');
             console.log(err);
         }
      },
@@ -29,10 +28,10 @@ export const User = {
     async register(data) {
         try {
             const res = await axios.post(`${VITE_BASEURL}/users`, data);
-            console.log('註冊成功');
+            // console.log('註冊成功');
             return res.data;
         } catch (err) {
-            console.log('註冊失敗');
+            // console.log('註冊失敗');
         }
     },
     // 登出 or token 失效(已登入超過一小時) => 清除 localStorage 裡面的用戶資料

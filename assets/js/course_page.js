@@ -28,7 +28,7 @@ const otherCourses = document.querySelector('.other-courses > ul')
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.has('id') && urlParams.get('id');
-const sort = urlParams.has('sort') && urlParams.get('sort');
+let sort = urlParams.has('sort') && urlParams.get('sort');
 let course; // 單頁課程資料
 let comments; // 評論畫面列表
 let user; // 用戶資料
@@ -76,7 +76,7 @@ async function init() {
     // 下方更多課程初始化
     renderOthers()
   } catch (err) {
-    console.log(err);
+    // console.log(err);
   }
 }
 function hasTestPassed() {
@@ -116,8 +116,9 @@ function renderCourse(course) {
 // 中間評論畫面渲染
 function renderComment(comments){
   // 該課程沒有評論
+    commentList.classList.remove('justify-content-around')
   if(!comments.data.length) {
-    commentList.innerHTML = `<p class="text-center fs-3 py-4">當前課程尚未評論</p>`
+    commentList.innerHTML = `<li class="text-center fs-3 py-4">當前課程尚未評論</li>`
     return
   }
 
@@ -303,7 +304,6 @@ const swiper = new Swiper('.other-courses', {
   otherBtn.forEach(btn => {
     btn.addEventListener('click', async (e) => {
       e.preventDefault()
-      console.log(btn);
 
       // if(!e.target.dataset.id) return
         const index = user.favorites.findIndex(item => Number(item.courseId) === Number(e.target.dataset.id))
@@ -336,7 +336,6 @@ favoriteBtn.addEventListener('click', async (e) => {
     await Favorites.remove(currId)
   }
   await updateUserInfo()
-  console.log(user);
 
 })
 
@@ -407,7 +406,17 @@ testForm.addEventListener('submit', (e) => {
 
 // 評論分類切換
 navBtn.forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    location.search = `?id=${id}&sort=${e.target.dataset.key}`
+  btn.addEventListener('click', async (e) => {
+    navBtn.forEach(item => item.classList.remove('active'))
+    btn.classList.add('active')
+
+    sort = e.target.dataset.key
+    commentList.classList.add('justify-content-around')
+    commentList.innerHTML = `<li class="spinner-border m-0 text-success" role="status" style="width: 100px; height: 100px;">
+    <span class="visually-hidden">Loading...</span>
+  </li>`
+  const changeData = await Comment.getComments(1, 6, sort, 'desc', id)
+    renderComment(changeData)
+    // location.search = `?id=${id}&sort=${e.target.dataset.key}`
   })
 })

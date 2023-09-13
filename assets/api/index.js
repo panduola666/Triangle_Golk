@@ -6,6 +6,8 @@ import { Passes } from './passes';
 import { Favorites } from './favorites';
 import { Avatars } from './avatars';
 import { Notions } from './Notions';
+import { KeyWords } from './key_words';
+import { CoursesApplies } from './courses_applies';
 
 function loading(apiData) {
     const loading = document.querySelector('.loading')
@@ -20,4 +22,4 @@ function loading(apiData) {
     }
 }
 
-export { User, About, Comment, Course, Passes, Favorites, Avatars, loading, Notions }
+export { User, About, Comment, Course, Passes, Favorites, Avatars, loading, Notions, KeyWords, CoursesApplies }

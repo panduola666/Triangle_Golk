@@ -20,7 +20,6 @@ const verifyEmail = document.getElementById('verify-email');
 // 登入註冊modal
 document.addEventListener("DOMContentLoaded", function () {
     let logout;
-    let reLogin;
 
     forget.addEventListener("click", function (e) {
         e.preventDefault();
@@ -50,9 +49,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     scrollbarPadding: false,
                     icon: 'success',
                     title: "註冊成功"
-                });
-                console.log(res);
-                registerForm.reset();
+                })
+                    .then((result) => {
+                        if (result.isDismissed || result.isConfirmed) {
+                            registerForm.classList.remove('was-validated');
+                            registerForm.reset();
+                        }
+                    })
                 return res.data;
             })
             .catch(err => {
@@ -85,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     icon: 'success',
                     title: "登入成功"
                 });
-                console.log(res);
                 return res.data;
             })
             .catch(err => {
@@ -122,8 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }).then((result) => {
                     logout = User.clearUserInfo();
                     location.href = 'index.html'
-                    //     location.href = 'index.html'
-                    // reLogin = User.plsReLogin();
                 });
             }
         })
