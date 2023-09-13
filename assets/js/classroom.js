@@ -9,8 +9,6 @@ var uiController = (function () {
 })();
 
 
-
-
 var controller = (function (botCntr, uiCntr) {
     var $chatCircle,
         $chatBox,
@@ -44,28 +42,30 @@ var controller = (function (botCntr, uiCntr) {
     }
 
     //generate messages on submit click
-    function submitMsg(evt) {
-        evt.preventDefault();
+    // function submitMsg(evt) {
+    //     evt.preventDefault();
 
-        //1. get input message data
-        msg = $chatSubmitBtn.val();
+    //     //1. get input message data
+    //     msg = $chatSubmitBtn.val();
 
-        //2.if there is no string button send shoudn't work
-        if (msg.trim() == '') {
-            return false;
-        }
-        //3. add message to bot controller
-        callbot(msg);
-        //4. display message to ui controller
-        generate_message(msg, 'self');
+    //     //2.if there is no string button send shoudn't work
+    //     if (msg.trim() == '') {
+    //         return false;
+    //     }
+    //     //3. add message to bot controller
+    //     callbot(msg);
+    //     //4. display message to ui controller
+    //     generate_message(msg, 'self');
 
-    }
+    // }
 
-    function chatSbmBtn(evt) {
-        if (evt.keyCode === 13 || evt.which === 13) {
-            console.log("btn pushed");
-        }
-    }
+    // function chatSbmBtn(evt) {
+    //     if (evt.keyCode === 13 || evt.which === 13) {
+    //         console.log("btn pushed");
+    //     }
+    // }
+    /* var input = uiCntr.getInput();*/
+    /* $chatSubmitBtn.on("click", hideCircle);*/
 
 
 
@@ -100,30 +100,30 @@ var controller = (function (botCntr, uiCntr) {
 })(botController, uiController);
 
 
-$('.chat-input__form').on('submit', function (e) {
-    e.preventDefault();
-  msg = $('.chat-input__text').val();
+// $('.chat-input__form').on('submit', function (e) {
+//     e.preventDefault();
+//   msg = $('.chat-input__text').val();
   
-  $('.chat-logs').append('<div id="cm-msg-0" class="chat-msg background-warning push-right bot"><div class="cm-msg-text">' + msg + '</div><span class="msg-avatar"><img class="chat-box-overlay_robot" src="https://www.meetsource.com//userStyles/images/user.png"></span></div>');  
-  $('.chat-input__text').val('');
-});
+//   $('.chat-logs').append('<div id="cm-msg-0" class="chat-msg background-warning push-right bot"><div class="cm-msg-text">' + msg + '</div><span class="msg-avatar"><img class="chat-box-overlay_robot" src="https://www.meetsource.com//userStyles/images/user.png"></span></div>');  
+//   $('.chat-input__text').val('');
+// });
 
 
 $(document).ready(controller.init);
 
     know = {
-      "hello" : "hi",
-      "how are you?" : "good",
-      "ok" : ":)"
-    };
-    function talk() {
-      var user = document.getElementById("userBox").value;
-      document.getElementById("userBox").value = "";
-      document.getElementById("chatLog").innerHTML += user+"<br>";
-      if (user in know) {
-        document.getElementById("chatLog").innerHTML += know[user]+"<br>";
-      } 
-      else {
-        document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
-      }
+    //   "嗨" : "哈囉",
+    //   "大家好" : "有人在嗎",
+    //   "哈哈" : ":)"
+    // };
+    // function talk() {
+    //   var user = document.getElementById("userBox").value;
+    //   document.getElementById("userBox").value = "";
+    //   document.getElementById("chatLog").innerHTML += user+"<br>";
+    //   if (user in know) {
+    //     document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+    //   } 
+    //   else {
+    //     document.getElementById("chatLog").innerHTML += "我不知道...<br>";
+    //   }
     } 
