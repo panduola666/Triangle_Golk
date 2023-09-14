@@ -156,7 +156,7 @@
   }
 }
 @media(min-width: 992px){
-  .apply-index-btn {
+  .index-applying-btn {
     position: relative;
     border-radius: 0 10px;
     transition: background-color 0.3s ease-in-out;
@@ -189,6 +189,7 @@
         transform: translate(-90px, -5px); /* hover時向上 */
         outline: 2px solid $white;
         pointer-events: none;
+        box-shadow: 0 0 8px -4px $black;
       }
     }
   }
