@@ -44,6 +44,8 @@ function renderBook(curData) {
     ${data[0].map(item => (`
     <div class="notebook-card-frame">
         <div class="card wishlist-note-card mb-3">
+          <span class="material-symbols-outlined outline-icon position-absolute end-0 top-0 text-secondary">heart_minus
+          </span>
         <div class="row g-0">
             <div class="col-4 card-row">
             <img src="${item.course.cover}" class="img-fluid rounded-start" alt="${item.course.title}">

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <%- include('./layout/loading'); -%>
+  <!-- <%- include('./layout/loading'); -%> -->
 <div class="min-vh-100 d-flex flex-column">
   <%- include('./layout/nav'); -%>
   <%- include('./layout/user_nav'); -%>
@@ -54,16 +54,16 @@
       <div class="notebook-pages-only row col g-0">
         <section class="notebook-page-left row col mb-4 row-cols-lg-2 gx-lg-5">
         <!-- 關注清單卡片的 card 樣式 => wishlist-note-card -->
-          <div class="book-left notebook-page-innersection col-lg-6 col-12">
+          <div class="book-left notebook-page-innersection col-lg-6 col-12 position-relative">
             <!-- 空頁面樣式 -->
-            <div id="user-list-empty" class="user-empty comment-style1" style="display: none;">
+            <div id="user-list-empty1" class="user-empty comment-style1" >
               <p class="fs-4 fw-bold mb-4 text-white text-center"
               >本頁還沒有內容喔</p>
               <a href="/pages/course.html" class="btn btn-outline-primary fs-3 fw-bold d-block"
               >出發探索好課</a>
             </div>
-            <!-- <div class="notebook-cards-group">
-              <div class="notebook-card-frame">
+            <div class="notebook-cards-group">
+              <!-- <div class="notebook-card-frame">
                 <div class="card wishlist-note-card mb-3">
                   <span class="material-symbols-outlined outline-icon position-absolute end-0 top-0 text-secondary">
                     heart_minus
@@ -194,9 +194,9 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
-            <div class="d-none d-lg-block justify-content-lg-start">
+            <!-- <div class="d-none d-lg-block justify-content-lg-start">
               <button class="btn btn-secondary px-2 py-1 mt-3 small" disabled>上一頁</button>
             </div> -->
           </div>

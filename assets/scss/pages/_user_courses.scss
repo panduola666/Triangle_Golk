@@ -2,8 +2,8 @@
   min-height: 34.75em;
   min-width: 40%;
   @media (max-width: 992px){
-    min-height: auto;
-    min-width: none;
+    min-height: 100vh;
+  //   min-width: none;
   }
 }
 .notebook-page {
@@ -111,6 +111,21 @@
     }
   }
 }
+/* 空頁面樣式 */
+.user-empty{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media(min-width: 992px){
+    transform: translate(0, -50%);
+  }
+  z-index: 5;
+  padding: 30% 1rem;
+  background: $secondary;
+  height: 30.75em;
+  width: 100%;
+}
 .single-note-card {
   position: relative;
   overflow-y: hidden;
@@ -178,12 +193,4 @@
   background-color: #dadada;
   margin: 0 auto;
   border-radius: 50%;
-}
-.user-empty{
-  z-index: 5;
-  margin: 0 auto;
-  padding: 35% 10%;
-  background: $secondary;
-  min-height: 34.75em;
-  min-width: 40%;
 }
