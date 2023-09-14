@@ -98,6 +98,12 @@ searchModal.addEventListener('submit',(e) => {
 // 小鈴鐺
 async function getNotions(more = false) {
     const res = await Notions.get()
+    notifyInfo.classList.add('d-none')
+    if(!res.length) {
+        notifyMenu.innerHTML = `<li class="py-2 px-sm text-center cur-point">暫無系統消息</li>`
+        return
+    }
+
     if(res.length) notifyInfo.classList.remove('d-none')
 
     const options = {
