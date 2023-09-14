@@ -95,13 +95,18 @@
               class="filter-container d-flex justify-content-end align-items-center mt-2 mt-md-0"
             >
               <div class="side-btn d-flex flex-row">
-                <button class="btn border-0 d-flex flex-row align-items-center">
+                <button
+                  class="btn border-0 d-flex flex-row align-items-center"
+                  id="delete-btn"
+                >
                   <span class="material-symbols-outlined outline-icon"
                     >delete</span
                   >
                   <span clasa="text-nowrap">清空條件</span>
                 </button>
-                <button class="btn btn-secondary text-secondry">搜尋</button>
+                <button class="btn btn-secondary text-secondry" id="search-btn">
+                  搜尋
+                </button>
               </div>
             </div>
           </form>
@@ -168,11 +173,8 @@
         </div>
 
         <ul class="course-list row list-unstyled g-lg-6 g-md-4 g-2 mb-5">
-          <li
-            class="col-lg-4 col-md-6 col-12 d-flex flex-column"
-            id="course-javascript"
-          >
-            <!-- 課程跳頁後面需要帶該課程 id 參數 -->
+          <!-- <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
+            課程跳頁後面需要帶該課程 id 參數
             <a
               class="card card-hover h-100 rounded-4 position-relative"
               href="./coursepages.html?id=1&sort=timer"
@@ -219,8 +221,8 @@
                 </div>
               </div>
             </a>
-          </li>
-          <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
+          </li> -->
+          <!-- <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
             <a class="card card-hover h-100 rounded-4" href="#">
               <div class="pic">
                 <img
@@ -264,8 +266,8 @@
                 </div>
               </div>
             </a>
-          </li>
-          <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
+          </li> -->
+          <!-- <li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
             <a class="card card-hover h-100 rounded-4" href="#">
               <div class="pic">
                 <img
@@ -444,7 +446,7 @@
                 </div>
               </div>
             </a>
-          </li>
+          </li> -->
         </ul>
         <button type="button" class="apply apply-btn btn btn-blue fw-bold">
           申請<br />新課
