@@ -1,3 +1,5 @@
+import { Dropdown } from 'bootstrap';
+
 import { Notions } from "../api/Notions"
 const nav = document.querySelector('.header-nav')
 // 輸入框
@@ -20,6 +22,16 @@ const userMenu = document.querySelector('.user-menu')
 const asideUser = document.querySelector('.aside-user')
 const asideLogin = document.querySelector('.aside-login')
 const asideSignOut = document.querySelector('.aside-sign-out')
+
+const dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+const dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+  return new Dropdown(dropdownToggleEl)
+})
+dropdownElementList.map((item,index) => {
+    item.addEventListener('click', () => {
+        dropdownList[index].toggle()
+    })
+})
 
 const currentPage = window.location.href.split('/').pop().split('.')[0];
 if(localStorage.getItem('token')) {
