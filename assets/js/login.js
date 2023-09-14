@@ -16,6 +16,7 @@ const registerEmail = document.getElementById('register-email');
 const registerNickname = document.getElementById('register-nickname');
 const registerPwd = document.getElementById('register-password');
 const verifyEmail = document.getElementById('verify-email');
+const loginTab = document.getElementById("login-tab");
 
 // 登入註冊modal
 document.addEventListener("DOMContentLoaded", function () {
@@ -54,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         if (result.isDismissed || result.isConfirmed) {
                             registerForm.classList.remove('was-validated');
                             registerForm.reset();
+                            loginTab.click();
                         }
                     })
                 return res.data;
@@ -64,9 +66,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     icon: 'error',
                     title: "註冊失敗",
                     text: '帳號或密碼有誤，請輸入正確資訊'
-                });
-                // 註冊失敗後續處理
-                console.log(err);
+                }).then((result) => {
+                    if (result.isDismissed || result.isConfirmed) {
+                        registerForm.classList.remove('was-validated');
+                        registerForm.reset();
+                    }
+                })
+                // console.log(err);
             });
     });
 
@@ -98,8 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     icon: "error",
                     title: "此帳號不存在或帳號密碼錯誤"
                 });
-                console.log(err);
-
+                // console.log(err);
             })
     })
     // 登出
@@ -191,7 +196,7 @@ async function getUserByEmail(email) {
         //     return null;
         // }
     } catch (err) {
-        console.log(err);
+        // console.log(err);
         return null;
     }
 }

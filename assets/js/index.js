@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Autoplay, Pagination } from 'swiper/modules';
-import { Course, Comment, KeyWords } from '../api/index'
+import { Course, Comment, KeyWords, loading } from '../api/index'
 
 
 const tagList = document.querySelector('.index-tag-list')
@@ -17,9 +17,11 @@ const coursesList = document.querySelector('.new-courses')
 
 
 async function init () {
+  loading()
   const keywords = await KeyWords.get()
   const comments = await Comment.getBest()
   const courses = await Course.getNewThree()
+  loading(comments)
   
   renderKeyWords(keywords)
   renderComments(comments)

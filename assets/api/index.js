@@ -1,5 +1,4 @@
 import { User } from './users';
-import { About } from './about';
 import { Comment } from './comment';
 import { Course } from './course';
 import { Passes } from './passes';
@@ -8,6 +7,7 @@ import { Avatars } from './avatars';
 import { Notions } from './Notions';
 import { KeyWords } from './key_words';
 import { CoursesApplies } from './courses_applies';
+import { UserMail } from './userMails';
 
 function loading(apiData) {
     const loading = document.querySelector('.loading')
@@ -22,4 +22,4 @@ function loading(apiData) {
     }
 }
 
-export { User, About, Comment, Course, Passes, Favorites, Avatars, loading, Notions, KeyWords, CoursesApplies }
+export { User, Comment, Course, Passes, Favorites, Avatars, loading, Notions, KeyWords, CoursesApplies, UserMail }
