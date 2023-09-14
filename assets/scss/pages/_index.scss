@@ -183,7 +183,7 @@
     }
     &:hover {
       background-color: $blue;
-      color: $white;
+      color: $secondary;
       border: $blue;
       &::after {
         transform: translate(-90px, -5px); /* hover時向上 */

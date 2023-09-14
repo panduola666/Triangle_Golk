@@ -10,12 +10,12 @@
 </head>
 
 <body>
-  <%- include('./layout/loading'); -%>
+  <!-- <%- include('./layout/loading'); -%> -->
 
   <div class="min-vh-100 d-flex flex-column">
     <%- include('./layout/nav'); -%>
     <%- include('./layout/user_nav'); -%>
-    <!-- 未完成  dev-check-->
+
       <main class="container my-xl flex-grow-1">
         <article class="notebook row">
           <!-- 電腦版標籤 -->
@@ -40,24 +40,24 @@
             </li> -->
           </ul>
           <!-- 手機板標籤 -->
-          <ul class="h5-marks bookmark-mobile list-unstyled text-center p-1 d-flex d-lg-none my-0">
+          <ul class="h5-marks bookmark-mobile list-unstyled text-center p-1 d-flex d-lg-none my-0 w-100">
             <!-- <li class="bookmark me-1 py-1 bg-teal fs-tiny">
-              六角學院 (333)
+              <span class="d-block text-nowrap">六角學院</span>(333)
             </li>
             <li class="bookmark me-1 bookmark-unselected py-1 bg-blue fs-tiny">
-              Hahow (6)
+              <span class="d-block text-nowrap">Hahow</span>(6)
             </li>
             <li class="bookmark me-1 bookmark-unselected py-1 bg-orange fs-tiny">
-              Udemy (6)
+              <span class="d-block text-nowrap">Udemy</span>(6)
             </li>
             <li class="bookmark me-1 bookmark-unselected py-1 bg-yellow fs-tiny">
-              Coursera (6)
+              <span class="d-block text-nowrap">Coursera</span>(6)
             </li>
             <li class="bookmark me-1 bookmark-unselected py-1 bg-gray-200 fs-tiny">
-              其他平台 (6)
+              <span class="d-block text-nowrap">其他平台</span>(6)
             </li>
             <li class="bookmark bookmark-unselected py-1 bg-primary ms-auto fs-tiny">
-              已完課 (6)
+              <span class="d-block text-nowrap">已完課</span>(6)
             </li> -->
           </ul>
           <div class="notebook-pages-only row col g-0">
@@ -344,6 +344,7 @@
                   </div>
                   <button class="btn btn-secondary px-2 py-1 mt-3 small">下一頁</button>
                 </div> -->
+
               </div>
             </section>
           </div>
@@ -351,6 +352,14 @@
         <div class="box-shadow"></div>
       </main>
 
+      <!-- 空頁面樣式 -->
+      <div id="user-list-empty" class="user-empty comment-style1" style="display: none;">
+        <p class="fs-4 fw-bold mb-4 text-white text-center"
+        >本頁還沒有內容喔</p>
+        <a href="/pages/course.html" class="btn btn-outline-primary fs-3 fw-bold d-block"
+        >出發探索好課</a>
+      </div>
+      
       <!-- 我的評論 modal -->
       <div class="modal fade" id="course-comment" tabindex="-1" aria-labelledby="couse-comment" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered comment-modal">
