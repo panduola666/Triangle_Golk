@@ -51,8 +51,8 @@ function renderBook(curData) {
             <div class="col-8">
             <div class="card-body pb-1">
                 <h2 class="card-title fs-6 text-truncate">${item.course.title}</h2>
-                <div class="user-courses-tags mb-2 mb-lg-3">
-                ${item.course.tags.map(tag => `<span class="card-text me-2 fs-8">#${tag}</span>`).join('')}
+                <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                ${item.course.tags.map(tag => `<span class="card-text fs-8">#${tag}</span>`).join('')}
                 </div>
                 <div class="stars d-flex justify-content-end">
                 <div class="stars-icon text-primary me-1 me-md-2">
@@ -83,6 +83,8 @@ function renderBook(curData) {
     ${data[1].map(item => (`
     <div class="notebook-card-frame">
         <div class="card wishlist-note-card mb-3">
+          <span class="material-symbols-outlined outline-icon position-absolute end-0 top-0 text-secondary">heart_minus
+          </span>
         <div class="row g-0">
             <div class="col-4 card-row">
             <img src="${item.course.cover}" class="img-fluid rounded-start" alt="${item.course.title}">
@@ -90,8 +92,8 @@ function renderBook(curData) {
             <div class="col-8">
             <div class="card-body pb-1">
                 <h2 class="card-title fs-6 text-truncate">${item.course.title}</h2>
-                <div class="user-courses-tags mb-2 mb-lg-3">
-                ${item.course.tags.map(tag => `<span class="card-text me-2 fs-8">#${tag}</span>`).join('')}
+                <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                ${item.course.tags.map(tag => `<span class="card-text fs-8">#${tag}</span>`).join('')}
                 </div>
                 <div class="stars d-flex justify-content-end">
                 <div class="stars-icon text-primary me-1 me-md-2">
@@ -130,7 +132,7 @@ function renderBook(curData) {
     }).join('')
     h5Marks.innerHTML = Object.keys(filterData).map((tag, index) => {
       return ` <li class="bookmark ${curTag === tag ? '' : 'bookmark-unselected'} me-1 py-1 bg-${tagsColor[index]} fs-tiny cur-point" data-tag="${tag}">
-      ${tag}(${filterData[tag].length})
+      <span class="d-block text-nowrap">${tag}</span>(${filterData[tag].length})
     </li>`}).join('')
   }
 

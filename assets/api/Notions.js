@@ -1,6 +1,5 @@
 import axios from "axios";
 const { VITE_BASEURL } = import.meta.env
-import Swal from 'sweetalert2';
 
 export const Notions = {
     async get(){

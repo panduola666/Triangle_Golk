@@ -76,8 +76,8 @@ function renderBook(curData) {
       <div class="col-8">
         <div class="card-body pb-1">
           <h2 class="card-title fs-6 text-truncate">${item.course.title}</h2>
-          <div class="user-courses-tags mb-2 mb-lg-3">
-          ${item.course.tags.map(tag => `<span>#${tag}</span>`).join('')}
+          <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+          ${item.course.tags.map(tag => `<span class="card-text fs-8">#${tag}</span>`).join('')}
           </div>
           <div class="stars d-flex justify-content-end">
             <div class="stars-icon text-primary me-1 me-md-2">
@@ -123,7 +123,7 @@ function renderBook(curData) {
       <div class="col-8">
         <div class="card-body pb-1">
           <h2 class="card-title fs-6 text-truncate">${item.course.title}</h2>
-          <div class="user-courses-tags mb-2 mb-lg-3">${item.course.tags.map(tag => `<span>#${tag}</span>`).join('')}</div>
+          <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">${item.course.tags.map(tag => `<span class="card-text fs-8">#${tag}</span>`).join('')}</div>
           <div class="stars d-flex justify-content-end">
             <div class="stars-icon text-primary me-1 me-md-2">
                 <span class="material-symbols-outlined star-fs ${item.avgScore >= 1 ? '' : 'outline-icon'}">star</span>
@@ -175,7 +175,7 @@ function renderMark(){
   }).join('')
   h5Marks.innerHTML = Object.keys(filterData).map((tag, index) => {
     return ` <li class="bookmark ${curTag === tag ? '' : 'bookmark-unselected'} ${tag === '已完課'? 'ms-auto' : 'me-1'} py-1 bg-${tagsColor[index]} fs-tiny cur-point" data-tag="${tag}">
-    ${tag}(${filterData[tag].length})
+    <span class="d-block text-nowrap">${tag}</span>(${filterData[tag].length})
   </li>`}).join('')
 }
 

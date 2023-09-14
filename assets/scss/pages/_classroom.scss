@@ -1,12 +1,15 @@
 // 三角形
 
+
 .triangle-container {
     transform: scale(1.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 100%; /* 让容器高度充满 li 的高度 */
-    max-width: 50%; /* 调整容器宽度 */
+    // max-height: 100%; /* 让容器高度充满 li 的高度 */
+    // max-width: 50%; /* 调整容器宽度 */
+    margin-top: 90px;
+
     
 }
 
@@ -19,17 +22,17 @@
 }
   
   
-  .triangle-one{
-    cursor: pointer;
-    border-color:transparent transparent gray;
-    transform-origin:center bottom;
-    transform: translateX(50px) translateY(50px) rotateX(-90deg);
-    border-width:0 50px 87px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+//   .triangle-one{
+//     cursor: pointer;
+//     border-color:transparent transparent gray;
+//     transform-origin:center bottom;
+//     transform: translateX(50px) translateY(50px) rotateX(-90deg);
+//     border-width:0 50px 87px;
+//     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
  
 
-    &:hover{
-        border-color:transparent transparent yellow;
+    // &:hover{
+    //     border-color:transparent transparent yellow;
 
         // &::before { 
         //     content: '🪑';
@@ -46,8 +49,8 @@
         // }
 
     
-}
-  }
+// }
+//   }
 
 
 .triangle-two{
@@ -55,9 +58,10 @@
     border-color:transparent transparent rgb(184, 184, 184);
     transform-origin:center bottom;
     // transform: translateX(50px) translateY(50px) rotateX(-19.5deg);
-    transform: translateX(25px) translateY(50px) rotateY(60deg) rotateX(-19.5deg);
+    // transform: translateX(25px) translateY(50px) rotateY(60deg) rotateX(-19.5deg);
     border-width:0 50px 87px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    // clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 53% 100%);
     
 
     &:hover{
@@ -85,10 +89,11 @@
     cursor: pointer;
     border-color:transparent transparent lightgray;
     transform-origin:right bottom;
-    transform :translateX(50px) translateY(50px) rotateY(60deg) rotateX(19.5deg);
+    // transform :translateX(50px) translateY(50px) rotateY(60deg) rotateX(19.5deg);
    
     border-width:0 50px 87px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    // clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 49% 100%, 100% 100%);
     
 
     &:hover{
@@ -117,9 +122,10 @@
     border-width:10px 50px 30px;
     border-color:transparent transparent darkgray;
     transform-origin:left bottom;
-    transform: translateX(50px) translateY(75px) rotateY(0deg) rotateX(9deg);
+    // transform: translateX(50px) translateY(75px) rotateY(0deg) rotateX(9deg);
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  
+    top:2.5px;
+   
 
  &:hover{
         border-color:transparent transparent yellow;

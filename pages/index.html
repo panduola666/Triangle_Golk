@@ -13,6 +13,8 @@
   </head>
 
   <body>
+    <%- include('./layout/loading'); -%>
+
     <div class="min-vh-100 d-flex flex-column">
       <%- include('./layout/nav'); -%>
       <main class="flex-grow-1 overflow-hidden">
@@ -481,7 +483,7 @@
                   </p>
                   <button
                     type="button"
-                    class="btn btn-secondary apply-btn align-self-lg-start"
+                    class="btn btn-secondary apply-btn index-applying-btn align-self-lg-start"
                   >
                     申請新課程
                   </button>
