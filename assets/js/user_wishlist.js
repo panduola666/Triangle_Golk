@@ -51,8 +51,8 @@ function renderBook(curData) {
             <div class="col-8">
             <div class="card-body pb-1">
                 <h2 class="card-title fs-6 text-truncate">${item.course.title}</h2>
-                <div class="user-courses-tags mb-2 mb-lg-3">
-                ${item.course.tags.map(tag => `<span class="card-text me-2 fs-8">#${tag}</span>`).join('')}
+                <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                ${item.course.tags.map(tag => `<span class="card-text fs-8">#${tag}</span>`).join('')}
                 </div>
                 <div class="stars d-flex justify-content-end">
                 <div class="stars-icon text-primary me-1 me-md-2">
@@ -92,8 +92,8 @@ function renderBook(curData) {
             <div class="col-8">
             <div class="card-body pb-1">
                 <h2 class="card-title fs-6 text-truncate">${item.course.title}</h2>
-                <div class="user-courses-tags mb-2 mb-lg-3">
-                ${item.course.tags.map(tag => `<span class="card-text me-2 fs-8">#${tag}</span>`).join('')}
+                <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                ${item.course.tags.map(tag => `<span class="card-text fs-8">#${tag}</span>`).join('')}
                 </div>
                 <div class="stars d-flex justify-content-end">
                 <div class="stars-icon text-primary me-1 me-md-2">

@@ -151,6 +151,7 @@
     height: 100%; /* 半透明底色的目標高度 */
   }
 }
+
 .vertical-line {
   width: 2px; /* 設定分隔線的寬度 */
   height: 75%;
@@ -179,6 +180,7 @@
   border-radius: 50%;
 }
 .user-empty{
+  z-index: 5;
   margin: 0 auto;
   padding: 35% 10%;
   background: $secondary;
