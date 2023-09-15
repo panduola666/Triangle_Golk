@@ -28,26 +28,25 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
           <main class="container ">
   
               <div class="page-header my-4 d-flex justify-content-between">
-                  <span class="d-flex justify-content-between">
-                  <span class="material-symbols-outlined h2">
+                <span class="d-flex justify-content-between align-items-center">
+                  <span class="material-symbols-outlined fs-2">
                       meeting_room
                       </span>
-                  <h2 class="fw-bold">
-                    <a href="./coursepages.html?id=1&sort=timer"> 離開教室</a>
+                  <h2 class="fs-5 mb-0 link-hover">
+                    <a class="page-back"> 離開教室</a>
                   </h2>
               </span>
                   <div class="dropdown">
-                      <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="btn btn-outline-secondary dropdown-toggle" id="dropdown-menu-link" data-bs-toggle="dropdown" aria-expanded="false">
                         教室：R1
-                      </a>
+                      </button>
                     
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">教室：R2</a></li>
+                      <ul class="dropdown-menu dropdown-shadow room-list" aria-labelledby="dropdown-menu-link">
+                        <!-- <li><a class="dropdown-item" href="#">教室：R2</a></li>
                         <li><a class="dropdown-item" href="#">教室：R3</a></li>
-                        <li><a class="dropdown-item" href="#">教室：R4</a></li>
+                        <li><a class="dropdown-item" href="#">教室：R4</a></li> -->
                       </ul>
                     </div>
-  
                   </div>
               
               <!-- 座位區 -->
@@ -55,10 +54,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
               <div class="container border border-secondary w-auto  pb-4 px-5 col-9 m-auto ">
   
                   <!-- 課程名稱 -->
-                  <span class=" container course-title d-flex justify-content-around mb-3 align-items-center">
-                  <span class=" d-flex justify-content-around border border-secondary p-3 bg-primary  shadow-sm">
-                      <span class=" border border-secondary bg-secondary rounded text-nowrap text-primary fw-bold m-auto p-2 align-content-center">六角學院</span>
-                      <h1 class=" page-title fw-bold text-secondary ms-2 m-auto ">JavaScript 核心篇</h1>
+                  <span class="container course-title d-flex justify-content-around mb-3 align-items-center">
+                  <span class="d-flex justify-content-around border border-secondary p-3 bg-primary  shadow-sm">
+                      <span class="border border-secondary bg-secondary rounded text-nowrap text-primary fw-bold m-auto p-2 align-content-center page-platform">六角學院</span>
+                      <h1 class="page-title fw-bold text-secondary ms-2 m-auto ">JavaScript 核心篇</h1>
                   </span>
               </span>
   
@@ -68,17 +67,13 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 
 <div class="seat container py-5 aos-init aos-animate" data-aos="fade-up-right"  >
 
-    <ul class="container col-auto row list-unstyled g-lg-6 g-md-3 g-2 mb-5  align-items-center m-auto h-auto justify-content-around  m-lg-auto m-sm-auto m-md-auto ">
+    <ul class="container col-auto row list-unstyled g-lg-6 g-md-3 g-2 mb-5  align-items-center m-auto h-auto justify-content-around  m-lg-auto m-sm-auto m-md-auto page-table">
 
-     <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-    
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <!-- <span class="triangle-one col-auto"> </span> -->
-            <span class="triangle-two  col-auto">  </span>
-            <span class="triangle-three col-auto"> </span>
-            <span class="triangle-four col-auto"> </span>
-            
+     <li class="triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center text-center">
+      <div class="col-auto triangle-container d-flex justify-content-center align-items-center col-auto">
+          <span class="triangle-two col-auto"></span>
+          <span class="triangle-three col-auto"></span>
+          <span class="triangle-four col-auto"></span>
       </div>
     </li>
 
