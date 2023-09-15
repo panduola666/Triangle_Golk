@@ -7,13 +7,6 @@ import { Course, Comment, KeyWords, loading } from '../api/index'
 const tagList = document.querySelector('.index-tag-list')
 const commentList = document.querySelector('.swiper-wrapper')
 const coursesList = document.querySelector('.new-courses')
-// TODO
-// 1. 點擊關鍵字跳轉搜尋 v
-// 2. 學員推課獲取評論 v
-// 3. 最新課程
-// 4. 申請新課
-// console.log(await Comment.getBest()); => 獲取評分高於4的評論
-// console.log(await Course.getNewThree()); => 獲取最新的三個課程
 
 
 async function init () {
@@ -30,7 +23,7 @@ async function init () {
 init()
 
 function renderKeyWords(keywords) {
-  tagList.innerHTML = keywords.map(word => ` <li class="index-tag text-nowrap">${word.keyWord}</li>`).join('')
+  tagList.innerHTML = keywords.map(word => ` <li class="index-tag text-nowrap cur-point">${word.keyWord}</li>`).join('')
 
 }
 // 學員推課

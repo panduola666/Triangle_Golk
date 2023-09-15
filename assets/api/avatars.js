@@ -21,7 +21,9 @@ export const Avatars = {
       Swal.fire({
         scrollbarPadding: false,
         icon: 'success',
-        title: '頭像變更成功'
+        title: '頭像變更成功',
+        showConfirmButton: false,
+        timer: 1500
       })
       return res.data;
     } catch (err) {

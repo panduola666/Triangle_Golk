@@ -64,6 +64,12 @@ notebook.addEventListener('click', (e) => {
 function renderBook(curData) {
   const { currentPage, totalPages, data } = curData
   bookLeft.innerHTML = `
+    <div id="user-list-empty0" class="user-empty comment-style1 ${data[0].length? 'd-none': ''}">
+      <p class="fs-4 fw-bold mb-4 text-white text-center"
+      >本頁還沒有內容喔</p>
+      <a href="course.html" class="btn btn-outline-primary fs-3 fw-bold d-block"
+      >出發探索好課</a>
+    </div>
   <div class="notebook-cards-group">
   ${data[0].map(item => (`
   <div class="notebook-card-frame position-relative">
@@ -158,7 +164,6 @@ function renderBook(curData) {
     <button class="btn btn-secondary px-2 py-1 mt-3 small ${currentPage === totalPages ? 'd-none' : ''}" data-page="${currentPage + 1}">下一頁</button>
   </div>
   `
-
 
   const modalBtn = document.querySelectorAll('.modal-btn');
 
