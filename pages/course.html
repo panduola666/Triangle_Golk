@@ -20,7 +20,7 @@
           <h2 class="page-title fw-bold">課程清單</h2>
         </div>
         <div class="filter-panel bg-light p-3 mb-4">
-          <form>
+          <form class="filter-form">
             <div class="search-box d-flex flex-row align-items-center mb-1">
               <label for="search-bar" class="fw-bold me-3">關鍵字</label>
               <div class="search-bar position-reative flex-grow-1 py-1 ps-2">
@@ -43,6 +43,8 @@
                   <input
                     class="form-check-input me-1"
                     type="checkbox"
+                    value="六角學院"
+                    name="platform"
                     id="hex-check"
                   />
                   <label class="form-check-label me-3" for="hex-check"
@@ -53,6 +55,8 @@
                   <input
                     class="form-check-input me-1"
                     type="checkbox"
+                    value="Udemy"
+                    name="platform"
                     id="udemy-check"
                   />
                   <label class="form-check-label me-3" for="udemy-check"
@@ -63,6 +67,8 @@
                   <input
                     class="form-check-input me-1"
                     type="checkbox"
+                    value="Hahow"
+                    name="platform"
                     id="hahow-check"
                   />
                   <label class="form-check-label me-3" for="hahow-check"
@@ -73,6 +79,8 @@
                   <input
                     class="form-check-input me-1"
                     type="checkbox"
+                    value="Coursera"
+                    name="platform"
                     id="coursera-check"
                   />
                   <label class="form-check-label me-3" for="coursera-check"
@@ -83,6 +91,8 @@
                   <input
                     class="form-check-input me-1"
                     type="checkbox"
+                    value="其他平台"
+                    name="platform"
                     id="others-check"
                   />
                   <label class="form-check-label me-3" for="others-check"
@@ -98,13 +108,14 @@
                 <button
                   class="btn border-0 d-flex flex-row align-items-center"
                   id="delete-btn"
+                  type="button"
                 >
                   <span class="material-symbols-outlined outline-icon"
                     >delete</span
                   >
                   <span clasa="text-nowrap">清空條件</span>
                 </button>
-                <button class="btn btn-secondary text-secondry" id="search-btn">
+                <button class="btn btn-secondary" id="search-btn" type="submit">
                   搜尋
                 </button>
               </div>

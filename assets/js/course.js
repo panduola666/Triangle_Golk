@@ -6,9 +6,9 @@ import { Favorites, User } from '../api';
 // 取得根據 url 參數篩選出來的全部課程資料
 // 該資料包含 avgScore:平均分 comments:這個課程的全部評論 favorites:點讚這個課程的人id
 // console.log(await Course.getAllCourses());
-const searchBar = document.querySelector("#search-bar");
+
+const filterForm = document.querySelector(".filter-form");
 const deleteBtn = document.querySelector("#delete-btn");
-const searchBtn = document.querySelector("#search-btn");
 const favBtn = document.querySelector(".favorite");
 
 let user;
@@ -132,24 +132,6 @@ function renderPagination() {
     }
   });
 }
-prevBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  if (currentPage > 1) {
-    currentPage--;
-    renderCourseList(currentPage);
-  }
-  updatePaginationBtns(); // 更新分頁按鈕狀態
-});
-
-nextBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  const totalPages = Math.ceil(totalItems / pageItems);
-  if (currentPage < totalPages) {
-    currentPage++;
-    renderCourseList(currentPage);
-  }
-  updatePaginationBtns(); // 更新分頁按鈕狀態
-});
 
 function updatePaginationBtns() {
   const totalPages = Math.ceil(totalItems / pageItems);
@@ -165,6 +147,13 @@ function updatePaginationBtns() {
         </a>
       </li>
     `;
+    const prevPageBtn = pagination.querySelector(".page-prev");
+    prevPageBtn.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--; // 減少當前頁碼
+        renderCourseList(currentPage); // 渲染新頁面資料
+      }
+    });
   }
 
   // 添加頁碼按鈕
@@ -186,8 +175,41 @@ function updatePaginationBtns() {
         </a>
       </li>
     `;
+    const nextPageBtn = pagination.querySelector(".page-next");
+    nextPageBtn.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++; // 增加當前頁碼
+        renderCourseList(currentPage); // 渲染新頁面資料
+      }
+    });
   }
-
-  prevBtn.classList.toggle('active', currentPage !== 1);
-  nextBtn.classList.toggle('d-none', currentPage === totalPages);
 }
+
+filterForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  const checkboxes = filterForm.querySelectorAll('input[type="checkbox"]');
+
+  const platform = [];
+  checkboxes.forEach(function (checkbox) {
+    if (checkbox.checked) {
+      platform.push(`platform=${checkbox.value}`);
+    }
+  });
+  let str = '?'
+  str += platform.join('&')
+  if (filterForm['search-bar'].value) {
+    str += `${platform.length ? '&' : ''}q=${filterForm['search-bar'].value}`
+  }
+  location.href = `course.html${str === '?' ? '' : str}`
+})
+
+deleteBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  filterForm['search-bar'].value = '';
+
+  const checkboxes = filterForm.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(function (checkbox) {
+    checkbox.checked = false;
+  });
+})
