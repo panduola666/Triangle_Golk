@@ -13,6 +13,7 @@
   </head>
 
   <body>
+    <%- include('./layout/loading'); -%>
     <div class="min-vh-100 d-flex flex-column">
       <%- include('./layout/nav'); -%> <%- include('./layout/user_nav'); -%>
       <div class="container flex-grow-1">
@@ -35,18 +36,19 @@
                   <div class="col-12 col-md-6 d-flex flex-column">
                     <form class="d-flex flex-column">
                       <div class="d-flex flex-column mb-4">
-                        <label class="form-label" for="nickName">暱稱</label>
+                        <label class="form-label fs-4" for="nickName">暱稱</label>
                         <input
-                          class="form-control name"
+                          class="form-control name fs-5"
                           id="nickName"
                           type="text"
                           value="林小明"
+                          readonly
                         />
                       </div>
                       <div class="d-flex flex-column mb-4">
-                        <label class="form-label" for="email">帳號</label>
+                        <label class="form-label fs-4" for="email">帳號</label>
                         <input
-                          class="form-control border-0 shadow-none"
+                          class="form-control border-0 shadow-none fs-5"
                           id="email"
                           type="email"
                           readonly
@@ -65,8 +67,8 @@
                         </button>
                       </div>
                       <div>
-                        <button class="btn btn-secondary" id="edit-btn">編輯</button>
-                        <button class="btn btn-secondary d-none" id="save-btn">儲存</button>
+                        <button type="button" class="btn btn-secondary" id="edit-btn">編輯</button>
+                        <button type="button" class="btn btn-secondary d-none" id="save-btn">儲存</button>
                       </div>
                     </div>
                   </div>
@@ -74,12 +76,11 @@
                     <img
                       src="../assets/images/avatar-04.svg"
                       alt="會員頭像"
+                      class="user-avatar"
                     />
                     <button
                       type="button"
-                      class="change btn rounded-circle d-flex justify-content-between align-items-center"
-                      data-bs-toggle="modal"
-                      data-bs-target="#pic-modal"
+                      class="change btn rounded-circle d-flex justify-content-between align-items-center pic-modal-btn"
                     >
                       <span class="material-symbols-outlined fw-bold"
                         >sync_alt</span
@@ -122,6 +123,7 @@
                         placeholder="請輸入新密碼"
                         autocomplete="off"
                         name="set-newPwd"
+                        minlength="6"
                         required/>
                       <label class="form-required" for="set-newPwd">
                         請輸入新密碼
@@ -136,6 +138,7 @@
                         placeholder="再次輸入新密碼"
                         autocomplete="off"
                         name="re-pwd"
+                        minlength="6"
                         required/>
                       <label class="form-required" for="re-pwd">
                         再次輸入新密碼
@@ -175,7 +178,7 @@
               ></button>
             </div>
             <div class="modal-body container album">
-              <div class="row g-4">
+              <!-- <div class="row g-4">
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
                     <img
@@ -220,7 +223,7 @@
                     <img class="avatar-img" src="../assets/images/avatar-03.svg" alt="徽章頭像" />
                   </button>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="modal-footer">
               <button
