@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <!-- <%- include('./layout/loading'); -%> -->
+  <%- include('./layout/loading'); -%>
 <div class="min-vh-100 d-flex flex-column">
   <%- include('./layout/nav'); -%>
   <%- include('./layout/user_nav'); -%>
@@ -56,7 +56,7 @@
         <!-- 關注清單卡片的 card 樣式 => wishlist-note-card -->
           <div class="book-left notebook-page-innersection col-lg-6 col-12 position-relative">
             <!-- 空頁面樣式 -->
-            <div id="user-list-empty1" class="user-empty comment-style1" >
+            <div id="user-list-empty1" class="user-empty comment-style1" style="display: none;">
               <p class="fs-4 fw-bold mb-4 text-white text-center"
               >本頁還沒有內容喔</p>
               <a href="/pages/course.html" class="btn btn-outline-primary fs-3 fw-bold d-block"
