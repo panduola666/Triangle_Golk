@@ -283,9 +283,26 @@
       "courseId": 1,
       "total": 30,
       "onlineUsers": [
-        1
+        {
+          "userId": 1,
+          "site": "1-1"
+        }
       ],
-      "name": "教室一"
+      "name": "R1"
+    },
+    {
+      "id": 2,
+      "courseId": 1,
+      "total": 12,
+      "onlineUsers": [],
+      "name": "R2"
+    },
+    {
+      "id": 3,
+      "courseId": 1,
+      "total": 18,
+      "onlineUsers": [],
+      "name": "R3"
     }
   ],
   "coursesApplies": [

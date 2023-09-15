@@ -8,6 +8,7 @@ import { Notions } from './Notions';
 import { KeyWords } from './key_words';
 import { CoursesApplies } from './courses_applies';
 import { UserMail } from './userMails';
+import { ChatRooms } from './chatRooms'
 
 function loading(apiData) {
     const loading = document.querySelector('.loading')
@@ -22,4 +23,4 @@ function loading(apiData) {
     }
 }
 
-export { User, Comment, Course, Passes, Favorites, Avatars, loading, Notions, KeyWords, CoursesApplies, UserMail }
+export { User, Comment, Course, Passes, Favorites, Avatars, loading, Notions, KeyWords, CoursesApplies, UserMail, ChatRooms }

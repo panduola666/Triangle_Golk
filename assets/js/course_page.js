@@ -83,6 +83,7 @@ function hasTestPassed() {
   testForm.classList.add('d-none')
   testPassed.classList.remove('d-none')
   classroomBtn.classList.remove('d-none')
+  classroomBtn.setAttribute('href', `classroom.html?courseId=${id}`)
 
 }
 // 上方課程畫面渲染
