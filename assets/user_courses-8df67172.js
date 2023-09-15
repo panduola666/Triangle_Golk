@@ -1,4 +1,10 @@
-import{U as x}from"./main-c97ccc8c.js";import"./user_nav-b8e04adf.js";import{l as v}from"./index-9c62c766.js";import{C as S}from"./comment-5ef484fd.js";import{P as w}from"./passes-01c870e9.js";import"https://cdn.jsdelivr.net/npm/aos@2.3.4/+esm";import"./avatars-d33d4d76.js";import"./course-70a6c6b8.js";const j=document.querySelector(".notebook"),P=document.querySelector(".book-left"),L=document.querySelector(".boot-right"),M=document.querySelector(".comment-modal"),f=document.querySelector(".pc-marks"),$=document.querySelector(".h5-marks");let g,y,o,r;async function q(){try{v(),g=await w.getUserPasses(),y=await x.getUserInfo(),o=g.reduce((a,s)=>{const e={...s,comment:y.comments.find(n=>n.courseId===s.courseId)||{}};return a[s.course.platform]?a[s.course.platform].push(e):a.其他平台.push(e),s.isFinish&&a.已完課.push(e),a},{六角學院:[],Hahow:[],Udemy:[],Coursera:[],其他平台:[],已完課:[]}),v(o),r=Object.keys(o)[0],d(u(o,1,r)),p()}catch(a){console.log(a)}}q();j.addEventListener("click",a=>{const{page:s}=a.target.dataset;s&&d(u(o,Number(s),r))});function d(a){const{currentPage:s,totalPages:e,data:n}=a;P.innerHTML=`
+import{U as x}from"./main-b28f6a90.js";import"./user_nav-b8e04adf.js";import{l as v}from"./index-972ae5fb.js";import{C as w}from"./comment-24e62baa.js";import{P as S}from"./passes-b2ed1cd6.js";import"https://cdn.jsdelivr.net/npm/aos@2.3.4/+esm";import"./avatars-7fdc7783.js";import"./course-f55b6d4c.js";const j=document.querySelector(".notebook"),P=document.querySelector(".book-left"),L=document.querySelector(".boot-right"),M=document.querySelector(".comment-modal"),f=document.querySelector(".pc-marks"),$=document.querySelector(".h5-marks");let g,y,o,l;async function q(){try{v(),g=await S.getUserPasses(),y=await x.getUserInfo(),o=g.reduce((a,s)=>{const e={...s,comment:y.comments.find(n=>n.courseId===s.courseId)||{}};return a[s.course.platform]?a[s.course.platform].push(e):a.其他平台.push(e),s.isFinish&&a.已完課.push(e),a},{六角學院:[],Hahow:[],Udemy:[],Coursera:[],其他平台:[],已完課:[]}),v(o),l=Object.keys(o)[0],d(u(o,1,l)),p()}catch(a){console.log(a)}}q();j.addEventListener("click",a=>{const{page:s}=a.target.dataset;s&&d(u(o,Number(s),l))});function d(a){const{currentPage:s,totalPages:e,data:n}=a;P.innerHTML=`
+    <div id="user-list-empty0" class="user-empty comment-style1 ${n[0].length?"d-none":""}">
+      <p class="fs-4 fw-bold mb-4 text-white text-center"
+      >本頁還沒有內容喔</p>
+      <a href="course.html" class="btn btn-outline-primary fs-3 fw-bold d-block"
+      >出發探索好課</a>
+    </div>
   <div class="notebook-cards-group">
   ${n[0].map(t=>`
   <div class="notebook-card-frame position-relative">
@@ -11,8 +17,8 @@ import{U as x}from"./main-c97ccc8c.js";import"./user_nav-b8e04adf.js";import{l a
       <div class="col-8">
         <div class="card-body pb-1">
           <h2 class="card-title fs-6 text-truncate">${t.course.title}</h2>
-          <div class="user-courses-tags mb-2 mb-lg-3">
-          ${t.course.tags.map(c=>`<span>#${c}</span>`).join("")}
+          <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+          ${t.course.tags.map(c=>`<span class="card-text fs-8">#${c}</span>`).join("")}
           </div>
           <div class="stars d-flex justify-content-end">
             <div class="stars-icon text-primary me-1 me-md-2">
@@ -57,7 +63,7 @@ import{U as x}from"./main-c97ccc8c.js";import"./user_nav-b8e04adf.js";import{l a
       <div class="col-8">
         <div class="card-body pb-1">
           <h2 class="card-title fs-6 text-truncate">${t.course.title}</h2>
-          <div class="user-courses-tags mb-2 mb-lg-3">${t.course.tags.map(c=>`<span>#${c}</span>`).join("")}</div>
+          <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">${t.course.tags.map(c=>`<span class="card-text fs-8">#${c}</span>`).join("")}</div>
           <div class="stars d-flex justify-content-end">
             <div class="stars-icon text-primary me-1 me-md-2">
                 <span class="material-symbols-outlined star-fs ${t.avgScore>=1?"":"outline-icon"}">star</span>
@@ -91,11 +97,11 @@ import{U as x}from"./main-c97ccc8c.js";import"./user_nav-b8e04adf.js";import{l a
     </div>
     <button class="btn btn-secondary px-2 py-1 mt-3 small ${s===e?"d-none":""}" data-page="${s+1}">下一頁</button>
   </div>
-  `,document.querySelectorAll(".modal-btn").forEach(t=>{t.addEventListener("click",()=>C(t))})}function p(){const a=["teal","blue","orange","yellow","gray-200","primary"];f.innerHTML=Object.keys(o).map((s,e)=>`<li class="bookmark ${r===s?"":"bookmark-unselected"} mb-2 py-1 bg-${a[e]} cur-point" data-tag="${s}">
+  `,document.querySelectorAll(".modal-btn").forEach(t=>{t.addEventListener("click",()=>C(t))})}function p(){const a=["teal","blue","orange","yellow","gray-200","primary"];f.innerHTML=Object.keys(o).map((s,e)=>`<li class="bookmark ${l===s?"":"bookmark-unselected"} mb-2 py-1 bg-${a[e]} cur-point" data-tag="${s}">
     <span class="fs-tiny">${s}(${o[s].length})</span>
-      </li>`).join(""),$.innerHTML=Object.keys(o).map((s,e)=>` <li class="bookmark ${r===s?"":"bookmark-unselected"} ${s==="已完課"?"ms-auto":"me-1"} py-1 bg-${a[e]} fs-tiny cur-point" data-tag="${s}">
-    ${s}(${o[s].length})
-  </li>`).join("")}async function C(a){const s=await S.getCurrent(a.dataset.id),{id:e,score:n,showName:l,user:t,content:c,canEdit:h,failContent:k,isPassed:i}=s,m=t.email.slice(0,t.email.indexOf("@"));M.innerHTML=`
+      </li>`).join(""),$.innerHTML=Object.keys(o).map((s,e)=>` <li class="bookmark ${l===s?"":"bookmark-unselected"} ${s==="已完課"?"ms-auto":"me-1"} py-1 bg-${a[e]} fs-tiny cur-point" data-tag="${s}">
+    <span class="d-block text-nowrap">${s}</span>(${o[s].length})
+  </li>`).join("")}async function C(a){const s=await w.getCurrent(a.dataset.id),{id:e,score:n,showName:r,user:t,content:c,canEdit:h,failContent:k,isPassed:i}=s,m=t.email.slice(0,t.email.indexOf("@"));M.innerHTML=`
      <article class="modal-content bg-secondary text-primary fw-bold comment-style1">
     <div class="translate-middle-y">
       <button class="btn btn-outline-primary rounded-circle float-end" data-bs-dismiss="modal">X</button>
@@ -108,7 +114,7 @@ import{U as x}from"./main-c97ccc8c.js";import"./user_nav-b8e04adf.js";import{l a
           <span class="material-symbols-outlined ${n>=4?"":"outline-icon"}">star</span>
           <span class="material-symbols-outlined ${n>=5?"":"outline-icon"}">star</span>
       </div>
-        <p class="fs-5">${l?t.nickName:`${m[0]}***${m[m.length-1]}`}：</p>
+        <p class="fs-5">${r?t.nickName:`${m[0]}***${m[m.length-1]}`}：</p>
     </div>
     <div class="fs-4 mb-0">${c}</div>
     <div>
@@ -117,4 +123,4 @@ import{U as x}from"./main-c97ccc8c.js";import"./user_nav-b8e04adf.js";import{l a
       <!-- 編輯 icon -->
       ${h&&i!==-1?`<a href="./comment.html?id=${e}" class="material-symbols-outlined outline-icon cur-point ${i===1&&"float-end"}">edit_square</a>`:""}
     </div>
-  </article>`}function u(a,s=1,e,n=8){const l=Math.ceil(a[e].length/n),t=a[e];return s<1?{totalPages:l,currentPage:s,data:b(t.slice(0,n))}:s>l?{totalPages:l,currentPage:s,data:b(t.slice(t.length-n))}:{totalPages:l,currentPage:s,data:b(t.slice(s*n-n,s*n))}}function b(a){return[a.slice(0,4),a.slice(4)]}f.addEventListener("click",a=>{a.target.dataset.tag&&(r=a.target.dataset.tag,d(u(o,1,r)),p())});$.addEventListener("click",a=>{a.target.dataset.tag&&(r=a.target.dataset.tag,d(u(o,1,r)),p())});
+  </article>`}function u(a,s=1,e,n=8){const r=Math.ceil(a[e].length/n),t=a[e];return s<1?{totalPages:r,currentPage:s,data:b(t.slice(0,n))}:s>r?{totalPages:r,currentPage:s,data:b(t.slice(t.length-n))}:{totalPages:r,currentPage:s,data:b(t.slice(s*n-n,s*n))}}function b(a){return[a.slice(0,4),a.slice(4)]}f.addEventListener("click",a=>{a.target.dataset.tag&&(l=a.target.dataset.tag,d(u(o,1,l)),p())});$.addEventListener("click",a=>{a.target.dataset.tag&&(l=a.target.dataset.tag,d(u(o,1,l)),p())});

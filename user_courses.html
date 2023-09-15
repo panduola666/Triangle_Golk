@@ -7,15 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>我的課程</title>
   <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico">
-  <script type="module" crossorigin src="/Triangle_Golk/assets/user_courses-28396d10.js"></script>
-  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/main-c97ccc8c.js">
+  <script type="module" crossorigin src="/Triangle_Golk/assets/user_courses-8df67172.js"></script>
+  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/main-b28f6a90.js">
   <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/user_nav-b8e04adf.js">
-  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/index-9c62c766.js">
-  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/avatars-d33d4d76.js">
-  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/comment-5ef484fd.js">
-  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/course-70a6c6b8.js">
-  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/passes-01c870e9.js">
-  <link rel="stylesheet" href="/Triangle_Golk/assets/main-9ccd8961.css">
+  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/index-972ae5fb.js">
+  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/avatars-7fdc7783.js">
+  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/comment-24e62baa.js">
+  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/course-f55b6d4c.js">
+  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/passes-b2ed1cd6.js">
+  <link rel="stylesheet" href="/Triangle_Golk/assets/main-8fb47d23.css">
 </head>
 
 <body>
@@ -74,7 +74,7 @@
             >
               平台
             </button>
-            <ul class="dropdown-menu nav-dropdown-menu search-dropdown">
+            <ul class="dropdown-menu dropdown-shadow search-dropdown">
               <li class="dropdown-item">平台</li>
               <li class="dropdown-item">關鍵字</li>
             </ul>
@@ -131,7 +131,7 @@
           <span class="notify-info d-none"></span>
           <!-- 通知欄 -->
           <ul
-            class="d-none notify-menu nav-dropdown-menu position-absolute end-0 bg-white p-0 py-2 overflow-y-auto"
+            class="d-none notify-menu dropdown-shadow position-absolute end-0 bg-white p-0 py-2 overflow-y-auto"
           >
             <li class="py-2 px-sm">
               <p class="text-gray-600 mb-2">
@@ -183,7 +183,7 @@
           >
             會員專區
           </div>
-          <ul class="dropdown-menu nav-dropdown-menu">
+          <ul class="dropdown-menu dropdown-shadow">
             <li>
               <a class="dropdown-item" href="./user.html">會員資料</a>
             </li>
@@ -590,7 +590,7 @@
             <a class="nav-link fs-6 fw-bold" href="./achievement.html" role="tab" data-toggle="tab" data-page="achievement">徽章成就</a>
         </li>
     </ul>
-</nav>    <!-- 未完成  dev-check-->
+</nav>
       <main class="container my-xl flex-grow-1">
         <article class="notebook row">
           <!-- 電腦版標籤 -->
@@ -615,32 +615,39 @@
             </li> -->
           </ul>
           <!-- 手機板標籤 -->
-          <ul class="h5-marks bookmark-mobile list-unstyled text-center p-1 d-flex d-lg-none my-0">
+          <ul class="h5-marks bookmark-mobile list-unstyled text-center p-1 d-flex d-lg-none my-0 w-100">
             <!-- <li class="bookmark me-1 py-1 bg-teal fs-tiny">
-              六角學院 (333)
+              <span class="d-block text-nowrap">六角學院</span>(333)
             </li>
             <li class="bookmark me-1 bookmark-unselected py-1 bg-blue fs-tiny">
-              Hahow (6)
+              <span class="d-block text-nowrap">Hahow</span>(6)
             </li>
             <li class="bookmark me-1 bookmark-unselected py-1 bg-orange fs-tiny">
-              Udemy (6)
+              <span class="d-block text-nowrap">Udemy</span>(6)
             </li>
             <li class="bookmark me-1 bookmark-unselected py-1 bg-yellow fs-tiny">
-              Coursera (6)
+              <span class="d-block text-nowrap">Coursera</span>(6)
             </li>
             <li class="bookmark me-1 bookmark-unselected py-1 bg-gray-200 fs-tiny">
-              其他平台 (6)
+              <span class="d-block text-nowrap">其他平台</span>(6)
             </li>
             <li class="bookmark bookmark-unselected py-1 bg-primary ms-auto fs-tiny">
-              已完課 (6)
+              <span class="d-block text-nowrap">已完課</span>(6)
             </li> -->
           </ul>
           <div class="notebook-pages-only row col g-0">
             <section class="notebook-page-left row col mb-4 row-cols-lg-2 gx-lg-5">
             <!-- 課程卡片的 card 樣式 => single-note-card -->
-              <div class="book-left notebook-page-innersection col-lg-6 col">
-                <!-- <div class="notebook-cards-group">
-                  <div class="notebook-card-frame position-relative">
+              <div class="book-left notebook-page-innersection col-lg-6 col position-relative">
+              <!-- 空頁面樣式 -->
+              <div id="user-list-empty0" class="user-empty comment-style1 d-none">
+                <p class="fs-4 fw-bold mb-4 text-white text-center"
+                >本頁還沒有內容喔</p>
+                <a href="/pages/course.html" class="btn btn-outline-primary fs-3 fw-bold d-block"
+                >出發探索好課</a>
+              </div>
+                <div class="notebook-cards-group">
+                  <!-- <div class="notebook-card-frame position-relative">
                     <div class="card single-note-card mb-3">
                     <div class="row g-0">
                       <div class="col-4 card-row">
@@ -649,8 +656,8 @@
                       <div class="col-8">
                         <div class="card-body pb-1">
                           <h2 class="card-title fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
-                          <div class="user-courses-tags mb-2 mb-lg-3">
-                            <span class="card-text me-2 fs-8">#程序</span>
+                          <div class="user-courses-tags d-flex gap-2 d-flex gap-2 mb-2 mb-lg-3">
+                            <span class="card-text fs-8">#程序</span>
                           </div>
                           <div class="stars d-flex justify-content-end">
                             <div class="stars-icon text-primary me-1 me-md-2">
@@ -681,8 +688,8 @@
                       <div class="col-8">
                         <div class="card-body pb-1">
                           <h2 class="card-title fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
-                          <div class="user-courses-tags mb-2 mb-lg-3">
-                            <span class="card-text me-2 fs-8">#程序</span>
+                          <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                            <span class="card-text fs-8">#程序</span>
                           </div>
                           <div class="stars d-flex justify-content-end">
                             <div class="stars-icon text-primary me-1 me-md-2">
@@ -713,8 +720,8 @@
                       <div class="col-8">
                         <div class="card-body pb-1">
                           <h2 class="card-title fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
-                          <div class="user-courses-tags mb-2 mb-lg-3">
-                            <span class="card-text me-2 fs-8">#程序</span>
+                          <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                            <span class="card-text fs-8">#程序</span>
                           </div>
                           <div class="stars d-flex justify-content-end">
                             <div class="stars-icon text-primary me-1 me-md-2">
@@ -745,8 +752,8 @@
                       <div class="col-8">
                         <div class="card-body pb-1">
                           <h2 class="card-title fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
-                          <div class="user-courses-tags mb-2 mb-lg-3">
-                            <span class="card-text me-2 fs-8">#程序</span>
+                          <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                            <span class="card-text fs-8">#程序</span>
                           </div>
                           <div class="stars d-flex justify-content-end">
                             <div class="stars-icon text-primary me-1 me-md-2">
@@ -767,8 +774,8 @@
                       </div>
                     </div>
                     </div>
-                  </div>
-                </div> -->
+                  </div> -->
+                </div>
                 <!-- 分頁按鈕 -->
                 <!-- <div class="d-none d-lg-block justify-content-lg-start">
                   <button class="btn btn-secondary px-2 py-1 mt-3 small" disabled>上一頁</button>
@@ -786,8 +793,8 @@
                       <div class="col-8">
                         <div class="card-body pb-1">
                           <h2 class="card-title fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
-                          <div class="user-courses-tags mb-2 mb-lg-3">
-                            <span class="card-text me-2 fs-8">#程序</span>
+                          <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                            <span class="card-text fs-8">#程序</span>
                           </div>
                           <div class="stars d-flex justify-content-end">
                             <div class="stars-icon text-primary me-1 me-md-2">
@@ -818,8 +825,8 @@
                       <div class="col-8">
                         <div class="card-body pb-1">
                           <h2 class="card-title fs-6 text-truncate">使用HTML、CSS開發一個網站</h2>
-                          <div class="user-courses-tags mb-2 mb-lg-3">
-                            <span class="card-text me-2 fs-8">#程序</span>
+                          <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                            <span class="card-text fs-8">#程序</span>
                           </div>
                           <div class="stars d-flex justify-content-end">
                             <div class="stars-icon text-primary me-1 me-md-2">
@@ -851,8 +858,8 @@
                         <div class="col-8">
                           <div class="card-body pb-1">
                             <h2 class="card-title fs-6 text-truncate">JavaScript 核心篇</h2>
-                            <div class="user-courses-tags mb-2 mb-lg-3">
-                            <span class="card-text me-2 fs-8">#程序</span>
+                            <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                            <span class="card-text fs-8">#程序</span>
                             </div>
                             <div class="stars d-flex justify-content-end">
                               <div class="stars-icon text-primary me-1 me-md-2">
@@ -885,8 +892,8 @@
                         <div class="col-8">
                           <div class="card-body pb-1">
                             <h2 class="card-title fs-6 text-truncate">2023 Python全攻略</h2>
-                            <div class="user-courses-tags mb-2 mb-lg-3">
-                            <span class="card-text me-2 fs-8">#程序</span>
+                            <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                            <span class="card-text fs-8">#程序</span>
                             </div>
                             <div class="stars d-flex justify-content-end">
                               <div class="stars-icon text-primary me-1 me-md-2">
@@ -919,6 +926,7 @@
                   </div>
                   <button class="btn btn-secondary px-2 py-1 mt-3 small">下一頁</button>
                 </div> -->
+
               </div>
             </section>
           </div>

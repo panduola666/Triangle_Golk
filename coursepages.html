@@ -7,18 +7,18 @@
     <title>課程內頁</title>
     <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico">
-    <script type="module" crossorigin src="/Triangle_Golk/assets/coursepages-f50cbf6c.js"></script>
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/main-c97ccc8c.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/apply_course-832c2178.js">
+    <script type="module" crossorigin src="/Triangle_Golk/assets/coursepages-1c8dc619.js"></script>
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/main-b28f6a90.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/apply_course-9c1ee343.js">
     <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/swiper-core-19160206.js">
     <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/autoplay-054b67c1.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/index-9c62c766.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/course-70a6c6b8.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/favorites-c1abf628.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/avatars-d33d4d76.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/comment-5ef484fd.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/passes-01c870e9.js">
-    <link rel="stylesheet" href="/Triangle_Golk/assets/main-9ccd8961.css">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/index-972ae5fb.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/course-f55b6d4c.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/favorites-858cd1c0.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/avatars-7fdc7783.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/comment-24e62baa.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/passes-b2ed1cd6.js">
+    <link rel="stylesheet" href="/Triangle_Golk/assets/main-8fb47d23.css">
     <link rel="stylesheet" href="/Triangle_Golk/assets/autoplay-0705b292.css">
   </head>
 
@@ -77,7 +77,7 @@
             >
               平台
             </button>
-            <ul class="dropdown-menu nav-dropdown-menu search-dropdown">
+            <ul class="dropdown-menu dropdown-shadow search-dropdown">
               <li class="dropdown-item">平台</li>
               <li class="dropdown-item">關鍵字</li>
             </ul>
@@ -134,7 +134,7 @@
           <span class="notify-info d-none"></span>
           <!-- 通知欄 -->
           <ul
-            class="d-none notify-menu nav-dropdown-menu position-absolute end-0 bg-white p-0 py-2 overflow-y-auto"
+            class="d-none notify-menu dropdown-shadow position-absolute end-0 bg-white p-0 py-2 overflow-y-auto"
           >
             <li class="py-2 px-sm">
               <p class="text-gray-600 mb-2">
@@ -186,7 +186,7 @@
           >
             會員專區
           </div>
-          <ul class="dropdown-menu nav-dropdown-menu">
+          <ul class="dropdown-menu dropdown-shadow">
             <li>
               <a class="dropdown-item" href="./user.html">會員資料</a>
             </li>
@@ -642,9 +642,9 @@
                 </a>
 
                 <img
-                  src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80"
+                  src=""
                   class="course-cover"
-                  alt="JavaScript 核心篇"
+                  alt=""
                 />
               </div>
             </div>
@@ -767,7 +767,7 @@
             </p>
             <div class="mt-3 px-3">
               <a
-                href="./classroom.html"
+                href="classroom.html"
                 class="btn btn-lg btn-secondary w-100 d-none classroom-btn"
                 id="show-alert"
               >
@@ -896,119 +896,120 @@
         <!-- 申請新課 -->
         <button
           type="button"
-          class="apply btn btn-blue fw-bold fixed-shadow"
-          data-bs-toggle="modal"
-          data-bs-target="#apply-modal"
+          class="apply apply-btn btn btn-blue fw-bold fixed-shadow"
         >
           申請<br />新課
         </button>
 
         <div
-          class="modal fade"
-          id="apply-modal"
-          tabindex="-1"
-          aria-labelledby="apply-modalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title fs-5 fw-bold" id="apply-modalLabel">
-                  申請新課
-                </h3>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <form
-                  class="apply-form needs-validation d-flex flex-column"
-                  novalidate
-                >
-                  <div class="mb-3">
-                    <label
-                      class="form-label form-required fw-bold mb-1"
-                      for="course-name"
-                      >課程名稱</label
-                    >
-                    <input
-                      class="form-control small py-1 ps-2"
-                      id="course-name"
-                      type="text"
-                      placeholder="請輸入課程名稱"
-                      required
-                    />
-                    <div class="invalid-feedback">請輸入課程名稱</div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label
-                      class="form-label form-required fw-bold mb-1"
-                      for="brand-name"
-                      >該課程開設在哪家平台</label
-                    >
-                    <input
-                      class="form-control small py-1 ps-2"
-                      id="brand-name"
-                      type="text"
-                      placeholder="請輸入平台名稱"
-                      required
-                    />
-                    <div class="invalid-feedback">請輸入平台名稱</div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label
-                      class="form-label form-required fw-bold mb-1"
-                      for="course-link"
-                      >該課程的頁面連結</label
-                    >
-                    <input
-                      class="form-control small py-1 ps-2"
-                      id="course-link"
-                      type="text"
-                      placeholder="請輸入課程連結"
-                      required
-                    />
-                    <div class="invalid-feedback">請輸入課程連結</div>
-                  </div>
-
-                  <div class="mb-4">
-                    <label
-                      class="form-label form-required fw-bold mb-1"
-                      for="comment"
-                      >請寫下你的理由</label
-                    >
-                    <div id="editor—wrapper">
-                      <div id="toolbar-container"><!-- 工具栏 --></div>
-                      <div id="editor-container"><!-- 编辑器 --></div>
-                    </div>
-                    <div class="invalid-feedback">請寫下你的理由</div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-outline-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      取消
-                    </button>
-                    <button
-                      type="submit"
-                      class="btn btn-secondary"
-                      id="show-alert"
-                    >
-                      送出申請
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+  class="modal fade"
+  id="apply-modal"
+  tabindex="-1"
+  aria-labelledby="apply-modalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5 fw-bold" id="apply-modalLabel">申請新課</h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form class="apply-form needs-validation d-flex flex-column" novalidate>
+          <div class="mb-3">
+            <label
+              class="form-label form-required fw-bold mb-1"
+              for="course-name"
+              >課程名稱</label
+            >
+            <input
+              class="form-control small py-1 ps-2"
+              id="course-name"
+              name="course-name"
+              type="text"
+              placeholder="請輸入課程名稱"
+              required
+            />
+            <div class="invalid-feedback">請輸入課程名稱</div>
           </div>
-        </div>
+
+          <div class="mb-3">
+            <label
+              class="form-label form-required fw-bold mb-1"
+              for="brand-name"
+              >該課程開設在哪家平台</label
+            >
+            <input
+              class="form-control small py-1 ps-2"
+              id="brand-name"
+              name="brand-name"
+              type="text"
+              placeholder="請輸入平台名稱"
+              required
+            />
+            <div class="invalid-feedback">請輸入平台名稱</div>
+          </div>
+
+          <div class="mb-3">
+            <label
+              class="form-label form-required fw-bold mb-1"
+              for="course-link"
+              >該課程的頁面連結</label
+            >
+            <input
+              class="form-control small py-1 ps-2"
+              id="course-link"
+              name="course-link"
+              type="text"
+              placeholder="請輸入課程連結"
+              required
+            />
+            <div class="invalid-feedback">請輸入課程連結</div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label form-required fw-bold mb-1" for="comment"
+              >請寫下你的理由</label
+            >
+            <!-- 文字編輯器 start -->
+            <div id="editor—wrapper">
+              <div id="toolbar-container"><!-- 工具栏 --></div>
+              <div id="editor-container"><!-- 编辑器 --></div>
+            </div>
+            <!-- <textarea
+                      class="form-control comment small py-1 ps-2"
+                      id="comment"
+                      cols="30"
+                      rows="10"
+                      placeholder="最多不超過 400 字"
+                      maxlength="400"
+                      minlength="5"
+                      required
+                    ></textarea> -->
+            <div class="invalid-feedback">請寫下你的理由</div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              取消
+            </button>
+            <button type="submit" class="btn btn-secondary" id="show-alert">
+              送出申請
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
       </main>
 
       <footer class="container-fluid bg-secondary-subtle py-lg-4 py-3 mt-lg-xxl mt-xl">

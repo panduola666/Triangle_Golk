@@ -19,9 +19,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 
     <title>進修室</title>
     <link rel="icon" type="image/png" href="/Triangle_Golk/assets/favicon-689ec6ab.ico">
-  <script type="module" crossorigin src="/Triangle_Golk/assets/classroom-83fa6fbb.js"></script>
-  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/main-c97ccc8c.js">
-  <link rel="stylesheet" href="/Triangle_Golk/assets/main-9ccd8961.css">
+  <script type="module" crossorigin src="/Triangle_Golk/assets/classroom-38eb8a6a.js"></script>
+  <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/main-b28f6a90.js">
+  <link rel="stylesheet" href="/Triangle_Golk/assets/main-8fb47d23.css">
 </head>
 
 <body>
@@ -62,7 +62,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
             >
               平台
             </button>
-            <ul class="dropdown-menu nav-dropdown-menu search-dropdown">
+            <ul class="dropdown-menu dropdown-shadow search-dropdown">
               <li class="dropdown-item">平台</li>
               <li class="dropdown-item">關鍵字</li>
             </ul>
@@ -119,7 +119,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
           <span class="notify-info d-none"></span>
           <!-- 通知欄 -->
           <ul
-            class="d-none notify-menu nav-dropdown-menu position-absolute end-0 bg-white p-0 py-2 overflow-y-auto"
+            class="d-none notify-menu dropdown-shadow position-absolute end-0 bg-white p-0 py-2 overflow-y-auto"
           >
             <li class="py-2 px-sm">
               <p class="text-gray-600 mb-2">
@@ -171,7 +171,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
           >
             會員專區
           </div>
-          <ul class="dropdown-menu nav-dropdown-menu">
+          <ul class="dropdown-menu dropdown-shadow">
             <li>
               <a class="dropdown-item" href="./user.html">會員資料</a>
             </li>
@@ -566,26 +566,25 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
           <main class="container ">
   
               <div class="page-header my-4 d-flex justify-content-between">
-                  <span class="d-flex justify-content-between">
-                  <span class="material-symbols-outlined h2">
+                <span class="d-flex justify-content-between align-items-center">
+                  <span class="material-symbols-outlined fs-2">
                       meeting_room
                       </span>
-                  <h2 class="fw-bold">
-                    <a href="./coursepages.html?id=1&sort=timer"> 離開教室</a>
+                  <h2 class="fs-5 mb-0 link-hover">
+                    <a class="page-back"> 離開教室</a>
                   </h2>
               </span>
                   <div class="dropdown">
-                      <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="btn btn-outline-secondary dropdown-toggle" id="dropdown-menu-link" data-bs-toggle="dropdown" aria-expanded="false">
                         教室：R1
-                      </a>
+                      </button>
                     
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">教室：R2</a></li>
+                      <ul class="dropdown-menu dropdown-shadow room-list" aria-labelledby="dropdown-menu-link">
+                        <!-- <li><a class="dropdown-item" href="#">教室：R2</a></li>
                         <li><a class="dropdown-item" href="#">教室：R3</a></li>
-                        <li><a class="dropdown-item" href="#">教室：R4</a></li>
+                        <li><a class="dropdown-item" href="#">教室：R4</a></li> -->
                       </ul>
                     </div>
-  
                   </div>
               
               <!-- 座位區 -->
@@ -593,10 +592,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
               <div class="container border border-secondary w-auto  pb-4 px-5 col-9 m-auto ">
   
                   <!-- 課程名稱 -->
-                  <span class=" container course-title d-flex justify-content-around mb-3 align-items-center">
-                  <span class=" d-flex justify-content-around border border-secondary p-3 bg-primary  shadow-sm">
-                      <span class=" border border-secondary bg-secondary rounded text-nowrap text-primary fw-bold m-auto p-2 align-content-center">六角學院</span>
-                      <h1 class=" page-title fw-bold text-secondary ms-2 m-auto ">JavaScript 核心篇</h1>
+                  <span class="container course-title d-flex justify-content-around mb-3 align-items-center">
+                  <span class="d-flex justify-content-around border border-secondary p-3 bg-primary  shadow-sm">
+                      <span class="border border-secondary bg-secondary rounded text-nowrap text-primary fw-bold m-auto p-2 align-content-center page-platform">六角學院</span>
+                      <h1 class="page-title fw-bold text-secondary ms-2 m-auto ">JavaScript 核心篇</h1>
                   </span>
               </span>
   
@@ -604,30 +603,25 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 <!-- 座位 -->
 
 
-<div class="seat container py-5">
+<div class="seat container py-5 aos-init aos-animate" data-aos="fade-up-right"  >
 
-    <ul class="container col-auto row list-unstyled g-lg-6 g-md-3 g-2 mb-5  align-items-center m-auto h-auto justify-content-around  ">
+    <ul class="container col-auto row list-unstyled g-lg-6 g-md-3 g-2 mb-5  align-items-center m-auto h-auto justify-content-around  m-lg-auto m-sm-auto m-md-auto page-table">
 
-     <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
-      <!-- <div class="triangle-container  d-flex d-inline-block align-middle position-relative flex-shrink-1  "> -->
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto"> </span>
-            <span class="triangle-two  col-auto">  </span>
-            <span class="triangle-three col-auto"> </span>
-            <span class="triangle-four col-auto"> </span>
-            
+     <li class="triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center text-center">
+      <div class="col-auto triangle-container d-flex justify-content-center align-items-center col-auto">
+          <span class="triangle-two col-auto"></span>
+          <span class="triangle-three col-auto"></span>
+          <span class="triangle-four col-auto"></span>
       </div>
     </li>
 
 
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+      
       
 
         <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto  "></span>
+            <!-- <span class="triangle-one col-auto  "></span> -->
             <span class="triangle-two   col-auto  "></span>
             <span class="triangle-three col-auto  "></span>
             <span class="triangle-four col-auto  "></span>
@@ -636,12 +630,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
     </li>
 
 
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+      
      
 
         <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto  "></span>
+            <!-- <span class="triangle-one col-auto  "></span> -->
             <span class="triangle-two   col-auto  "></span>
             <span class="triangle-three col-auto  "></span>
             <span class="triangle-four col-auto  "></span>
@@ -650,12 +644,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
     </li>
 
 
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+      
      
 
         <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto  "></span>
+            <!-- <span class="triangle-one col-auto  "></span> -->
             <span class="triangle-two   col-auto  "></span>
             <span class="triangle-three col-auto  "></span>
             <span class="triangle-four col-auto  "></span>
@@ -663,12 +657,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       </div>
     </li>
 
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+      
      
 
         <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto  "></span>
+            <!-- <span class="triangle-one col-auto  "></span> -->
             <span class="triangle-two   col-auto  "></span>
             <span class="triangle-three col-auto  "></span>
             <span class="triangle-four col-auto  "></span>
@@ -677,12 +671,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
     </li>
 
 
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+      
      
 
         <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto  "></span>
+            <!-- <span class="triangle-one col-auto  "></span> -->
             <span class="triangle-two   col-auto  "></span>
             <span class="triangle-three col-auto  "></span>
             <span class="triangle-four col-auto  "></span>
@@ -690,12 +684,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       </div>
     </li>
 
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+      
      
 
         <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto  "></span>
+            <!-- <span class="triangle-one col-auto  "></span> -->
             <span class="triangle-two   col-auto  "></span>
             <span class="triangle-three col-auto  "></span>
             <span class="triangle-four col-auto  "></span>
@@ -703,12 +697,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       </div>
     </li>
 
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+      
      
 
         <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto  "></span>
+            <!-- <span class="triangle-one col-auto  "></span> -->
             <span class="triangle-two   col-auto  "></span>
             <span class="triangle-three col-auto  "></span>
             <span class="triangle-four col-auto  "></span>
@@ -718,12 +712,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 
  
 
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+      
      
 
         <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto  "></span>
+            <!-- <span class="triangle-one col-auto  "></span> -->
             <span class="triangle-two   col-auto  "></span>
             <span class="triangle-three col-auto  "></span>
             <span class="triangle-four col-auto  "></span>
@@ -732,12 +726,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
     </li>
 
 
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+      
      
 
         <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto  "></span>
+            <!-- <span class="triangle-one col-auto  "></span> -->
             <span class="triangle-two   col-auto  "></span>
             <span class="triangle-three col-auto  "></span>
             <span class="triangle-four col-auto  "></span>
@@ -745,12 +739,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       </div>
     </li>
 
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+      
      
 
         <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto  "></span>
+            <!-- <span class="triangle-one col-auto  "></span> -->
             <span class="triangle-two   col-auto  "></span>
             <span class="triangle-three col-auto  "></span>
             <span class="triangle-four col-auto  "></span>
@@ -758,12 +752,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       </div>
     </li>
 
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      <!-- <img class=" w-auto h-auto opacity-100 border border-light border-5 " src="../assets/images/avatar-01.svg" alt="完課徽章-LV1" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"> -->
+    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
+      
      
 
         <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <span class="triangle-one col-auto  "></span>
+            <!-- <span class="triangle-one col-auto  "></span> -->
             <span class="triangle-two   col-auto  "></span>
             <span class="triangle-three col-auto  "></span>
             <span class="triangle-four col-auto  "></span>
@@ -797,7 +791,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
           </div>
 
           <div id="chat-box-welcome__ava">
-              <!--<i class="material-icons">android</i>-->
               <img class="chat-box-welcome_robot" src="/Triangle_Golk/assets/icon-logo-d99fd1a1.png">
           </div>
           <div class="chat-box-welcome__welcome-text">
@@ -839,6 +832,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
         <span class="cm-msg-text shadow-sm rounded text-secondary fw-bold bg-secondary-subtle"> 
           哈囉 我是兔兔 </span>
           </div> -->
+
+
+
+
+
+
 
 
               <div class="spin-container">
@@ -924,7 +923,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
       
       
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
+    
 </body>
 
 </html>

@@ -10,16 +10,35 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    <script type="module" crossorigin src="/Triangle_Golk/assets/user-85d67057.js"></script>
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/main-c97ccc8c.js">
+    <script type="module" crossorigin src="/Triangle_Golk/assets/user-f36c6ea1.js"></script>
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/main-b28f6a90.js">
     <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/swiper-core-19160206.js">
-    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/avatars-d33d4d76.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/index-972ae5fb.js">
+    <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/avatars-7fdc7783.js">
     <link rel="modulepreload" crossorigin href="/Triangle_Golk/assets/user_nav-b8e04adf.js">
-    <link rel="stylesheet" href="/Triangle_Golk/assets/main-9ccd8961.css">
+    <link rel="stylesheet" href="/Triangle_Golk/assets/main-8fb47d23.css">
   </head>
 
   <body>
-    <div class="min-vh-100 d-flex flex-column">
+    <div class="loading d-none">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;display:block;" width="255px" height="255px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+        <g transform="translate(50 42)">
+          <g transform="scale(0.8)">
+            <g transform="translate(-50 -50)">
+              <polygon fill="#163300" points="72.5 50 50 11 27.5 50 50 50">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="2.5s" values="0 50 38.5;360 50 38.5" keyTimes="0;1"></animateTransform>
+              </polygon>
+              <polygon fill="#163300" points="5 89 50 89 27.5 50">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="2.5s" values="0 27.5 77.5;360 27.5 77.5" keyTimes="0;1"></animateTransform>
+              </polygon>
+              <polygon fill="#163300" points="72.5 50 50 89 95 89">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="2.5s" values="0 72.5 77.5;360 72 77.5" keyTimes="0;1"></animateTransform>
+              </polygon>
+            </g>
+          </g>
+        </g>
+        </svg>
+</div>    <div class="min-vh-100 d-flex flex-column">
       <header class="header-nav py-sm bg-white sticky-top">
   <nav class="container-fluid container-lg">
     <div class="row">
@@ -55,7 +74,7 @@
             >
               平台
             </button>
-            <ul class="dropdown-menu nav-dropdown-menu search-dropdown">
+            <ul class="dropdown-menu dropdown-shadow search-dropdown">
               <li class="dropdown-item">平台</li>
               <li class="dropdown-item">關鍵字</li>
             </ul>
@@ -112,7 +131,7 @@
           <span class="notify-info d-none"></span>
           <!-- 通知欄 -->
           <ul
-            class="d-none notify-menu nav-dropdown-menu position-absolute end-0 bg-white p-0 py-2 overflow-y-auto"
+            class="d-none notify-menu dropdown-shadow position-absolute end-0 bg-white p-0 py-2 overflow-y-auto"
           >
             <li class="py-2 px-sm">
               <p class="text-gray-600 mb-2">
@@ -164,7 +183,7 @@
           >
             會員專區
           </div>
-          <ul class="dropdown-menu nav-dropdown-menu">
+          <ul class="dropdown-menu dropdown-shadow">
             <li>
               <a class="dropdown-item" href="./user.html">會員資料</a>
             </li>
@@ -591,21 +610,21 @@
                   <div class="col-12 col-md-6 d-flex flex-column">
                     <form class="d-flex flex-column">
                       <div class="d-flex flex-column mb-4">
-                        <label class="form-label" for="nickName">暱稱</label>
+                        <label class="form-label fs-4" for="nickName">暱稱</label>
                         <input
-                          class="form-control name"
+                          class="form-control name fs-5"
                           id="nickName"
                           type="text"
                           value="林小明"
+                          readonly
                         />
                       </div>
                       <div class="d-flex flex-column mb-4">
-                        <label class="form-label" for="email">帳號</label>
+                        <label class="form-label fs-4" for="email">帳號</label>
                         <input
-                          class="form-control"
+                          class="form-control border-0 shadow-none fs-5"
                           id="email"
                           type="email"
-                          value="email@example.com"
                           readonly
                         />
                       </div>
@@ -622,8 +641,8 @@
                         </button>
                       </div>
                       <div>
-                        <button class="btn btn-secondary" id="edit-btn">編輯</button>
-                        <button class="btn btn-secondary d-none" id="save-btn">儲存</button>
+                        <button type="button" class="btn btn-secondary" id="edit-btn">編輯</button>
+                        <button type="button" class="btn btn-secondary d-none" id="save-btn">儲存</button>
                       </div>
                     </div>
                   </div>
@@ -631,12 +650,11 @@
                     <img
                       src="/Triangle_Golk/assets/avatar-04-828ea1d6.svg"
                       alt="會員頭像"
+                      class="user-avatar"
                     />
                     <button
                       type="button"
-                      class="change btn rounded-circle d-flex justify-content-between align-items-center"
-                      data-bs-toggle="modal"
-                      data-bs-target="#pic-modal"
+                      class="change btn rounded-circle d-flex justify-content-between align-items-center pic-modal-btn"
                     >
                       <span class="material-symbols-outlined fw-bold"
                         >sync_alt</span
@@ -679,6 +697,7 @@
                         placeholder="請輸入新密碼"
                         autocomplete="off"
                         name="set-newPwd"
+                        minlength="6"
                         required/>
                       <label class="form-required" for="set-newPwd">
                         請輸入新密碼
@@ -693,6 +712,7 @@
                         placeholder="再次輸入新密碼"
                         autocomplete="off"
                         name="re-pwd"
+                        minlength="6"
                         required/>
                       <label class="form-required" for="re-pwd">
                         再次輸入新密碼
@@ -732,52 +752,52 @@
               ></button>
             </div>
             <div class="modal-body container album">
-              <div class="row g-4">
+              <!-- <div class="row g-4">
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
                     <img
                       class="avatar-img opacity-100"
-                      src="/Triangle_Golk/assets/avatar-04-828ea1d6.svg"
+                      src="../assets/images/avatar-04.svg"
                       alt="徽章頭像"
                     />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img class="avatar-img" src="/Triangle_Golk/assets/avatar-05-caaec6cb.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-05.svg" alt="徽章頭像" />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img class="avatar-img" src="/Triangle_Golk/assets/avatar-06-d5e1d0a8.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-06.svg" alt="徽章頭像" />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img class="avatar-img" src="/Triangle_Golk/assets/avatar-07-910b33ab.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-07.svg" alt="徽章頭像" />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img class="avatar-img" src="/Triangle_Golk/assets/avatar-08-d6486012.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-08.svg" alt="徽章頭像" />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img class="avatar-img" src="/Triangle_Golk/assets/avatar-01-1b969a41.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-01.svg" alt="徽章頭像" />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img class="avatar-img" src="/Triangle_Golk/assets/avatar-02-a290b376.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-02.svg" alt="徽章頭像" />
                   </button>
                 </div>
                 <div class="col-lg-4 col-6">
                   <button class="btn p-0" type="button">
-                    <img class="avatar-img" src="/Triangle_Golk/assets/avatar-03-c09d6aa8.svg" alt="徽章頭像" />
+                    <img class="avatar-img" src="../assets/images/avatar-03.svg" alt="徽章頭像" />
                   </button>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="modal-footer">
               <button
