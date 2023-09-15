@@ -40,6 +40,12 @@ async function init() {
 function renderBook(curData) {
     const { currentPage, totalPages, data } = curData
     bookLeft.innerHTML = `
+    <div id="user-list-empty1" class="user-empty comment-style1 ${data[0].length? 'd-none' : ''}">
+      <p class="fs-4 fw-bold mb-4 text-white text-center"
+      >本頁還沒有內容喔</p>
+      <a href="course.html" class="btn btn-outline-primary fs-3 fw-bold d-block"
+      >出發探索好課</a>
+    </div>
     <div class="notebook-cards-group">
     ${data[0].map(item => (`
     <div class="notebook-card-frame">
@@ -68,9 +74,9 @@ function renderBook(curData) {
                 </div>
             </div>
             </div>
-            <div class="wishlist-note-card-btn d-flex justify-content-center flex-nowrap">
-            <a href="./coursepages.html?id=${item.courseId}&sort=timer" target="_self" class="d-block text-white fs-5 align-self-center text-nowrap p-xxl">查看課程</a>
-            </div>
+            <a href="coursepages.html?id=${item.courseId}&sort=timer" class="wishlist-note-card-btn d-flex text-white fs-5 align-items-center justify-content-around text-nowrap">
+            查看課程
+            </a>
         </div>
         </div>
     </div>
@@ -109,9 +115,9 @@ function renderBook(curData) {
                 </div>
             </div>
             </div>
-            <div class="wishlist-note-card-btn d-flex justify-content-center flex-nowrap">
-            <a href="./coursepages.html?id=${item.courseId}&sort=timer" target="_self" class="d-block text-white fs-5 align-self-center text-nowrap p-xxl">查看課程</a>
-            </div>
+            <a href="coursepages.html?id=${item.courseId}&sort=timer" class="wishlist-note-card-btn d-flex text-white fs-5 align-items-center justify-content-around text-nowrap">
+            查看課程
+            </a>
         </div>
         </div>
     </div>
