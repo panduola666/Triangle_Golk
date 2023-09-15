@@ -2,7 +2,7 @@
   "users": [
     {
       "email": "admin@gmail.com",
-      "password": "$2a$10$o0jLpH4FKyj8xCyGwOwmleRI5uRQ0clWPNyihUdoaxE1kFP93rp6u",
+      "password": "$2a$10$EozFpQ0mzyUeYIv5eLE.i./W/AY7EmvHmliP43Ts/c1McU/Zz75zS",
       "avatars": [
         4,
         5
@@ -213,48 +213,6 @@
       "courseId": 8,
       "isFinish": false,
       "id": 3
-    },
-    {
-      "userId": 1,
-      "courseId": 1,
-      "isFinish": false,
-      "id": 4
-    },
-    {
-      "id": 5,
-      "userId": 1,
-      "courseId": 6,
-      "isFinish": false
-    },
-    {
-      "userId": 1,
-      "courseId": 1,
-      "isFinish": false,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "courseId": 1,
-      "isFinish": false,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "courseId": 2,
-      "isFinish": false,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "courseId": 9,
-      "isFinish": false,
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "courseId": 1,
-      "isFinish": false,
-      "id": 10
     }
   ],
   "comments": [

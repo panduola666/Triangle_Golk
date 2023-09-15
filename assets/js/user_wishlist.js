@@ -1,5 +1,6 @@
 import { Favorites, loading } from '../api/index';
 
+const notebook = document.querySelector('.notebook')
 const bookLeft = document.querySelector('.book-left')
 const bootRight = document.querySelector('.boot-right')
 const pcMarks = document.querySelector('.pc-marks')
@@ -8,24 +9,12 @@ const h5Marks = document.querySelector('.h5-marks')
 let originData;
 let filterData;
 let curTag;
+let curPage
 
 async function init() {
     try {
       loading()
-      originData = await Favorites.getUserFavorites()
-      // 把他們按照平台分類
-      filterData = originData.reduce((obj, item) => {
-        obj[item.course.platform]
-          ? obj[item.course.platform].push(item)
-          : obj['其他平台'].push(item);
-          return obj
-      }, {
-        六角學院: [],
-        Hahow: [],
-        Udemy: [],
-        Coursera: [],
-        其他平台: [],
-      });
+      await getData()
       loading(filterData)
       curTag = Object.keys(filterData)[0]
       renderBook(pagination(filterData, 1, curTag))
@@ -33,8 +22,32 @@ async function init() {
     } catch (error) {
       console.log(error);
     }
-  }
-  init();
+}
+init();
+
+async function getData() {
+  originData = await Favorites.getUserFavorites()
+  // 把他們按照平台分類
+  filterData = originData.reduce((obj, item) => {
+    obj[item.course.platform]
+      ? obj[item.course.platform].push(item)
+      : obj['其他平台'].push(item);
+      return obj
+  }, {
+    六角學院: [],
+    Hahow: [],
+    Udemy: [],
+    Coursera: [],
+    其他平台: [],
+  });
+}
+
+notebook.addEventListener('click', (e) => {
+  const { page } = e.target.dataset
+  if(!page) return
+  curPage = Number(page)
+  renderBook(pagination(filterData, curPage, curTag))
+})
 
   // 渲染左右頁的課程內容
 function renderBook(curData) {
@@ -50,7 +63,7 @@ function renderBook(curData) {
     ${data[0].map(item => (`
     <div class="notebook-card-frame">
         <div class="card wishlist-note-card mb-3">
-          <span class="remove-wishlist text-gray-300 material-symbols-outlined outline-icon position-absolute end-0 top-0 text-secondary">heart_minus
+          <span data-id="${item.id}" class="remove-wishlist material-symbols-outlined outline-icon">heart_minus
           </span>
         <div class="row g-0">
             <div class="col-4 card-row">
@@ -91,7 +104,7 @@ function renderBook(curData) {
     ${data[1].map(item => (`
     <div class="notebook-card-frame">
         <div class="card wishlist-note-card mb-3">
-          <span class="remove-wishlist text-gray-300 material-symbols-outlined outline-icon position-absolute end-0 top-0 text-secondary">heart_minus
+          <span data-id="${item.id}" class="remove-wishlist material-symbols-outlined outline-icon">heart_minus
           </span>
         <div class="row g-0">
             <div class="col-4 card-row">
@@ -131,7 +144,7 @@ function renderBook(curData) {
     </div>
     `
   }
-  function renderMark(){
+  function renderMark() {
     const tagsColor = ['teal', 'blue', 'orange', 'yellow', 'gray-200']
     pcMarks.innerHTML = Object.keys(filterData).map((tag, index) => {
       return`<li class="bookmark ${curTag === tag ? '' : 'bookmark-unselected'} mb-2 py-1 bg-${tagsColor[index]} cur-point" data-tag="${tag}">
@@ -151,13 +164,14 @@ function pagination(resData, page = 1, curTag, limit = 8) {
   // resData[curTag] 可以替換成只要進行分頁的 Array 資料
   const totalPages = Math.ceil(resData[curTag].length / limit);
   const data = resData[curTag];
+  console.log(data);
 
   if (page < 1) {
     // console.log('已經在第一頁');
     // 回傳第一頁資料
     return {
       totalPages,
-      currentPage: page,
+      currentPage: page >= totalPages ? totalPages : page,
       data: halfSlice(data.slice(0, limit)),
     };
   }
@@ -166,13 +180,13 @@ function pagination(resData, page = 1, curTag, limit = 8) {
     // 回傳最後一頁資料
     return {
       totalPages,
-      currentPage: page,
+      currentPage: page >= totalPages ? totalPages : page,
       data: halfSlice(data.slice(data.length - limit)),
     };
   }
   return {
     totalPages,
-    currentPage: page,
+    currentPage: page >= totalPages ? totalPages : page,
     data: halfSlice(data.slice(page * limit - limit, page * limit)),
   };
 }
@@ -182,15 +196,29 @@ function halfSlice(data) {
   return [data.slice(0, 4),data.slice(4)]
 }
 
+// 標籤點籍
 pcMarks.addEventListener('click', (e) => {
     if(!e.target.dataset.tag) return
     curTag = e.target.dataset.tag
     renderBook(pagination(filterData, 1, curTag))
     renderMark()
   })
-  h5Marks.addEventListener('click', (e) => {
-    if(!e.target.dataset.tag) return
-    curTag = e.target.dataset.tag
-    renderBook(pagination(filterData, 1, curTag))
-    renderMark()
-  })
+h5Marks.addEventListener('click', (e) => {
+  if(!e.target.dataset.tag) return
+  curTag = e.target.dataset.tag
+  renderBook(pagination(filterData, 1, curTag))
+  renderMark()
+})
+
+// 取消關注
+bookLeft.addEventListener('click', removeFavorites)
+bootRight.addEventListener('click', removeFavorites)
+
+async function removeFavorites(e) {
+  const { id } = e.target.dataset
+  if(!id) return
+  Favorites.remove(id)
+  await getData()
+  renderBook(pagination(filterData, curPage, curTag))
+  renderMark()
+}

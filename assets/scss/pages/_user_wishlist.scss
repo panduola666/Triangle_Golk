@@ -1,6 +1,16 @@
 .remove-wishlist{
-  z-index: 3;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $primary;
+  padding: 4px;
+  border-radius: 50%;
+  color: $secondary;
+  &:hover{
+    background-color: $secondary;
+    color: #fff;
+  }
 }
 .wishlist-note-card {
   position: relative;
