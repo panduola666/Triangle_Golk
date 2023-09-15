@@ -1,8 +1,11 @@
+.remove-wishlist{
+  z-index: 3;
+  cursor: pointer;
+}
 .wishlist-note-card {
   position: relative;
   overflow: hidden;
   transition: transform 0.2s;
-
   &::before {
     content: "";
     position: absolute;
