@@ -50,7 +50,7 @@ function renderBook(curData) {
     ${data[0].map(item => (`
     <div class="notebook-card-frame">
         <div class="card wishlist-note-card mb-3">
-          <span class="material-symbols-outlined outline-icon position-absolute end-0 top-0 text-secondary">heart_minus
+          <span class="remove-wishlist text-gray-300 material-symbols-outlined outline-icon position-absolute end-0 top-0 text-secondary">heart_minus
           </span>
         <div class="row g-0">
             <div class="col-4 card-row">
@@ -91,7 +91,7 @@ function renderBook(curData) {
     ${data[1].map(item => (`
     <div class="notebook-card-frame">
         <div class="card wishlist-note-card mb-3">
-          <span class="material-symbols-outlined outline-icon position-absolute end-0 top-0 text-secondary">heart_minus
+          <span class="remove-wishlist text-gray-300 material-symbols-outlined outline-icon position-absolute end-0 top-0 text-secondary">heart_minus
           </span>
         <div class="row g-0">
             <div class="col-4 card-row">
