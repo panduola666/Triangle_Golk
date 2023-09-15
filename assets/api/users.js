@@ -15,7 +15,10 @@ export const User = {
             const swal = await Swal.fire({
                 scrollbarPadding: false,
                 icon: 'success',
-                title: '登入成功'
+                title: '登入成功',
+                showConfirmButton: false,
+                timer: 1500,
+                allowOutsideClick: false
             })
             if(swal.isConfirmed || swal.isDismissed) location.reload()
             return res.data;

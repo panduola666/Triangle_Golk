@@ -40,7 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const data = {
             email: registerForm['register-email'].value,
             nickName: registerForm['register-nickname'].value,
-            password: registerForm['register-password'].value
+            password: registerForm['register-password'].value,
+            avatars: [],
+            avatarId: 4,
+            totalCheckIn: 0,
+            isAdmin: false,
         }
 
         User.register(data)
