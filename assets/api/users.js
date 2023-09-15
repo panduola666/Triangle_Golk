@@ -17,7 +17,6 @@ export const User = {
                 icon: 'success',
                 title: '登入成功'
             })
-            console.log(swal);
             if(swal.isConfirmed || swal.isDismissed) location.reload()
             return res.data;
         } catch (err) {
@@ -28,10 +27,9 @@ export const User = {
     async register(data) {
         try {
             const res = await axios.post(`${VITE_BASEURL}/users`, data);
-            // console.log('註冊成功');
             return res.data;
         } catch (err) {
-            // console.log('註冊失敗');
+            console.log(err);
         }
     },
     // 登出 or token 失效(已登入超過一小時) => 清除 localStorage 裡面的用戶資料
@@ -77,6 +75,22 @@ export const User = {
                 
             }
             this.clearUserInfo()
+        }
+    },
+    // 修改用戶資訊
+    async updateUser(data, useNewSwal = false) {
+        try {
+            const res = await axios.patch(`${VITE_BASEURL}/users/${localStorage.getItem('userId')}`, data);
+            !useNewSwal && Swal.fire({
+                scrollbarPadding: false,
+                icon: 'success',
+                title: '修改成功',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            return res.data;
+        } catch (err) {
+            console.log(err);
         }
     },
 } 
