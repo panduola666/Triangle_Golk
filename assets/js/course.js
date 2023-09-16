@@ -28,7 +28,7 @@ async function init() {
   const urlParams = new URLSearchParams(window.location.search);
   const platform =
   urlParams.has('platform') ? urlParams.getAll('platform') : []
-    const q =  urlParams.has('q') && urlParams.get('q');
+    const q =  urlParams.has('q') ? urlParams.get('q') : ''
     filterForm['search-bar'].value = q
     filterForm.querySelectorAll('input[type=checkbox]').forEach(input => {
       input.checked = platform.includes(input.value)
