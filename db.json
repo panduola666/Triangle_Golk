@@ -66,6 +66,83 @@
       "checkInTimer": 0,
       "isAdmin": false,
       "id": 6
+    },
+    {
+      "email": "chicken@trianglegolk.com",
+      "password": "$2a$10$Ib9EUprAElStF1LapbQuVe69CnrfRqnuzQXBOhlJiShkTZGTppT4G",
+      "nickName": "七肯",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 7
+    },
+    {
+      "email": "wang@trianglegolk.com",
+      "password": "$2a$10$Wl5sMOWGM2boF7ZtA.vA0e/E0pRmSJnYwOUdFExBl8hemrV9YftPm",
+      "nickName": "汪汪",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 8
+    },
+    {
+      "email": "mi@trianglegolk.com",
+      "password": "$2a$10$pUMvLkdtJVzi/N7va7xvvuquvD36KuOXDrRcudS1W/pJ81AglI7Qa",
+      "nickName": "小咪",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 9
+    },
+    {
+      "email": "mo@trianglegolk.com",
+      "password": "$2a$10$MugNlSoyXR0udq28x.WptezRghALiqgFI.ArquL0WJ0vjEVFkMPOO",
+      "nickName": "阿哞",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 10
+    },
+    {
+      "email": "miao@trianglegolk.com",
+      "password": "$2a$10$F02jNVZ1t1kPfAtpbT/mMOgX8VcxGRHciVvBWuqZac8W5FpIau8sO",
+      "nickName": "喵喵最大尾",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 11
+    },
+    {
+      "email": "piggy@trianglegolk.com",
+      "password": "$2a$10$W.5EM2f1uOT1IM7T4Dvp1e61Rhz5Kd3d583NyENyui0wWBnBgzPuG",
+      "nickName": "福豬豬",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 12
+    },
+    {
+      "email": "m2@trianglegolk.com",
+      "password": "$2a$10$N25kJr/xXohjTrn5sozbd.Jshz1mPNfK2Eh3QQnHjFYHMbMw04qna",
+      "nickName": "米兔",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 13
     }
   ],
   "favorites": [
@@ -108,6 +185,16 @@
       "userId": 6,
       "courseId": 1,
       "id": 11
+    },
+    {
+      "userId": 9,
+      "courseId": 4,
+      "id": 12
+    },
+    {
+      "userId": 10,
+      "courseId": 1,
+      "id": 13
     }
   ],
   "notions": [
@@ -362,6 +449,102 @@
       "courseId": 1,
       "isFinish": false,
       "id": 10
+    },
+    {
+      "userId": 7,
+      "courseId": 9,
+      "isFinish": false,
+      "id": 11
+    },
+    {
+      "userId": 7,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 12
+    },
+    {
+      "userId": 8,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 13
+    },
+    {
+      "userId": 8,
+      "courseId": 8,
+      "isFinish": false,
+      "id": 14
+    },
+    {
+      "userId": 8,
+      "courseId": 7,
+      "isFinish": false,
+      "id": 15
+    },
+    {
+      "userId": 8,
+      "courseId": 9,
+      "isFinish": false,
+      "id": 16
+    },
+    {
+      "userId": 8,
+      "courseId": 6,
+      "isFinish": false,
+      "id": 17
+    },
+    {
+      "userId": 8,
+      "courseId": 5,
+      "isFinish": false,
+      "id": 18
+    },
+    {
+      "userId": 8,
+      "courseId": 2,
+      "isFinish": false,
+      "id": 19
+    },
+    {
+      "userId": 8,
+      "courseId": 4,
+      "isFinish": false,
+      "id": 20
+    },
+    {
+      "userId": 9,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 21
+    },
+    {
+      "userId": 9,
+      "courseId": 4,
+      "isFinish": false,
+      "id": 22
+    },
+    {
+      "userId": 10,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 23
+    },
+    {
+      "userId": 11,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 24
+    },
+    {
+      "userId": 12,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 25
+    },
+    {
+      "userId": 13,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 26
     }
   ],
   "comments": [
@@ -378,9 +561,13 @@
       "isPassed": 1,
       "failContent": "",
       "likes": [
-        1
+        1,
+        6,
+        8,
+        10,
+        11
       ],
-      "likesNum": 1,
+      "likesNum": 5,
       "timer": 1693643063871
     },
     {
@@ -391,7 +578,7 @@
       "score": 5,
       "content": "<p>教學相當直白淺顯易懂，也提供超多範例給大家練習，適合像我這樣的小萌新 &lt;3</p>",
       "theme": 0,
-      "isPassed": -1,
+      "isPassed": 1,
       "failContent": "",
       "likes": [
         1
@@ -409,7 +596,7 @@
       "score": 4,
       "content": "<p>很適合剛剛接觸的JS新手，先講解原理再給練習題目複習挑戰，實際操作能加快吸收知識</p>",
       "theme": 0,
-      "isPassed": -1,
+      "isPassed": 1,
       "failContent": "",
       "likes": [],
       "likesNum": 0,
@@ -441,13 +628,191 @@
       "score": 3,
       "content": "<p>會從入門跟常用的教起, 不過如果比較深的內容的話需要再自己另外 google, 整體上來說還不錯</p>",
       "theme": 0,
-      "isPassed": -1,
+      "isPassed": 1,
       "failContent": "",
       "likes": [],
       "likesNum": 0,
       "timer": 1694874891877,
       "userId": 1,
       "id": 5
+    },
+    {
+      "courseId": 9,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>這門課程不僅提供了理論知識，還有實際的作業練習，讓人能夠實際應用所學。</p><p>我現在比較有概念能夠設計出兼具美觀和實用的界面了，謝謝老師，大推！</p>",
+      "theme": 1,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694873643901,
+      "userId": 7,
+      "id": 5
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 0,
+      "score": 5,
+      "content": "<p>課程量豐富紮實，發摟了老師的建議，每天都要空出一段時間持續穩定地跟課才不會走一步退兩步一直原地踏步，雖然前期有段時間尬到公司忙季有點爆炸，但撐過去之後現在回頭看是滿滿的成就感，大推！</p>",
+      "theme": 1,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694873793169,
+      "userId": 7,
+      "id": 6
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>一開始只會跟著照抄而已，很多地方都不是很理解，但是慢慢地也越來越理解為什麼要這樣寫，很推薦這門課大家可以參考看看</p>",
+      "theme": 0,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [
+        11
+      ],
+      "likesNum": 1,
+      "timer": 1694873915023,
+      "userId": 8,
+      "id": 7
+    },
+    {
+      "courseId": 8,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>很讚的課，新手友善，還有提供可以加深印象和概念的練習網頁，助教也很有耐心，會詳細地協助回應課程問題，大推~</p>",
+      "theme": 1,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694874299452,
+      "userId": 8,
+      "id": 8
+    },
+    {
+      "courseId": 9,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>這個課程真是UI設計的寶庫！老師深入淺出的教學方式讓我完全理解了設計原則和工具的運用，現在我能輕鬆設計出好看又兼具使用者友善的界面。敲碗期待進階課開課！</p>",
+      "theme": 0,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694874630134,
+      "userId": 8,
+      "id": 9
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>老師講得太好了,剛好我面試就遇到裡面好多個問題,真的好險有選這門課,老師保佑我面試成功~</p>",
+      "theme": 0,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694875104723,
+      "userId": 9,
+      "id": 10
+    },
+    {
+      "courseId": 4,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>內容編排和老師講解的方式都很好，讓我在跟著練習時能跟著老師的聲音，更迅速地專注回自己身上。</p><p>不止睡眠品質有提升，總覺得專注力也變強了，很開心。</p>",
+      "theme": 0,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694875221009,
+      "userId": 9,
+      "id": 11
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 4,
+      "content": "<p>不推薦初學者。</p><p>有時候老師講的速度太快了，還沒來得及反應就進到下一個重點，希望可以再放慢一點。</p>",
+      "theme": 0,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694875318708,
+      "userId": 10,
+      "id": 12
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>以前想著能動就好,殊不知有很多地方都是多餘的步驟,自從上了這門課我的 code 也越來越簡潔了!!!</p>",
+      "theme": 0,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694875409792,
+      "userId": 11,
+      "id": 13
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>這門課需要有點基礎再上會比較好，沒有基礎的話就要在課程以外的時間自己去補充知識，以免會跟不上</p>",
+      "theme": 0,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694875529875,
+      "userId": 12,
+      "id": 14
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 4,
+      "content": "<p>每次聽每次有不同的收穫,老師也會用一些生動的範例給我們講解,但我還是最喜歡漂亮阿姨出現在範例裡面 XD</p>",
+      "theme": 1,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694875674190,
+      "userId": 13,
+      "id": 15
     }
   ],
   "chatRooms": [
@@ -536,7 +901,7 @@
       "title": "使用HTML、CSS開發一個網站",
       "platform": "六角學院",
       "reason": "<p>前端三劍客怎麼可以少了 HTML 和 CSS</p>",
-      "isPassed": -1,
+      "isPassed": 1,
       "url": "https://www.hexschool.com/courses/html_css.html",
       "timer": 1690092378676
     }
