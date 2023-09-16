@@ -66,6 +66,28 @@
       "checkInTimer": 0,
       "isAdmin": false,
       "id": 6
+    },
+    {
+      "email": "chicken@trianglegolk.com",
+      "password": "$2a$10$Ib9EUprAElStF1LapbQuVe69CnrfRqnuzQXBOhlJiShkTZGTppT4G",
+      "nickName": "七肯",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 7
+    },
+    {
+      "email": "wang@trianglegolk.com",
+      "password": "$2a$10$Wl5sMOWGM2boF7ZtA.vA0e/E0pRmSJnYwOUdFExBl8hemrV9YftPm",
+      "nickName": "汪汪",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 8
     }
   ],
   "favorites": [
@@ -362,6 +384,66 @@
       "courseId": 1,
       "isFinish": false,
       "id": 10
+    },
+    {
+      "userId": 7,
+      "courseId": 9,
+      "isFinish": false,
+      "id": 11
+    },
+    {
+      "userId": 7,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 12
+    },
+    {
+      "userId": 8,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 13
+    },
+    {
+      "userId": 8,
+      "courseId": 8,
+      "isFinish": false,
+      "id": 14
+    },
+    {
+      "userId": 8,
+      "courseId": 7,
+      "isFinish": false,
+      "id": 15
+    },
+    {
+      "userId": 8,
+      "courseId": 9,
+      "isFinish": false,
+      "id": 16
+    },
+    {
+      "userId": 8,
+      "courseId": 6,
+      "isFinish": false,
+      "id": 17
+    },
+    {
+      "userId": 8,
+      "courseId": 5,
+      "isFinish": false,
+      "id": 18
+    },
+    {
+      "userId": 8,
+      "courseId": 2,
+      "isFinish": false,
+      "id": 19
+    },
+    {
+      "userId": 8,
+      "courseId": 4,
+      "isFinish": false,
+      "id": 20
     }
   ],
   "comments": [
@@ -378,9 +460,11 @@
       "isPassed": 1,
       "failContent": "",
       "likes": [
-        1
+        1,
+        6,
+        8
       ],
-      "likesNum": 1,
+      "likesNum": 3,
       "timer": 1693643063871
     },
     {
@@ -432,6 +516,86 @@
       "timer": 1694873265171,
       "userId": 6,
       "id": 4
+    },
+    {
+      "courseId": 9,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>這門課程不僅提供了理論知識，還有實際的作業練習，讓人能夠實際應用所學。</p><p>我現在比較有概念能夠設計出兼具美觀和實用的界面了，謝謝老師，大推！</p>",
+      "theme": 1,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694873643901,
+      "userId": 7,
+      "id": 5
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 0,
+      "score": 5,
+      "content": "<p>課程量豐富紮實，發摟了老師的建議，每天都要空出一段時間持續穩定地跟課才不會走一步退兩步一直原地踏步，雖然前期有段時間尬到公司忙季有點爆炸，但撐過去之後現在回頭看是滿滿的成就感，大推！</p>",
+      "theme": 1,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694873793169,
+      "userId": 7,
+      "id": 6
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>一開始只會跟著照抄而已，很多地方都不是很理解，但是慢慢地也越來越理解為什麼要這樣寫，很推薦這門課大家可以參考看看</p>",
+      "theme": 0,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694873915023,
+      "userId": 8,
+      "id": 7
+    },
+    {
+      "courseId": 8,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>很讚的課，新手友善，還有提供可以加深印象和概念的練習網頁，助教也很有耐心，會詳細地協助回應課程問題，大推~</p>",
+      "theme": 1,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694874299452,
+      "userId": 8,
+      "id": 8
+    },
+    {
+      "courseId": 9,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>這個課程真是UI設計的寶庫！老師深入淺出的教學方式讓我完全理解了設計原則和工具的運用，現在我能輕鬆設計出好看又兼具使用者友善的界面。敲碗期待進階課開課！</p>",
+      "theme": 0,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694874630134,
+      "userId": 8,
+      "id": 9
     }
   ],
   "chatRooms": [
