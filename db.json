@@ -55,6 +55,17 @@
       "totalCheckIn": 0,
       "isAdmin": false,
       "id": 5
+    },
+    {
+      "email": "shawey.contact@gmail.com",
+      "password": "$2a$10$9rFqvARDzcOceUtSWcvmOOPoWIIilHTMmEbk7DHydN7ZmV8j3Fkra",
+      "nickName": "雪維",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 6
     }
   ],
   "favorites": [
@@ -92,6 +103,11 @@
       "userId": 1,
       "courseId": 1,
       "id": 10
+    },
+    {
+      "userId": 6,
+      "courseId": 1,
+      "id": 11
     }
   ],
   "notions": [
@@ -340,6 +356,12 @@
       "courseId": 1,
       "isFinish": false,
       "id": 9
+    },
+    {
+      "userId": 6,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 10
     }
   ],
   "comments": [
@@ -394,6 +416,22 @@
       "timer": 1694863236686,
       "userId": 5,
       "id": 3
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>獲益良多，從零開始打下了紮實的基礎，很喜歡這門課</p>",
+      "theme": 1,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694873265171,
+      "userId": 6,
+      "id": 4
     }
   ],
   "chatRooms": [
