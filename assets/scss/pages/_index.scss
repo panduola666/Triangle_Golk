@@ -104,6 +104,9 @@
     height: 400px;
     transition: height 1s;
     float: left;
+    p{
+      margin-bottom: 0;
+    }
     @media(min-width: 992px){
       height: 420px;
       width: 420px;

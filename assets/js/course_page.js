@@ -117,6 +117,7 @@ function renderCourse(course) {
 
 // 中間評論畫面渲染
 function renderComment(comments) {
+  console.log(comments);
   // 該課程沒有評論
   commentList.classList.remove('justify-content-around');
   if (!comments.data.length) {
@@ -405,32 +406,6 @@ favoriteBtn.addEventListener('click', async (e) => {
   await updateUserInfo();
 });
 
-// 評論區點讚
-commentList.addEventListener('click', async (e) => {
-  if (!e.target.dataset.comment) return;
-  // 找到當前點擊的評論資料
-  const current = comments.data.find(
-    (comment) => comment.id === Number(e.target.dataset.comment)
-  );
-  const { id, likes, likesNum } = current;
-  if (likes.includes(user.id)) return; // 點過讚的人
-  // 點讚
-  likes.push(user.id);
-  const data = {
-    likes,
-    likesNum: likes.length,
-  };
-  Comment.likeComment(id, data);
-  renderComment(
-    await Comment.getComments(
-      Number(e.target.dataset.link),
-      6,
-      sort,
-      'desc',
-      id
-    )
-  );
-});
 
 // 課堂小測提交
 testForm.addEventListener('submit', (e) => {
@@ -495,4 +470,32 @@ navBtn.forEach((btn) => {
     renderComment(changeData);
     // location.search = `?id=${id}&sort=${e.target.dataset.key}`
   });
+});
+
+// 評論區點讚
+commentList.addEventListener('click', async (e) => {
+  if (!e.target.dataset.comment) return;
+
+  // 找到當前點擊的評論資料
+  const current = await Comment.getCurrent(Number(e.target.dataset.comment))
+  const { id, likes, likesNum } = current;
+  if (likes.includes(user.id)) return; // 點過讚的人
+  // 點讚
+  likes.push(user.id);
+  const data = {
+    likes,
+    likesNum: likes.length,
+  };
+  console.log(sort);
+  Comment.likeComment(id, data);
+  
+  renderComment(
+    await Comment.getComments(
+      comments.currentPage,
+      6,
+      sort,
+      'desc',
+      urlParams.get('id')
+    )
+  );
 });
