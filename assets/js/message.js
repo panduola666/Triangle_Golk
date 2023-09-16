@@ -42,7 +42,6 @@ var $chatBoxUsername; // 用户名
     // 處理用戶提交訊息的函數
     function submitMessage() {
         var userMessage = $chatInput.val(); // 獲取用戶輸入的訊息
-        
         var userAvatarUrl = userData.avatar.image;
 
         var messageHtml = '<div class="chat-msg self chat-msg bot">' +
@@ -123,4 +122,4 @@ $(document).ready(controller.init);
 setTimeout(function() {
     document.getElementById("chat-box__wraper").style.display = "block";
     document.querySelector(".chat-box-welcome__header").style.display = "none";
-}, 5000);
+}, 3000);

@@ -7,7 +7,7 @@
         4,
         5
       ],
-      "avatarId": 4,
+      "avatarId": 5,
       "nickName": "圈圈",
       "totalCheckIn": 0,
       "isAdmin": true,
@@ -327,12 +327,7 @@
       "id": 1,
       "courseId": 1,
       "total": 30,
-      "onlineUsers": [
-        {
-          "userId": 1,
-          "site": "1-1"
-        }
-      ],
+      "onlineUsers": [],
       "name": "R1"
     },
     {
