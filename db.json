@@ -56,11 +56,6 @@
   ],
   "favorites": [
     {
-      "userId": 1,
-      "courseId": 1,
-      "id": 1
-    },
-    {
       "userId": 2,
       "courseId": 9,
       "id": 3
@@ -89,6 +84,11 @@
       "userId": 5,
       "courseId": 1,
       "id": 9
+    },
+    {
+      "userId": 1,
+      "courseId": 1,
+      "id": 10
     }
   ],
   "notions": [

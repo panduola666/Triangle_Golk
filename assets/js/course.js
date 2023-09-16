@@ -28,7 +28,9 @@ init()
 async function updateUserInfo() {
   if (!localStorage.getItem('token')) {
     // 如果用户未登入，隐藏收藏按鈕
-    favBtn.classList.add('d-none')
+    if (favBtn) {
+      favBtn.classList.add('d-none')
+    }
     return
   }
   user = await User.getUserInfo()
@@ -46,7 +48,9 @@ async function updateUserInfo() {
   });
 
   //  當前課程的收藏 icon
-  favBtn.classList.remove('d-none')
+  if (favBtn) {
+    favBtn.classList.remove('d-none')
+  }
 }
 
 async function renderCourseList(pageNum) {
