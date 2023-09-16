@@ -74,6 +74,7 @@ export const Course = {
 
         return {
           ...course,
+          comments: course.comments.filter(item => item.isPassed === 1),
           avgScore: Math.floor(avgScore),
         };
       });
