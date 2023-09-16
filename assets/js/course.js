@@ -26,25 +26,21 @@ async function init() {
 init()
 
 async function updateUserInfo() {
-  try {
-    if (!localStorage.getItem('token')) {
-      // 如果用户未登入，隐藏收藏按鈕
-      if (favBtn) {
-        favBtn.forEach((btn) => {
-          btn.classList.add("d-none");
-        });
-      }
-    } else {
-      if (favBtn) {
-        favBtn.forEach((btn) => {
-          btn.classList.remove("d-none");
-        });
-      }
-    }
-  } catch (err) {
-    console.log(err);
+
+  if (!localStorage.getItem('token')) {
+    // 如果用户未登入，隐藏收藏按鈕
+    favBtn.classList.add('d-none')
+    return
   }
   user = await User.getUserInfo()
+  if (!user) return
+  //  當前課程的收藏 icon
+  favBtn.classList.remove('d-none')
+  if (user.favorites.find(item => Number(item.courseId) === Number(id))) {
+    favBtn.classList.remove('outline-icon')
+  } else {
+    favBtn.classList.add('outline-icon')
+  }
 }
 
 async function renderCourseList(pageNum) {
@@ -77,7 +73,7 @@ async function renderCourseList(pageNum) {
           >${item.platform}</span
         >
         <span
-          class="${localStorage.getItem('token') ? '' : 'd-none'} favorite text-white material-symbols-outlined outline-icon position-absolute" data-id="${item.id}"
+          class="${localStorage.getItem('token') ? '' : 'd-none'} favorite material-symbols-outlined outline-icon position-absolute" data-id="${item.id}"
           >favorite</span
         >
       </div>
@@ -109,11 +105,10 @@ async function renderCourseList(pageNum) {
 
   courseList.innerHTML = str;
   updatePaginationBtns();
+  await updateUserInfo();
 }
 
 const pagination = document.querySelector(".pagination");
-const prevBtn = document.querySelector(".page-prev");
-const nextBtn = document.querySelector(".page-next");
 const pageItems = 6; // 每頁顯示的數量
 let currentPage = 1; // 當前頁碼
 let totalItems = 0; // 總共幾筆資料
@@ -213,3 +208,26 @@ deleteBtn.addEventListener('click', (e) => {
     checkbox.checked = false;
   });
 })
+
+// 每個課程內的關注按鈕點擊
+document.querySelector(".course-list").addEventListener("click", async (e) => {
+  if (e.target.classList.contains("favorite")) {
+    e.preventDefault();
+
+    const courseId = e.target.dataset.id;
+    if (!courseId) return;
+
+    const index = user.favorites.findIndex((item) => Number(item.courseId) === Number(courseId));
+    if (index === -1) {
+      // 加入收藏
+      await Favorites.add(courseId);
+      e.target.classList.remove('outline-icon');
+    } else {
+      const currId = user.favorites[index].id;
+      await Favorites.remove(currId);
+      e.target.classList.add('outline-icon');
+    }
+
+    await updateUserInfo();
+  }
+});
