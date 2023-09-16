@@ -37,12 +37,12 @@ function renderComments(comments) {
   commentList.innerHTML = comments.map((comment, index) => {
     const {nickName, email} = comment.user
     return `<li data-id="${comment.courseId}" class="swiper-slide p-5 bg-${colors[(index + 1) % 3]} rounded-4 d-flex flex-column cur-point card-hover">
-    <h4 class="fs-5 mb-4">${comment.course.title}</h4>
-    <div class="fs-4 mb-4 flex-grow-1">
+    <h4 class="fs-5 mb-4 text-truncate">${comment.course.title}</h4>
+    <div class="fs-5 mb-4 flex-grow-1 overflow-y-auto">
       ${comment.content}
     </div>
     <div class="d-flex align-items-center gap-3">
-      <img src="${comment.avatarUrl}" alt="" class="recommend-avatar">
+      <img src="${comment.avatarUrl}" alt="用戶頭像" class="recommend-avatar border border-gray-400">
       <p class="fs-6 mb-0">${comment.showName ? nickName : `${email.split('@')[0][0]}***${email.split('@')[0][email.split('@')[0].length -1]}`}</p>
     </div>
   </li>`

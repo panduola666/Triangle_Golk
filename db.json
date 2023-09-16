@@ -143,6 +143,17 @@
       "checkInTimer": 0,
       "isAdmin": false,
       "id": 13
+    },
+    {
+      "email": "user@gmail.com",
+      "password": "$2a$10$fWOCO27TzjEEwNqZdFD3ieQwC896hg/F.Xfb/dw9yJV9H3fa5CDnK",
+      "nickName": "艾爾",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 14
     }
   ],
   "favorites": [
@@ -565,9 +576,10 @@
         6,
         8,
         10,
-        11
+        11,
+        14
       ],
-      "likesNum": 5,
+      "likesNum": 6,
       "timer": 1693643063871
     },
     {
@@ -792,8 +804,10 @@
       "theme": 0,
       "isPassed": 1,
       "failContent": "",
-      "likes": [],
-      "likesNum": 0,
+      "likes": [
+        14
+      ],
+      "likesNum": 1,
       "timer": 1694875529875,
       "userId": 12,
       "id": 14
@@ -808,8 +822,10 @@
       "theme": 1,
       "isPassed": 1,
       "failContent": "",
-      "likes": [],
-      "likesNum": 0,
+      "likes": [
+        14
+      ],
+      "likesNum": 1,
       "timer": 1694875674190,
       "userId": 13,
       "id": 15
