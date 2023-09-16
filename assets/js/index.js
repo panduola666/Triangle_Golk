@@ -125,7 +125,6 @@ const swiper = new Swiper('.other-courses', {
   },
   pagination: {
     el: ".swiper-pagination",
-    clickable :true,
   },
   });
   
