@@ -91,7 +91,7 @@ function renderCourse(course) {
   courseTitle.innerHTML = `
   <span class="bg-secondary text-white py-2 px-4 rounded-1 me-lg-3 me-2 mb-1 mb-lg-0">${course.platform
   }</span>
-  <h1 class="page-title fs-lg-2 fs-4 fw-bold text-nowrap">
+  <h1 class="page-title fs-lg-2 fs-4 fw-bold">
     ${course.title}
   </h1>
               `

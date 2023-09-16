@@ -19,6 +19,11 @@
       "userId": 1,
       "courseId": 1,
       "id": 1
+    },
+    {
+      "userId": 1,
+      "courseId": 4,
+      "id": 2
     }
   ],
   "notions": [
