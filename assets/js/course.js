@@ -13,7 +13,8 @@ const favBtn = document.querySelector(".favorite");
 const sortBtn = document.querySelectorAll('.sort-btn')
 const sortItemBtn = document.querySelectorAll('.sort-item-btn')
 const pagination = document.querySelector(".pagination");
-
+const contentFilterItems = document.querySelectorAll('.content-filter');
+const sortFilterItems = document.querySelectorAll('.sort-filter');
 
 const pageItems = 6; // 每頁顯示的數量
 let currentPage = 1; // 當前頁碼
@@ -25,10 +26,10 @@ const sortOption = {
 }
 async function init() {
   try {
-  const urlParams = new URLSearchParams(window.location.search);
-  const platform =
-  urlParams.has('platform') ? urlParams.getAll('platform') : []
-    const q =  urlParams.has('q') ? urlParams.get('q') : ''
+    const urlParams = new URLSearchParams(window.location.search);
+    const platform =
+      urlParams.has('platform') ? urlParams.getAll('platform') : []
+    const q = urlParams.has('q') ? urlParams.get('q') : ''
     filterForm['search-bar'].value = q
     filterForm.querySelectorAll('input[type=checkbox]').forEach(input => {
       input.checked = platform.includes(input.value)
@@ -74,18 +75,18 @@ async function updateUserInfo() {
 async function renderCourseList(pageNum) {
   const courseList = document.querySelector(".course-list");
   const res = await Course.getAllCourses();
-  switch(sortOption.content) {
-    case '全部': 
-    res.sort((a,b) => sortOption.sort !== '正序' ? b.id - a.id : a.id - b.id)
-    break
-    case '評價數':
-    res.sort((a,b) => sortOption.sort !== '正序' ? a.comments.length - b.comments.length : b.comments.length - a.comments.length)
+  switch (sortOption.content) {
+    case '全部':
+      res.sort((a, b) => sortOption.sort !== '正序' ? b.id - a.id : a.id - b.id)
       break
-      default:
-    res.sort((a,b) => sortOption.sort !== '正序' ? a.avgScore - b.avgScore : b.avgScore - a.avgScore)
+    case '評價數':
+      res.sort((a, b) => sortOption.sort !== '正序' ? a.comments.length - b.comments.length : b.comments.length - a.comments.length)
+      break
+    default:
+      res.sort((a, b) => sortOption.sort !== '正序' ? a.avgScore - b.avgScore : b.avgScore - a.avgScore)
       break
   }
- 
+
   // 更新總共幾筆資料
   totalItems = res.length;
   // 計算分頁範圍
@@ -94,7 +95,7 @@ async function renderCourseList(pageNum) {
 
   let str = "";
   const currentPageData = res.slice(startIndex, endIndex);
-  if(currentPageData.length) {
+  if (currentPageData.length) {
     currentPageData.forEach((item) => {
       str += `<li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
       <a class="card card-hover h-100 rounded-4" href="./coursepages.html?id=${item.id}&sort=timer">
@@ -150,14 +151,14 @@ async function renderCourseList(pageNum) {
     </li>
     `
   }
-   
+
 
   courseList.innerHTML = str;
 
-  if(!currentPageData.length) {
+  if (!currentPageData.length) {
     document.querySelector('.need-apply').addEventListener('click', () => {
       document.querySelector('.apply-btn').click()
-     })
+    })
   }
   updatePaginationBtns();
   await updateUserInfo();
@@ -165,7 +166,7 @@ async function renderCourseList(pageNum) {
 sortBtn.forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation()
-    const { sort='' } = btn.dataset
+    const { sort = '' } = btn.dataset
     sortBtn.forEach(item => {
       item.classList.remove('btn-secondary')
       item.classList.remove('active')
@@ -180,7 +181,7 @@ sortBtn.forEach(btn => {
 sortItemBtn.forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation()
-    const { content='' } = btn.dataset
+    const { content = '' } = btn.dataset
     sortItemBtn.forEach(item => {
       item.classList.remove('btn-secondary')
       item.classList.remove('active')
@@ -193,9 +194,6 @@ sortItemBtn.forEach(btn => {
     renderCourseList(currentPage)
   })
 })
-
-
-
 
 function renderPagination() {
   pagination.addEventListener('click', (e) => {
@@ -251,11 +249,11 @@ function updatePaginationBtns() {
 
   const prevPageBtn = pagination.querySelector(".page-prev");
   prevPageBtn && prevPageBtn.addEventListener('click', () => {
-      if (currentPage > 1) {
-        currentPage--; // 減少當前頁碼
-        renderCourseList(currentPage); // 渲染新頁面資料
-      }
-    });
+    if (currentPage > 1) {
+      currentPage--; // 減少當前頁碼
+      renderCourseList(currentPage); // 渲染新頁面資料
+    }
+  });
   const nextPageBtn = pagination.querySelector(".page-next");
   nextPageBtn && nextPageBtn.addEventListener('click', () => {
     if (currentPage < totalPages) {
@@ -315,4 +313,30 @@ document.querySelector(".course-list").addEventListener("click", async (e) => {
 
     await updateUserInfo();
   }
+});
+
+// 添加內容篩選的事件監聽器
+contentFilterItems.forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    const content = e.target.dataset.content;
+    sortOption.content = content;
+    renderCourseList(currentPage);
+
+    // 更新下拉選單按鈕上的文字
+    document.getElementById('selectedContent').textContent = content;
+  });
+});
+
+// 添加排序篩選的事件監聽器
+sortFilterItems.forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    const sort = e.target.dataset.sort;
+    sortOption.sort = sort;
+    renderCourseList(currentPage);
+
+    // 更新下拉選單按鈕上的文字
+    document.getElementById('selectedSort').textContent = sort;
+  });
 });
