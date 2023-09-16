@@ -1,4 +1,5 @@
-import { User } from '../api';
+import { User} from '../api';
+
 
 const botController = (function () {
     
@@ -22,20 +23,6 @@ var $chatBoxUsername; // 用户名
  var $chatBoxAvatar; // 頭像
  var userData; // 用戶數據
 
-
-//   // 获取用户信息
-//   User.getUserInfo()
-//   .then(userData => {
-//       if (userData) {
-//           // 更新聊天室的用户名和头像
-//           $chatBoxUsername.text(userData.nickName);
-//           $chatBoxAvatar.attr("src", userData.avatar.image);
-//           userData = userData; // 将userData保存到全局以供submitMessage函数使用
-//       }
-//   })
-//   .catch(err => {
-//       console.error(err);
-//   });
     
     
 
@@ -77,13 +64,15 @@ var $chatBoxUsername; // 用户名
         $chatBoxUsername = $("#chat-box-username"); // 用户名
         $chatBoxAvatar = $("#chat-box-avatar"); // 頭像
 
+
+
         // 獲取用戶訊息
     User.getUserInfo()
     .then(function (userDataResponse) {
       if (userDataResponse) {
         userData = userDataResponse; // 將userData保存到全局
         // 更新聊天室的用户名和頭像
-        $chatBoxUsername.text(userData.nickName);
+        // $chatBoxUsername.text(userData.nickName);
         // $chatBoxAvatar.attr("src", userData.avatar.image);
       }
     })
