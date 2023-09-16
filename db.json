@@ -32,6 +32,26 @@
       "totalCheckIn": 0,
       "isAdmin": false,
       "id": 3
+    },
+    {
+      "email": "ohhiyo@gmail.com",
+      "password": "$2a$10$GxIWIn6xzz316knW9vMkbeylvhNFMnmcBXZKqi2TD7opJUd4GY9le",
+      "nickName": "ohhiyo",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "isAdmin": false,
+      "id": 4
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$b4wi0WHA1pBMk/HrHifzZeNqjspVKB7Ri1.x5e9/puo70AjQpH6xy",
+      "nickName": "伊登 ",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "isAdmin": false,
+      "id": 5
     }
   ],
   "favorites": [
@@ -39,11 +59,6 @@
       "userId": 1,
       "courseId": 1,
       "id": 1
-    },
-    {
-      "userId": 1,
-      "courseId": 4,
-      "id": 2
     },
     {
       "userId": 2,
@@ -64,6 +79,16 @@
       "userId": 3,
       "courseId": 2,
       "id": 6
+    },
+    {
+      "userId": 1,
+      "courseId": 3,
+      "id": 8
+    },
+    {
+      "userId": 5,
+      "courseId": 1,
+      "id": 9
     }
   ],
   "notions": [
@@ -300,6 +325,18 @@
       "courseId": 1,
       "isFinish": false,
       "id": 7
+    },
+    {
+      "userId": 4,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 8
+    },
+    {
+      "userId": 5,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 9
     }
   ],
   "comments": [
@@ -320,6 +357,40 @@
       ],
       "likesNum": 1,
       "timer": 1693643063871
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://picsum.photos/200/200?grayscale",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>教學相當直白淺顯易懂，也提供超多範例給大家練習，適合像我這樣的小萌新 &lt;3</p>",
+      "theme": 0,
+      "isPassed": -1,
+      "failContent": "",
+      "likes": [
+        1
+      ],
+      "likesNum": 1,
+      "timer": 1694862417336,
+      "userId": 4,
+      "id": 2
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://picsum.photos/200/200?grayscale",
+      "showName": 1,
+      "score": 4,
+      "content": "<p>很適合剛剛接觸的JS新手，先講解原理再給練習題目複習挑戰，實際操作能加快吸收知識</p>",
+      "theme": 0,
+      "isPassed": -1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694863236686,
+      "userId": 5,
+      "id": 3
     }
   ],
   "chatRooms": [

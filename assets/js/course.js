@@ -26,7 +26,6 @@ async function init() {
 init()
 
 async function updateUserInfo() {
-
   if (!localStorage.getItem('token')) {
     // 如果用户未登入，隐藏收藏按鈕
     favBtn.classList.add('d-none')
@@ -34,13 +33,20 @@ async function updateUserInfo() {
   }
   user = await User.getUserInfo()
   if (!user) return
+
+  //  在這裡檢查每個課程是否在收藏中，並更新按鈕狀態
+  const favBtns = document.querySelectorAll('.favorite');
+  favBtns.forEach((button) => {
+    const courseId = button.dataset.id;
+    if (user.favorites.find(item => Number(item.courseId) === Number(courseId))) {
+      button.classList.remove('outline-icon')
+    } else {
+      button.classList.add('outline-icon')
+    }
+  });
+
   //  當前課程的收藏 icon
   favBtn.classList.remove('d-none')
-  if (user.favorites.find(item => Number(item.courseId) === Number(id))) {
-    favBtn.classList.remove('outline-icon')
-  } else {
-    favBtn.classList.add('outline-icon')
-  }
 }
 
 async function renderCourseList(pageNum) {
@@ -167,12 +173,12 @@ function updatePaginationBtns() {
 
   const prevPageBtn = pagination.querySelector(".page-prev");
   prevPageBtn && prevPageBtn.addEventListener('click', () => {
-      console.log(currentPage);
-      if (currentPage > 1) {
-        currentPage--; // 減少當前頁碼
-        renderCourseList(currentPage); // 渲染新頁面資料
-      }
-    });
+    console.log(currentPage);
+    if (currentPage > 1) {
+      currentPage--; // 減少當前頁碼
+      renderCourseList(currentPage); // 渲染新頁面資料
+    }
+  });
   const nextPageBtn = pagination.querySelector(".page-next");
   nextPageBtn && nextPageBtn.addEventListener('click', () => {
     if (currentPage < totalPages) {
