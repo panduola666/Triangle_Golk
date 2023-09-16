@@ -9,6 +9,7 @@ const commentContent = document.querySelector('.comment-content')
 const commentView = document.querySelector('.comment-view')
 const proveImg = document.querySelector('.prove-img')
 const userName = document.querySelector('.comment-userName')
+const pageTitle = document.querySelector('.page-title')
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.has('id') && urlParams.get('id') // 評論id => 編輯
@@ -33,6 +34,7 @@ const user = {
 async function init() {
   if(id) { // 編輯
    const res = await Comment.getCurrent(id)
+   pageTitle.textContent = `完課評價－${res.course.title}`
    params = {...params,...res}
    user.nickName = res.user.nickName
    user.email = res.user.email.slice(0,res.user.email.indexOf('@'))
@@ -54,6 +56,7 @@ async function init() {
     commentView.classList.add(`comment-style${params.theme}`)
     try{
       const res = await Course.getCourse(courseId)
+      pageTitle.textContent = `完課評價－${res.title}`
       renderCourseCard(res)
     }
     catch(err) {
@@ -77,7 +80,7 @@ function renderCourseCard (data) {
     <img src="${data.cover}" class="img-fluid rounded-start"
       alt="${data.title}">
   </div>
-  <div class="col">
+  <div class="col-7 col-lg-8">
     <div class="card-body">
       <h4 class="card-title text-truncate">${data.title}</h4>
     </div>

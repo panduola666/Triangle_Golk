@@ -13,5 +13,15 @@ export const ChatRooms = {
         } catch (err) {
             console.log(err);
         }
+    },
+    async update(params, id) {
+        try {
+            await axios.patch(`${VITE_BASEURL}/chatRooms/${id}`, params);
+            const res = await this.curCourse()
+            
+            return res
+        } catch (err) {
+            console.log(err);
+        }
     }
 }

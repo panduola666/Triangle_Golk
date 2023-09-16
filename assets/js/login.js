@@ -92,12 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         User.login(data)
             .then(res => {
-                // 登入成功後續處理
-                Swal.fire({
-                    scrollbarPadding: false,
-                    icon: 'success',
-                    title: "登入成功"
-                });
                 return res.data;
             })
             .catch(err => {

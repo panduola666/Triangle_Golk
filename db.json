@@ -7,11 +7,31 @@
         4,
         5
       ],
-      "avatarId": 4,
+      "avatarId": 5,
       "nickName": "圈圈",
       "totalCheckIn": 0,
       "isAdmin": true,
       "id": 1
+    },
+    {
+      "email": "bear@gmail.com",
+      "password": "$2a$10$4w9I3ZNjV8wTqiQ7fUI6TOXvT3vS8M8XnFYEHJP5myO4/zLgrMIi.",
+      "nickName": "熊熊",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "isAdmin": false,
+      "id": 2
+    },
+    {
+      "email": "1D@gmail.com",
+      "password": "$2a$10$9Rw1eJsAVu7BhfjGS1W4LOJO4ZuV1CRTVYycCzOXD0SSpiVLEQS6S",
+      "nickName": "1D",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "isAdmin": false,
+      "id": 3
     }
   ],
   "favorites": [
@@ -19,6 +39,31 @@
       "userId": 1,
       "courseId": 1,
       "id": 1
+    },
+    {
+      "userId": 1,
+      "courseId": 4,
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "courseId": 9,
+      "id": 3
+    },
+    {
+      "userId": 3,
+      "courseId": 4,
+      "id": 4
+    },
+    {
+      "userId": 3,
+      "courseId": 5,
+      "id": 5
+    },
+    {
+      "userId": 3,
+      "courseId": 2,
+      "id": 6
     }
   ],
   "notions": [
@@ -231,6 +276,30 @@
       "courseId": 8,
       "isFinish": false,
       "id": 3
+    },
+    {
+      "userId": 2,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "courseId": 9,
+      "isFinish": false,
+      "id": 5
+    },
+    {
+      "userId": 3,
+      "courseId": 7,
+      "isFinish": false,
+      "id": 6
+    },
+    {
+      "userId": 3,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 7
     }
   ],
   "comments": [
@@ -258,12 +327,7 @@
       "id": 1,
       "courseId": 1,
       "total": 30,
-      "onlineUsers": [
-        {
-          "userId": 1,
-          "site": "1-1"
-        }
-      ],
+      "onlineUsers": [],
       "name": "R1"
     },
     {

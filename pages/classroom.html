@@ -1,299 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
-" rel="stylesheet">
+"
+      rel="stylesheet"
+    />
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <title>進修室</title>
-    <link rel="icon" type="image/png" href="../assets/images/favicon.ico">
-</head>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.ico" />
+  </head>
 
-<body>
-<div class="min-vh-100 d-flex flex-column">  
-
+  <body>
+    <div class="min-vh-100 d-flex flex-column">
       <%- include('./layout/nav'); -%>
-          <main class="container ">
-  
-              <div class="page-header my-4 d-flex justify-content-between">
-                <span class="d-flex justify-content-between align-items-center">
-                  <span class="material-symbols-outlined fs-2">
-                      meeting_room
-                      </span>
-                  <h2 class="fs-5 mb-0 link-hover">
-                    <a class="page-back"> 離開教室</a>
-                  </h2>
-              </span>
-                  <div class="dropdown">
-                      <button class="btn btn-outline-secondary dropdown-toggle" id="dropdown-menu-link" data-bs-toggle="dropdown" aria-expanded="false">
-                        教室：R1
-                      </button>
-                    
-                      <ul class="dropdown-menu dropdown-shadow room-list" aria-labelledby="dropdown-menu-link">
-                        <!-- <li><a class="dropdown-item" href="#">教室：R2</a></li>
+      <main class="container">
+        <div class="page-header my-4 d-flex justify-content-between">
+          <span class="d-flex justify-content-between align-items-center level-class">
+            <span class="material-symbols-outlined fs-2"> meeting_room </span>
+            <h2 class="fs-5 mb-0 link-hover">
+              <a class="page-back"> 離開教室</a>
+            </h2>
+          </span>
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              id="dropdown-menu-link"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              教室：R1
+            </button>
+
+            <ul
+              class="dropdown-menu dropdown-shadow room-list"
+              aria-labelledby="dropdown-menu-link"
+            >
+              <!-- <li><a class="dropdown-item" href="#">教室：R2</a></li>
                         <li><a class="dropdown-item" href="#">教室：R3</a></li>
                         <li><a class="dropdown-item" href="#">教室：R4</a></li> -->
-                      </ul>
-                    </div>
-                  </div>
-              
-              <!-- 座位區 -->
-  
-              <div class="container border border-secondary w-auto  pb-4 px-5 col-9 m-auto ">
-  
-                  <!-- 課程名稱 -->
-                  <span class="container course-title d-flex justify-content-around mb-3 align-items-center">
-                  <span class="d-flex justify-content-around border border-secondary p-3 bg-primary  shadow-sm">
-                      <span class="border border-secondary bg-secondary rounded text-nowrap text-primary fw-bold m-auto p-2 align-content-center page-platform">六角學院</span>
-                      <h1 class="page-title fw-bold text-secondary ms-2 m-auto ">JavaScript 核心篇</h1>
-                  </span>
-              </span>
-  
+            </ul>
+          </div>
+        </div>
 
-<!-- 座位 -->
+        <!-- 座位區 -->
 
+        <div
+          class="container border border-secondary w-auto pb-4 px-5 col-9 m-auto"
+        >
+          <!-- 課程名稱 -->
+          <span
+            class="container course-title d-flex justify-content-around mb-3 align-items-center"
+          >
+            <span
+              class="d-flex justify-content-around border border-secondary p-3 bg-primary shadow-sm"
+            >
+              <span
+                class="border border-secondary bg-secondary rounded text-nowrap text-primary fw-bold m-auto p-2 align-content-center page-platform"
+                >六角學院</span
+              >
+              <h1 class="page-title fw-bold text-secondary ms-2 m-auto">
+                JavaScript 核心篇
+              </h1>
+            </span>
+          </span>
 
-<div class="seat container py-5 aos-init aos-animate" data-aos="fade-up-right"  >
+          <!-- 座位 -->
 
-    <ul class="container col-auto row list-unstyled g-lg-6 g-md-3 g-2 mb-5  align-items-center m-auto h-auto justify-content-around  m-lg-auto m-sm-auto m-md-auto page-table">
-
-     <li class="triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center text-center">
+          <div
+            class="seat container py-5 aos-init aos-animate"
+            data-aos="fade-up-right"
+          >
+            <ul
+              class="container col-auto row list-unstyled g-lg-6 g-md-3 g-2 mb-5 align-items-center m-auto h-auto justify-content-around m-lg-auto m-sm-auto m-md-auto page-table"
+            >
+              <!-- <li class="triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center text-center">
       <div class="col-auto triangle-container d-flex justify-content-center align-items-center col-auto">
-          <span class="triangle-two col-auto"></span>
-          <span class="triangle-three col-auto"></span>
-          <span class="triangle-four col-auto"></span>
+          <span  class="triangle-two col-auto"></span>
+          <span  class="triangle-three col-auto"></span>
+          <span class=" triangle-four col-auto"></span>
       </div>
-    </li>
-
-
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      
-      
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <!-- <span class="triangle-one col-auto  "></span> -->
-            <span class="triangle-two   col-auto  "></span>
-            <span class="triangle-three col-auto  "></span>
-            <span class="triangle-four col-auto  "></span>
-            
-      </div>
-    </li>
-
-
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      
-     
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <!-- <span class="triangle-one col-auto  "></span> -->
-            <span class="triangle-two   col-auto  "></span>
-            <span class="triangle-three col-auto  "></span>
-            <span class="triangle-four col-auto  "></span>
-            
-      </div>
-    </li>
-
-
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      
-     
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <!-- <span class="triangle-one col-auto  "></span> -->
-            <span class="triangle-two   col-auto  "></span>
-            <span class="triangle-three col-auto  "></span>
-            <span class="triangle-four col-auto  "></span>
-            
-      </div>
-    </li>
-
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      
-     
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <!-- <span class="triangle-one col-auto  "></span> -->
-            <span class="triangle-two   col-auto  "></span>
-            <span class="triangle-three col-auto  "></span>
-            <span class="triangle-four col-auto  "></span>
-            
-      </div>
-    </li>
-
-
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      
-     
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <!-- <span class="triangle-one col-auto  "></span> -->
-            <span class="triangle-two   col-auto  "></span>
-            <span class="triangle-three col-auto  "></span>
-            <span class="triangle-four col-auto  "></span>
-            
-      </div>
-    </li>
-
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      
-     
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <!-- <span class="triangle-one col-auto  "></span> -->
-            <span class="triangle-two   col-auto  "></span>
-            <span class="triangle-three col-auto  "></span>
-            <span class="triangle-four col-auto  "></span>
-            
-      </div>
-    </li>
-
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      
-     
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <!-- <span class="triangle-one col-auto  "></span> -->
-            <span class="triangle-two   col-auto  "></span>
-            <span class="triangle-three col-auto  "></span>
-            <span class="triangle-four col-auto  "></span>
-            
-      </div>
-    </li>
-
- 
-
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      
-     
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <!-- <span class="triangle-one col-auto  "></span> -->
-            <span class="triangle-two   col-auto  "></span>
-            <span class="triangle-three col-auto  "></span>
-            <span class="triangle-four col-auto  "></span>
-            
-      </div>
-    </li>
-
-
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      
-     
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <!-- <span class="triangle-one col-auto  "></span> -->
-            <span class="triangle-two   col-auto  "></span>
-            <span class="triangle-three col-auto  "></span>
-            <span class="triangle-four col-auto  "></span>
-            
-      </div>
-    </li>
-
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      
-     
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <!-- <span class="triangle-one col-auto  "></span> -->
-            <span class="triangle-two   col-auto  "></span>
-            <span class="triangle-three col-auto  "></span>
-            <span class="triangle-four col-auto  "></span>
-            
-      </div>
-    </li>
-
-    <li class=" triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center" style="min-height: 50px; min-width: 50px; margin-bottom: 100px;">
-      
-     
-
-        <div class="col-auto triangle-container  d-flex justify-content-center align-items-center col-auto ">
-            <!-- <span class="triangle-one col-auto  "></span> -->
-            <span class="triangle-two   col-auto  "></span>
-            <span class="triangle-three col-auto  "></span>
-            <span class="triangle-four col-auto  "></span>
-            
-      </div>
-    </li>
-
-  </ul>
-
-</div>
-
-<!-- 聊天窗 -->
-
- <!--button-->
- <div id="chat-circle" class="border border-primary bg-primary fw-bold  m-5 shadow rounded-circle p-3 d-flex justify-content-center align-items-center">
-  <div id="chat-overlay shadow"></div>
-  <span class="material-icons text-secondary">
-    chat_bubble
-    </span>
-</div>
-
-<!--chat-bot-->
-<div class="chat-box ms-lg-5 ms-md-5 ms-sm-1  me-lg-5 me-md-5 shadow">
-  <div class="chat-box-body bg-primary">
-      
-    <!--welcome message-->
-      <div class="chat-box-welcome__header">
-          <div class="chat-box__header-text">
-              <p3 class="chat-box-welcome__company-name"></p3>
-              <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+    </li> -->
+            </ul>
           </div>
 
-          <div id="chat-box-welcome__ava">
-              <img class="chat-box-welcome_robot" src="../assets/images/icon-logo.png">
+          <!-- 聊天窗 -->
+
+          <!--button-->
+          <div
+            id="chat-circle"
+            class="border border-primary bg-primary fw-bold m-5 shadow rounded-circle p-3 d-flex justify-content-center align-items-center"
+          >
+            <div id="chat-overlay shadow"></div>
+            <span class="material-icons text-secondary"> chat_bubble </span>
           </div>
-          <div class="chat-box-welcome__welcome-text">
-              <p class="mt-4 text-secondary h6">Hi Goalker! 準備好一起建構未來的夥伴關係了嗎？讓我們一起向前進吧 🚀</p>
+
+          <!--chat-bot-->
+          <div class="chat-box ms-lg-5 ms-md-5 ms-sm-1 me-lg-5 me-md-5 shadow">
+            <div class="chat-box-body bg-primary">
+              <!--welcome message-->
+              <div class="chat-box-welcome__header">
+                <div class="chat-box__header-text">
+                  <p3 class="chat-box-welcome__company-name"></p3>
+                  <span class="chat-box-toggle"
+                    ><i class="material-icons">cancel</i></span
+                  >
+                </div>
+
+                <div id="chat-box-welcome__ava">
+                  <img class="chat-box-welcome_robot" src="../assets/images/icon-logo.png">
+              </div>
+              <div class="chat-box-welcome__welcome-text">
+                  <p class="mt-4 text-secondary h6">Hi Goalker! 準備好一起建構未來的夥伴關係了嗎？讓我們一起向前進吧 🚀</p>
+              </div>
           </div>
-      </div>
 
 
       <!--chat-bot after welcome was toggled-->
       <div id="chat-box__wraper">
-          <div class="chat-box-header bg-primary  text-secondary fw-bold">熊熊
+          <div class="chat-box-header bg-primary  text-secondary fw-bold">
+              <span id="chat-box-username" class="chat-box-username"></span>
               <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
           </div>
 
 
           <div class="chat-box-overlay">
           </div>
+
           <div class="chat-logs bg-light">
+            <!-- <div id="cm-msg-0">
+                <span class="msg-avatar">
+           <img id="chat-box-avatar" class="" src="" alt="">     
+          </span>
+          <span class="cm-msg-text"></span>
+            </div> -->
+
+
+
+            <!-- 聊天窗初始版本 -->
+            <!-- <div id="chat-box__wraper">
+              <div class="chat-box-header bg-primary  text-secondary fw-bold">熊熊
+                  <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+              </div>
+    
+    
+              <div class="chat-box-overlay">
+              </div> -->
+
+
+
+          <!-- <div class="chat-logs bg-light">
               <div id="cm-msg-0" class="chat-msg bot">
                   <span class="msg-avatar">
              <img class="chat-box-overlay_robot rounded-circle" src="../assets/images/chat.png" alt="完課徽章-LV1">     
             </span>
             <span class="cm-msg-text shadow-sm rounded text-secondary fw-bold bg-light">哈囉 我是熊熊 有人在嗎 </span>
-              </div>
+              </div> -->
 
-              <div id="cm-msg-0" class="chat-msg bot">
+              <!-- <div id="cm-msg-0" class="chat-msg bot">
                 <span class="msg-avatar">
            <img class="chat-box-overlay_robot rounded-circle" src="../assets/images/chat.png" alt="完課徽章-LV1">     
            </span>
           <span class="cm-msg-text shadow-sm rounded text-secondary fw-bold bg-light">這裡好安靜啊 😆 </span>
-            </div>
+            </div> -->
 
-            <!-- <div id="cm-msg-0" class="chat-msg bot d-flex justify-content-end mt-5">
-              <span class="msg-avatar">
-         <img class="chat-box-overlay_robot rounded-circle" src="../assets/images/chat2.png" alt="完課徽章-LV1">  
-         <span class="bg-primary text-white m-auto shadow" style="font-size: xx-small;">兔</span>   
-         </span>
-         
-        <span class="cm-msg-text shadow-sm rounded text-secondary fw-bold bg-secondary-subtle"> 
-          哈囉 我是兔兔 </span>
-          </div> -->
+          
 
 
 
@@ -302,44 +194,47 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 
 
 
-              <div class="spin-container">
-                  <div class="spiner">
+                  <div class="spin-container">
+                    <div class="spiner">
                       <div aria-hidden="true"></div>
                       <div aria-hidden="true"></div>
                       <div aria-hidden="true"></div>
+                    </div>
                   </div>
+                </div>
+
+                <!--chat-log-->
               </div>
+            </div>
+            <div class="chat-input-box" id="chatLog">
+              <form class="chat-input__form">
+                <input
+                  type="text"
+                  class="chat-input__text"
+                  id="chat-input__text"
+                  placeholder="寫下學習的點點滴滴..."
+                />
+                <button type="submit" class="chat-submit" id="chat-submit">
+                  <i class="material-icons text-secondary">send</i>
+                </button>
+              </form>
+              <p6 class="chat-box__sign text-secondary">Triangle Golk</p6>
+            </div>
           </div>
 
-          <!--chat-log-->
-      </div>
-
-  </div>
-  <div class="chat-input-box" id="chatLog">
-      <form class="chat-input__form">
-         <input type="text" class="chat-input__text" id="chat-input__text" placeholder="寫下學習的點點滴滴..." /> 
-          <button type="submit" class="chat-submit" id="chat-submit">
-            <i class="material-icons text-secondary">send</i>
-        </button>
-      </form>
-      <p6 class="chat-box__sign text-secondary">Triangle Golk</p6>
-  </div>
-</div>
-
-
-
-             <!-- 外層 -->
-              </div>    
-          </main>
+          <!-- 外層 -->
         </div>
-         
+      </main>
+    </div>
+
     <%- include('./layout/footer'); -%>
 
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
       <script type="module" src="../main.js"></script>
       <script type="module" src="../assets/js/classroom.js"></script>
       <script type="module" src="../assets/js/message.js"></script>
-    
+      <!-- <script type="module" src="../assets/js/seat.js"></script> -->
+
 </body>
 
 </html>
