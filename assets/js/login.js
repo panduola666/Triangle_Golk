@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             avatars: [],
             avatarId: 4,
             totalCheckIn: 0,
+            checkInTimer: 0,
             isAdmin: false,
         }
 

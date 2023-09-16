@@ -7,9 +7,10 @@
         4,
         5
       ],
-      "avatarId": 5,
+      "avatarId": 6,
       "nickName": "圈圈",
       "totalCheckIn": 0,
+      "checkInTimer": 0,
       "isAdmin": true,
       "id": 1
     },
@@ -20,6 +21,7 @@
       "avatars": [],
       "avatarId": 4,
       "totalCheckIn": 0,
+      "checkInTimer": 0,
       "isAdmin": false,
       "id": 2
     },
@@ -30,6 +32,7 @@
       "avatars": [],
       "avatarId": 4,
       "totalCheckIn": 0,
+      "checkInTimer": 0,
       "isAdmin": false,
       "id": 3
     },

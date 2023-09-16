@@ -81,7 +81,7 @@ export const Comment = {
     try {
       const total = await axios.get(`${VITE_BASEURL}/comments?courseId=${courseId}`);
       const res = await axios.get(
-        `${VITE_BASEURL}/comments?courseId=${courseId}&_expand=user&_page=${page}&_limit=${limit}&_sort=${sort}&_order=${order}`
+        `${VITE_BASEURL}/comments?courseId=${courseId}&_expand=user&_page=${page}&_limit=${limit}&_sort=${sort}&_order=${order}&isPassed=1`
       );
       return {
         totalPages: Math.ceil(total.data.length / 6), // 儀控幾頁
