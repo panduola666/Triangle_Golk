@@ -103,7 +103,7 @@ function renderBook(curData) {
         <button class="go-comment btn btn-outline-primary ${item.comment.id ? 'd-none': 'd-block'}">
           <a href="./comment.html?courseId=${item.courseId}">完課評價</a>
         </button>
-        <button type="button" class="btn btn-secondary modal-btn ${item.comment.id ? 'd-block': 'd-none'}" data-bs-toggle="modal" data-bs-target="#course-comment" data-id="1">
+        <button type="button" class="btn btn-secondary modal-btn ${item.comment.id ? 'd-block': 'd-none'}" data-bs-toggle="modal" data-bs-target="#course-comment" data-id="${item.comment.id}">
         我的評價
       </button>
       </div>
@@ -230,7 +230,6 @@ async function renderModal(btn) {
     </div>
     <div class="fs-4 mb-0">${content}</div>
     <div>
-      <!-- 課程審核進度 -->
       ${
         isPassed === -1
           ? `<button type="button" class="btn btn-danger btn-state float-end" data-bs-dismiss="modal">審核中</button>`
