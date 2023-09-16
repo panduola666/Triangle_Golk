@@ -1,6 +1,5 @@
-import Swal from 'sweetalert2';
 import { Course } from '../api/course';
-import { Favorites, User } from '../api';
+import { Favorites, User, loading } from '../api';
 
 
 // 取得根據 url 參數篩選出來的全部課程資料
@@ -26,6 +25,7 @@ const sortOption = {
 }
 async function init() {
   try {
+    loading()
     const urlParams = new URLSearchParams(window.location.search);
     const platform =
       urlParams.has('platform') ? urlParams.getAll('platform') : []
@@ -75,6 +75,7 @@ async function updateUserInfo() {
 async function renderCourseList(pageNum) {
   const courseList = document.querySelector(".course-list");
   const res = await Course.getAllCourses();
+  loading(res)
   switch (sortOption.content) {
     case '全部':
       res.sort((a, b) => sortOption.sort !== '正序' ? b.id - a.id : a.id - b.id)
