@@ -88,6 +88,61 @@
       "checkInTimer": 0,
       "isAdmin": false,
       "id": 8
+    },
+    {
+      "email": "mi@trianglegolk.com",
+      "password": "$2a$10$pUMvLkdtJVzi/N7va7xvvuquvD36KuOXDrRcudS1W/pJ81AglI7Qa",
+      "nickName": "小咪",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 9
+    },
+    {
+      "email": "mo@trianglegolk.com",
+      "password": "$2a$10$MugNlSoyXR0udq28x.WptezRghALiqgFI.ArquL0WJ0vjEVFkMPOO",
+      "nickName": "阿哞",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 10
+    },
+    {
+      "email": "miao@trianglegolk.com",
+      "password": "$2a$10$F02jNVZ1t1kPfAtpbT/mMOgX8VcxGRHciVvBWuqZac8W5FpIau8sO",
+      "nickName": "喵喵最大尾",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 11
+    },
+    {
+      "email": "piggy@trianglegolk.com",
+      "password": "$2a$10$W.5EM2f1uOT1IM7T4Dvp1e61Rhz5Kd3d583NyENyui0wWBnBgzPuG",
+      "nickName": "福豬豬",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 12
+    },
+    {
+      "email": "m2@trianglegolk.com",
+      "password": "$2a$10$N25kJr/xXohjTrn5sozbd.Jshz1mPNfK2Eh3QQnHjFYHMbMw04qna",
+      "nickName": "米兔",
+      "avatars": [],
+      "avatarId": 4,
+      "totalCheckIn": 0,
+      "checkInTimer": 0,
+      "isAdmin": false,
+      "id": 13
     }
   ],
   "favorites": [
@@ -130,6 +185,16 @@
       "userId": 6,
       "courseId": 1,
       "id": 11
+    },
+    {
+      "userId": 9,
+      "courseId": 4,
+      "id": 12
+    },
+    {
+      "userId": 10,
+      "courseId": 1,
+      "id": 13
     }
   ],
   "notions": [
@@ -444,6 +509,42 @@
       "courseId": 4,
       "isFinish": false,
       "id": 20
+    },
+    {
+      "userId": 9,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 21
+    },
+    {
+      "userId": 9,
+      "courseId": 4,
+      "isFinish": false,
+      "id": 22
+    },
+    {
+      "userId": 10,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 23
+    },
+    {
+      "userId": 11,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 24
+    },
+    {
+      "userId": 12,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 25
+    },
+    {
+      "userId": 13,
+      "courseId": 1,
+      "isFinish": false,
+      "id": 26
     }
   ],
   "comments": [
@@ -462,9 +563,11 @@
       "likes": [
         1,
         6,
-        8
+        8,
+        10,
+        11
       ],
-      "likesNum": 3,
+      "likesNum": 5,
       "timer": 1693643063871
     },
     {
@@ -541,7 +644,7 @@
       "score": 5,
       "content": "<p>課程量豐富紮實，發摟了老師的建議，每天都要空出一段時間持續穩定地跟課才不會走一步退兩步一直原地踏步，雖然前期有段時間尬到公司忙季有點爆炸，但撐過去之後現在回頭看是滿滿的成就感，大推！</p>",
       "theme": 1,
-      "isPassed": 1,
+      "isPassed": -1,
       "failContent": "",
       "likes": [],
       "likesNum": 0,
@@ -559,8 +662,10 @@
       "theme": 0,
       "isPassed": 1,
       "failContent": "",
-      "likes": [],
-      "likesNum": 0,
+      "likes": [
+        11
+      ],
+      "likesNum": 1,
       "timer": 1694873915023,
       "userId": 8,
       "id": 7
@@ -596,6 +701,102 @@
       "timer": 1694874630134,
       "userId": 8,
       "id": 9
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>老師講得太好了,剛好我面試就遇到裡面好多個問題,真的好險有選這門課,老師保佑我面試成功~</p>",
+      "theme": 0,
+      "isPassed": -1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694875104723,
+      "userId": 9,
+      "id": 10
+    },
+    {
+      "courseId": 4,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>內容編排和老師講解的方式都很好，讓我在跟著練習時能跟著老師的聲音，更迅速地專注回自己身上。</p><p>不止睡眠品質有提升，總覺得專注力也變強了，很開心。</p>",
+      "theme": 0,
+      "isPassed": 1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694875221009,
+      "userId": 9,
+      "id": 11
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 4,
+      "content": "<p>不推薦初學者。</p><p>有時候老師講的速度太快了，還沒來得及反應就進到下一個重點，希望可以再放慢一點。</p>",
+      "theme": 0,
+      "isPassed": -1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694875318708,
+      "userId": 10,
+      "id": 12
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>以前想著能動就好,殊不知有很多地方都是多餘的步驟,自從上了這門課我的 code 也越來越簡潔了!!!</p>",
+      "theme": 0,
+      "isPassed": -1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694875409792,
+      "userId": 11,
+      "id": 13
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 5,
+      "content": "<p>這門課需要有點基礎再上會比較好，沒有基礎的話就要在課程以外的時間自己去補充知識，以免會跟不上</p>",
+      "theme": 0,
+      "isPassed": -1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694875529875,
+      "userId": 12,
+      "id": 14
+    },
+    {
+      "courseId": 1,
+      "canEdit": true,
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/TaXzTb6RHqP5utx9LGjP",
+      "showName": 1,
+      "score": 4,
+      "content": "<p>每次聽每次有不同的收穫,老師也會用一些生動的範例給我們講解,但我還是最喜歡漂亮阿姨出現在範例裡面 XD</p>",
+      "theme": 1,
+      "isPassed": -1,
+      "failContent": "",
+      "likes": [],
+      "likesNum": 0,
+      "timer": 1694875674190,
+      "userId": 13,
+      "id": 15
     }
   ],
   "chatRooms": [
