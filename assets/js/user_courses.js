@@ -82,7 +82,7 @@ function renderBook(curData) {
       <div class="col-8">
         <div class="card-body pb-1">
           <h2 class="card-title fs-6 text-truncate">${item.course.title}</h2>
-          <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+          <div class="user-courses-tags d-flex flex-wrap gap-2 mb-2 mb-lg-3">
           ${item.course.tags.map(tag => `<span class="card-text fs-8">#${tag}</span>`).join('')}
           </div>
           <div class="stars d-flex justify-content-end">
@@ -129,7 +129,7 @@ function renderBook(curData) {
       <div class="col-8">
         <div class="card-body pb-1">
           <h2 class="card-title fs-6 text-truncate">${item.course.title}</h2>
-          <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">${item.course.tags.map(tag => `<span class="card-text fs-8">#${tag}</span>`).join('')}</div>
+          <div class="user-courses-tags d-flex flex-wrap gap-2 mb-2 mb-lg-3">${item.course.tags.map(tag => `<span class="card-text fs-8">#${tag}</span>`).join('')}</div>
           <div class="stars d-flex justify-content-end">
             <div class="stars-icon text-primary me-1 me-md-2">
                 <span class="material-symbols-outlined star-fs ${item.avgScore >= 1 ? '' : 'outline-icon'}">star</span>
