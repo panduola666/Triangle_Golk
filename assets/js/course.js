@@ -25,6 +25,14 @@ const sortOption = {
 }
 async function init() {
   try {
+  const urlParams = new URLSearchParams(window.location.search);
+  const platform =
+  urlParams.has('platform') ? urlParams.getAll('platform') : []
+    const q =  urlParams.has('q') && urlParams.get('q');
+    filterForm['search-bar'].value = q
+    filterForm.querySelectorAll('input[type=checkbox]').forEach(input => {
+      input.checked = platform.includes(input.value)
+    })
     renderCourseList(1);
     await updateUserInfo();
     renderPagination();
@@ -86,56 +94,71 @@ async function renderCourseList(pageNum) {
 
   let str = "";
   const currentPageData = res.slice(startIndex, endIndex);
-
-  currentPageData.forEach((item) => {
-    str += `<li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
-    <a class="card card-hover h-100 rounded-4" href="./coursepages.html?id=${item.id}&sort=timer">
-      <div class="pic">
-        <img
-          src="${item.cover}"
-          alt="${item.title}"
-          class="card-pic"
-        />
-      </div>
-      <div
-        class="badge d-flex justify-content-between align-items-center position-absolute"
-      >
-        <span
-          class="brand bg-secondary small text-white rounded-1 py-1 px-3"
-          >${item.platform}</span
-        >
-        <span
-          class="${localStorage.getItem('token') ? '' : 'd-none'} favorite material-symbols-outlined outline-icon position-absolute" data-id="${item.id}"
-          >favorite</span
-        >
-      </div>
-      <div class="card-body">
-        <h3 class="title text-secondary fs-6 fw-bold">
-          ${item.title}
-        </h3>
-      </div>
-      <div class="card-footer">
-        <div class="tags mb-2 mt-auto">
-        ${item.tags.map(tag => `<span class="fs-8 me-2">#${tag}</span>`).join('')}
+  if(currentPageData.length) {
+    currentPageData.forEach((item) => {
+      str += `<li class="col-lg-4 col-md-6 col-12 d-flex flex-column">
+      <a class="card card-hover h-100 rounded-4" href="./coursepages.html?id=${item.id}&sort=timer">
+        <div class="pic">
+          <img
+            src="${item.cover}"
+            alt="${item.title}"
+            class="card-pic"
+          />
         </div>
-        <div class="stars d-flex">
-          <div class="stars-icon text-primary me-2">
-          <span class="material-symbols-outlined ${item.avgScore >= 1 ? '' : 'outline-icon'}">star</span>
-          <span class="material-symbols-outlined ${item.avgScore >= 2 ? '' : 'outline-icon'}">star</span>
-          <span class="material-symbols-outlined ${item.avgScore >= 3 ? '' : 'outline-icon'}">star</span>
-          <span class="material-symbols-outlined ${item.avgScore >= 4 ? '' : 'outline-icon'}">star</span>
-          <span class="material-symbols-outlined ${item.avgScore >= 5 ? '' : 'outline-icon'}"
-              >star</span
-            >
+        <div
+          class="badge d-flex justify-content-between align-items-center position-absolute"
+        >
+          <span
+            class="brand bg-secondary small text-white rounded-1 py-1 px-3"
+            >${item.platform}</span
+          >
+          <span
+            class="${localStorage.getItem('token') ? '' : 'd-none'} favorite material-symbols-outlined outline-icon position-absolute" data-id="${item.id}"
+            >favorite</span
+          >
+        </div>
+        <div class="card-body">
+          <h3 class="title text-secondary fs-6 fw-bold">
+            ${item.title}
+          </h3>
+        </div>
+        <div class="card-footer">
+          <div class="tags mb-2 mt-auto">
+          ${item.tags.map(tag => `<span class="fs-8 me-2">#${tag}</span>`).join('')}
           </div>
-          <span class="fs-8 text-gray-400">(${item.comments.length})</span>
+          <div class="stars d-flex">
+            <div class="stars-icon text-primary me-2">
+            <span class="material-symbols-outlined ${item.avgScore >= 1 ? '' : 'outline-icon'}">star</span>
+            <span class="material-symbols-outlined ${item.avgScore >= 2 ? '' : 'outline-icon'}">star</span>
+            <span class="material-symbols-outlined ${item.avgScore >= 3 ? '' : 'outline-icon'}">star</span>
+            <span class="material-symbols-outlined ${item.avgScore >= 4 ? '' : 'outline-icon'}">star</span>
+            <span class="material-symbols-outlined ${item.avgScore >= 5 ? '' : 'outline-icon'}"
+                >star</span
+              >
+            </div>
+            <span class="fs-8 text-gray-400">(${item.comments.length})</span>
+          </div>
         </div>
-      </div>
-    </a>
-  </li>`
-  });
+      </a>
+    </li>`
+    });
+  } else {
+    str = `
+    <li class="pt-5 text-center">
+      <h3 class="mb-4 h1">暫無相關課程</h3>
+      <button type="button" class="btn btn-primary btn-lg need-apply">申請新課</button>
+    </li>
+    `
+  }
+   
 
   courseList.innerHTML = str;
+
+  if(!currentPageData.length) {
+    document.querySelector('.need-apply').addEventListener('click', () => {
+      document.querySelector('.apply-btn').click()
+     })
+  }
   updatePaginationBtns();
   await updateUserInfo();
 }
