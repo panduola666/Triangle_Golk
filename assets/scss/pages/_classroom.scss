@@ -1,3 +1,5 @@
+
+
 // 三角形
 .triangle{
     min-height: 50px;
@@ -66,12 +68,11 @@
     // transform: translateX(25px) translateY(50px) rotateY(60deg) rotateX(-19.5deg);
     border-width:0 50px 87px;
     // clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    clip-path: polygon(50% 0%, -2% 100%, 50% 64%);;
+    clip-path: polygon(50% 0%, -2% 100%, 50% 64%);
     
 
     &:hover{
-        border-color:transparent transparent rgb(248, 248, 85)
-
+        border-color:transparent transparent rgb(248, 248, 85);
         // &::before { 
         //     content: '🪑';
         //     display: block;
@@ -85,6 +86,7 @@
         //     white-space: nowrap;
         //     z-index: 1; /* 確保文字顯示在頂部 */
         // }
+        
 
     }
 }

@@ -71,9 +71,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 
      <li class="triangle col-lg-3 col-md-5 col-12 d-flex flex-column text-center text-center">
       <div class="col-auto triangle-container d-flex justify-content-center align-items-center col-auto">
-          <span class="triangle-two col-auto"></span>
-          <span class="triangle-three col-auto"></span>
-          <span class="triangle-four col-auto"></span>
+          <span  class="triangle-two col-auto"></span>
+          <span  class="triangle-three col-auto"></span>
+          <span class=" triangle-four col-auto"></span>
       </div>
     </li>
 
@@ -263,37 +263,53 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 
       <!--chat-bot after welcome was toggled-->
       <div id="chat-box__wraper">
-          <div class="chat-box-header bg-primary  text-secondary fw-bold">熊熊
+          <div class="chat-box-header bg-primary  text-secondary fw-bold">
+              <span id="chat-box-username" class="chat-box-username"></span>
               <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
           </div>
 
 
           <div class="chat-box-overlay">
           </div>
+
           <div class="chat-logs bg-light">
+            <div id="cm-msg-0">
+                <!-- <span class="msg-avatar"> -->
+           <img id="chat-box-avatar" class="" src="" alt="">     
+          <!-- </span> -->
+          <!-- <span class="cm-msg-text"></span> -->
+            </div>
+
+
+
+            <!-- 聊天窗初始版本 -->
+            <!-- <div id="chat-box__wraper">
+              <div class="chat-box-header bg-primary  text-secondary fw-bold">熊熊
+                  <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+              </div>
+    
+    
+              <div class="chat-box-overlay">
+              </div> -->
+
+
+
+          <!-- <div class="chat-logs bg-light">
               <div id="cm-msg-0" class="chat-msg bot">
                   <span class="msg-avatar">
              <img class="chat-box-overlay_robot rounded-circle" src="../assets/images/chat.png" alt="完課徽章-LV1">     
             </span>
             <span class="cm-msg-text shadow-sm rounded text-secondary fw-bold bg-light">哈囉 我是熊熊 有人在嗎 </span>
-              </div>
+              </div> -->
 
-              <div id="cm-msg-0" class="chat-msg bot">
+              <!-- <div id="cm-msg-0" class="chat-msg bot">
                 <span class="msg-avatar">
            <img class="chat-box-overlay_robot rounded-circle" src="../assets/images/chat.png" alt="完課徽章-LV1">     
            </span>
           <span class="cm-msg-text shadow-sm rounded text-secondary fw-bold bg-light">這裡好安靜啊 😆 </span>
-            </div>
+            </div> -->
 
-            <!-- <div id="cm-msg-0" class="chat-msg bot d-flex justify-content-end mt-5">
-              <span class="msg-avatar">
-         <img class="chat-box-overlay_robot rounded-circle" src="../assets/images/chat2.png" alt="完課徽章-LV1">  
-         <span class="bg-primary text-white m-auto shadow" style="font-size: xx-small;">兔</span>   
-         </span>
-         
-        <span class="cm-msg-text shadow-sm rounded text-secondary fw-bold bg-secondary-subtle"> 
-          哈囉 我是兔兔 </span>
-          </div> -->
+          
 
 
 
@@ -339,7 +355,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       <script type="module" src="../main.js"></script>
       <script type="module" src="../assets/js/classroom.js"></script>
       <script type="module" src="../assets/js/message.js"></script>
-    
+      <!-- <script type="module" src="../assets/js/seat.js"></script> -->
+
 </body>
 
 </html>
