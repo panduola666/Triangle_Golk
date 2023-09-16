@@ -36,21 +36,31 @@ async function init() {
 
 init()
 async function updateUserInfo() {
+  if (!localStorage.getItem('token')) {
+    // 如果用户未登入，隐藏收藏按鈕
+    if (favBtn) {
+      favBtn.classList.add('d-none')
+    }
+    return
+  }
+  user = await User.getUserInfo()
+  if (!user) return
 
-  // if (!localStorage.getItem('token')) {
-  //   // 如果用户未登入，隐藏收藏按鈕
-  //   favBtn.classList.add('d-none')
-  //   return
-  // }
-  // user = await User.getUserInfo()
-  // if (!user) return
-  // //  當前課程的收藏 icon
-  // favBtn.classList.remove('d-none')
-  // if (user.favorites.find(item => Number(item.courseId) === Number(id))) {
-  //   favBtn.classList.remove('outline-icon')
-  // } else {
-  //   favBtn.classList.add('outline-icon')
-  // }
+  //  在這裡檢查每個課程是否在收藏中，並更新按鈕狀態
+  const favBtns = document.querySelectorAll('.favorite');
+  favBtns.forEach((button) => {
+    const courseId = button.dataset.id;
+    if (user.favorites.find(item => Number(item.courseId) === Number(courseId))) {
+      button.classList.remove('outline-icon')
+    } else {
+      button.classList.add('outline-icon')
+    }
+  });
+
+  //  當前課程的收藏 icon
+  if (favBtn) {
+    favBtn.classList.remove('d-none')
+  }
 }
 
 async function renderCourseList(pageNum) {
