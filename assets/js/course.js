@@ -147,13 +147,7 @@ function updatePaginationBtns() {
         </a>
       </li>
     `;
-    const prevPageBtn = pagination.querySelector(".page-prev");
-    prevPageBtn.addEventListener('click', () => {
-      if (currentPage > 1) {
-        currentPage--; // 減少當前頁碼
-        renderCourseList(currentPage); // 渲染新頁面資料
-      }
-    });
+    
   }
 
   // 添加頁碼按鈕
@@ -166,6 +160,14 @@ function updatePaginationBtns() {
     `;
   }
 
+  const prevPageBtn = pagination.querySelector(".page-prev");
+  prevPageBtn && prevPageBtn.addEventListener('click', () => {
+      console.log(currentPage);
+      if (currentPage > 1) {
+        currentPage--; // 減少當前頁碼
+        renderCourseList(currentPage); // 渲染新頁面資料
+      }
+    });
   // 添加下一頁按鈕
   if (currentPage < totalPages) {
     pagination.innerHTML += `
