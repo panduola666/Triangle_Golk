@@ -37,7 +37,7 @@ function renderComments(comments) {
   commentList.innerHTML = comments.map((comment, index) => {
     const {nickName, email} = comment.user
     return `<li data-id="${comment.courseId}" class="swiper-slide p-5 bg-${colors[(index + 1) % 3]} rounded-4 d-flex flex-column cur-point card-hover">
-    <h4 class="fs-5 mb-4 text-truncate">${comment.course.title}</h4>
+    <h4 class="fs-5 mb-4 text-truncate flex-shrink-0">${comment.course.title}</h4>
     <div class="fs-5 mb-4 flex-grow-1 overflow-y-auto">
       ${comment.content}
     </div>
