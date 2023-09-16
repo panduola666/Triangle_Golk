@@ -12,7 +12,6 @@ export const CoursesApplies = {
         isPassed: -1
       };
       const res = await axios.post(`${VITE_BASEURL}/coursesApplies`, data);
-      console.log(res);
       Swal.fire({
         scrollbarPadding: false,
         title: '已送出',
@@ -21,6 +20,19 @@ export const CoursesApplies = {
         showConfirmButton: false,
         timer: 1500,
       });
+     const user = await axios.get(`${VITE_BASEURL}/users/${localStorage.getItem('userId')}`);
+     const { avatars } = user.data
+     if(!avatars.includes(5)) {
+      avatars.push(5)
+      await axios.patch(`${VITE_BASEURL}/users/${localStorage.getItem('userId')}`, {avatars});
+      Swal.fire({
+        scrollbarPadding: false,
+        title: `恭喜您獲得新徽章`,
+        showConfirmButton: false,
+        timer: 2500,
+        allowOutsideClick: false
+    })
+     }
       return res.data;
     } catch (err) {
       console.log(err);

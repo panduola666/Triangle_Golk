@@ -47,38 +47,6 @@ modal.addEventListener('hidden.bs.modal', () => {
     applyForm.reset();
 })
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const form = document.querySelector('.apply-form');
-//     const inputFields = form.querySelectorAll('input, textarea');
-
-//     // 當表單提交時
-//     form.addEventListener('submit', function (event) {
-//         event.preventDefault(); // 阻止表單默認提交
-
-//         // 處理表單提交邏輯...
-
-//         // 清空輸入框的值
-//         inputFields.forEach(function (input) {
-//             input.value = '';
-//         });
-
-//         // 顯示 SweetAlert 窗口
-//         Swal.fire({
-//             scrollbarPadding: false,
-//             title: '成功！',
-//             text: '你的申請已成功提交。',
-//             icon: 'success',
-//             confirmButtonText: '確定'
-//         });
-//     });
-
-//     // 當輸入框被點擊時
-//     // inputFields.forEach(function (input) {
-//     //     input.addEventListener('click', function () {
-//     //         input.value = ''; // 清空輸入框的值
-//     //     });
-//     // });
-// });
 
 // 富文本編輯器配置
 const { createEditor, createToolbar } = window.wangEditor;
