@@ -19,21 +19,21 @@ const controller = (function (botCntr, uiCntr) {
         evt.preventDefault();
         $chatCircle.hide('scale');
         $chatBox.show('scale');
-        $chatBoxWelcome.show('scale');
+        // $chatBoxWelcome.show('scale');
     }
 
     function chatBoxCl(evt) {
         evt.preventDefault();
         $chatCircle.show('scale');
         $chatBox.hide('scale');
-        $chatBoxWelcome.hide('scale');
-        $chatWraper.hide('scale');
+        // $chatBoxWelcome.hide('scale');
+        // $chatWraper.hide('scale');
     }
 
     function chatOpenMessage(evt) {
         evt.preventDefault();
-        $chatBoxWelcome.hide();
-        $chatWraper.show();
+        // $chatBoxWelcome.hide();
+        // $chatWraper.show();
     }
 
  

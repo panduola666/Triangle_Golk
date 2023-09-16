@@ -121,5 +121,5 @@ $(document).ready(controller.init);
    // 將歡迎消息隱藏
 setTimeout(function() {
     document.getElementById("chat-box__wraper").style.display = "block";
-    document.querySelector(".chat-box-welcome__header").style.display = "none";
-}, 3000);
+    // document.querySelector(".chat-box-welcome__header").style.display = "none";
+}, 0);

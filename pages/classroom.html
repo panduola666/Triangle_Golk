@@ -37,7 +37,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
       <%- include('./layout/nav'); -%>
       <main class="container">
         <div class="page-header my-4 d-flex justify-content-between">
-          <span class="d-flex justify-content-between align-items-center level-class">
+          <span
+            class="d-flex justify-content-between align-items-center level-class"
+          >
             <span class="material-symbols-outlined fs-2"> meeting_room </span>
             <h2 class="fs-5 mb-0 link-hover">
               <a class="page-back"> 離開教室</a>
@@ -129,37 +131,40 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
                 </div>
 
                 <div id="chat-box-welcome__ava">
-                  <img class="chat-box-welcome_robot" src="../assets/images/icon-logo.png">
+                  <img
+                    class="chat-box-welcome_robot"
+                    src="../assets/images/icon-logo.png"
+                  />
+                </div>
+                <div class="chat-box-welcome__welcome-text">
+                  <p class="mt-4 text-secondary h6">
+                    Hi Goalker!
+                    準備好一起建構未來的夥伴關係了嗎？讓我們一起向前進吧 🚀
+                  </p>
+                </div>
               </div>
-              <div class="chat-box-welcome__welcome-text">
-                  <p class="mt-4 text-secondary h6">Hi Goalker! 準備好一起建構未來的夥伴關係了嗎？讓我們一起向前進吧 🚀</p>
-              </div>
-          </div>
 
+              <!--chat-bot after welcome was toggled-->
+              <div id="chat-box__wraper">
+                <div class="chat-box-header bg-primary text-secondary fw-bold">
+                  <span id="chat-box-username" class="chat-box-username"></span>
+                  <span class="chat-box-toggle"
+                    ><i class="material-icons">cancel</i></span
+                  >
+                </div>
 
-      <!--chat-bot after welcome was toggled-->
-      <div id="chat-box__wraper">
-          <div class="chat-box-header bg-primary  text-secondary fw-bold">
-              <span id="chat-box-username" class="chat-box-username"></span>
-              <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
-          </div>
+                <div class="chat-box-overlay"></div>
 
-
-          <div class="chat-box-overlay">
-          </div>
-
-          <div class="chat-logs bg-light">
-            <!-- <div id="cm-msg-0">
+                <div class="chat-logs bg-light">
+                  <!-- <div id="cm-msg-0">
                 <span class="msg-avatar">
            <img id="chat-box-avatar" class="" src="" alt="">     
           </span>
           <span class="cm-msg-text"></span>
             </div> -->
 
-
-
-            <!-- 聊天窗初始版本 -->
-            <!-- <div id="chat-box__wraper">
+                  <!-- 聊天窗初始版本 -->
+                  <!-- <div id="chat-box__wraper">
               <div class="chat-box-header bg-primary  text-secondary fw-bold">熊熊
                   <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
               </div>
@@ -168,9 +173,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
               <div class="chat-box-overlay">
               </div> -->
 
-
-
-          <!-- <div class="chat-logs bg-light">
+                  <!-- <div class="chat-logs bg-light">
               <div id="cm-msg-0" class="chat-msg bot">
                   <span class="msg-avatar">
              <img class="chat-box-overlay_robot rounded-circle" src="../assets/images/chat.png" alt="完課徽章-LV1">     
@@ -178,21 +181,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
             <span class="cm-msg-text shadow-sm rounded text-secondary fw-bold bg-light">哈囉 我是熊熊 有人在嗎 </span>
               </div> -->
 
-              <!-- <div id="cm-msg-0" class="chat-msg bot">
+                  <!-- <div id="cm-msg-0" class="chat-msg bot">
                 <span class="msg-avatar">
            <img class="chat-box-overlay_robot rounded-circle" src="../assets/images/chat.png" alt="完課徽章-LV1">     
            </span>
           <span class="cm-msg-text shadow-sm rounded text-secondary fw-bold bg-light">這裡好安靜啊 😆 </span>
             </div> -->
-
-          
-
-
-
-
-
-
-
 
                   <div class="spin-container">
                     <div class="spiner">
@@ -229,12 +223,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 
     <%- include('./layout/footer'); -%>
 
-      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script type="module" src="../main.js"></script>
-      <script type="module" src="../assets/js/classroom.js"></script>
-      <script type="module" src="../assets/js/message.js"></script>
-      <!-- <script type="module" src="../assets/js/seat.js"></script> -->
-
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/classroom.js"></script>
+    <script type="module" src="../assets/js/message.js"></script>
+    <!-- <script type="module" src="../assets/js/seat.js"></script> -->
+  </body>
 </html>
