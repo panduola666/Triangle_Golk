@@ -1,4 +1,4 @@
-import{U as x}from"./main-b77ea123.js";import"./user_nav-b8e04adf.js";import{l as v}from"./index-b2bf1253.js";import{C as w}from"./comment-522eb3d4.js";import{P as S}from"./passes-f320bab4.js";import"https://cdn.jsdelivr.net/npm/aos@2.3.4/+esm";import"./avatars-0a7385bc.js";import"./course-0ae1a782.js";const j=document.querySelector(".notebook"),P=document.querySelector(".book-left"),L=document.querySelector(".boot-right"),M=document.querySelector(".comment-modal"),f=document.querySelector(".pc-marks"),$=document.querySelector(".h5-marks");let g,y,o,l;async function q(){try{v(),g=await S.getUserPasses(),y=await x.getUserInfo(),o=g.reduce((a,s)=>{const e={...s,comment:y.comments.find(n=>n.courseId===s.courseId)||{}};return a[s.course.platform]?a[s.course.platform].push(e):a.其他平台.push(e),s.isFinish&&a.已完課.push(e),a},{六角學院:[],Hahow:[],Udemy:[],Coursera:[],其他平台:[],已完課:[]}),v(o),l=Object.keys(o)[0],d(u(o,1,l)),p()}catch(a){console.log(a)}}q();j.addEventListener("click",a=>{const{page:s}=a.target.dataset;s&&d(u(o,Number(s),l))});function d(a){const{currentPage:s,totalPages:e,data:n}=a;P.innerHTML=`
+import{U as x}from"./main-6c126296.js";import"./user_nav-b8e04adf.js";import{l as v}from"./index-00c34100.js";import{C as w}from"./comment-a44fa049.js";import{P as S}from"./passes-fbcc49a6.js";import"https://cdn.jsdelivr.net/npm/aos@2.3.4/+esm";import"./avatars-cf792582.js";import"./course-0f83fb1f.js";const j=document.querySelector(".notebook"),P=document.querySelector(".book-left"),L=document.querySelector(".boot-right"),M=document.querySelector(".comment-modal"),f=document.querySelector(".pc-marks"),$=document.querySelector(".h5-marks");let g,y,o,l;async function q(){try{v(),g=await S.getUserPasses(),y=await x.getUserInfo(),o=g.reduce((a,s)=>{const e={...s,comment:y.comments.find(n=>n.courseId===s.courseId)||{}};return a[s.course.platform]?a[s.course.platform].push(e):a.其他平台.push(e),s.isFinish&&a.已完課.push(e),a},{六角學院:[],Hahow:[],Udemy:[],Coursera:[],其他平台:[],已完課:[]}),v(o),l=Object.keys(o)[0],d(u(o,1,l)),p()}catch(a){console.log(a)}}q();j.addEventListener("click",a=>{const{page:s}=a.target.dataset;s&&d(u(o,Number(s),l))});function d(a){const{currentPage:s,totalPages:e,data:n}=a;P.innerHTML=`
     <div id="user-list-empty0" class="user-empty comment-style1 ${n[0].length?"d-none":""}">
       <p class="fs-4 fw-bold mb-4 text-white text-center"
       >本頁還沒有內容喔</p>
@@ -38,7 +38,7 @@ import{U as x}from"./main-b77ea123.js";import"./user_nav-b8e04adf.js";import{l a
         <button class="go-comment btn btn-outline-primary ${t.comment.id?"d-none":"d-block"}">
           <a href="./comment.html?courseId=${t.courseId}">完課評價</a>
         </button>
-        <button type="button" class="btn btn-secondary modal-btn ${t.comment.id?"d-block":"d-none"}" data-bs-toggle="modal" data-bs-target="#course-comment" data-id="1">
+        <button type="button" class="btn btn-secondary modal-btn ${t.comment.id?"d-block":"d-none"}" data-bs-toggle="modal" data-bs-target="#course-comment" data-id="${t.comment.id}">
         我的評價
       </button>
       </div>
@@ -118,7 +118,6 @@ import{U as x}from"./main-b77ea123.js";import"./user_nav-b8e04adf.js";import{l a
     </div>
     <div class="fs-4 mb-0">${c}</div>
     <div>
-      <!-- 課程審核進度 -->
       ${i===-1?'<button type="button" class="btn btn-danger btn-state float-end" data-bs-dismiss="modal">審核中</button>':i===0?`<button type="button" class="btn btn-danger btn-state float-end" data-bs-dismiss="modal">${k}</button>`:""}
       <!-- 編輯 icon -->
       ${h&&i!==-1?`<a href="./comment.html?id=${e}" class="material-symbols-outlined outline-icon cur-point ${i===1&&"float-end"}">edit_square</a>`:""}
