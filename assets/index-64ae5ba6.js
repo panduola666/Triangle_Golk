@@ -1,0 +1,1 @@
+import"./main-20e5e0cf.js";function d(e){const o=document.querySelector(".loading");e?(o.style.opacity=0,setTimeout(()=>o.classList.add("d-none"),1e3),document.body.style.overflow="auto"):(o.classList.remove("d-none"),o.style.opacity=1,document.body.style.overflow="hidden")}export{d as l};

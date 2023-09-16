@@ -1,4 +1,4 @@
-import"./main-6c126296.js";import"./user_nav-b8e04adf.js";import{l as m}from"./index-00c34100.js";import{F as b}from"./favorites-a706b415.js";import"https://cdn.jsdelivr.net/npm/aos@2.3.4/+esm";import"./course-0f83fb1f.js";const x=document.querySelector(".notebook"),f=document.querySelector(".book-left"),g=document.querySelector(".boot-right"),y=document.querySelector(".pc-marks"),$=document.querySelector(".h5-marks");let v,e,r,p;async function w(){try{m(),await h(),m(e),r=Object.keys(e)[0],l(i(e,1,r)),d()}catch(a){console.log(a)}}w();async function h(){v=await b.getUserFavorites(),e=v.reduce((a,s)=>(a[s.course.platform]?a[s.course.platform].push(s):a.其他平台.push(s),a),{六角學院:[],Hahow:[],Udemy:[],Coursera:[],其他平台:[]})}x.addEventListener("click",a=>{const{page:s}=a.target.dataset;s&&(p=Number(s),l(i(e,p,r)))});function l(a){const{currentPage:s,totalPages:n,data:o}=a;f.innerHTML=`
+import"./main-20e5e0cf.js";import"./user_nav-b8e04adf.js";import{l as m}from"./index-64ae5ba6.js";import{F as f}from"./favorites-ff1c6920.js";import"https://cdn.jsdelivr.net/npm/aos@2.3.4/+esm";import"./course-fe90b3c4.js";const x=document.querySelector(".notebook"),b=document.querySelector(".book-left"),g=document.querySelector(".boot-right"),y=document.querySelector(".pc-marks"),$=document.querySelector(".h5-marks");let v,e,r,p;async function w(){try{m(),await h(),m(e),r=Object.keys(e)[0],l(i(e,1,r)),d()}catch(a){console.log(a)}}w();async function h(){v=await f.getUserFavorites(),e=v.reduce((a,s)=>(a[s.course.platform]?a[s.course.platform].push(s):a.其他平台.push(s),a),{六角學院:[],Hahow:[],Udemy:[],Coursera:[],其他平台:[]})}x.addEventListener("click",a=>{const{page:s}=a.target.dataset;s&&(p=Number(s),l(i(e,p,r)))});function l(a){const{currentPage:s,totalPages:n,data:o}=a;b.innerHTML=`
     <div id="user-list-empty1" class="user-empty comment-style1 ${o[0].length?"d-none":""}">
       <p class="fs-4 fw-bold mb-4 text-white text-center"
       >本頁還沒有內容喔</p>
@@ -18,7 +18,7 @@ import"./main-6c126296.js";import"./user_nav-b8e04adf.js";import{l as m}from"./i
             <div class="col-8">
             <div class="card-body pb-1">
                 <h2 class="card-title fs-6 text-truncate">${t.course.title}</h2>
-                <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                <div class="user-courses-tags d-flex flex-wrap gap-2 mb-2 mb-lg-3">
                 ${t.course.tags.map(c=>`<span class="card-text fs-8">#${c}</span>`).join("")}
                 </div>
                 <div class="stars d-flex justify-content-end">
@@ -58,7 +58,7 @@ import"./main-6c126296.js";import"./user_nav-b8e04adf.js";import{l as m}from"./i
             <div class="col-8">
             <div class="card-body pb-1">
                 <h2 class="card-title fs-6 text-truncate">${t.course.title}</h2>
-                <div class="user-courses-tags d-flex gap-2 mb-2 mb-lg-3">
+                <div class="user-courses-tags d-flex flex-wrap gap-2 mb-2 mb-lg-3">
                 ${t.course.tags.map(c=>`<span class="card-text fs-8">#${c}</span>`).join("")}
                 </div>
                 <div class="stars d-flex justify-content-end">
@@ -91,4 +91,4 @@ import"./main-6c126296.js";import"./user_nav-b8e04adf.js";import{l as m}from"./i
       <span class="fs-tiny"> ${s}(${e[s].length})</span>
         </li>`).join(""),$.innerHTML=Object.keys(e).map((s,n)=>` <li class="bookmark ${r===s?"":"bookmark-unselected"} me-1 py-1 bg-${a[n]} fs-tiny cur-point" data-tag="${s}">
       <span class="d-block text-nowrap">${s}</span>(${e[s].length})
-    </li>`).join("")}function i(a,s=1,n,o=8){const t=Math.ceil(a[n].length/o),c=a[n];return console.log(c),s<1?{totalPages:t,currentPage:s>=t?t:s,data:u(c.slice(0,o))}:s>t?{totalPages:t,currentPage:s>=t?t:s,data:u(c.slice(c.length-o))}:{totalPages:t,currentPage:s>=t?t:s,data:u(c.slice(s*o-o,s*o))}}function u(a){return[a.slice(0,4),a.slice(4)]}y.addEventListener("click",a=>{a.target.dataset.tag&&(r=a.target.dataset.tag,l(i(e,1,r)),d())});$.addEventListener("click",a=>{a.target.dataset.tag&&(r=a.target.dataset.tag,l(i(e,1,r)),d())});f.addEventListener("click",k);g.addEventListener("click",k);async function k(a){const{id:s}=a.target.dataset;s&&(b.remove(s),await h(),l(i(e,p,r)),d())}
+    </li>`).join("")}function i(a,s=1,n,o=8){const t=Math.ceil(a[n].length/o),c=a[n];return console.log(c),s<1?{totalPages:t,currentPage:s>=t?t:s,data:u(c.slice(0,o))}:s>t?{totalPages:t,currentPage:s>=t?t:s,data:u(c.slice(c.length-o))}:{totalPages:t,currentPage:s>=t?t:s,data:u(c.slice(s*o-o,s*o))}}function u(a){return[a.slice(0,4),a.slice(4)]}y.addEventListener("click",a=>{a.target.dataset.tag&&(r=a.target.dataset.tag,l(i(e,1,r)),d())});$.addEventListener("click",a=>{a.target.dataset.tag&&(r=a.target.dataset.tag,l(i(e,1,r)),d())});b.addEventListener("click",k);g.addEventListener("click",k);async function k(a){const{id:s}=a.target.dataset;s&&(f.remove(s),await h(),l(i(e,p,r)),d())}
