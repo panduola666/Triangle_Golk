@@ -10,8 +10,19 @@ import { Favorites, User } from '../api';
 const filterForm = document.querySelector(".filter-form");
 const deleteBtn = document.querySelector("#delete-btn");
 const favBtn = document.querySelector(".favorite");
+const sortBtn = document.querySelectorAll('.sort-btn')
+const sortItemBtn = document.querySelectorAll('.sort-item-btn')
+const pagination = document.querySelector(".pagination");
 
+
+const pageItems = 6; // 每頁顯示的數量
+let currentPage = 1; // 當前頁碼
+let totalItems = 0; // 總共幾筆資料
 let user;
+const sortOption = {
+  sort: '正序',
+  content: '全部'
+}
 async function init() {
   try {
     renderCourseList(1);
@@ -24,7 +35,6 @@ async function init() {
 }
 
 init()
-
 async function updateUserInfo() {
   if (!localStorage.getItem('token')) {
     // 如果用户未登入，隐藏收藏按鈕
@@ -56,6 +66,18 @@ async function updateUserInfo() {
 async function renderCourseList(pageNum) {
   const courseList = document.querySelector(".course-list");
   const res = await Course.getAllCourses();
+  switch(sortOption.content) {
+    case '全部': 
+    res.sort((a,b) => sortOption.sort !== '正序' ? b.id - a.id : a.id - b.id)
+    break
+    case '評價數':
+    res.sort((a,b) => sortOption.sort !== '正序' ? a.comments.length - b.comments.length : b.comments.length - a.comments.length)
+      break
+      default:
+    res.sort((a,b) => sortOption.sort !== '正序' ? a.avgScore - b.avgScore : b.avgScore - a.avgScore)
+      break
+  }
+ 
   // 更新總共幾筆資料
   totalItems = res.length;
   // 計算分頁範圍
@@ -117,11 +139,40 @@ async function renderCourseList(pageNum) {
   updatePaginationBtns();
   await updateUserInfo();
 }
+sortBtn.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation()
+    const { sort='' } = btn.dataset
+    sortBtn.forEach(item => {
+      item.classList.remove('btn-secondary')
+      item.classList.remove('active')
+      item.classList.add('btn-outline-secondary')
+    })
+    sortOption.sort = sort
+    btn.classList.remove('btn-outline-secondary')
+    btn.classList.add('btn-secondary')
+    renderCourseList(currentPage)
+  })
+})
+sortItemBtn.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation()
+    const { content='' } = btn.dataset
+    sortItemBtn.forEach(item => {
+      item.classList.remove('btn-secondary')
+      item.classList.remove('active')
+      item.classList.add('btn-outline-secondary')
+    })
+    sortOption.content = content
+    btn.classList.add('btn-secondary')
+    btn.classList.add('active')
+    btn.classList.remove('btn-outline-secondary')
+    renderCourseList(currentPage)
+  })
+})
 
-const pagination = document.querySelector(".pagination");
-const pageItems = 6; // 每頁顯示的數量
-let currentPage = 1; // 當前頁碼
-let totalItems = 0; // 總共幾筆資料
+
+
 
 function renderPagination() {
   pagination.addEventListener('click', (e) => {
@@ -177,12 +228,11 @@ function updatePaginationBtns() {
 
   const prevPageBtn = pagination.querySelector(".page-prev");
   prevPageBtn && prevPageBtn.addEventListener('click', () => {
-    console.log(currentPage);
-    if (currentPage > 1) {
-      currentPage--; // 減少當前頁碼
-      renderCourseList(currentPage); // 渲染新頁面資料
-    }
-  });
+      if (currentPage > 1) {
+        currentPage--; // 減少當前頁碼
+        renderCourseList(currentPage); // 渲染新頁面資料
+      }
+    });
   const nextPageBtn = pagination.querySelector(".page-next");
   nextPageBtn && nextPageBtn.addEventListener('click', () => {
     if (currentPage < totalPages) {
